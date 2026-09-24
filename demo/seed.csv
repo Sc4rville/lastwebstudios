@@ -1,0 +1,4 @@
+name,city,website,industry,email
+Atelier Braise,Toulouse,{{FIXTURES}}/before/,ironworker,atelier@example.com
+Studio Nord,Lyon,{{FIXTURES}}/modern/,kitchen-designer,studio@example.com
+Menuiserie Fantôme,Nantes,http://127.0.0.1:9/,cabinetmaker,

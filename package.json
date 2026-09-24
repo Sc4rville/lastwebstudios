@@ -1,0 +1,37 @@
+{
+  "name": "lastwebstudios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An autonomous web-design agency: find weak-website businesses, build their demo site from their own content, learn from every outcome.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "setup": "playwright install chromium",
+    "demo": "tsx demo/run-demo.ts",
+    "preview": "tsx scripts/preview.ts",
+    "pipeline": "tsx architecture/orchestration/run.ts",
+    "cycle": "tsx architecture/cycle/cycle.ts",
+    "score": "tsx leadengine/2_scoring/scripts/score.ts",
+    "parse": "tsx leadengine/3_parsing/scripts/parse.ts",
+    "structure": "tsx leadengine/3_parsing/scripts/structure.ts",
+    "compose": "tsx design/scripts/compose.ts",
+    "polish": "tsx design/scripts/polish.ts",
+    "verify": "tsx design/scripts/verify.ts",
+    "package": "tsx distribution/scripts/package.ts",
+    "learn": "tsx learning/scripts/learn.ts",
+    "learn:record": "tsx learning/scripts/record.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

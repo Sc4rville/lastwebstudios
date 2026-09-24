@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# secrets — only .env.example is versioned
+.env
+.env.*
+!.env.example
+
+# the data bus and everything the pipeline generates
+data/
+output/
+distribution/packages/
+journal/
+learning/rules/
+learning/analysis/
+STOP
+
+# OS / editor noise
+.DS_Store
+*.log

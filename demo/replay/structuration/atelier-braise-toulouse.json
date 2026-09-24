@@ -1,0 +1,35 @@
+{
+  "identity": {
+    "zone": "Toulouse, Haute-Garonne et départements limitrophes",
+    "hours": "Lun–Ven 8h–12h / 13h30–17h30 · samedi sur rendez-vous",
+    "since": 2006
+  },
+  "content": {
+    "tagline": "Métallerie d'art & ferronnerie depuis 2006",
+    "about": "Trois compagnons métalliers dans une halle de 600 m². Des ouvrages en métal dessinés au millimètre, forgés pour durer un siècle. Chaque pièce sort de leurs mains, jamais d'un catalogue. Marteau, enclume et cintreuse à galets d'un côté ; découpe plasma et relevé laser 3D de l'autre. En direct avec les architectes et maîtres d'œuvre, du croquis à la pose.",
+    "services": ["Escaliers acier", "Verrières d'atelier", "Mobilier sur mesure", "Ferronnerie d'architecte"],
+    "offers": [
+      { "title": "Escaliers acier", "detail": "Hélicoïdaux, droits ou à crémaillère. Limon plié, marches tôle larmée ou chêne massif sur platine.", "material": "Acier S235 brut ciré · thermolaquage RAL au choix", "leadTime": "8–12 sem." },
+      { "title": "Verrières d'atelier", "detail": "Profils fins soudés-meulés, vitrage feuilleté 44.2. Pose en feuillure sur cloison ou maçonnerie.", "material": "Profilé T & cornière acier · noir graphite mat", "leadTime": "4–6 sem." },
+      { "title": "Mobilier sur mesure", "detail": "Tables, consoles, bibliothèques. Assemblages invisibles, plateaux pierre, chêne ou tôle pleine.", "material": "Acier · laiton · inox 304L", "leadTime": "3–8 sem." },
+      { "title": "Ferronnerie d'architecte", "detail": "Garde-corps, portails, mains courantes. Exécution sur plans, calepinage et pose comprise.", "material": "Fer plein forgé · galvanisation à chaud", "leadTime": "Sur étude" }
+    ],
+    "facts": [
+      { "value": "600", "unit": "m²", "label": "d'atelier, halle unique" },
+      { "value": "3", "label": "compagnons métalliers" },
+      { "value": "240", "unit": "+", "label": "ouvrages livrés depuis 2006" }
+    ],
+    "process": [
+      { "title": "Relevé", "detail": "Mesure laser sur site, analyse des appuis et des tolérances. Rien n'est dessiné avant d'avoir vu le mur." },
+      { "title": "Dessin", "detail": "Plans d'exécution au 1/10e, sections et assemblages validés avec l'architecte avant la première coupe." },
+      { "title": "Forge", "detail": "Débit, forge, soudure semi-auto puis meulage. Finition cirée, thermolaquée ou galvanisée selon l'usage." },
+      { "title": "Pose", "detail": "Pose par nos compagnons, jamais sous-traitée. Réglages sur place, réception contradictoire au niveau laser." }
+    ],
+    "projects": [
+      "Escalier hélicoïdal — maison de ville, Carmes",
+      "Verrière 9 m — loft, Saint-Cyprien",
+      "Console laiton brossé — galerie d'art",
+      "Garde-corps fer plein — appartement sur les quais"
+    ]
+  }
+}

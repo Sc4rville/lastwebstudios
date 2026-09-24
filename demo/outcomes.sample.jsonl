@@ -1,0 +1,36 @@
+{"id": "demo-001", "industry": "pool-builder", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "social": true}, "outcome": "reply", "ts": "2026-01-10T10:00:00Z"}
+{"id": "demo-002", "industry": "pool-builder", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "social": true}, "outcome": "meeting", "ts": "2026-02-11T10:00:00Z"}
+{"id": "demo-003", "industry": "pool-builder", "tier": "hot", "signals": {"gallery": true, "quoteCta": true}, "outcome": "won", "ts": "2026-03-12T10:00:00Z"}
+{"id": "demo-004", "industry": "pool-builder", "tier": "hot", "signals": {"gallery": true, "quoteCta": true}, "outcome": "meeting", "ts": "2026-04-13T10:00:00Z"}
+{"id": "demo-005", "industry": "pool-builder", "tier": "hot", "signals": {"quoteCta": true, "social": true}, "outcome": "won", "ts": "2026-05-14T10:00:00Z"}
+{"id": "demo-006", "industry": "pool-builder", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "social": true}, "outcome": "reply", "ts": "2026-06-15T10:00:00Z"}
+{"id": "demo-007", "industry": "kitchen-designer", "tier": "warm", "signals": {"quoteCta": true, "social": true}, "outcome": "won", "ts": "2026-01-10T10:00:00Z"}
+{"id": "demo-008", "industry": "kitchen-designer", "tier": "warm", "signals": {"gallery": true, "quoteCta": true, "social": true}, "outcome": "lost", "ts": "2026-02-11T10:00:00Z"}
+{"id": "demo-009", "industry": "kitchen-designer", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true}, "outcome": "won", "ts": "2026-03-12T10:00:00Z"}
+{"id": "demo-010", "industry": "kitchen-designer", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "reply", "ts": "2026-04-13T10:00:00Z"}
+{"id": "demo-011", "industry": "kitchen-designer", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "lost", "ts": "2026-05-14T10:00:00Z"}
+{"id": "demo-012", "industry": "kitchen-designer", "tier": "warm", "signals": {"gallery": true, "quoteCta": true}, "outcome": "lost", "ts": "2026-06-15T10:00:00Z"}
+{"id": "demo-013", "industry": "ironworker", "tier": "warm", "signals": {"gallery": true, "quoteCta": true}, "outcome": "won", "ts": "2026-01-10T10:00:00Z"}
+{"id": "demo-014", "industry": "ironworker", "tier": "warm", "signals": {"gallery": true, "quoteCta": true, "social": true}, "outcome": "lost", "ts": "2026-02-11T10:00:00Z"}
+{"id": "demo-015", "industry": "ironworker", "tier": "warm", "signals": {"social": true}, "outcome": "reply", "ts": "2026-03-12T10:00:00Z"}
+{"id": "demo-016", "industry": "ironworker", "tier": "warm", "signals": {"quoteCta": true, "social": true}, "outcome": "won", "ts": "2026-04-13T10:00:00Z"}
+{"id": "demo-017", "industry": "ironworker", "tier": "hot", "signals": {"gallery": true, "premium": true, "social": true}, "outcome": "meeting", "ts": "2026-05-14T10:00:00Z"}
+{"id": "demo-018", "industry": "ironworker", "tier": "warm", "signals": {"quoteCta": true}, "outcome": "lost", "ts": "2026-06-15T10:00:00Z"}
+{"id": "demo-019", "industry": "cabinetmaker", "tier": "warm", "signals": {"quoteCta": true, "social": true}, "outcome": "sent", "ts": "2026-01-10T10:00:00Z"}
+{"id": "demo-020", "industry": "cabinetmaker", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "reply", "ts": "2026-02-11T10:00:00Z"}
+{"id": "demo-021", "industry": "cabinetmaker", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "meeting", "ts": "2026-03-12T10:00:00Z"}
+{"id": "demo-022", "industry": "cabinetmaker", "tier": "warm", "signals": {"gallery": true}, "outcome": "sent", "ts": "2026-04-13T10:00:00Z"}
+{"id": "demo-023", "industry": "cabinetmaker", "tier": "warm", "signals": {"gallery": true}, "outcome": "lost", "ts": "2026-05-14T10:00:00Z"}
+{"id": "demo-024", "industry": "cabinetmaker", "tier": "warm", "signals": {"gallery": true, "quoteCta": true, "social": true}, "outcome": "won", "ts": "2026-06-15T10:00:00Z"}
+{"id": "demo-025", "industry": "wedding-venue", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "won", "ts": "2026-01-10T10:00:00Z"}
+{"id": "demo-026", "industry": "wedding-venue", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "lost", "ts": "2026-02-11T10:00:00Z"}
+{"id": "demo-027", "industry": "wedding-venue", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true, "social": true}, "outcome": "won", "ts": "2026-03-12T10:00:00Z"}
+{"id": "demo-028", "industry": "wedding-venue", "tier": "warm", "signals": {"social": true}, "outcome": "won", "ts": "2026-04-13T10:00:00Z"}
+{"id": "demo-029", "industry": "wedding-venue", "tier": "hot", "signals": {"gallery": true, "quoteCta": true, "premium": true}, "outcome": "won", "ts": "2026-05-14T10:00:00Z"}
+{"id": "demo-030", "industry": "wedding-venue", "tier": "hot", "signals": {"gallery": true, "social": true}, "outcome": "reply", "ts": "2026-06-15T10:00:00Z"}
+{"id": "demo-031", "industry": "landscape-architect", "tier": "warm", "signals": {"gallery": true, "quoteCta": true}, "outcome": "lost", "ts": "2026-01-10T10:00:00Z"}
+{"id": "demo-032", "industry": "landscape-architect", "tier": "hot", "signals": {"gallery": true, "premium": true, "social": true}, "outcome": "reply", "ts": "2026-02-11T10:00:00Z"}
+{"id": "demo-033", "industry": "landscape-architect", "tier": "warm", "signals": {"gallery": true, "quoteCta": true}, "outcome": "sent", "ts": "2026-03-12T10:00:00Z"}
+{"id": "demo-034", "industry": "landscape-architect", "tier": "warm", "signals": {"social": true}, "outcome": "lost", "ts": "2026-04-13T10:00:00Z"}
+{"id": "demo-035", "industry": "landscape-architect", "tier": "warm", "signals": {"social": true}, "outcome": "meeting", "ts": "2026-05-14T10:00:00Z"}
+{"id": "demo-036", "industry": "landscape-architect", "tier": "warm", "signals": {"quoteCta": true}, "outcome": "lost", "ts": "2026-06-15T10:00:00Z"}

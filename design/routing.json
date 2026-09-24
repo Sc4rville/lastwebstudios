@@ -1,0 +1,9 @@
+{
+  "_doc": "Industry → template. Read by compose.ts. The private build routes ~10 industries to a catalog of harvested, de-branded templates and bespoke compositions.",
+  "routes": {
+    "ironworker": "design/templates/atelier",
+    "cabinetmaker": "design/templates/atelier",
+    "kitchen-designer": "design/templates/atelier"
+  },
+  "fallback": "design/templates/atelier"
+}
