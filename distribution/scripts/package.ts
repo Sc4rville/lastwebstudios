@@ -39,7 +39,7 @@ function comparePage(sheet: ProspectSheet): string {
   .cmp .before { clip-path: inset(0 calc(100% - var(--x, 50%)) 0 0); background: #d9d4cc; }
   .bar { position: absolute; top: 0; bottom: 0; left: var(--x, 50%); width: 2px; background: var(--accent); }
   .bar::after { content: "⟷"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--ink); display: grid; place-items: center; font-size: 18px; }
-  .tag { position: absolute; top: 16px; padding: 6px 10px; background: rgba(0,0,0,.7); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+  .tag { position: absolute; top: calc(50% - 14px); padding: 6px 10px; background: rgba(0,0,0,.7); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
   .tag.b { left: 16px; } .tag.a { right: 16px; color: var(--accent); }
 </style>
 </head>
