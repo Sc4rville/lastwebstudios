@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="docs/media/hero.gif" alt="A dated small-business site swept away by the demo LastWebStudios built from its own content, then the new site scrolling" width="1080">
+  <img src="docs/media/hero.gif" alt="The LastWebStudios cockpit: generated sites in a list, live previews, before/after, a review comment, then the grid of every generated site" width="1080">
 </p>
+<p align="center"><sub>The cockpit where generated sites are reviewed: live previews, before/after, comments fed back to the design engine. All businesses shown are fictional.</sub></p>
 
 <h1 align="center">LastWebStudios</h1>
 
