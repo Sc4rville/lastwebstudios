@@ -1,0 +1,13 @@
+# Fonts BANNIES (slug du catalogue, un par ligne). Le composer/orchestrateur ne doit JAMAIS les choisir.
+# Raison : sur-utilisées par défaut (Claude y gravite) → tuent la diversité, ou détestées par l'opérateur.
+reckless
+# génériques / non distinctives (le composer doit choisir du caractère, pas du défaut) :
+inter
+helvetica
+open-sans
+arial
+# fonts d'icônes / bruit (jamais en typo de contenu) :
+icomoon
+mono
+abc
+abcplus

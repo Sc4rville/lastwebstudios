@@ -1,0 +1,45 @@
+<!-- guarantees-grid · guarantees · 3-4 garanties en chips/cartes courtes (garantie 10 ans, devis gratuit, financement) -->
+<section class="grnt" data-section="guarantees-grid">
+  <style>
+    .grnt{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,104px) clamp(20px,5vw,80px)}
+    .grnt__head{max-width:56ch; margin:0 0 clamp(28px,4vw,44px)}
+    .grnt__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .grnt__title{font-family:var(--serif); font-weight:500; line-height:1.08; letter-spacing:-.01em;
+      font-size:clamp(28px,3.6vw,48px); margin:0}
+    .grnt__grid{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(14px,2vw,24px)}
+    .grnt__card{border:1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+      border-radius:10px; padding:clamp(20px,2.4vw,30px)}
+    .grnt__icon{width:clamp(38px,4vw,48px); height:clamp(38px,4vw,48px); border-radius:8px;
+      display:grid; place-items:center; margin:0 0 clamp(16px,2vw,22px);
+      background:color-mix(in srgb, var(--accent) 14%, transparent); color:var(--accent)}
+    .grnt__icon svg{width:50%; height:50%}
+    .grnt__name{font-family:var(--sans); font-weight:600; font-size:clamp(16px,1.3vw,19px); margin:0 0 8px}
+    .grnt__text{font-family:var(--sans); font-size:14px; line-height:1.55; color:var(--muted); margin:0}
+    .grnt .reveal{opacity:1}
+    @media (max-width:880px){ .grnt__grid{grid-template-columns:1fr 1fr} }
+    @media (max-width:480px){ .grnt__grid{grid-template-columns:1fr} }
+  </style>
+
+  <div class="grnt__head reveal">
+    <p class="grnt__kicker">{{KICKER}}</p>
+    <h2 class="grnt__title">{{HEADLINE}}</h2>
+  </div>
+
+  <div class="grnt__grid">
+    <!-- repeat: guarantee -->
+    <article class="grnt__card reveal">
+      <div class="grnt__icon" aria-hidden="true">
+        <!-- icône Lucide (shield-check) ; remplaçable par une autre Lucide selon la garantie -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <h3 class="grnt__name">{{GUARANTEE_TITLE}}</h3>
+      <p class="grnt__text">{{GUARANTEE_TEXT}}</p>
+    </article>
+    <!-- /repeat -->
+  </div>
+</section>

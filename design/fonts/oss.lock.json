@@ -1,0 +1,949 @@
+{
+  "_comment": "Polices LIBRES de LWS : provenance Fontsource (paquets npm @fontsource/*, @fontsource-variable/*, servis par jsDelivr), version figée, sha256 de chaque fichier. Généré par `node scripts/oss/fonts.mjs --fetch` ; vérifié par `node scripts/oss/fonts.mjs` (et par npm test). Ne pas éditer à la main.",
+  "generated": "2026-10-24",
+  "source": "https://fontsource.org",
+  "families": [
+    {
+      "family": "Host Grotesk",
+      "slug": "host-grotesk",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "host-grotesk/OFL.txt",
+        "sha256": "552a7a934f1051e2375c395a77958cc25cc02bba1a66a0186c1e6f019f979d4e",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/host-grotesk@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "host-grotesk/host-grotesk-var.woff2",
+          "weight": "300-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 20296,
+          "sha256": "ce9c9db8a488852eb7e4a52f51fd8ce0c93ef61a8d3bfa054b509ec92958dcfe",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/host-grotesk:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "host-grotesk/host-grotesk-300.woff2",
+          "weight": "300",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13476,
+          "sha256": "f82e028bf296971dde3187767427285e48ec7892ebe319ba1fd4d7cb47ad5c44",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/host-grotesk@5.3.0/latin-300-normal.woff2"
+        },
+        {
+          "file": "host-grotesk/host-grotesk-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13684,
+          "sha256": "66c5700221ce1f6155614a3f869f89c29d48e0a5cf7b8ec1d94f382fae7deef6",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/host-grotesk@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "host-grotesk/host-grotesk-600.woff2",
+          "weight": "600",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13728,
+          "sha256": "91897e9f297d83ea11c844c9db6e4b535b7d85cb8aff7a12c3e75acd07e087e8",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/host-grotesk@5.3.0/latin-600-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Bricolage Grotesque",
+      "slug": "bricolage-grotesque",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "bricolage-grotesque/OFL.txt",
+        "sha256": "923f4ddf0fd39f9b7794ab0df7332f3d95dc43e8ad7ec2289d6d9e8491177f51",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/bricolage-grotesque@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "bricolage-grotesque/bricolage-grotesque-var.woff2",
+          "weight": "200-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 41344,
+          "sha256": "a97804dc9fbe5fc972a08018c5eda4dab7ef2346f64c57e61419d05e6de4ea1c",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/bricolage-grotesque:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Archivo",
+      "slug": "archivo",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "archivo/OFL.txt",
+        "sha256": "c3c8402eec0e31dc9a76851235b1c02a0bb821488b2db8e35bcc2ab60ca8fc2b",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/archivo@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "archivo/archivo-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 34928,
+          "sha256": "8f704806dbedeaaeca334b11ec348bc3ac3a439d6431544b3afb54f534ee4967",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/archivo:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Syne",
+      "slug": "syne",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "syne/OFL.txt",
+        "sha256": "ea775d83f01ecd45fc622fa5db568fad99c9338192594c3719a52b78bab91e44",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/syne@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "syne/syne-var.woff2",
+          "weight": "400-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 34608,
+          "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/syne:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Unbounded",
+      "slug": "unbounded",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "unbounded/OFL.txt",
+        "sha256": "48a780bc857729859e54d1e691b05792894a26634edc1c4b5dbeabffe6941758",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/unbounded@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "unbounded/unbounded-var.woff2",
+          "weight": "200-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 50904,
+          "sha256": "22f9b928aa3928a896340422b54d690fbb5875c30eae4c106f029c61f2289fd6",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/unbounded:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Space Grotesk",
+      "slug": "space-grotesk",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "space-grotesk/OFL.txt",
+        "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "space-grotesk/space-grotesk-var.woff2",
+          "weight": "300-700",
+          "style": "normal",
+          "variable": true,
+          "bytes": 22288,
+          "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "space-grotesk/space-grotesk-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13388,
+          "sha256": "65fd17fcbd2e2f522940b5f67ead3d23329e02891aa5495e74d11a499c0b0673",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "space-grotesk/space-grotesk-500.woff2",
+          "weight": "500",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13312,
+          "sha256": "1b1a8131d9edf975d9decee81e2f2bf504812f7a4f498e5500f28a613e22e64c",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk@5.3.0/latin-500-normal.woff2"
+        },
+        {
+          "file": "space-grotesk/space-grotesk-600.woff2",
+          "weight": "600",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13284,
+          "sha256": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk@5.3.0/latin-600-normal.woff2"
+        },
+        {
+          "file": "space-grotesk/space-grotesk-700.woff2",
+          "weight": "700",
+          "style": "normal",
+          "variable": false,
+          "bytes": 12840,
+          "sha256": "35f8aec56cfd5cbfdb03cc68733a54a0b05bb3617ffcd5fd332badc0b045ca55",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk@5.3.0/latin-700-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Familjen Grotesk",
+      "slug": "familjen-grotesk",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "familjen-grotesk/OFL.txt",
+        "sha256": "3775f2441de413d148650ae0c5688c1065fe9db6cfc54d99eeeb92d97f832cc4",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/familjen-grotesk@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "familjen-grotesk/familjen-grotesk-var.woff2",
+          "weight": "400-700",
+          "style": "normal",
+          "variable": true,
+          "bytes": 18916,
+          "sha256": "414d5dfe5f3d02a327f99ad9121bd77ae931b5b754565578fb0ce4fede2de268",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/familjen-grotesk:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Fraunces",
+      "slug": "fraunces",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "fraunces/OFL.txt",
+        "sha256": "cd3384cafac6f2bddc3955273958a2e029f97027c8037ac539ef5744a77b579e",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "fraunces/fraunces-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 36620,
+          "sha256": "7f9d191d999336d3b9790afa72e1358e50a13b06d4f289341e92a311967a80f9",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/fraunces:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "fraunces/fraunces-var-italic.woff2",
+          "weight": "100-900",
+          "style": "italic",
+          "variable": true,
+          "bytes": 45656,
+          "sha256": "bceec2ef4d549efbc8df0194a8d5280b6a64c3e399244dffccd9ea1bd9ad6db7",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/fraunces:vf@5.3.0/latin-wght-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Cormorant Garamond",
+      "slug": "cormorant-garamond",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "cormorant-garamond/OFL.txt",
+        "sha256": "732f37009943e7f4378cf37113c9bcc4716af002a8583511aa91ed5d37683e73",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "cormorant-garamond/cormorant-garamond-var.woff2",
+          "weight": "300-700",
+          "style": "normal",
+          "variable": true,
+          "bytes": 37640,
+          "sha256": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/cormorant-garamond:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "cormorant-garamond/cormorant-garamond-var-italic.woff2",
+          "weight": "300-700",
+          "style": "italic",
+          "variable": true,
+          "bytes": 39260,
+          "sha256": "6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/cormorant-garamond:vf@5.3.0/latin-wght-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Newsreader",
+      "slug": "newsreader",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "newsreader/OFL.txt",
+        "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/newsreader@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "newsreader/newsreader-var.woff2",
+          "weight": "200-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 58084,
+          "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/newsreader:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "newsreader/newsreader-var-italic.woff2",
+          "weight": "200-800",
+          "style": "italic",
+          "variable": true,
+          "bytes": 64520,
+          "sha256": "48bc8861b9b2ca9300747cad4fd6a3b4ac3028d364df00bd1b72097baa75e509",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/newsreader:vf@5.3.0/latin-wght-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Bodoni Moda",
+      "slug": "bodoni-moda",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "bodoni-moda/OFL.txt",
+        "sha256": "6c64f717433eadd29b058d6254fe25c1ee2d249ce3772f843bb21f73285779c2",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/bodoni-moda@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "bodoni-moda/bodoni-moda-var.woff2",
+          "weight": "400-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 25884,
+          "sha256": "192ae876c21d9258d096a526dad5bddf37f0daa69cfe943cae5f6be5a52adda2",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/bodoni-moda:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "bodoni-moda/bodoni-moda-var-italic.woff2",
+          "weight": "400-900",
+          "style": "italic",
+          "variable": true,
+          "bytes": 30328,
+          "sha256": "e50a00b8431381bd33c7676c50ffb98fc95f4a06c707ea44d04a423266e211cd",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/bodoni-moda:vf@5.3.0/latin-wght-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Source Serif 4",
+      "slug": "source-serif-4",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "source-serif-4/OFL.txt",
+        "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/source-serif-4@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "source-serif-4/source-serif-4-var.woff2",
+          "weight": "200-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 50824,
+          "sha256": "c1df4596be5029233ed2afbb8b2f6ea20784b3fb1aa5d6b5c6519ccd85eb3dfb",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "source-serif-4/source-serif-4-var-italic.woff2",
+          "weight": "200-900",
+          "style": "italic",
+          "variable": true,
+          "bytes": 51516,
+          "sha256": "663e7ef3037a56dce81dfc33f68c1e6445995ffd8887991b3c0b68a7689c9da5",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/source-serif-4:vf@5.3.0/latin-wght-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Instrument Serif",
+      "slug": "instrument-serif",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "instrument-serif/OFL.txt",
+        "sha256": "b6106a757902d2d412e09d94dc4a226fe3da80485208a98003969f1b8b6b1d74",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/instrument-serif@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "instrument-serif/instrument-serif-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 21032,
+          "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "instrument-serif/instrument-serif-400-italic.woff2",
+          "weight": "400",
+          "style": "italic",
+          "variable": false,
+          "bytes": 22128,
+          "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif@5.3.0/latin-400-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "DM Serif Display",
+      "slug": "dm-serif-display",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "dm-serif-display/OFL.txt",
+        "sha256": "e9d4ced9825bf03a6b634c37fe8ae974f6d1b80fbb0bd3ae9b089987e4dc541b",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/dm-serif-display@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "dm-serif-display/dm-serif-display-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 24744,
+          "sha256": "fdf61e20fd2c0108e0ea28da4daca0035205b4b7fc031a3974b865b704de160a",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-display@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "dm-serif-display/dm-serif-display-400-italic.woff2",
+          "weight": "400",
+          "style": "italic",
+          "variable": false,
+          "bytes": 24572,
+          "sha256": "ed8b291611e32fa2d2900488dd48fc95faf0957b2ef7ddf1527e8d21dd9cf2df",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-display@5.3.0/latin-400-italic.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Young Serif",
+      "slug": "young-serif",
+      "category": "serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "young-serif/OFL.txt",
+        "sha256": "ea3081eef60700a513afba76c1b7130facee06be5d221b19a20b75aa52665e06",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/young-serif@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "young-serif/young-serif-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 26992,
+          "sha256": "6ba68b9927ad2a640d32cbea050ffc2b5d0ae6cbaa785afe470da9d6bf0ef39f",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/young-serif@5.3.0/latin-400-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Geist",
+      "slug": "geist",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "geist/OFL.txt",
+        "sha256": "71609cbb5c78b5870d712eab73a31d76622635c6ed034ab5cee3b9ecbda8685f",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/geist@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "geist/geist-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 29400,
+          "sha256": "19f9c92546aa300c312235e3125af1b81394d8db9a4bc4a425cd5b641d2d54e1",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/geist:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "geist/geist-300.woff2",
+          "weight": "300",
+          "style": "normal",
+          "variable": false,
+          "bytes": 13228,
+          "sha256": "9612fb8a87c3284e441675bb34ea4ddca564b40883794f7f14ff12e7382d3d4a",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/geist@5.3.0/latin-300-normal.woff2"
+        },
+        {
+          "file": "geist/geist-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 12956,
+          "sha256": "ead637fd0b6b887d829b3ce3f25fdc242b1de0cfb69c0d97987933675d1315ba",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/geist@5.3.0/latin-400-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Instrument Sans",
+      "slug": "instrument-sans",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "instrument-sans/OFL.txt",
+        "sha256": "c27a3c53c3beed7f5c26853afa15991478ff7145d3754a36b0382f84e10c0d03",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/instrument-sans@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "instrument-sans/instrument-sans-var.woff2",
+          "weight": "400-700",
+          "style": "normal",
+          "variable": true,
+          "bytes": 30092,
+          "sha256": "2ee17598a98d8a59e4df8152d015bec9ab8e4d5672cc0ab42bef806b568e3971",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/instrument-sans:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Manrope",
+      "slug": "manrope",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "manrope/OFL.txt",
+        "sha256": "d826ab6583b12c26807d8716a545bdbbb672df04f48608a364ba9efdbe501c30",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "manrope/manrope-var.woff2",
+          "weight": "200-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 24836,
+          "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/manrope:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Figtree",
+      "slug": "figtree",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "figtree/OFL.txt",
+        "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/figtree@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "figtree/figtree-var.woff2",
+          "weight": "300-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 20156,
+          "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/figtree:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Work Sans",
+      "slug": "work-sans",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "work-sans/OFL.txt",
+        "sha256": "e7c426573d51f3d2e5e92254878c862344ffa0b9272f79a880f9f99010f002c7",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/work-sans@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "work-sans/work-sans-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 50316,
+          "sha256": "1dd49afc07fb2231b2ff686cbf007725fb2742271bb1f28ebd98f22a0d817343",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/work-sans:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "IBM Plex Sans",
+      "slug": "ibm-plex-sans",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "ibm-plex-sans/OFL.txt",
+        "sha256": "d0283623ef57e722fd0eb688a8041589670c608ab780cd3612d06ba6f153d3fd",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-sans@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "ibm-plex-sans/ibm-plex-sans-var.woff2",
+          "weight": "100-700",
+          "style": "normal",
+          "variable": true,
+          "bytes": 45712,
+          "sha256": "e2291e842cf5af167122a22881a740c7f2dda7716f1e8cd76680264f4a859470",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-sans:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "DM Sans",
+      "slug": "dm-sans",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "dm-sans/OFL.txt",
+        "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/dm-sans@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "dm-sans/dm-sans-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 36932,
+          "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/dm-sans:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Schibsted Grotesk",
+      "slug": "schibsted-grotesk",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "schibsted-grotesk/OFL.txt",
+        "sha256": "15222412a95d70042e66e79bfb3b985653e0693e4d41703bc131bee9c5aa1aa7",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/schibsted-grotesk@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "schibsted-grotesk/schibsted-grotesk-var.woff2",
+          "weight": "400-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 46752,
+          "sha256": "4c8b93f431d462c696e12b9d6a033feb3394d36e66e781357c496b95d8a75e05",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/schibsted-grotesk:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Onest",
+      "slug": "onest",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.1",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "onest/OFL.txt",
+        "sha256": "a2a09da98a3d0d1ec79fc2d6deeac748b20a8153e26699552e7b59b5a40b63a3",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/onest@5.3.1/LICENSE"
+      },
+      "files": [
+        {
+          "file": "onest/onest-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 33760,
+          "sha256": "052df74533250c2e0ca0c4bdd32de594e107d99c1648e63820ef9c6142067828",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/onest:vf@5.3.1/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Plus Jakarta Sans",
+      "slug": "plus-jakarta-sans",
+      "category": "sans-serif",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "plus-jakarta-sans/OFL.txt",
+        "sha256": "e07fd1167c2aaaa6fb965dd66e1e73b13c9c95b76b2d648b6e938780f30b37af",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/plus-jakarta-sans@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "plus-jakarta-sans/plus-jakarta-sans-var.woff2",
+          "weight": "200-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 27348,
+          "sha256": "153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/plus-jakarta-sans:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "JetBrains Mono",
+      "slug": "jetbrains-mono",
+      "category": "monospace",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "jetbrains-mono/OFL.txt",
+        "sha256": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "jetbrains-mono/jetbrains-mono-var.woff2",
+          "weight": "100-800",
+          "style": "normal",
+          "variable": true,
+          "bytes": 40404,
+          "sha256": "18be452724bfdc236c074ca94a249a7f41a86752c7d04ab258ce9ed5651f6a7e",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@5.3.0/latin-wght-normal.woff2"
+        },
+        {
+          "file": "jetbrains-mono/jetbrains-mono-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 21168,
+          "sha256": "14425ba9c695763c1547f48a206b7aa60350a33ae23de09f0407877f3fcd89eb",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "jetbrains-mono/jetbrains-mono-500.woff2",
+          "weight": "500",
+          "style": "normal",
+          "variable": false,
+          "bytes": 21832,
+          "sha256": "cb182feeed4d798ff6961d3c79f7026279448fca0676438aaecb21f3fc39553a",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@5.3.0/latin-500-normal.woff2"
+        },
+        {
+          "file": "jetbrains-mono/jetbrains-mono-700.woff2",
+          "weight": "700",
+          "style": "normal",
+          "variable": false,
+          "bytes": 21908,
+          "sha256": "d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@5.3.0/latin-700-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Chivo Mono",
+      "slug": "chivo-mono",
+      "category": "monospace",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "chivo-mono/OFL.txt",
+        "sha256": "7f3169de22ef42f67ffa761b8b0d68f637244aab62b31a3aa1366d6d065a24f9",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/chivo-mono@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "chivo-mono/chivo-mono-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 26336,
+          "sha256": "c00775f8ecb034b6c193c7b253d698cfe882a1d6c0df67299a3d5382c2e82216",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/chivo-mono:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Geist Mono",
+      "slug": "geist-mono",
+      "category": "monospace",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "geist-mono/OFL.txt",
+        "sha256": "cc815ed4fc045f0e991abb10395b7932bd028c6a067deb13316d6002105074e6",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/geist-mono@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "geist-mono/geist-mono-var.woff2",
+          "weight": "100-900",
+          "style": "normal",
+          "variable": true,
+          "bytes": 23128,
+          "sha256": "684ad5b531f81d43c1e8c7038262d5db7cdc1f68006e04d6c7769efa8d33c8cc",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/geist-mono:vf@5.3.0/latin-wght-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "IBM Plex Mono",
+      "slug": "ibm-plex-mono",
+      "category": "monospace",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "ibm-plex-mono/OFL.txt",
+        "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "ibm-plex-mono/ibm-plex-mono-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 14708,
+          "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-mono@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "ibm-plex-mono/ibm-plex-mono-500.woff2",
+          "weight": "500",
+          "style": "normal",
+          "variable": false,
+          "bytes": 14888,
+          "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-mono@5.3.0/latin-500-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "DM Mono",
+      "slug": "dm-mono",
+      "category": "monospace",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "dm-mono/OFL.txt",
+        "sha256": "d2766c396a8534cba53340f8af2037749b6a0a1dd3587348c917a70e779d2e32",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/dm-mono@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "dm-mono/dm-mono-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 14820,
+          "sha256": "e1896b13b2b1bb112fac2f9571bd6c40e118746e77a4511edbf43fbb41bf3e1e",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/dm-mono@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "dm-mono/dm-mono-500.woff2",
+          "weight": "500",
+          "style": "normal",
+          "variable": false,
+          "bytes": 14988,
+          "sha256": "9964608a849396bd00c4bfd7034afe03486469dcf20b4f6b8cbdfdd310369951",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/dm-mono@5.3.0/latin-500-normal.woff2"
+        }
+      ]
+    },
+    {
+      "family": "Space Mono",
+      "slug": "space-mono",
+      "category": "monospace",
+      "license": "OFL-1.1",
+      "version": "5.3.0",
+      "upstream": "https://github.com/google/fonts",
+      "licenseFile": {
+        "file": "space-mono/OFL.txt",
+        "sha256": "761663b7fb7667764f42243f9b1b2bcfccf41b158a7ab508bed4961dcf377eab",
+        "url": "https://cdn.jsdelivr.net/npm/@fontsource/space-mono@5.3.0/LICENSE"
+      },
+      "files": [
+        {
+          "file": "space-mono/space-mono-400.woff2",
+          "weight": "400",
+          "style": "normal",
+          "variable": false,
+          "bytes": 16520,
+          "sha256": "fb4a81a2d0a893e5c38c394a7e716a1cef0b24610a0af49c96f6d529bd66bf2b",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-mono@5.3.0/latin-400-normal.woff2"
+        },
+        {
+          "file": "space-mono/space-mono-700.woff2",
+          "weight": "700",
+          "style": "normal",
+          "variable": false,
+          "bytes": 16724,
+          "sha256": "2d46bd159b53f55c41167a4f1540a074649464194fd1e416f5b4694a6c0f282c",
+          "url": "https://cdn.jsdelivr.net/fontsource/fonts/space-mono@5.3.0/latin-700-normal.woff2"
+        }
+      ]
+    }
+  ]
+}

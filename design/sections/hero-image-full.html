@@ -1,0 +1,49 @@
+<!-- hero-image-full · hero · image plein écran edge-to-edge + titre + CTA en surimpression bas-gauche -->
+<section class="hero-full" data-section="hero-image-full">
+  <style>
+    .hero-full{
+      position:relative; isolation:isolate; min-height:92vh; display:flex; align-items:flex-end;
+      padding:clamp(28px,6vw,72px) clamp(20px,5vw,80px) clamp(40px,7vw,88px);
+      background:var(--bg); color:var(--bg); overflow:hidden;
+    }
+    .hero-full__bg{position:absolute; inset:0; z-index:-2}
+    .hero-full__bg img{width:100%; height:100%; object-fit:cover; object-position:center; display:block;
+      transform:scale(1.04); transition:transform 8s ease-out}
+    .hero-full:hover .hero-full__bg img{transform:scale(1)}
+    .hero-full__scrim{position:absolute; inset:0; z-index:-1;
+      background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.18) 45%, rgba(0,0,0,.62) 100%)}
+    .hero-full__copy{max-width:34ch}
+    .hero-full__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; opacity:.85; margin:0 0 clamp(14px,2vw,22px)}
+    .hero-full__title{font-family:var(--serif); font-weight:500; line-height:1.0; letter-spacing:-.015em;
+      font-size:clamp(40px,8vw,104px); margin:0 0 clamp(16px,2vw,26px)}
+    .hero-full__lead{font-family:var(--sans); font-size:clamp(16px,1.4vw,20px); line-height:1.55;
+      max-width:46ch; opacity:.92; margin:0 0 clamp(24px,3vw,34px)}
+    .hero-full__actions{display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px}
+    .hero-full__cta{font-family:var(--sans); font-weight:600; font-size:16px; padding:15px 28px;
+      border-radius:999px; background:var(--accent); color:var(--bg); text-decoration:none;
+      transition:transform .2s, opacity .2s}
+    .hero-full__cta:hover{transform:translateY(-2px); opacity:.92}
+    .hero-full__phone{font-family:var(--sans); font-weight:600; color:var(--bg); text-decoration:none;
+      border-bottom:1px solid rgba(255,255,255,.5); padding-bottom:2px}
+    .hero-full__phone:hover{border-color:var(--bg)}
+    .hero-full .reveal{opacity:1}
+    @media (max-width:880px){
+      .hero-full{min-height:86vh; padding-bottom:clamp(32px,9vw,56px)}
+      .hero-full__copy{max-width:none}
+    }
+  </style>
+
+  <div class="hero-full__bg"><img src="{{HERO_IMG}}" alt="{{HERO_ALT}}"></div>
+  <div class="hero-full__scrim" aria-hidden="true"></div>
+
+  <div class="hero-full__copy">
+    <p class="hero-full__kicker reveal">{{KICKER}}</p>
+    <h1 class="hero-full__title reveal">{{HEADLINE}}</h1>
+    <p class="hero-full__lead reveal">{{LEAD}}</p>
+    <div class="hero-full__actions reveal">
+      <a class="hero-full__cta" href="{{CTA_HREF}}">{{CTA_LABEL}}</a>
+      <a class="hero-full__phone" href="tel:{{PHONE}}">{{PHONE_DISPLAY}}</a>
+    </div>
+  </div>
+</section>

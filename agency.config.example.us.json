@@ -1,0 +1,60 @@
+{
+  "_comment": "FICTIONAL US example agency (RFC 2606 .example domains, 555-01xx phone, invented address). Copy to agency.config.json for a US studio: country drives the mail footer (CAN-SPAM: postal address required for a live send), phone formats and TLD guesses; language drives the generated sites, mails and call scripts. No public company registry is wired outside France.",
+  "country": "US",
+  "language": "en",
+  "locale": "en-US",
+  "currency": "USD",
+  "timezone": "America/New_York",
+  "name": "Harbor & Pine Web Co.",
+  "slug": "harbor-pine",
+  "website": "https://harborpine.example",
+  "contactEmail": "hello@harborpine.example",
+  "phone": "+1 207-555-0142",
+  "calendarUrl": "https://cal.harborpine.example/15min",
+  "postalAddress": "410 Harbor Street, Suite 2, Portland, ME 04101",
+  "http": {
+    "userAgent": "harbor-pine-leadengine/1.0 (+https://harborpine.example)",
+    "crawlerUserAgent": "Mozilla/5.0 (compatible; harbor-pine/1.0; +https://harborpine.example)"
+  },
+  "mail": {
+    "senderName": "Sam at Harbor & Pine",
+    "signature": "Harbor & Pine Web Co.",
+    "legalIdentity": "Harbor & Pine Web Co.",
+    "heloDomain": "harborpine.example"
+  },
+  "brand": {
+    "expediteur": "Sam",
+    "team": "a small independent web studio that designs and launches websites for local trades and small businesses",
+    "offer": "a site rebuilt from the ground up, launched and looked after: copy, photos, local SEO and online booking",
+    "garantie": "no deposit: you only pay if the new site is right for you"
+  },
+  "invoice": {
+    "seller": {
+      "name": "Harbor & Pine Web Co.",
+      "legal": "<entity type>",
+      "address": "410 Harbor Street, Suite 2, Portland, ME 04101",
+      "siret": "",
+      "tva": "<EIN>",
+      "rcs": "",
+      "email": "hello@harborpine.example",
+      "phone": "+1 207-555-0142",
+      "iban": "",
+      "bic": "",
+      "capital": "",
+      "paymentLink": ""
+    }
+  },
+  "operators": [
+    "sam",
+    "alex"
+  ],
+  "storage": {
+    "bucket": "harbor-pine-assets"
+  },
+  "leadengine": {
+    "searchFallback": false
+  },
+  "outreach": {
+    "competitorClaims": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "value": 41,
+  "tier": "warm",
+  "axes": {
+    "besoin": 45,
+    "levier": 40,
+    "valeur": 50,
+    "closabilite": 60,
+    "expansion": 20
+  },
+  "expectedValue": 33,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": false,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de menuisier : SEO pauvre. On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "SEO pauvre (pas de description / OG)"
+  ],
+  "_sample": "score fictif"
+}

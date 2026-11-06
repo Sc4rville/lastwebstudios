@@ -1,0 +1,41 @@
+Last Web Studios
+Copyright (c) 2026 Scarville
+Licensed under the MIT License (see LICENSE).
+
+This distribution includes or relies on the following third-party material.
+
+1. frontend-design (.claude/skills/frontend-design/)
+   A design-direction skill by Anthropic, licensed under the Apache License,
+   Version 2.0. The composer reads it as its aesthetic frame. The file keeps
+   its own license header; see http://www.apache.org/licenses/LICENSE-2.0.
+
+2. Font library (design/fonts/)
+   31 font families, all under the SIL Open Font License 1.1, obtained from
+   Fontsource (https://fontsource.org), which packages fonts published through
+   Google Fonts. Each family folder carries its own OFL.txt and every file's
+   SHA-256 is pinned in design/fonts/oss.lock.json. The fonts are copyright
+   their respective authors.
+
+3. GSAP (GreenSock Animation Platform)
+   Generated sites may load GSAP from a public CDN at runtime. GSAP is NOT
+   redistributed in this repository and is governed by its own license
+   (https://gsap.com/licensing/). The composer is instructed never to vendor it.
+
+4. OpenStreetMap data
+   The lead engine can query OpenStreetMap through the Overpass API. OSM data
+   is (c) OpenStreetMap contributors, available under the Open Database License
+   (ODbL, https://www.openstreetmap.org/copyright). If you redistribute a list
+   derived from it, the ODbL attribution and share-alike terms apply.
+
+5. Lucide icons
+   The composer may inline Lucide icons (https://lucide.dev) in generated
+   sites. Lucide is licensed under the ISC License, (c) Lucide contributors.
+
+6. SIRENE (French company registry)
+   The lead engine can query the public "recherche-entreprises" API operated by
+   the French government. Data is published under the Licence Ouverte / Open
+   Licence 2.0 (Etalab).
+
+Everything under data/sample/, examples/ and test/fixtures/ is fictional:
+businesses, people, places, phone numbers (ARCEP fiction ranges), e-mail
+addresses (.example domains, RFC 2606) and illustrations made from scratch.

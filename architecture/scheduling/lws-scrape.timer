@@ -1,0 +1,10 @@
+[Unit]
+Description=lastwebstudios — scraping hebdomadaire (lundi 02:00, avant le pipeline de 03:00)
+
+[Timer]
+OnCalendar=Mon *-*-* 02:00:00
+Persistent=true
+# Hebdo suffit : OSM bouge lentement, et le registre dédup garantit qu'un re-run n'ajoute que du neuf.
+
+[Install]
+WantedBy=timers.target

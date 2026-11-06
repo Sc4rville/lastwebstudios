@@ -1,0 +1,30 @@
+# lws-sequencer — UN tick du séquenceur cold-email (outreach/scripts/sequencer.ts), lancé par lws-sequencer.timer.
+# Unité systemd UTILISATEUR, NON installée par défaut (cf. cron.md « Installer »). Chemins par %h (ton HOME) :
+# le dépôt est attendu dans ~/lws (la disposition de la box, cf. worker/setup-box.sh). Ailleurs :
+#   ln -s /chemin/vers/le/depot ~/lws
+#
+# Un tick, dans l'ordre : STOP ? (rien ne bouge) → lecteur de réponses (réponse = Hot Lead) → clics et
+# désinscriptions du tracking → disjoncteur de délivrabilité → envois dus (throttle par boîte).
+#
+# ENVOI RÉEL = DEUX CLÉS, sinon DRY-RUN (le .eml est écrit dans data/sequencer/outbox/, rien ne part) :
+#   1. "dryRun": false dans outreach/sequencer/config.json
+#   2. la ligne Environment=LWS_LIVE_SEND=1 ci-dessous décommentée (dans l'unité, PAS dans .env)
+# dryRun:false sans la 2e clé : le tick refuse (code 2) et l'alerte lws-alert@ se déclenche.
+
+[Unit]
+Description=lastwebstudios — tick du séquenceur cold-email (réponses, clics, disjoncteur, envois dus)
+OnFailure=lws-alert@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+# DATABASE_URL (état partagé avec le cockpit), TRACK_BASE + LWS_TRACK_SECRET (liens signés), LWS_REPLY_READER…
+EnvironmentFile=-%h/lws/.env
+#Environment=LWS_LIVE_SEND=1
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh sequencer sequencer tick
+# un tick lit des boîtes et envoie au plus quelques mails : 10 min suffisent largement
+TimeoutStartSec=600
+# logs : journalctl --user -u lws-sequencer.service · état lu par le cockpit : data/logs/last-sequencer.json

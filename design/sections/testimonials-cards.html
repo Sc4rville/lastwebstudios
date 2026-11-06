@@ -1,0 +1,55 @@
+<!-- testimonials-cards · testimonials · 3 avis en cartes, citation + nom + source (Google/Trustpilot) cliquable -->
+<section class="tst-cards" data-section="testimonials-cards">
+  <style>
+    .tst-cards{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,112px) clamp(20px,5vw,80px)}
+    .tst-cards__head{display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap;
+      gap:16px; margin:0 0 clamp(28px,4vw,48px)}
+    .tst-cards__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .tst-cards__title{font-family:var(--serif); font-weight:500; line-height:1.08; letter-spacing:-.01em;
+      font-size:clamp(30px,4vw,52px); margin:0}
+    .tst-cards__score{font-family:var(--sans); font-size:14px; color:var(--muted)}
+    .tst-cards__score b{font-family:var(--serif); font-size:clamp(20px,2vw,28px); color:var(--fg)}
+    .tst-cards__grid{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2vw,28px)}
+    .tst-cards__card{border:1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+      border-radius:8px; padding:clamp(22px,2.5vw,32px); display:flex; flex-direction:column}
+    .tst-cards__stars{display:flex; gap:3px; color:var(--accent); margin:0 0 clamp(14px,2vw,20px)}
+    .tst-cards__stars svg{width:18px; height:18px}
+    .tst-cards__quote{font-family:var(--serif); font-size:clamp(17px,1.4vw,21px); line-height:1.45;
+      margin:0 0 clamp(18px,2.5vw,26px); flex:1}
+    .tst-cards__meta{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .tst-cards__author{font-family:var(--sans); font-weight:600; font-size:15px; margin:0}
+    .tst-cards__src{font-family:var(--sans); font-size:13px; color:var(--muted); text-decoration:none}
+    .tst-cards__src:hover{color:var(--accent)}
+    .tst-cards .reveal{opacity:1}
+    @media (max-width:880px){ .tst-cards__grid{grid-template-columns:1fr} }
+  </style>
+
+  <div class="tst-cards__head reveal">
+    <div>
+      <p class="tst-cards__kicker">{{KICKER}}</p>
+      <h2 class="tst-cards__title">{{HEADLINE}}</h2>
+    </div>
+    <p class="tst-cards__score"><b>{{RATING}}</b> / 5 · {{REVIEW_COUNT}}</p>
+  </div>
+
+  <div class="tst-cards__grid">
+    <!-- repeat: review -->
+    <figure class="tst-cards__card reveal">
+      <div class="tst-cards__stars" aria-label="{{STARS_LABEL}}">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <blockquote class="tst-cards__quote">{{QUOTE}}</blockquote>
+      <figcaption class="tst-cards__meta">
+        <p class="tst-cards__author">{{AUTHOR}}</p>
+        <a class="tst-cards__src" href="{{SOURCE_HREF}}" target="_blank" rel="noopener">{{SOURCE_LABEL}}</a>
+      </figcaption>
+    </figure>
+    <!-- /repeat -->
+  </div>
+</section>

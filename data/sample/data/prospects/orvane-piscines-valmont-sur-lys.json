@@ -1,0 +1,241 @@
+{
+  "id": "orvane-piscines-valmont-sur-lys",
+  "industry": "pisciniste",
+  "identity": {
+    "name": "Orvane Piscines",
+    "city": "Valmont-sur-Lys",
+    "phone": "03 53 01 24 68",
+    "email": "contact@orvane-piscines.example",
+    "hours": "Lundi au samedi 9h - 12h / 14h - 18h",
+    "zone": "Valmont-sur-Lys et 40 km"
+  },
+  "content": {
+    "tagline": "Votre piscine, notre savoir-faire depuis 1998 !",
+    "about": "Depuis plus de quinze ans, Orvane Piscines construit, rénove et entretient les piscines des familles de la vallée de la Lys. Une petite équipe de passionnés accompagne de A à Z : étude du terrain, choix du bassin, terrassement, maçonnerie, pose du liner ou du carrelage, filtration, mise en eau et conseils d'entretien. Chaque chantier est suivi par le même chef d'équipe, du premier coup de pelle à la première baignade. Travail avec des matériaux de qualité et des fournisseurs de la région.",
+    "services": [
+      "Construction de piscines enterrées et semi-enterrées, en béton ou en kit, toutes formes",
+      "Rénovation de bassins : changement de liner, reprise des margelles, mise aux normes de la sécurité",
+      "Spas et abris : spas 3 à 6 places, abris bas et télescopiques, volets roulants",
+      "Entretien saisonnier : mise en hivernage, remise en route au printemps, contrats annuels",
+      "Dépannage filtration : pompes, filtres à sable, électrolyseurs, régulation du pH"
+    ]
+  },
+  "assets": {
+    "logo": "assets/orvane-piscines-valmont-sur-lys/logo.svg",
+    "photos": [
+      "assets/orvane-piscines-valmont-sur-lys/photo-1.svg",
+      "assets/orvane-piscines-valmont-sur-lys/photo-2.svg",
+      "assets/orvane-piscines-valmont-sur-lys/photo-3.svg",
+      "assets/orvane-piscines-valmont-sur-lys/photo-4.svg",
+      "assets/orvane-piscines-valmont-sur-lys/photo-5.svg"
+    ]
+  },
+  "existing": {
+    "url": "http://orvane-piscines.example/",
+    "screenshot": "assets/orvane-piscines-valmont-sur-lys/avant.png"
+  },
+  "score": {
+    "value": 95,
+    "tier": "hot",
+    "axes": {
+      "besoin": 98,
+      "levier": 100,
+      "valeur": 100,
+      "closabilite": 100,
+      "expansion": 55
+    },
+    "expectedValue": 98,
+    "signals": {
+      "gallery": true,
+      "quoteCta": true,
+      "social": false,
+      "premium": true,
+      "multiSite": false,
+      "ecommerce": false,
+      "booking": false,
+      "blog": false
+    },
+    "feasible": true,
+    "accroche": "Votre site de pisciniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+    "reasons": [
+      "pas responsive (pas de viewport)",
+      "SEO pauvre (pas de description / OG)",
+      "pas de HTTPS (sécurité + SEO pénalisé)",
+      "aucune donnée structurée (SEO local faible)",
+      "vieux jQuery (socle technique daté)",
+      "page très pauvre (peu de contenu)",
+      "dernière trace de maj : 2016",
+      "axes — besoin 98 · levier 100 · valeur 100 · closab. 100 · expansion 55 → € espéré 98"
+    ]
+  },
+  "audit": {
+    "date": "2026-10-24",
+    "url": "http://orvane-piscines.example/",
+    "finalUrl": "http://orvane-piscines.example/",
+    "reachable": true,
+    "https": false,
+    "loadMs": 64,
+    "mobile": {
+      "overflowPx": 510,
+      "brokenMobile": true,
+      "hasViewportMeta": false,
+      "overflow768": 132,
+      "overflow1280": 0
+    },
+    "contact": {
+      "hasForm": false,
+      "hasTel": true,
+      "hasMailto": true,
+      "hasPhoneText": true,
+      "hasEmailText": true,
+      "hasContactLink": true
+    },
+    "seo": {
+      "title": "Orvane Piscines - Pisciniste - Valmont-sur-Lys - Accueil",
+      "titleLen": 56,
+      "hasMetaDesc": false,
+      "h1Count": 1,
+      "imgCount": 5,
+      "imgNoAlt": 0,
+      "hasCanonical": false,
+      "jsonLdCount": 0,
+      "hasOgTitle": false,
+      "hasOgImage": false
+    },
+    "strengths": {
+      "videos": 0,
+      "hasBooking": false,
+      "hasReviews": false,
+      "googleRating": null,
+      "reviewCount": null,
+      "copyrightYear": 2016,
+      "stale": true
+    },
+    "buttons": {
+      "tested": 3,
+      "dead": []
+    },
+    "form": {
+      "present": false,
+      "status": "none"
+    },
+    "overlap": {
+      "desktop": {
+        "count": 0,
+        "examples": []
+      },
+      "mobile": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "perf": {
+      "available": false,
+      "score": null,
+      "lcpMs": null,
+      "cls": null,
+      "source": "psi"
+    },
+    "pages": [
+      {
+        "url": "http://orvane-piscines.example/contact.html",
+        "kind": "contact",
+        "reachable": true,
+        "overflow": {
+          "at390": 510,
+          "at768": 132,
+          "at1280": 0
+        },
+        "overlapDesktop": {
+          "count": 0,
+          "examples": []
+        },
+        "overlapMobile": {
+          "count": 0,
+          "examples": []
+        },
+        "brokenImages": []
+      },
+      {
+        "url": "http://orvane-piscines.example/realisations.html",
+        "kind": "portfolio",
+        "reachable": true,
+        "overflow": {
+          "at390": 510,
+          "at768": 132,
+          "at1280": 0
+        },
+        "overlapDesktop": {
+          "count": 0,
+          "examples": []
+        },
+        "overlapMobile": {
+          "count": 0,
+          "examples": []
+        },
+        "brokenImages": []
+      }
+    ],
+    "screenshots": {
+      "desktop": "data/assets/orvane-piscines-valmont-sur-lys/_audit-desktop.png",
+      "mobile": "data/assets/orvane-piscines-valmont-sur-lys/_audit-mobile.png"
+    },
+    "links": {
+      "checked": 4,
+      "broken": []
+    },
+    "functional": {
+      "jsErrors": 0,
+      "jsErrorMessages": [],
+      "deadLinks": 1,
+      "brokenImages": 0,
+      "brokenImageUrls": []
+    },
+    "issues": [
+      "Pas de HTTPS : le navigateur affiche « Non sécurisé », ça fait fuir et Google pénalise.",
+      "Le site déborde horizontalement sur mobile (510px de scroll latéral à 390px) : pénible à lire au téléphone.",
+      "Le site déborde aussi horizontalement sur tablette (132px à 768px).",
+      "Pas de balise viewport : le site n'est pas pensé pour le mobile (texte minuscule, zoom forcé).",
+      "Le pied de page affiche « © 2016 » : le site paraît à l'abandon / non mis à jour depuis 10 an(s).",
+      "Pas de meta description : Google affiche un extrait au hasard sous votre lien.",
+      "Pas d'URL canonique (balise canonical) : risque de contenu dupliqué aux yeux de Google.",
+      "Aucune donnée structurée (JSON-LD) : Google ne peut pas afficher d'infos enrichies (étoiles, horaires, adresse).",
+      "Balises Open Graph incomplètes : les partages sur réseaux sociaux s'affichent sans aperçu propre.",
+      "Sur la page contact, débordement horizontal sur mobile (510px).",
+      "Sur la page réalisations/portfolio, débordement horizontal sur mobile (510px)."
+    ],
+    "clientIssues": [
+      "Pas de HTTPS : le navigateur affiche « Non sécurisé », ça fait fuir et Google pénalise.",
+      "Le site déborde horizontalement sur mobile (510px de scroll latéral à 390px) : pénible à lire au téléphone.",
+      "Le site déborde aussi horizontalement sur tablette (132px à 768px).",
+      "Pas de balise viewport : le site n'est pas pensé pour le mobile (texte minuscule, zoom forcé).",
+      "Le pied de page affiche « © 2016 » : le site paraît à l'abandon / non mis à jour depuis 10 an(s).",
+      "Sur la page contact, débordement horizontal sur mobile (510px).",
+      "Sur la page réalisations/portfolio, débordement horizontal sur mobile (510px)."
+    ]
+  },
+  "brief": {
+    "date": "2026-10-24",
+    "beauty_before": {
+      "score": 2,
+      "why": "Mise en page en tableaux de 2016 (largeur fixe 900px, fond à motif qui écrase le contenu, bandeau marquee « PROMOTION PRINTEMPS 2016 », compteur de visiteurs) : un site d'archive, pas une vitrine de pisciniste premium."
+    },
+    "what": "Pisciniste familial (construction, rénovation, spas/abris, entretien) actif depuis 1998 autour de Valmont-sur-Lys, positionné sur le suivi artisanal (même chef d'équipe du premier coup de pelle à la première baignade) et le bouche-à-oreille local.",
+    "problems": [
+      "Pas de HTTPS : avertissement « Non sécurisé » dans le navigateur, et pénalité Google (audit).",
+      "Casse entièrement sur mobile et tablette : 510px de débordement horizontal à 390px (et sur les pages contact/réalisations), pas de balise viewport — la majorité des visites mobiles sont illisibles (audit).",
+      "Design visuellement daté et anxiogène à l'œil : fond à motif saturé en damier orange, mise en page en tableaux HTML, bandeau défilant « PROMOTION PRINTEMPS 2016 », compteur de visiteurs « n° 004217 » (avant.png).",
+      "Aucune preuve sociale : zéro avis, zéro note Google, zéro témoignage, zéro photo réelle de chantier — seulement 4 illustrations SVG génériques en guise de « réalisations » (fiche + audit : avis false, vidéos 0).",
+      "Pied de page « © 2016 », dernière maj 12/03/2016 : le site paraît à l'abandon depuis 10 ans, ce qui inquiète sur la fiabilité de l'entreprise plutôt que de la rassurer (audit).",
+      "SEO pauvre : pas de meta description, pas de canonical, aucune donnée structurée (JSON-LD), Open Graph incomplet — invisible en recherche locale (audit)."
+    ],
+    "angle": "L'artisan de confiance qui suit chaque piscine de A à Z depuis 1998 — mérite une vitrine aussi soignée que son travail, pas un site d'archive des années 2000.",
+    "moves": [
+      "Hero plein écran avec une vraie photo de bassin terminé (remplacer les SVG génériques par un visuel chaleureux, eau turquoise, lumière d'été) + CTA devis gratuit immédiat, visible dès le premier écran mobile.",
+      "Mettre en avant la garantie décennale, l'assurance et le suivi par un même chef d'équipe comme preuve de sérieux (actuellement noyés en bas de page) ; section « Pourquoi nous choisir » remontée et illustrée.",
+      "Palette eau/nature sobre (bleu profond + sable/vert, fini le damier orange) avec une paire de fonts sérieuse et chaleureuse du catalogue design/fonts, grille responsive propre (fini le layout en tableaux) pour que mobile et desktop soient enfin impeccables."
+    ],
+    "keep": []
+  },
+  "_sample": "FICTIF : prospect inventé pour la sandbox et la démo (aucune entreprise réelle)."
+}

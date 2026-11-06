@@ -1,0 +1,20 @@
+{
+  "slug": "bureaubenjamin-com",
+  "url": "https://www.bureaubenjamin.com/",
+  "vars": {
+    "--cream": "#F6F2E5",
+    "--pink": "#D9719C"
+  },
+  "palette": [
+    "#f6f2e5",
+    "#d9719c",
+    "#efefef",
+    "#e4e4e4",
+    "#dedede",
+    "#bdbdbd",
+    "#1990c6",
+    "#136f99",
+    "#121212",
+    "#f003"
+  ]
+}

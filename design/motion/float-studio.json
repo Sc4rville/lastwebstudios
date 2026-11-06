@@ -1,0 +1,10 @@
+{
+  "slug": "float-studio",
+  "url": "https://www.float.studio/",
+  "stack": [
+    "three.js",
+    "lottie",
+    "swiper"
+  ],
+  "scroll": "native"
+}

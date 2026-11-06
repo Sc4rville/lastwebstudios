@@ -1,0 +1,18 @@
+# lws-learn — la boucle LEARNING de nuit : `npm run learn` relit toutes les issues (data/outcomes.jsonl + base :
+# Signature = won, Perdu = lost, RDV = meeting, réponse = reply, écrites automatiquement par le cockpit et le
+# séquenceur) et recalcule les poids de la porte de scoring (learning/rules/rules.json, ±15 par métier).
+# Unité systemd UTILISATEUR, NON installée par défaut (cf. cron.md). Dépôt attendu dans ~/lws (%h/lws).
+# Aucun LLM, aucun réseau hors la base : quelques secondes.
+
+[Unit]
+Description=lastwebstudios — learning de nuit (issues CRM → poids de la porte de scoring)
+OnFailure=lws-alert@%n.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh learn learn
+TimeoutStartSec=300
+# logs : journalctl --user -u lws-learn.service · état : data/logs/last-learn.json

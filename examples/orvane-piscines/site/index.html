@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orvane Piscines, pisciniste à Valmont-sur-Lys depuis 1998</title>
+<meta name="description" content="Orvane Piscines construit, rénove et entretient les piscines de la vallée de la Lys depuis 1998. Un seul chef d'équipe du premier coup de pelle à la première baignade. Devis détaillé et gratuit.">
+<meta property="og:title" content="Orvane Piscines, pisciniste à Valmont-sur-Lys depuis 1998">
+<meta property="og:description" content="Construction, rénovation, spas et abris, entretien. Le même chef d'équipe de A à Z, dans un rayon de 40 km autour de Valmont-sur-Lys.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/bassin-2.svg">
+<meta name="theme-color" content="#F4EFE6">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Orvane Piscines",
+  "description": "Pisciniste : construction, rénovation, spas et abris, entretien saisonnier et dépannage filtration.",
+  "telephone": "+33353012468",
+  "email": "contact@orvane-piscines.example",
+  "foundingDate": "1998",
+  "address": { "@type": "PostalAddress", "streetAddress": "12 chemin des Tilleuls", "addressLocality": "Valmont-sur-Lys", "addressCountry": "FR" },
+  "areaServed": "Valmont-sur-Lys et 40 km alentour",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "14:00", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+@font-face{font-family:"Host Grotesk";src:url("fonts/host-grotesk-300.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Host Grotesk";src:url("fonts/host-grotesk-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Host Grotesk";src:url("fonts/host-grotesk-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist";src:url("fonts/geist-300.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist";src:url("fonts/geist-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+
+:root{
+  --bg:#F4EFE6;          /* sable clair, dominant */
+  --bg-2:#EAE3D5;        /* sable plus dense */
+  --water:#DCEBEE;       /* bleu d'eau très pâle */
+  --fg:#0E2A3A;          /* encre bleu nuit */
+  --muted:#4E5E69;
+  --accent:#0D5C8A;      /* le bleu du logo */
+  --sky:#5FC6EE;         /* l'eau du logo, ponctuation */
+  --night:#0B2F45;
+  --line:color-mix(in srgb, var(--fg) 16%, transparent);
+  --serif:"Host Grotesk", "Geist", sans-serif;
+  --sans:"Geist", "Host Grotesk", sans-serif;
+  --mono:"Geist", sans-serif;
+  --pad:clamp(20px,5vw,80px);
+  --ease:cubic-bezier(.22,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+.kicker{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 clamp(16px,2vw,24px)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:16px;line-height:1.2;padding:16px 26px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;transition:transform .2s var(--ease),background-color .2s}
+.btn:hover{transform:translateY(-2px);background:#0A4C73}
+.btn svg{width:18px;height:18px}
+.ulink{font-family:var(--serif);font-weight:600;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:3px;transition:background-size .2s var(--ease),color .2s}
+.ulink:hover{color:var(--accent);background-size:100% 2px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* HEADER */
+.site-head{position:sticky;top:0;z-index:20;height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--pad);background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-head__logo img{height:46px;width:auto;border-radius:6px}
+.site-head nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px)}
+.site-head nav a.nl{font-size:15px;text-decoration:none;color:var(--fg);transition:color .2s}
+.site-head nav a.nl:hover{color:var(--accent)}
+.site-head .btn{padding:11px 18px;font-size:15px}
+
+/* HERO : hero-split (catalogue) */
+.hero-sp{display:grid;grid-template-columns:1.02fr 0.98fr;min-height:calc(100svh - 76px);background:var(--bg)}
+.hero-sp__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,96px) clamp(24px,5vw,80px) clamp(40px,5vw,72px) var(--pad)}
+.hero-sp__title{font-weight:300;font-size:clamp(42px,5.6vw,88px);line-height:1.06;letter-spacing:-.025em;margin:0 0 clamp(22px,2.6vw,34px);max-width:12.5ch}
+.hero-sp__title strong{font-weight:400;color:var(--accent)}
+.hero-sp__lead{font-size:clamp(17px,1.3vw,20px);line-height:1.6;color:var(--muted);max-width:46ch;margin:0 0 clamp(28px,3vw,40px)}
+.hero-sp__actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px}
+.hero-sp__phone{font-family:var(--serif);font-weight:600;font-size:17px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:color .2s}
+.hero-sp__phone:hover{color:var(--accent)}
+.hero-sp__phone svg{width:18px;height:18px;color:var(--accent)}
+.hero-sp__meta{margin-top:clamp(40px,5.5vw,76px);padding-top:clamp(20px,2vw,26px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(24px,4vw,56px)}
+.hero-sp__meta b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.4vw,36px);line-height:1.1;letter-spacing:-.01em}
+.hero-sp__meta span{display:block;font-size:14px;line-height:1.4;color:var(--muted);margin-top:6px;max-width:20ch}
+.hero-sp__media{position:relative;margin:0;overflow:hidden;background:#f5b46b}
+.hero-sp__media img{width:100%;height:100%;object-fit:cover;object-position:72% 60%}
+.hero-sp__tag{position:absolute;left:clamp(16px,2vw,28px);bottom:clamp(16px,2vw,28px);display:flex;align-items:center;gap:10px;background:rgba(244,239,230,.94);color:var(--fg);font-size:14px;line-height:1.3;padding:10px 14px;border-radius:6px}
+.hero-sp__tag i{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
+
+/* PROCESS : process-timeline (catalogue) */
+.proc-tl{padding:clamp(72px,10vw,150px) var(--pad);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,96px);align-items:start;background:var(--bg)}
+.proc-tl__title{font-size:clamp(32px,4.2vw,60px);line-height:1.08;letter-spacing:-.02em;margin:0 0 clamp(18px,2vw,26px);max-width:18ch}
+.proc-tl__intro{color:var(--muted);max-width:52ch;margin:0 0 clamp(44px,5vw,72px)}
+.proc-tl__track{position:relative}
+.proc-tl__list{list-style:none;margin:0;padding:0}
+.proc-tl__track::before,.proc-tl__fill{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:2px;border-radius:2px;background:var(--line)}
+.proc-tl__fill{background:var(--accent);transform-origin:top}
+.proc-tl__item{position:relative;display:grid;grid-template-columns:48px 1fr;gap:clamp(18px,2.4vw,32px);padding:0 0 clamp(30px,3.6vw,48px)}
+.proc-tl__item:last-child{padding-bottom:0}
+.proc-tl__dot{position:relative;z-index:1;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1px solid var(--accent);font-family:var(--serif);font-size:15px;color:var(--accent)}
+.proc-tl__name{font-size:clamp(21px,1.9vw,28px);line-height:1.2;letter-spacing:-.01em;margin:8px 0 8px}
+.proc-tl__text{color:var(--muted);max-width:50ch}
+.proc-tl__media{position:sticky;top:108px;margin:0}
+.proc-tl__frame{aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#7ec8f0}
+.proc-tl__frame img{width:100%;height:100%;object-fit:cover;object-position:58% 55%}
+.proc-tl__media figcaption{display:flex;justify-content:space-between;gap:16px;margin-top:14px;font-size:14px;color:var(--muted)}
+
+/* SERVICES : services-list (catalogue) */
+.svc-list{padding:clamp(72px,9vw,140px) var(--pad) clamp(56px,7vw,100px);background:var(--bg-2)}
+.svc-list__head{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(20px,5vw,80px);align-items:end;margin:0 0 clamp(36px,5vw,64px)}
+.svc-list__title{font-size:clamp(34px,5vw,72px);line-height:1.06;letter-spacing:-.02em}
+.svc-list__intro{font-size:clamp(16px,1.25vw,19px);color:var(--muted);max-width:54ch}
+.svc-list__rows{border-top:1px solid var(--fg)}
+.svc-list__row{display:grid;grid-template-columns:72px 1fr 1.1fr 32px;align-items:baseline;gap:clamp(16px,3vw,48px);padding:clamp(22px,2.8vw,40px) 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:padding-left .25s var(--ease),background-color .25s}
+.svc-list__row:hover{padding-left:clamp(8px,1.4vw,18px)}
+.svc-list__idx{font-family:var(--serif);font-size:15px;color:var(--accent)}
+.svc-list__name{font-size:clamp(24px,2.7vw,40px);line-height:1.1;letter-spacing:-.015em}
+.svc-list__desc{color:var(--muted);max-width:46ch}
+.svc-list__arrow{align-self:center;color:var(--muted);transition:transform .25s var(--ease),color .25s}
+.svc-list__row:hover .svc-list__arrow{transform:translateX(6px);color:var(--accent)}
+.svc-list__arrow svg{width:24px;height:24px}
+
+/* BANDE PLEINE LARGEUR : spas et abris */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--bg-2)}
+.duo figure{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden}
+.duo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;transition:transform .6s var(--ease)}
+.duo figure:hover img{transform:scale(1.03)}
+.duo figcaption{position:absolute;left:clamp(16px,2.4vw,36px);bottom:clamp(16px,2.4vw,32px);background:rgba(244,239,230,.94);padding:12px 16px;border-radius:6px;max-width:calc(100% - 32px)}
+.duo figcaption b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(16px,1.4vw,20px);line-height:1.25}
+.duo figcaption span{display:block;font-size:14px;color:var(--muted);line-height:1.35}
+
+/* ENTRETIEN & SAV */
+.care{padding:clamp(72px,10vw,150px) var(--pad);background:var(--water);display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(36px,6vw,96px);align-items:start}
+.care__title{font-size:clamp(34px,4.6vw,66px);line-height:1.07;letter-spacing:-.02em;margin:0 0 clamp(20px,2.4vw,30px);max-width:15ch}
+.care__text{color:var(--muted);max-width:44ch;margin:0 0 clamp(26px,3vw,36px)}
+.care__rows{border-top:1px solid color-mix(in srgb, var(--fg) 22%, transparent)}
+.care__row{display:grid;grid-template-columns:150px 1fr;gap:clamp(16px,3vw,40px);padding:clamp(22px,2.6vw,34px) 0;border-bottom:1px solid color-mix(in srgb, var(--fg) 22%, transparent)}
+.care__when{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.care__when svg{width:20px;height:20px;flex:none}
+.care__row h3{font-size:clamp(21px,1.9vw,27px);line-height:1.2;letter-spacing:-.01em;margin:0 0 6px}
+.care__row p{color:var(--muted)}
+
+/* CONFIANCE : guarantees-grid (catalogue), version filets */
+.grnt{padding:clamp(72px,9vw,140px) var(--pad);background:var(--bg)}
+.grnt__head{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,5vw,80px);align-items:end;margin:0 0 clamp(40px,5vw,72px)}
+.grnt__title{font-size:clamp(32px,4.2vw,60px);line-height:1.08;letter-spacing:-.02em;max-width:17ch}
+.grnt__intro{color:var(--muted);max-width:46ch}
+.grnt__grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--fg)}
+.grnt__card{padding:clamp(24px,2.6vw,36px) clamp(18px,2vw,30px) 0 0;margin-right:clamp(18px,2vw,30px);border-right:1px solid var(--line);min-height:100%}
+.grnt__card:last-child{border-right:0;margin-right:0}
+.grnt__icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb, var(--accent) 12%, transparent);color:var(--accent);margin:0 0 clamp(20px,2.4vw,30px)}
+.grnt__icon svg{width:22px;height:22px}
+.grnt__name{font-size:clamp(19px,1.6vw,23px);line-height:1.25;margin:0 0 10px;letter-spacing:-.005em}
+.grnt__text{font-size:15.5px;color:var(--muted);line-height:1.55;padding-bottom:6px}
+
+/* CONTACT / CTA FINAL (seule bascule sombre) */
+.contact{background:var(--night);color:#F4EFE6;padding:clamp(72px,10vw,150px) var(--pad) clamp(56px,7vw,96px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.contact .kicker{color:var(--sky)}
+.contact__title{font-size:clamp(38px,5.4vw,80px);line-height:1.06;letter-spacing:-.025em;font-weight:300;margin:0 0 clamp(20px,2.4vw,30px);max-width:12ch}
+.contact__lead{color:#B9CAD4;max-width:44ch;margin:0 0 clamp(32px,4vw,48px)}
+.contact__tel{display:inline-block;font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.4vw,48px);line-height:1.1;letter-spacing:-.01em;text-decoration:none;color:#fff;margin:0 0 clamp(28px,3vw,40px);transition:color .2s}
+.contact__tel:hover{color:var(--sky)}
+.contact__dl{display:grid;grid-template-columns:auto 1fr;gap:12px 28px;margin:0;border-top:1px solid rgba(244,239,230,.18);padding-top:clamp(20px,2.4vw,28px);font-size:15.5px}
+.contact__dl dt{color:#9FB4C1}
+.contact__dl dd{margin:0;color:#F4EFE6}
+.contact__dl a{text-decoration:none;border-bottom:1px solid rgba(95,198,238,.6)}
+.contact__dl a:hover{color:var(--sky)}
+.form{background:#F4EFE6;color:var(--fg);border-radius:8px;padding:clamp(24px,3vw,44px)}
+.form h3{font-size:clamp(22px,2vw,28px);line-height:1.2;margin:0 0 6px}
+.form > p{color:var(--muted);font-size:15px;margin:0 0 clamp(20px,2.4vw,28px)}
+.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:block;font-size:14px;color:var(--fg)}
+.form label.full{grid-column:1/-1}
+.form input,.form select,.form textarea{display:block;width:100%;margin-top:6px;font:inherit;font-size:16px;color:var(--fg);background:#fff;border:1px solid color-mix(in srgb, var(--fg) 22%, transparent);border-radius:6px;padding:12px 14px;transition:border-color .2s}
+.form textarea{min-height:96px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent)}
+.form .btn{margin-top:22px;width:100%;justify-content:center;border:0;cursor:pointer}
+.form small{display:block;margin-top:12px;font-size:13px;color:var(--muted)}
+
+.foot{background:var(--night);color:#9FB4C1;padding:28px var(--pad) 36px;border-top:1px solid rgba(244,239,230,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:14px}
+.foot b{font-family:var(--serif);font-weight:600;color:#F4EFE6;font-size:16px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--sky)}
+
+/* barre d'action mobile */
+.mbar{display:none}
+
+/* MOTION (3 mouvements) : 1 entrée du héros · 2 reveal de section au scroll · 3 la ligne du chantier qui se remplit */
+@keyframes heroIn{from{opacity:.4;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes heroImg{from{transform:scale(1.05)}to{transform:none}}
+.hero-sp__copy > *{animation:heroIn .9s var(--ease) both}
+.hero-sp__copy > :nth-child(2){animation-delay:.08s}
+.hero-sp__copy > :nth-child(3){animation-delay:.16s}
+.hero-sp__copy > :nth-child(4){animation-delay:.24s}
+.hero-sp__copy > :nth-child(5){animation-delay:.32s}
+.hero-sp__media img{animation:heroImg 1.6s var(--ease) both}
+@supports (animation-timeline: view()){
+  @keyframes rise{from{opacity:.4;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .reveal{animation:rise linear none;animation-timeline:view();animation-range:entry 0% entry 70%}
+  @keyframes fillLine{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  .proc-tl__fill{animation:fillLine linear none;animation-timeline:--steps;animation-range:entry 0% contain 60%}
+  .proc-tl__track{view-timeline-name:--steps}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* RESPONSIVE */
+@media (max-width:1100px){
+  .svc-list__row{grid-template-columns:56px 1fr 32px}
+  .svc-list__desc{grid-column:2/3;margin-top:-6px}
+  .svc-list__arrow{grid-column:3;grid-row:1}
+  .grnt__grid{grid-template-columns:1fr 1fr}
+  .grnt__card:nth-child(2){border-right:0;margin-right:0}
+  .grnt__card:nth-child(n+3){border-top:1px solid var(--line);margin-top:clamp(24px,2.6vw,36px)}
+}
+@media (max-width:880px){
+  .foot{padding-bottom:104px}
+  .site-head{height:64px}
+  .site-head__logo img{height:38px}
+  .site-head nav a.nl{display:none}
+  .hero-sp{grid-template-columns:1fr;min-height:auto}
+  .hero-sp__media{order:-1;aspect-ratio:4/3.4}
+  .hero-sp__copy{padding:clamp(32px,8vw,48px) var(--pad) clamp(40px,10vw,56px)}
+  .hero-sp__meta{grid-template-columns:repeat(3,1fr);gap:16px}
+  .hero-sp__meta b{font-size:24px}
+  .hero-sp__meta span{font-size:13px}
+  .proc-tl{grid-template-columns:1fr}
+  .proc-tl__media{position:static;order:-1}
+  .proc-tl__frame{aspect-ratio:4/3}
+  .proc-tl__track::before,.proc-tl__fill{left:19px}
+  .proc-tl__item{grid-template-columns:40px 1fr;gap:16px}
+  .proc-tl__dot{width:40px;height:40px;font-size:14px}
+  .proc-tl__name{margin-top:4px}
+  .svc-list__head,.grnt__head{grid-template-columns:1fr;align-items:start;gap:18px}
+  .svc-list__row{grid-template-columns:40px 1fr}
+  .svc-list__arrow{display:none}
+  .duo{grid-template-columns:1fr}
+  .care{grid-template-columns:1fr}
+  .care__row{grid-template-columns:1fr;gap:10px}
+  .contact{grid-template-columns:1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1.3fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(244,239,230,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:6px;font-family:var(--serif);font-weight:600;font-size:15px;text-decoration:none}
+  .mbar a svg{width:18px;height:18px}
+  .mbar .call{border:1px solid var(--fg);color:var(--fg)}
+  .mbar .quote{background:var(--accent);color:#fff}
+}
+@media (max-width:560px){
+  .site-head .btn{display:none}
+  .hero-sp__meta{grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .grnt__grid{grid-template-columns:1fr}
+  .grnt__card{border-right:0;margin-right:0;padding-right:0}
+  .grnt__card:nth-child(n+2){border-top:1px solid var(--line);margin-top:24px}
+  .form__grid{grid-template-columns:1fr}
+  .contact__dl{grid-template-columns:1fr;gap:2px}
+  .contact__dl dd{margin-bottom:12px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-head">
+  <a class="site-head__logo" href="#top" aria-label="Orvane Piscines, accueil"><img src="assets/logo.svg" alt="Orvane Piscines" width="150" height="46"></a>
+  <nav aria-label="Navigation principale">
+    <a class="nl" href="#projet">Votre projet</a>
+    <a class="nl" href="#services">Services</a>
+    <a class="nl" href="#entretien">Entretien</a>
+    <a class="nl" href="#confiance">Pourquoi nous</a>
+    <a class="btn" href="#contact">Devis gratuit</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="hero-sp" id="top" data-section="hero-split">
+  <div class="hero-sp__copy">
+    <p class="kicker">Pisciniste à Valmont-sur-Lys depuis 1998</p>
+    <h1 class="hero-sp__title">Du premier coup de pelle à la <strong>première baignade.</strong></h1>
+    <p class="hero-sp__lead">Orvane Piscines construit, rénove et entretient les piscines des familles de la vallée de la Lys. Chaque chantier est suivi par le même chef d'équipe, de A à Z.</p>
+    <div class="hero-sp__actions">
+      <a class="btn" href="#contact">Demander mon devis gratuit
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <a class="hero-sp__phone" href="tel:+33353012468">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+        03 53 01 24 68</a>
+    </div>
+    <div class="hero-sp__meta">
+      <div><b>1998</b><span>année de création</span></div>
+      <div><b>40 km</b><span>autour de Valmont-sur-Lys</span></div>
+      <div><b>1 équipe</b><span>le même chef d'équipe sur tout le chantier</span></div>
+    </div>
+  </div>
+  <figure class="hero-sp__media">
+    <img src="assets/bassin-2.svg" alt="Illustration d'un bassin à débordement au coucher du soleil" width="1600" height="1066" fetchpriority="high">
+    <figcaption class="hero-sp__tag"><i></i>Bassin à débordement</figcaption>
+  </figure>
+</section>
+
+<section class="proc-tl" id="projet" data-section="process-timeline">
+  <div>
+    <p class="kicker reveal">Votre projet, maîtrisé</p>
+    <h2 class="proc-tl__title reveal">Un seul chef d'équipe, de l'étude du terrain à la mise en eau.</h2>
+    <p class="proc-tl__intro reveal">Une piscine, c'est un projet de famille et un vrai chantier chez vous. Nous prenons le temps de vous écouter, puis la même personne suit chaque étape.</p>
+    <div class="proc-tl__track">
+    <span class="proc-tl__fill" aria-hidden="true"></span>
+    <ol class="proc-tl__list">
+      <li class="proc-tl__item reveal">
+        <span class="proc-tl__dot">01</span>
+        <div><h3 class="proc-tl__name">Étude du terrain</h3>
+        <p class="proc-tl__text">Visite chez vous et étude du terrain. Vous recevez un devis détaillé, gratuit et sans engagement.</p></div>
+      </li>
+      <li class="proc-tl__item reveal">
+        <span class="proc-tl__dot">02</span>
+        <div><h3 class="proc-tl__name">Choix du bassin</h3>
+        <p class="proc-tl__text">Enterré ou semi-enterré, en béton ou en kit, toutes formes. Le bassin se décide avec vous, selon votre jardin.</p></div>
+      </li>
+      <li class="proc-tl__item reveal">
+        <span class="proc-tl__dot">03</span>
+        <div><h3 class="proc-tl__name">Terrassement et maçonnerie</h3>
+        <p class="proc-tl__text">Des matériaux de qualité et des fournisseurs de la région, dans les délais annoncés.</p></div>
+      </li>
+      <li class="proc-tl__item reveal">
+        <span class="proc-tl__dot">04</span>
+        <div><h3 class="proc-tl__name">Liner ou carrelage, filtration</h3>
+        <p class="proc-tl__text">Pose du revêtement et installation de la filtration, par l'équipe qui a construit le bassin.</p></div>
+      </li>
+      <li class="proc-tl__item reveal">
+        <span class="proc-tl__dot">05</span>
+        <div><h3 class="proc-tl__name">Mise en eau</h3>
+        <p class="proc-tl__text">La première baignade, et nos conseils d'entretien pour bien démarrer.</p></div>
+      </li>
+    </ol>
+    </div>
+  </div>
+  <figure class="proc-tl__media reveal">
+    <div class="proc-tl__frame"><img src="assets/bassin-1.svg" alt="Illustration d'un bassin familial 8 x 4 avec échelle" width="1600" height="1066"></div>
+    <figcaption><span>Bassin familial 8 x 4</span><span>Construction</span></figcaption>
+  </figure>
+</section>
+
+<section class="svc-list" id="services" data-section="services-list">
+  <div class="svc-list__head reveal">
+    <div>
+      <p class="kicker">Nos services</p>
+      <h2 class="svc-list__title">Construire, rénover, équiper.</h2>
+    </div>
+    <p class="svc-list__intro">Une petite équipe de passionnés et des fournisseurs de la région. Notre showroom de Valmont-sur-Lys vous accueille du lundi au samedi pour découvrir nos modèles de bassins, de spas et d'abris.</p>
+  </div>
+  <div class="svc-list__rows">
+    <a class="svc-list__row reveal" href="#contact">
+      <span class="svc-list__idx">01</span>
+      <h3 class="svc-list__name">Construction de piscines</h3>
+      <p class="svc-list__desc">Piscines enterrées et semi-enterrées, en béton ou en kit, toutes formes.</p>
+      <span class="svc-list__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </a>
+    <a class="svc-list__row reveal" href="#contact">
+      <span class="svc-list__idx">02</span>
+      <h3 class="svc-list__name">Rénovation de bassins</h3>
+      <p class="svc-list__desc">Changement de liner, reprise des margelles, mise aux normes de la sécurité.</p>
+      <span class="svc-list__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </a>
+    <a class="svc-list__row reveal" href="#contact">
+      <span class="svc-list__idx">03</span>
+      <h3 class="svc-list__name">Spas et abris</h3>
+      <p class="svc-list__desc">Spas de 3 à 6 places, abris bas et télescopiques, volets roulants.</p>
+      <span class="svc-list__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="duo" aria-label="Spas et abris">
+  <figure class="reveal">
+    <img src="assets/bassin-3.svg" alt="Illustration d'un spa 5 places" width="1600" height="1066">
+    <figcaption><b>Spas de 3 à 6 places</b><span>Exposés au showroom</span></figcaption>
+  </figure>
+  <figure class="reveal">
+    <img src="assets/bassin-4.svg" alt="Illustration d'un bassin protégé par un abri télescopique" width="1600" height="1066">
+    <figcaption><b>Abris bas et télescopiques</b><span>Et volets roulants</span></figcaption>
+  </figure>
+</section>
+
+<section class="care" id="entretien">
+  <div class="reveal">
+    <p class="kicker">Entretien et service après-vente</p>
+    <h2 class="care__title">Après la première baignade, on reste là.</h2>
+    <p class="care__text">Une piscine bien suivie, c'est une saison sans souci. Notre service après-vente est joignable toute l'année.</p>
+    <a class="ulink" href="#contact">Demander un contrat d'entretien</a>
+  </div>
+  <div class="care__rows reveal">
+    <div class="care__row">
+      <span class="care__when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="m14 20 1.25-2.5L18 18"/><path d="m14 4 1.25 2.5L18 6"/><path d="m17 21-3-6h-4"/><path d="m17 3-3 6 1.5 3"/><path d="M2 12h6.5L10 9"/><path d="m20 10-1.5 2 1.5 2"/><path d="M22 12h-6.5L14 15"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h4"/></svg>Fin de saison</span>
+      <div><h3>Mise en hivernage</h3><p>Le bassin et la filtration préparés pour passer l'hiver.</p></div>
+    </div>
+    <div class="care__row">
+      <span class="care__when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>Printemps</span>
+      <div><h3>Remise en route</h3><p>Votre piscine prête pour les beaux jours. Contrats annuels possibles.</p></div>
+    </div>
+    <div class="care__row">
+      <span class="care__when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg>Toute l'année</span>
+      <div><h3>Dépannage filtration</h3><p>Pompes, filtres à sable, électrolyseurs, régulation du pH.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="grnt" id="confiance" data-section="guarantees-grid">
+  <div class="grnt__head reveal">
+    <div>
+      <p class="kicker">Pourquoi nous</p>
+      <h2 class="grnt__title">Nos clients nous recommandent depuis 1998.</h2>
+    </div>
+    <p class="grnt__intro">La plupart de nos chantiers viennent du bouche-à-oreille. Ce qui le rend possible tient en quatre engagements.</p>
+  </div>
+  <div class="grnt__grid">
+    <article class="grnt__card reveal">
+      <div class="grnt__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+      <h3 class="grnt__name">Un devis détaillé et gratuit</h3>
+      <p class="grnt__text">Sans engagement, après avoir pris le temps de vous écouter.</p>
+    </article>
+    <article class="grnt__card reveal">
+      <div class="grnt__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></div>
+      <h3 class="grnt__name">Les délais annoncés</h3>
+      <p class="grnt__text">Nous respectons le calendrier fixé ensemble avant le premier coup de pelle.</p>
+    </article>
+    <article class="grnt__card reveal">
+      <div class="grnt__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <h3 class="grnt__name">Garantie décennale</h3>
+      <p class="grnt__text">Nos ouvrages sont couverts par la garantie décennale et notre assurance.</p>
+    </article>
+    <article class="grnt__card reveal">
+      <div class="grnt__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3 class="grnt__name">Un interlocuteur unique</h3>
+      <p class="grnt__text">Le même chef d'équipe du premier rendez-vous à la mise en eau.</p>
+    </article>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="reveal">
+    <p class="kicker">Devis gratuit</p>
+    <h2 class="contact__title">Étudions votre piscine ensemble.</h2>
+    <p class="contact__lead">Construction, rénovation, spa, abri ou entretien : décrivez votre projet, nous vous rappelons pour fixer une visite. Nous intervenons à Valmont-sur-Lys et dans un rayon de 40 km.</p>
+    <a class="contact__tel" href="tel:+33353012468">03 53 01 24 68</a>
+    <dl class="contact__dl">
+      <dt>E-mail</dt><dd><a href="mailto:contact@orvane-piscines.example">contact@orvane-piscines.example</a></dd>
+      <dt>Showroom</dt><dd>12 chemin des Tilleuls, Valmont-sur-Lys</dd>
+      <dt>Horaires</dt><dd>Lundi au samedi, 9h-12h et 14h-18h</dd>
+      <dt>Zone</dt><dd>Valmont-sur-Lys et 40 km alentour</dd>
+    </dl>
+  </div>
+  <form class="form reveal" id="devis" novalidate>
+    <h3>Ma demande de devis</h3>
+    <p>Un nom et un téléphone suffisent, on vous rappelle.</p>
+    <div class="form__grid">
+      <label>Nom<input name="nom" autocomplete="name" required></label>
+      <label>Téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
+      <label>Commune<input name="commune" autocomplete="address-level2"></label>
+      <label>Projet
+        <select name="projet">
+          <option>Construction d'une piscine</option>
+          <option>Rénovation d'un bassin</option>
+          <option>Spa ou abri</option>
+          <option>Entretien saisonnier</option>
+          <option>Dépannage filtration</option>
+        </select>
+      </label>
+      <label class="full">Meilleur moment pour vous rappeler
+        <select name="creneau">
+          <option>En matinée (9h-12h)</option>
+          <option>L'après-midi (14h-18h)</option>
+          <option>Peu importe</option>
+        </select>
+      </label>
+      <label class="full">Quelques mots sur votre projet (facultatif)<textarea name="message"></textarea></label>
+    </div>
+    <button class="btn" type="submit">Envoyer ma demande
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+    <small>Votre demande s'ouvre dans votre messagerie, prête à partir vers contact@orvane-piscines.example.</small>
+  </form>
+</section>
+</main>
+
+<footer class="foot">
+  <span><b>Orvane Piscines</b>&nbsp; Pisciniste à Valmont-sur-Lys depuis 1998</span>
+  <span><a href="tel:+33353012468">03 53 01 24 68</a> · <a href="mailto:contact@orvane-piscines.example">contact@orvane-piscines.example</a></span>
+  <span>© 2026 Orvane Piscines</span>
+</footer>
+
+<nav class="mbar" aria-label="Actions rapides">
+  <a class="call" href="tel:+33353012468"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>Appeler</a>
+  <a class="quote" href="#contact">Devis gratuit</a>
+</nav>
+
+<script>
+document.getElementById('devis').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target, v = function (n) { return (f.elements[n].value || '').trim(); };
+  if (!v('nom') || !v('tel')) { (v('nom') ? f.elements.tel : f.elements.nom).focus(); return; }
+  var body = 'Nom : ' + v('nom') + '\nTéléphone : ' + v('tel') + '\nCommune : ' + v('commune') +
+    '\nProjet : ' + v('projet') + '\nRappel : ' + v('creneau') + '\n\n' + v('message');
+  location.href = 'mailto:contact@orvane-piscines.example?subject=' +
+    encodeURIComponent('Demande de devis, ' + v('projet')) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1066" viewBox="0 0 800 533">
+<title>Bassin à débordement (illustration fictive)</title>
+<defs><linearGradient id="s1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5b46b"/><stop offset="1" stop-color="#fde5c2"/></linearGradient></defs>
+<rect width="800" height="533" fill="url(#s1)"/>
+<circle cx="580" cy="98" r="38" fill="#fff7c2"/>
+<path d="M0 250 Q 200 206 400 250 T 800 240 V 300 H 0 Z" fill="#7bb36a"/>
+<rect x="0" y="280" width="800" height="253" fill="#d9c29a"/>
+<rect x="136" y="286" width="528" height="184" rx="10" fill="#f4efe6"/>
+<rect x="150" y="300" width="500" height="156" rx="6" fill="#1f8fbf"/>
+<path d="M170 322 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M170 346 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M170 370 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M170 394 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M170 418 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/>
+<g stroke="#9aa3ab" stroke-width="6" fill="none"><path d="M600 260 v 70"/><path d="M630 260 v 70"/><path d="M600 260 q 15 -18 30 0"/></g>
+</svg>

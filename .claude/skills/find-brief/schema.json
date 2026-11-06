@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "description": "A search brief for the lead engine, parsed from the owner's free text.",
+  "properties": {
+    "trades": { "type": "array", "items": { "type": "string" } },
+    "place": { "type": "string" },
+    "country": { "type": "string" },
+    "count": { "type": "integer", "minimum": 1, "maximum": 200 },
+    "mix": { "type": "boolean" }
+  },
+  "required": ["trades", "place", "country", "count", "mix"],
+  "additionalProperties": false
+}

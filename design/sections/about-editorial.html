@@ -1,0 +1,43 @@
+<!-- about-editorial · about · texte éditorial large à gauche + portrait/atelier à droite, asymétrique -->
+<section class="about-ed" data-section="about-editorial">
+  <style>
+    .about-ed{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,120px) clamp(20px,5vw,80px);
+      display:grid; grid-template-columns:1.25fr 0.75fr; gap:clamp(32px,6vw,80px); align-items:center}
+    .about-ed__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 clamp(16px,2vw,24px)}
+    .about-ed__title{font-family:var(--serif); font-weight:500; line-height:1.1; letter-spacing:-.01em;
+      font-size:clamp(28px,3.6vw,48px); margin:0 0 clamp(20px,2.5vw,32px); max-width:22ch}
+    .about-ed__body{font-family:var(--sans); font-size:clamp(16px,1.25vw,18px); line-height:1.7;
+      color:var(--muted); max-width:58ch}
+    .about-ed__body p{margin:0 0 1.1em}
+    .about-ed__body p:last-child{margin-bottom:0}
+    .about-ed__lede{color:var(--fg); font-size:clamp(18px,1.5vw,22px); line-height:1.5}
+    .about-ed__sign{margin-top:clamp(24px,3vw,36px); font-family:var(--serif); font-style:italic;
+      font-size:clamp(18px,1.8vw,24px); color:var(--fg)}
+    .about-ed__sign span{display:block; font-family:var(--sans); font-style:normal; font-size:13px;
+      color:var(--muted); margin-top:4px}
+    .about-ed__media{position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px}
+    .about-ed__media img{width:100%; height:100%; object-fit:cover; object-position:center; display:block}
+    .about-ed .reveal{opacity:1}
+    @media (max-width:880px){
+      .about-ed{grid-template-columns:1fr; gap:clamp(28px,7vw,40px)}
+      .about-ed__media{aspect-ratio:4/3; order:-1; max-height:60vh}
+    }
+  </style>
+
+  <div>
+    <p class="about-ed__kicker reveal">{{KICKER}}</p>
+    <h2 class="about-ed__title reveal">{{HEADLINE}}</h2>
+    <div class="about-ed__body reveal">
+      <p class="about-ed__lede">{{LEDE}}</p>
+      <p>{{PARAGRAPH_1}}</p>
+      <p>{{PARAGRAPH_2}}</p>
+    </div>
+    <p class="about-ed__sign reveal">{{SIGNATURE_NAME}}<span>{{SIGNATURE_ROLE}}</span></p>
+  </div>
+
+  <figure class="about-ed__media reveal">
+    <img src="{{ABOUT_IMG}}" alt="{{ABOUT_ALT}}">
+  </figure>
+</section>

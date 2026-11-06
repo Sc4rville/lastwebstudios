@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "description": "Sortie du skill visual-scoring-gate (prompt.md) : besoin de refonte visuel /100 et raisons observées, ou unusable:true si les captures ne montrent pas le site.",
+  "properties": {
+    "besoin": { "type": "number" },
+    "reasons": { "type": "array", "items": { "type": "string" } },
+    "unusable": { "type": "boolean" }
+  },
+  "required": ["reasons"],
+  "additionalProperties": false
+}

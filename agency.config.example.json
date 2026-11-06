@@ -1,0 +1,60 @@
+{
+  "_comment": "AGENCE FICTIVE d'exemple (packages/shared/agency.mjs) : « Atelier Vélin » n'existe pas. Domaines en .example (RFC 2606), téléphone dans une plage ARCEP réservée à la fiction. Pour TON agence : copie ce fichier en agency.config.json et remplace chaque valeur ; tout ce qui parle en ton nom (pied légal des mails, HELO, User-Agent, factures, mail sauveur, signature) le lit.",
+  "_country": "country (ISO 3166-1 alpha-2) : registre d'entreprises (SIRENE si FR), pied légal des mails par pays, formats de téléphone, TLD. language : langue des sites, mails et scripts générés. Exemple US : agency.config.example.us.json.",
+  "country": "FR",
+  "language": "fr",
+  "locale": "fr-FR",
+  "currency": "EUR",
+  "timezone": "Europe/Paris",
+  "name": "Atelier Vélin",
+  "slug": "atelier-velin",
+  "website": "https://atelier-velin.example",
+  "contactEmail": "bonjour@atelier-velin.example",
+  "phone": "01 99 00 12 34",
+  "calendarUrl": "https://cal.atelier-velin.example/15min",
+  "http": {
+    "_comment": "userAgent : APIs de données ouvertes (Overpass, recherche-entreprises) qui demandent de s'identifier, avec un moyen de te joindre ; crawlerUserAgent : lecture des sites des prospects.",
+    "userAgent": "atelier-velin-leadengine/1.0 (+https://atelier-velin.example)",
+    "crawlerUserAgent": "Mozilla/5.0 (compatible; atelier-velin/1.0; +https://atelier-velin.example)"
+  },
+  "mail": {
+    "senderName": "Camille · Atelier Vélin",
+    "signature": "Atelier Vélin",
+    "legalIdentity": "Atelier Vélin, studio web",
+    "heloDomain": "atelier-velin.example"
+  },
+  "brand": {
+    "_comment": "Faits de marque du MAIL SAUVEUR (skill generate-savior). Reste factuel : aucune équipe, aucun chiffre, aucun avis que tu n'as pas.",
+    "expediteur": "Camille",
+    "team": "un petit studio web indépendant qui conçoit et met en ligne des sites pour les artisans et les PME",
+    "offer": "un site refait de A à Z, mis en ligne et suivi : textes, photos, référencement local et prise de rendez-vous",
+    "garantie": "aucun acompte : vous ne payez que si le nouveau site vous convient"
+  },
+  "invoice": {
+    "_comment": "Vendeur par défaut des factures, avant les réglages saisis dans le cockpit (page Facturation). Remplace les placeholders <...>.",
+    "seller": {
+      "name": "Atelier Vélin",
+      "legal": "<forme juridique et capital>",
+      "address": "<n° et rue>, <CP> <ville>",
+      "siret": "<SIRET — 14 chiffres>",
+      "tva": "<TVA intracom — FRXX XXXXXXXXX>",
+      "rcs": "<RCS <ville> <numéro>>",
+      "email": "bonjour@atelier-velin.example",
+      "phone": "01 99 00 12 34",
+      "iban": "<IBAN>",
+      "bic": "<BIC>",
+      "capital": "<capital social €>",
+      "paymentLink": ""
+    }
+  },
+  "operators": ["camille", "alex"],
+  "storage": { "bucket": "lws-assets" },
+  "leadengine": {
+    "_comment": "searchFallback : quand le domaine deviné ne répond pas, chercher le site de l'entreprise dans DuckDuckGo puis Bing (pages HTML de résultats). Coupé par défaut : lire des pages de résultats par programme sort des conditions d'utilisation des moteurs. À activer en connaissance de cause (docs/GUIDE.md §10).",
+    "searchFallback": false
+  },
+  "outreach": {
+    "_comment": "competitorClaims : phrases que le brouillon (outreach/scripts/draft.ts) peut dire d'un concurrent NOMMÉ. Vide : aucune ligne « concurrent ». N'y mets qu'un fait vrai et vérifiable : une affirmation inventée sur un tiers identifiable est une pratique commerciale trompeuse (Code de la consommation L121-2).",
+    "competitorClaims": []
+  }
+}

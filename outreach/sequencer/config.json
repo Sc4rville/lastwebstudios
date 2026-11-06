@@ -1,0 +1,51 @@
+{
+  "_comment": "Le funnel outreach (moteur : outreach/scripts/sequencer.ts). dryRun=true → N'ENVOIE RIEN : chaque mail est écrit en .eml dans data/sequencer/outbox/. Un envoi réel exige DEUX clés : \"dryRun\": false ici ET LWS_LIVE_SEND=1 dans l'environnement (sinon refus, exit 2). Funnel : mail parfait (savior) → escalade GATÉE AU CLIC (démo perso → article SEO → contenu). Répondre à tout stade = stop (replied). delayDays = relatif au step précédent. Le throttle reporte l'excédent au lendemain. Les boîtes ci-dessous sont FICTIVES (.example) : mets les tiennes, après un warmup de 10 à 14 jours (outreach/scripts/warmup.ts).",
+  "dryRun": true,
+  "steps": [
+    {
+      "id": "mail-parfait",
+      "pool": "B",
+      "delayDays": 0,
+      "source": "savior"
+    },
+    {
+      "id": "demo-perso",
+      "pool": "B",
+      "delayDays": 3,
+      "source": "demo",
+      "gate": "clicked"
+    },
+    {
+      "id": "article-seo",
+      "pool": "B",
+      "delayDays": 3,
+      "source": "seo",
+      "gate": "clicked"
+    },
+    {
+      "id": "contenu",
+      "pool": "B",
+      "delayDays": 3,
+      "source": "contenu",
+      "gate": "clicked"
+    }
+  ],
+  "inboxes": {
+    "A": [
+      {
+        "email": "bonjour@atelier-velin.example",
+        "throttlePerDay": 8
+      }
+    ],
+    "B": [
+      {
+        "email": "camille@atelier-velin.example",
+        "throttlePerDay": 8
+      },
+      {
+        "email": "studio@atelier-velin.example",
+        "throttlePerDay": 8
+      }
+    ]
+  }
+}

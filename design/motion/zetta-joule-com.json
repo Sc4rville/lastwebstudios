@@ -1,0 +1,14 @@
+{
+  "slug": "zetta-joule-com",
+  "url": "https://zetta-joule.com",
+  "stack": [
+    "gsap",
+    "ScrollTrigger",
+    "lenis",
+    "three.js",
+    "lottie",
+    "swiper",
+    "webflow"
+  ],
+  "scroll": "lenis (smooth)"
+}

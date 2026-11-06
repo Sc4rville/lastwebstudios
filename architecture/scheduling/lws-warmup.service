@@ -1,0 +1,27 @@
+# lws-warmup — UN tick du warmup des boîtes d'envoi (outreach/scripts/warmup.ts), lancé par lws-warmup.timer.
+# Unité systemd UTILISATEUR, NON installée par défaut (cf. cron.md « Installer », ou install-units.sh). Chemins par
+# %h (ton HOME) : le dépôt est attendu dans ~/lws.
+#
+# Les boîtes de outreach/sequencer/config.json s'écrivent et se répondent entre elles (mail 1:1, rampe de 2 à
+# 20 mails par boîte et par jour, au plus 2 par boîte et par tick) : la réputation des domaines se construit
+# AVANT le premier cold. Compte 10 à 14 jours avant d'activer lws-sequencer.timer.
+#
+# ENVOI RÉEL : la ligne Environment=LWS_LIVE_SEND=1 ci-dessous décommentée (dans l'unité, PAS dans .env), plus la clé
+# du compte de service Google (outreach/sequencer/sa-key.json, délégation domaine, scope gmail.send ; gmail.modify en
+# plus pour sortir les warmups du spam). Commentée : le tick dit ce qu'il AURAIT envoyé et n'écrit rien.
+
+[Unit]
+Description=lastwebstudios — tick du warmup des boîtes d'envoi (rampe 2 → 20 mails/boîte/jour)
+OnFailure=lws-alert@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+#Environment=LWS_LIVE_SEND=1
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh warmup warmup tick
+TimeoutStartSec=600
+# logs : journalctl --user -u lws-warmup.service · état : npm run warmup -- status

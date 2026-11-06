@@ -1,0 +1,19 @@
+{
+  "slug": "owlfurnitureandobjects-com",
+  "url": "https://owlfurnitureandobjects.com/",
+  "vars": {
+    "--color": "#fff",
+    "--color-white": "#fff",
+    "--color-black": "#000",
+    "--color-blue": "#0038a3",
+    "--color-grey": "#0038a3"
+  },
+  "palette": [
+    "#efefef",
+    "#e4e4e4",
+    "#0038a3",
+    "#bdbdbd",
+    "rgba(0,0,0,.2)",
+    "rgba(0,0,0,0)"
+  ]
+}

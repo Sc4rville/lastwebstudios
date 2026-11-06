@@ -1,0 +1,19 @@
+{
+  "_comment": "Paires de polices LIBRES (SIL Open Font License 1.1), toutes dans la bibliothèque de provenance vérifiée (design/fonts/oss.lock.json, fichiers Fontsource + OFL.txt par famille ; `node scripts/oss/fonts.mjs` vérifie). Pour un site publiable sans licence commerciale : npm run first-site -- <url> --pairings design/fonts/pairings.oss.json. L'édition open source en fait SA design/fonts/pairings.json. Une police de titre distincte par paire, rien de blacklist.txt. La paire 0 sert au premier site d'un batch.",
+  "pairings": [
+    { "mood": "clean-humanist", "display": "Host Grotesk", "display_slug": "host-grotesk", "body": "Geist", "body_slug": "geist", "mono": "Chivo Mono", "mono_slug": "chivo-mono", "license": "OFL-1.1" },
+    { "mood": "warm-editorial", "display": "Fraunces", "display_slug": "fraunces", "body": "Instrument Sans", "body_slug": "instrument-sans", "mono": "JetBrains Mono", "mono_slug": "jetbrains-mono", "license": "OFL-1.1" },
+    { "mood": "artisan-heritage", "display": "Cormorant Garamond", "display_slug": "cormorant-garamond", "body": "Manrope", "body_slug": "manrope", "mono": null, "mono_slug": null, "license": "OFL-1.1" },
+    { "mood": "bold-contemporary", "display": "Bricolage Grotesque", "display_slug": "bricolage-grotesque", "body": "Figtree", "body_slug": "figtree", "mono": "Geist Mono", "mono_slug": "geist-mono", "license": "OFL-1.1" },
+    { "mood": "quiet-luxury", "display": "Instrument Serif", "display_slug": "instrument-serif", "body": "Geist", "body_slug": "geist", "mono": null, "mono_slug": null, "license": "OFL-1.1" },
+    { "mood": "classic-print", "display": "Newsreader", "display_slug": "newsreader", "body": "Work Sans", "body_slug": "work-sans", "mono": "IBM Plex Mono", "mono_slug": "ibm-plex-mono", "license": "OFL-1.1" },
+    { "mood": "swiss-technical", "display": "Archivo", "display_slug": "archivo", "body": "IBM Plex Sans", "body_slug": "ibm-plex-sans", "mono": "IBM Plex Mono", "mono_slug": "ibm-plex-mono", "license": "OFL-1.1" },
+    { "mood": "fashion-contrast", "display": "Bodoni Moda", "display_slug": "bodoni-moda", "body": "DM Sans", "body_slug": "dm-sans", "mono": null, "mono_slug": null, "license": "OFL-1.1" },
+    { "mood": "friendly-warm", "display": "Young Serif", "display_slug": "young-serif", "body": "Schibsted Grotesk", "body_slug": "schibsted-grotesk", "mono": null, "mono_slug": null, "license": "OFL-1.1" },
+    { "mood": "avant-garde", "display": "Syne", "display_slug": "syne", "body": "Onest", "body_slug": "onest", "mono": "DM Mono", "mono_slug": "dm-mono", "license": "OFL-1.1" },
+    { "mood": "geometric-bold", "display": "Unbounded", "display_slug": "unbounded", "body": "Plus Jakarta Sans", "body_slug": "plus-jakarta-sans", "mono": "Space Mono", "mono_slug": "space-mono", "license": "OFL-1.1" },
+    { "mood": "literary-serif", "display": "DM Serif Display", "display_slug": "dm-serif-display", "body": "Source Serif 4", "body_slug": "source-serif-4", "mono": null, "mono_slug": null, "license": "OFL-1.1" },
+    { "mood": "modern-grotesk", "display": "Space Grotesk", "display_slug": "space-grotesk", "body": "Manrope", "body_slug": "manrope", "mono": "JetBrains Mono", "mono_slug": "jetbrains-mono", "license": "OFL-1.1" },
+    { "mood": "nordic-calm", "display": "Familjen Grotesk", "display_slug": "familjen-grotesk", "body": "Newsreader", "body_slug": "newsreader", "mono": null, "mono_slug": null, "license": "OFL-1.1" }
+  ]
+}

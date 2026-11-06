@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="90" viewBox="0 0 300 90">
+<title>Logo Atelier Brisane (fictif)</title>
+<defs><linearGradient id="w" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c98a4b"/><stop offset="1" stop-color="#7a4a22"/></linearGradient></defs>
+<rect x="6" y="10" width="70" height="70" rx="8" fill="url(#w)"/>
+<path d="M18 66 L41 22 L64 66 Z" fill="none" stroke="#fff3df" stroke-width="5" stroke-linejoin="round"/>
+<path d="M28 52 H54" stroke="#fff3df" stroke-width="4"/>
+<text x="88" y="44" font-family="Georgia, serif" font-size="27" font-weight="bold" fill="#5b3418">Atelier Brisane</text>
+<text x="90" y="68" font-family="Verdana, sans-serif" font-size="13" fill="#8a5a2e">Menuiserie bois · depuis 1987</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "slug": "alchemy-international",
+  "url": "https://alchemy.international/",
+  "vars": {
+    "--modern-dark-bg": "#0e1e26"
+  },
+  "palette": [
+    "#111",
+    "#b4b4b4",
+    "#b8e4fc",
+    "#ffffff59",
+    "#efefef",
+    "#e4e4e4",
+    "#a2c7db",
+    "#a6fff8",
+    "#0e1e26",
+    "#17c4d4"
+  ]
+}

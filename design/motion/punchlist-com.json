@@ -1,0 +1,10 @@
+{
+  "slug": "punchlist-com",
+  "url": "https://punchlist.com/",
+  "stack": [
+    "lottie",
+    "swiper",
+    "webflow"
+  ],
+  "scroll": "native"
+}

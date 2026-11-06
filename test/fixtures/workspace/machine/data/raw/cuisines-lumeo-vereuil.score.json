@@ -1,0 +1,28 @@
+{
+  "value": 38,
+  "tier": "warm",
+  "axes": {
+    "besoin": 40,
+    "levier": 45,
+    "valeur": 50,
+    "closabilite": 30,
+    "expansion": 20
+  },
+  "expectedValue": 30,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": false,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de cuisiniste : page d'accueil vide. On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "page très pauvre (peu de contenu)"
+  ],
+  "_fixture": "score fictif (vue Machine)"
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "vanacker-com",
+  "url": "https://www.vanacker.com/",
+  "vars": {
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgba(59,130,246,.5)",
+    "--tw-gradient-from": "#000"
+  },
+  "palette": [
+    "rgb(255255255/var(--tw-text-opacity,1)",
+    "#efefef",
+    "#e4e4e4",
+    "rgba(59,130,246,.5)",
+    "rgb(000/var(--tw-bg-opacity,1)",
+    "#bdbdbd",
+    "#e5e7eb",
+    "#9ca3af",
+    "rgb(156163175/var(--tw-bg-opacity,1)",
+    "rgba(0,0,0,.3)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "description": "Sortie du skill structuration (prompt.md) : identité de contact et contenu rangés depuis le texte brut. Champs absents du texte : omis.",
+  "properties": {
+    "identity": {
+      "type": "object",
+      "properties": {
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "hours": { "type": "string" },
+        "zone": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "tagline": { "type": "string" },
+        "about": { "type": "string" },
+        "services": { "type": "array", "items": { "type": "string" } },
+        "brands": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["services"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["content"],
+  "additionalProperties": false
+}

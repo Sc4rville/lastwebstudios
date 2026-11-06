@@ -1,0 +1,26 @@
+{
+  "slug": "kidsuper-world",
+  "url": "https://kidsuper.world/",
+  "vars": {
+    "--color-white": "#fff",
+    "--color-black": "#000",
+    "--color-black-transparent": "#0000000d",
+    "--color-gray": "#666",
+    "--color-pink": "#e886b2",
+    "--color-violet": "#94a4f9",
+    "--color-violet-rgba": "#94a4f94d",
+    "--link-hover-color": "#fff"
+  },
+  "palette": [
+    "#798df6",
+    "#efefef",
+    "#e4e4e4",
+    "#0000001a",
+    "#faa1b7",
+    "#ffb978",
+    "#a0e388",
+    "#fff385",
+    "#c179c3",
+    "#ffffffb3"
+  ]
+}

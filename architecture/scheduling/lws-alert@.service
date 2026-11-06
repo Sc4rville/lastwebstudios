@@ -1,0 +1,12 @@
+[Unit]
+Description=lastwebstudios — alerte d'échec de %i (dead-man's-switch local)
+
+[Service]
+Type=oneshot
+# Sur OnFailure= d'un job : journalise dans data/logs/ALERT.log + notification GNOME si dispo (poste de travail).
+# Sur une box sans écran : LWS_ALERT_URL dans ~/lws/.env reçoit un POST texte (« ÉCHEC <unité> sur <machine> ») :
+# un sujet ntfy (https://ntfy.sh/<sujet-secret>), l'URL /fail d'un check healthchecks.io, ou tout webhook qui
+# accepte un corps texte. Absent : rien ne sort de la machine. (`$$` = un `$` littéral pour systemd : c'est bash qui lit les
+# variables, pas le gestionnaire.)
+EnvironmentFile=-%h/lws/.env
+ExecStart=/usr/bin/env bash -c 'D=%h/lws/data/logs; mkdir -p "$$D"; echo "[$$(date -Iseconds)] ÉCHEC %i" >> "$$D/ALERT.log"; command -v notify-send >/dev/null && notify-send "lastwebstudios" "Échec planifié : %i"; if [ -n "$$LWS_ALERT_URL" ]; then curl -fsS -m 15 -H "Title: lastwebstudios" --data-raw "ÉCHEC %i sur $$(hostname)" "$$LWS_ALERT_URL" >/dev/null || echo "[$$(date -Iseconds)] alerte LWS_ALERT_URL non remise" >> "$$D/ALERT.log"; fi; true'

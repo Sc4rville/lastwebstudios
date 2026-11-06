@@ -1,0 +1,7 @@
+{
+  "_sample": "mail FICTIF de la sandbox (le vrai est généré par npm run savior / la démo)",
+  "prospectId": "atelier-brisane-sornac-le-haut",
+  "senderName": "Camille · Atelier Vélin",
+  "subject": "Une idée pour l'Atelier Brisane",
+  "body": "Bonjour,\n\nVos escaliers méritent mieux que des vignettes de 96 pixels. J'ai refait votre page d'accueil, l'escalier quart tournant en héros : https://atelier-velin.example/demo/brisane\n\nSi elle vous plaît, je vous la mets en ligne.\n\nCamille"
+}

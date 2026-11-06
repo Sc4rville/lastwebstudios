@@ -1,0 +1,147 @@
+{
+  "id": "atelier-brisane-sornac-le-haut",
+  "url": "http://atelier-brisane.example/",
+  "date": "2026-10-24",
+  "startedAt": "2026-10-24T14:39:26.926Z",
+  "steps": {
+    "score": {
+      "ms": 43,
+      "value": 82,
+      "tier": "hot",
+      "reasons": [
+        "pas responsive (pas de viewport)",
+        "SEO pauvre (pas de description / OG)",
+        "pas de HTTPS (sécurité + SEO pénalisé)",
+        "aucune donnée structurée (SEO local faible)"
+      ]
+    },
+    "parse": {
+      "ms": 2705,
+      "photos": 6,
+      "logo": true,
+      "textChars": 2056
+    },
+    "structure": {
+      "ms": 15102,
+      "services": 7,
+      "issue": null
+    },
+    "compose": {
+      "ms": 637506,
+      "engine": "workflow",
+      "planEstimateUsd": 2.9264344,
+      "agents": null
+    }
+  },
+  "engine": "workflow",
+  "provider": "claude-code",
+  "compose": {
+    "args": {
+      "date": "2026-10-24",
+      "ids": [
+        "atelier-brisane-sornac-le-haut"
+      ],
+      "pairings": "1 paire(s) de pairings.run.json",
+      "scores": {
+        "atelier-brisane-sornac-le-haut": 82
+      },
+      "boost": false,
+      "image": "none",
+      "video": "none",
+      "sync": false,
+      "models": {
+        "smart": "opus",
+        "fast": "haiku",
+        "judge": "sonnet"
+      }
+    }
+  },
+  "workflowResult": {
+    "engines": {
+      "boost": false,
+      "image": "none",
+      "video": "none",
+      "sync": false,
+      "models": {
+        "smart": "opus",
+        "fast": "haiku",
+        "judge": "sonnet"
+      }
+    },
+    "passed": [
+      {
+        "id": "atelier-brisane-sornac-le-haut",
+        "font": "Fraunces (display) x Instrument Sans (texte)",
+        "arch": "hero-split (texte à gauche, image plein-bleed à droite)",
+        "before": 2,
+        "heroVideo": false,
+        "loops": 1,
+        "verdict": {
+          "more_beautiful": "A",
+          "margin": "much",
+          "reasons": [
+            "A has a cohesive modern warm-wood palette and generous whitespace; B uses a busy tiled wood-pattern background that feels cluttered and dated",
+            "A establishes clear visual hierarchy with a confident hero statement and large type; B crams a bienvenue paragraph, nav, sidebar, gallery, tariffs table all into one dense boxed layout",
+            "A's typography is refined and intentional (serif display + clean sans body); B mixes a decorative script-like heading with generic sans-serif and bold red accents typical of 2000s-era sites",
+            "A's imagery/icons (illustrated wood textures, numbered fabrication list, clean photo cards) feel custom and premium; B's icons/photos look like generic clip-art thumbnails",
+            "B has clear legacy-web tells that erode trust/modernity: a 'visitor counter' widget, a note about being optimized for 1024x768 resolution, and a bordered box-within-box frame layout",
+            "A's CTA and contact sections (gradient dark band, clear form) feel like a modern conversion-focused site; B's flat tariff table and plain footer feel like a static brochure page from over a decade ago"
+          ]
+        }
+      }
+    ],
+    "failed": []
+  },
+  "lint": {
+    "clean": true,
+    "dashCount": 0,
+    "problems": []
+  },
+  "verify": {
+    "clean": true,
+    "desktop": {
+      "overflowX": false,
+      "scrollW": 1440,
+      "innerW": 1440,
+      "scrollH": 7568,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "blurryImages": [],
+      "stuckHidden": 0,
+      "clippedHeadings": [],
+      "screenshot": "site/_after.png"
+    },
+    "mobile": {
+      "overflowX": false,
+      "scrollW": 390,
+      "innerW": 390,
+      "scrollH": 9149,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "blurryImages": [],
+      "stuckHidden": 0,
+      "clippedHeadings": [],
+      "screenshot": "site/_after.mobile.png"
+    }
+  },
+  "gate": {
+    "pass": true,
+    "loops": 1,
+    "font": "Fraunces (display) x Instrument Sans (texte)",
+    "verdict": {
+      "more_beautiful": "A",
+      "margin": "much",
+      "reasons": [
+        "A has a cohesive modern warm-wood palette and generous whitespace; B uses a busy tiled wood-pattern background that feels cluttered and dated",
+        "A establishes clear visual hierarchy with a confident hero statement and large type; B crams a bienvenue paragraph, nav, sidebar, gallery, tariffs table all into one dense boxed layout",
+        "A's typography is refined and intentional (serif display + clean sans body); B mixes a decorative script-like heading with generic sans-serif and bold red accents typical of 2000s-era sites",
+        "A's imagery/icons (illustrated wood textures, numbered fabrication list, clean photo cards) feel custom and premium; B's icons/photos look like generic clip-art thumbnails",
+        "B has clear legacy-web tells that erode trust/modernity: a 'visitor counter' widget, a note about being optimized for 1024x768 resolution, and a bordered box-within-box frame layout",
+        "A's CTA and contact sections (gradient dark band, clear form) feel like a modern conversion-focused site; B's flat tariff table and plain footer feel like a static brochure page from over a decade ago"
+      ]
+    },
+    "why": null
+  },
+  "totalMs": 668539,
+  "ok": true
+}

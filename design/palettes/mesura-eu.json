@@ -1,0 +1,23 @@
+{
+  "slug": "mesura-eu",
+  "url": "https://mesura.eu/",
+  "vars": {
+    "--color-txt": "#1d1c1c",
+    "--color-txt-disabled": "#bebcba",
+    "--color-bg": "#fbfbfb",
+    "--color-bg-red": "#f11f21",
+    "--color-bg-overlay": "#0000004d"
+  },
+  "palette": [
+    "#ccc",
+    "#333",
+    "rgba(7,20,30,.7)",
+    "rgba(0,0,0,.5)",
+    "rgba(255,222,23,.8)",
+    "#07141e",
+    "#f7f7f7",
+    "rgba(255,255,255,.2)",
+    "#ffde17",
+    "#0000004d"
+  ]
+}

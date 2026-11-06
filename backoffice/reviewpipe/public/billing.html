@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Billing — Last Web Studios</title>
+<style>
+  /* même système que la Station (app.css) */
+  @font-face{font-family:"Host Grotesk";font-weight:400;src:url("/designfont/host-grotesk/host-grotesk-400.woff2") format("woff2");font-display:swap}
+  @font-face{font-family:"Host Grotesk";font-weight:600;src:url("/designfont/host-grotesk/host-grotesk-600.woff2") format("woff2");font-display:swap}
+  @font-face{font-family:"Space Grotesk";font-weight:600;src:url("/font/space-grotesk-600.woff2") format("woff2");font-display:swap}
+  :root{--bg:#0b0b0c;--bg2:#141417;--bg3:#1c1c20;--line:#27272c;--line2:#3a3a42;--ink:#f1f1f4;--dim:#c4c4cc;--faint:#a8a8b2;--accent:#d8ff3e;--accent-ink:#10100a;--ok:#7ee081;--warn:#ffcf5c;--bad:#ff6b6b;--info:#7db8ff;
+    --font-ui:"Host Grotesk",system-ui,sans-serif;--font-display:"Space Grotesk",var(--font-ui);--r-md:10px;--r-lg:14px;--r-pill:999px}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink)}
+  body{font-family:var(--font-ui);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  header{display:flex;align-items:center;gap:16px;height:56px;padding:0 24px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg2) 50%,var(--bg));flex-wrap:wrap}
+  .brand{font-family:var(--font-display);font-weight:600;font-size:16px;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+  .brand i{font-style:normal;font-family:var(--font-ui);font-weight:500;font-size:12px;color:var(--dim);background:var(--bg3);border:1px solid var(--line);border-radius:var(--r-pill);padding:3px 10px;line-height:1.2}
+  .back{display:inline-flex;align-items:center;gap:6px;color:var(--faint);font-size:13px;font-weight:500;border:1px solid var(--line);border-radius:var(--r-pill);padding:5px 13px 5px 10px;transition:color .12s,border-color .12s}
+  .back:hover{color:var(--ink);border-color:var(--line2)}
+  .back svg{width:13px;height:13px}
+  .tabs{display:flex;gap:2px;margin-left:auto;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r-pill);padding:3px}
+  .tab{background:none;border:0;color:var(--faint);border-radius:var(--r-pill);padding:5px 14px;cursor:pointer;font:500 13px var(--font-ui);transition:color .12s,background .12s}
+  .tab:hover{color:var(--ink)}
+  .tab.on{color:var(--accent-ink);background:var(--ink);font-weight:600}
+  main{padding:28px 24px 48px;max-width:1040px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+  label{display:block;font-size:13px;font-weight:500;color:var(--dim);margin:10px 0 6px}
+  input,textarea,select{width:100%;background:var(--bg);border:1px solid var(--line2);color:var(--ink);border-radius:var(--r-md);padding:10px 12px;font:14px var(--font-ui);transition:border-color .12s}
+  input::placeholder,textarea::placeholder{color:var(--faint)}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+  .card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 22px;margin-bottom:16px}
+  h2{font-family:var(--font-display);font-size:18px;font-weight:600;margin:0 0 10px;color:var(--ink)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;color:var(--faint);font-weight:500;font-size:13px;padding:8px 8px;border-bottom:1px solid var(--line)}
+  td{padding:7px 8px;border-bottom:1px solid var(--line)}
+  tbody tr:last-child td{border-bottom:0}
+  .items input{padding:8px 10px}
+  .r{text-align:right;font-variant-numeric:tabular-nums}
+  button{cursor:pointer;font:14px var(--font-ui)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:38px;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:var(--r-md);padding:0 18px;font-weight:600;transition:filter .12s}
+  .btn:hover{filter:brightness(1.06)}
+  .btn.ghost{background:transparent;border:1px solid var(--line2);color:var(--dim);font-weight:500}
+  .btn.ghost:hover{color:var(--ink);border-color:var(--dim);background:var(--bg3)}
+  .xrow{background:none;border:0;color:var(--bad);font-size:18px;line-height:1;width:28px;height:28px;border-radius:50%}
+  .xrow:hover{background:color-mix(in srgb,var(--bad) 14%,transparent)}
+  .tot{margin:16px 0 0;margin-left:auto;width:280px}
+  .tot div{display:flex;justify-content:space-between;padding:5px 0;color:var(--dim)}
+  .tot .ttc{border-top:1px solid var(--line2);font-weight:700;font-size:17px;color:var(--ink);margin-top:6px;padding-top:10px}
+  .badge{padding:2px 10px;border-radius:var(--r-pill);font-size:12px;font-weight:600;border:1px solid currentColor}
+  .draft{color:var(--dim)}.sent{color:var(--info)}.paid{color:var(--ok)}
+  .rowline{cursor:pointer;transition:background .12s}.rowline:hover td{background:color-mix(in srgb,var(--bg3) 60%,var(--bg2))}
+  .mut{color:var(--faint);font-size:13px}
+  .flex{display:flex;gap:10px;align-items:center}
+  .warn{color:var(--warn);font-size:13px;margin-top:10px}
+  code{font-family:ui-monospace,monospace;font-size:12px;background:var(--bg3);padding:1px 5px;border-radius:5px}
+  @media (max-width:760px){header{padding:10px 16px;height:auto}.tabs{margin-left:0;flex-basis:100%}main{padding:20px 16px 40px}.grid{grid-template-columns:1fr}.tot{width:100%}}
+</style></head><body>
+<header>
+  <span class="brand">Last Web Studios <i>Billing</i></span>
+  <a class="back" href="/#sites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> Cockpit</a>
+  <div class="tabs">
+    <button class="tab on" data-v="new">New invoice</button>
+    <button class="tab" data-v="list">Invoices</button>
+    <button class="tab" data-v="settings">Seller</button>
+  </div>
+</header>
+<main>
+  <!-- NOUVELLE FACTURE -->
+  <section id="v-new">
+    <div class="card">
+      <h2>Client</h2>
+      <div class="grid">
+        <div><label>Name / company</label><input id="c-name" placeholder="Orvane Pools"></div>
+        <div><label>Email</label><input id="c-email" placeholder="contact@…"></div>
+        <div><label>Address</label><input id="c-address" placeholder="12 Main St, City"></div>
+        <div><label>Company number (optional)</label><input id="c-siret" placeholder="—"></div>
+      </div>
+      <div class="grid" style="margin-top:6px">
+        <div><label>Issue date</label><input id="i-issue" type="date"></div>
+        <div><label>Due date</label><input id="i-due" type="date"></div>
+        <div><label>Type</label><select id="i-kind">
+          <option value="facture">Invoice</option>
+          <option value="acompte">Deposit invoice</option>
+          <option value="solde">Final invoice</option>
+        </select></div>
+        <div><label>Payment link (optional)</label><input id="i-payurl" placeholder="https://buy.stripe.com/…"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Items</h2>
+      <table class="items"><thead><tr><th>Description</th><th style="width:80px" class="r">Qty</th><th style="width:120px" class="r">Unit price</th><th style="width:110px" class="r">Amount</th><th style="width:30px"></th></tr></thead>
+        <tbody id="items"></tbody></table>
+      <button class="btn ghost" id="add-item" style="margin-top:12px">Add a line</button>
+      <div class="flex" style="margin-top:14px">
+        <label style="margin:0" id="tax-label">Tax %</label><input id="i-vat" type="number" value="20" style="width:80px">
+      </div>
+      <div class="tot">
+        <div><span>Subtotal</span><span id="t-ht">0.00</span></div>
+        <div><span>Tax</span><span id="t-tva">0.00</span></div>
+        <div class="ttc"><span>Total</span><span id="t-ttc">0.00</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <label>Note (optional)</label><textarea id="i-notes" rows="2" placeholder="Thank you for your trust."></textarea>
+    </div>
+    <button class="btn" id="save">Create invoice</button>
+    <span id="saved" class="mut" style="margin-left:12px"></span>
+  </section>
+
+  <!-- LISTE -->
+  <section id="v-list" hidden>
+    <div class="card">
+      <p class="mut" style="margin:0 0 14px">Sequential numbering: an issued invoice is never deleted or edited, it is cancelled by a credit note.</p>
+      <table><thead><tr><th>Number</th><th>Client</th><th>Date</th><th class="r">Total</th><th>Status</th><th></th></tr></thead>
+        <tbody id="inv-rows"></tbody></table>
+    </div>
+  </section>
+
+  <!-- RÉGLAGES VENDEUR -->
+  <section id="v-settings" hidden>
+    <div class="card">
+      <h2>Seller</h2>
+      <p class="mut">Shown on every invoice. Replace the <code>&lt;…&gt;</code> placeholders.</p>
+      <div class="grid" id="seller-fields"></div>
+      <button class="btn" id="save-settings" style="margin-top:16px">Save</button>
+      <span id="settings-saved" class="mut" style="margin-left:12px"></span>
+      <div class="warn" id="seller-warn"></div>
+    </div>
+  </section>
+</main>
+<script>
+const $ = (s) => document.querySelector(s)
+let CUR = { locale: "en-US", currency: "EUR" }
+const eur = (n) => { try { return new Intl.NumberFormat(CUR.locale, { style: "currency", currency: CUR.currency }).format(Number(n)||0) } catch { return (Number(n)||0).toFixed(2) } }
+fetch("/api/agency").then((r) => r.json()).then((a) => { if (a && a.currency) { CUR = { locale: a.locale || "en-US", currency: a.currency }; recalc(); const t = document.querySelector("#tax-label"); if (t && a.country === "US") t.textContent = "Sales tax %" } }).catch(() => {})
+const escH = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))
+// MONTANTS EN CENTIMES : mêmes règles que invoices.ts (lineCents/totalsCents), vérifié par test/cockpit/invoices.test.ts
+// <money>
+function divRound(n, d) { return (n < 0 ? -1 : 1) * Math.floor((Math.abs(n) + d / 2) / d) + 0 }
+function lineCents(it) { return divRound(Math.round((Number(it.qty) || 0) * 1000) * Math.round((Number(it.unitPrice) || 0) * 100), 1000) }
+function totalsCents(inv) { const lines = (inv.items || []).map(lineCents); const ht = lines.reduce((s, c) => s + c, 0); const tva = divRound(ht * Math.round((Number(inv.vatRate) || 0) * 100), 10000); return { lines, ht, tva, ttc: ht + tva } }
+// </money>
+const SELLER_FIELDS = [["name","Name"],["legal","Legal form / capital"],["address","Address"],["siret","Company number"],["tva","VAT number"],["rcs","Registry"],["email","Email"],["phone","Phone"],["iban","IBAN"],["bic","BIC"],["capital","Share capital"],["paymentLink","Default payment link"]]
+
+// ── onglets ──
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("on",x===t))
+  for(const v of ["new","list","settings"]) $("#v-"+v).hidden = v!==t.dataset.v
+  if(t.dataset.v==="list") loadList()
+  if(t.dataset.v==="settings") loadSettings()
+})
+
+// ── lignes de prestation ──
+function addItem(it={label:"",qty:1,unitPrice:0}){
+  const tr=document.createElement("tr")
+  tr.innerHTML=`<td><input class="il-label" value="${escH(it.label||"")}" placeholder="Website redesign"></td>
+    <td><input class="il-qty r" type="number" value="${escH(it.qty)}" step="any"></td>
+    <td><input class="il-pu r" type="number" value="${escH(it.unitPrice)}" step="any"></td>
+    <td class="r il-amt">0,00 €</td>
+    <td><button class="xrow" title="remove">×</button></td>`
+  tr.querySelector(".xrow").onclick=()=>{tr.remove();recalc()}
+  tr.querySelectorAll("input").forEach(i=>i.oninput=recalc)
+  $("#items").appendChild(tr); recalc()
+}
+function readItems(){return [...document.querySelectorAll("#items tr")].map(tr=>({label:tr.querySelector(".il-label").value,qty:Number(tr.querySelector(".il-qty").value)||0,unitPrice:Number(tr.querySelector(".il-pu").value)||0}))}
+function recalc(){
+  const t=totalsCents({items:readItems(),vatRate:Number($("#i-vat").value)||0})
+  document.querySelectorAll("#items tr").forEach((tr,i)=>{tr.querySelector(".il-amt").textContent=eur(t.lines[i]/100)})
+  $("#t-ht").textContent=eur(t.ht/100);$("#t-tva").textContent=eur(t.tva/100);$("#t-ttc").textContent=eur(t.ttc/100)
+}
+$("#add-item").onclick=()=>addItem()
+$("#i-vat").oninput=recalc
+
+// dates par défaut : aujourd'hui + échéance à 30j
+const today=new Date().toISOString().slice(0,10)
+$("#i-issue").value=today
+$("#i-due").value=new Date(Date.now()+30*864e5).toISOString().slice(0,10)
+addItem({label:"",qty:1,unitPrice:0})
+
+// ── créer ──
+$("#save").onclick=async()=>{
+  const body={client:{name:$("#c-name").value,address:$("#c-address").value,email:$("#c-email").value,siret:$("#c-siret").value},
+    issueDate:$("#i-issue").value,dueDate:$("#i-due").value,items:readItems(),vatRate:Number($("#i-vat").value)||0,notes:$("#i-notes").value,
+    kind:$("#i-kind").value,paymentUrl:$("#i-payurl").value.trim()}
+  if(!body.client.name){$("#saved").textContent="Client name is required.";return}
+  const inv=await(await fetch("/api/invoices",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})).json()
+  $("#saved").innerHTML=`${inv.kind==="acompte"?"Deposit":"Invoice"} ${inv.number} created: <a href="/facture/${inv.id}" target="_blank">open or print</a>`
+}
+
+// ── liste ──
+async function loadList(){
+  const invs=await(await fetch("/api/invoices")).json()
+  const KL={facture:"",acompte:"deposit",solde:"final",avoir:"CREDIT NOTE"}
+  $("#inv-rows").innerHTML=invs.length?invs.map(i=>{
+    const ttc=i.totals?i.totals.ttc:totalsCents(i).ttc/100 // les totaux du serveur (centimes)
+    const lab={draft:"Draft",sent:"Sent",paid:"Paid"}[i.status]||i.status
+    const kind=KL[i.kind||"facture"]
+    // une facture émise ne se supprime JAMAIS : elle s'annule par un avoir (séquence légale sans trou)
+    const avoir=(i.kind!=="avoir"&&i.status!=="draft")?` <a href="#" data-av="${i.id}" class="av mut" style="margin-left:10px" title="Cancel this invoice with a credit note">credit note</a>`:""
+    return `<tr class="rowline"><td><b>${escH(i.number)}</b>${kind?` <span class="badge ${i.kind==="avoir"?"draft":"sent"}" style="font-size:10px">${kind}</span>`:""}${i.ref?` <span class="mut" style="font-size:11px">→ ${escH(i.ref)}</span>`:""}</td><td>${escH(i.client?.name||"")}</td><td class="mut">${escH(i.issueDate)}</td><td class="r">${eur(ttc)}</td>
+      <td><span class="badge ${i.status}">${lab}</span></td>
+      <td class="r"><a href="/facture/${i.id}" target="_blank">open</a> <a href="#" data-cy="${i.id}" data-st="${i.status}" class="cyc mut" style="margin-left:10px">change status</a>${avoir}</td></tr>`
+  }).join(""):`<tr><td colspan="6" class="mut" style="padding:24px;text-align:center">No invoices yet.</td></tr>`
+  // cycle LÉGAL : brouillon → envoyée → payée ⇄ envoyée (jamais retour brouillon une fois émise)
+  document.querySelectorAll(".cyc").forEach(a=>a.onclick=async(e)=>{e.preventDefault();const nx={draft:"sent",sent:"paid",paid:"sent"}[a.dataset.st];await fetch("/api/invoices/"+a.dataset.cy,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({status:nx})});loadList()})
+  document.querySelectorAll(".av").forEach(a=>a.onclick=async(e)=>{e.preventDefault();const r=await(await fetch("/api/invoices/"+a.dataset.av+"/avoir",{method:"POST"})).json();if(r.number)window.open("/facture/"+r.id,"_blank");loadList()})
+}
+
+// ── réglages vendeur ──
+async function loadSettings(){
+  const s=await(await fetch("/api/invoice-settings")).json()
+  $("#seller-fields").innerHTML=SELLER_FIELDS.map(([k,lab])=>`<div><label>${lab}</label><input id="s-${k}" value="${(s[k]||"").replace(/"/g,'&quot;')}"></div>`).join("")
+  const missing=SELLER_FIELDS.filter(([k])=>k!=="paymentLink"&&String(s[k]||"").includes("<")).map(([,l])=>l)
+  $("#seller-warn").textContent=missing.length?("Still placeholders: "+missing.join(", ")):""
+}
+$("#save-settings").onclick=async()=>{
+  const body={};SELLER_FIELDS.forEach(([k])=>body[k]=$("#s-"+k).value)
+  await fetch("/api/invoice-settings",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})
+  $("#settings-saved").textContent="Saved.";loadSettings()
+}
+</script></body></html>

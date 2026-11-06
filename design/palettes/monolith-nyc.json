@@ -1,0 +1,32 @@
+{
+  "slug": "monolith-nyc",
+  "url": "https://www.monolith.nyc/",
+  "vars": {
+    "--bg": "#0e0e0e",
+    "--bg-dark": "#161616",
+    "--index-text-view": "#1d1c1b",
+    "--fg": "#eceae5",
+    "--image-bg": "#1d1c1b",
+    "--material-dropdown-bg": "#dddad1",
+    "--bg-invert": "#eceae5",
+    "--bg-dark-invert": "#eceae5",
+    "--index-text-view-invert": "#dddad1",
+    "--fg-invert": "#28282a",
+    "--image-bg-invert": "#dfd9d3",
+    "--material-dropdown-bg-invert": "#373739",
+    "--swiper-theme-color": "#007aff",
+    "--swiper-preloader-color": "#000"
+  },
+  "palette": [
+    "#eceae5",
+    "#dddad1",
+    "#1d1c1b",
+    "#28282a",
+    "#dfd9d3",
+    "#373739",
+    "#0e0e0e",
+    "#161616",
+    "rgba(0,0,0,.5)",
+    "#efefef"
+  ]
+}

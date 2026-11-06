@@ -1,0 +1,41 @@
+{
+  "id": "cuisines-lumeo-vereuil",
+  "generated": "2026-10-24",
+  "mode": "audit-only",
+  "engines": { "image": "none", "video": "none" },
+  "credits_spent": 0,
+  "heroVideo": false,
+  "hero": {
+    "candidate": null,
+    "note": "Aucune vraie photo raster : l'audit compte 0 photo. Héro à porter par une compo éditoriale (typo, palette, aplats), pas par une image."
+  },
+  "assets": [
+    {
+      "source": "photo-1.svg",
+      "action": "none",
+      "generated": false,
+      "real": false,
+      "hero_ok": false,
+      "weak": true,
+      "note": "Illustration vectorielle FICTIVE (titre SVG « illustration fictive »), légende rouge incrustée « Cuisine laquée blanche, îlot central ». Pas une vraie réalisation : ne pas la présenter comme leur travail. À remplacer par une vraie photo (reshoot côté client)."
+    },
+    {
+      "source": "photo-2.svg",
+      "action": "none",
+      "generated": false,
+      "real": false,
+      "hero_ok": false,
+      "weak": true,
+      "note": "Illustration vectorielle FICTIVE (« Cuisine bois et béton »), légende incrustée. Même règle : pas leur portfolio, à reshooter côté client."
+    },
+    {
+      "source": "logo.svg",
+      "action": "none",
+      "generated": false,
+      "real": true,
+      "note": "Logo vectoriel, pas de nettoyage (moteur image coupé ; SVG déjà sans fond raster)."
+    }
+  ],
+  "reshoot": ["photo-1.svg", "photo-2.svg"],
+  "notes": "Moteurs image et vidéo désactivés par le lanceur : aucune génération, aucune édition, hero-cli non appelé. 0 vraie photo détectée par asset-audit ; les 2 SVG sont des illustrations fictives avec texte incrusté. Composer : compo éditoriale sans photo de héros ; si les SVG servent, uniquement en décoratif clairement non-portfolio."
+}

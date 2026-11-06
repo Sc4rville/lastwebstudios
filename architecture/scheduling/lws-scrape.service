@@ -1,0 +1,13 @@
+[Unit]
+Description=lastwebstudios — scraping annuaire OSM (nouveaux prospects francophonie)
+OnFailure=lws-alert@%n.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+# métier et zone : LWS_SCRAPE_ARGS dans ~/lws/.env (qui l'emporte), ex. « menuisier fr » ; zones fr | be | ch | all
+Environment="LWS_SCRAPE_ARGS=cuisiniste all"
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh scrape scrape $LWS_SCRAPE_ARGS
+# logs capturés par journald : journalctl --user -u lws-scrape.service

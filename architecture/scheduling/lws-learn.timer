@@ -1,0 +1,12 @@
+# lws-learn.timer — chaque nuit à 01:30 (Paris), avant le pipeline de 03:00 : la porte du jour a les poids d'hier.
+# 01:30 et pas 02:30 : au changement d'heure, 02:30 n'existe pas (mars) ou existe deux fois (octobre).
+
+[Unit]
+Description=lastwebstudios — learning de nuit (01:30, Paris)
+
+[Timer]
+OnCalendar=*-*-* 01:30:00 Europe/Paris
+Persistent=true
+
+[Install]
+WantedBy=timers.target

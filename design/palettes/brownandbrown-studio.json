@@ -1,0 +1,26 @@
+{
+  "slug": "brownandbrown-studio",
+  "url": "https://www.brownandbrown.studio/",
+  "vars": {
+    "--orange-red": "#eb460a",
+    "--bronze": "#b46428",
+    "--chalk": "#f5f0e6",
+    "--oak-brown": "#6e3c2d",
+    "--stone": "#e6ded2",
+    "--dark-slate-grey": "#285550",
+    "--white-smoke": "#ebebeb",
+    "--lemon-chiffon": "#faffc8"
+  },
+  "palette": [
+    "#00000040",
+    "#ccc",
+    "#ffffff80",
+    "#333",
+    "#3898ec",
+    "#ddd",
+    "#222",
+    "#fafafa",
+    "#0006",
+    "#c8c8c8"
+  ]
+}

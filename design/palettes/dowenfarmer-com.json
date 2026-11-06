@@ -1,0 +1,23 @@
+{
+  "slug": "dowenfarmer-com",
+  "url": "https://www.dowenfarmer.com/",
+  "vars": {
+    "--wp-block-synced-color": "#7a00df",
+    "--wp-editor-canvas-background": "#ddd",
+    "--wp-admin-theme-color": "#007cba",
+    "--wp-admin-theme-color-darker-10": "#006ba1",
+    "--wp-admin-theme-color-darker-20": "#005a87"
+  },
+  "palette": [
+    "#d5c5b5",
+    "#c6d5e5",
+    "#ff9212",
+    "#ddd",
+    "#eee",
+    "#313131",
+    "#32373c",
+    "#efefef",
+    "#e4e4e4",
+    "rgba(255,255,255,0)"
+  ]
+}

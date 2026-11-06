@@ -1,0 +1,36 @@
+{
+  "slug": "maap-cc",
+  "url": "https://maap.cc/",
+  "vars": {
+    "--swiper-theme-color": "#007aff",
+    "--swiper-preloader-color": "#000",
+    "--color-black": "#000",
+    "--color-brand-white": "#fff",
+    "--color-brand-cement": "#f7f7f7",
+    "--color-brand-aluminium": "#e7e7e7",
+    "--color-brand-steel": "#ccc",
+    "--color-brand-titanium": "#777",
+    "--color-brand-black": "#222",
+    "--color-brand-buy": "#00f",
+    "--color-brand-discover": "#7000ff",
+    "--color-brand-pay": "#ccfd50",
+    "--color-brand-warning": "#f70",
+    "--color-brand-Filter": "#f07",
+    "--overlay": "rgba(var(--black-rgb)",
+    "--PhoneInput-color--focus": "#03b2cb",
+    "--PhoneInputCountryFlag-borderColor": "rgba(0,0,0,.5)",
+    "--PhoneInputCountryFlag-backgroundColor--loading": "rgba(0,0,0,.1)"
+  },
+  "palette": [
+    "#222",
+    "#f0f0f0",
+    "#efefef",
+    "#ccc",
+    "rgba(0,0,0,.5)",
+    "#e0e0e0",
+    "#f5f5f5",
+    "#f7f7f7",
+    "#777",
+    "rgba(0,0,0,.1)"
+  ]
+}

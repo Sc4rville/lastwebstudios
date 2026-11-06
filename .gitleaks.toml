@@ -1,0 +1,12 @@
+# gitleaks : règles par défaut + une liste blanche ÉTROITE pour les secrets FICTIFS des tests
+# (clés HMAC du tracking signé : « secret-de-test-fictif-… », jamais utilisées hors des tests).
+# Utilisé par `gitleaks dir .` (le fichier est lu automatiquement à la racine scannée) et par npm run oss:export.
+title = "lws"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "secrets fictifs des tests (préfixe secret-de-test-fictif-)"
+regexTarget = "match"
+regexes = ['''secret-de-test-fictif-[a-z0-9-]+''']

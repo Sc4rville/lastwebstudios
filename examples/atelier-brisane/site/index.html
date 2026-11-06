@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier Brisane · Menuisier ébéniste à Sornac-le-Haut depuis 1987</title>
+<meta name="description" content="Menuisier ébéniste à Sornac-le-Haut depuis 1987 : escaliers, fenêtres, portes, placards et cuisines en bois massif, dessinés avec vous, fabriqués et posés par notre atelier. Devis gratuit à domicile dans un rayon de 30 km.">
+<meta property="og:title" content="Atelier Brisane · Menuisier ébéniste à Sornac-le-Haut">
+<meta property="og:description" content="Escaliers, fenêtres, portes, placards et cuisines en bois massif, fabriqués sur mesure dans notre atelier depuis 1987.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/escalier.svg">
+<meta name="theme-color" content="#f7f2ea">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Atelier Brisane",
+  "description": "Menuisier ébéniste, fabrication sur mesure d'escaliers, fenêtres, portes, placards et cuisines en bois massif.",
+  "foundingDate": "1987",
+  "telephone": "+33 2 61 91 37 05",
+  "email": "bonjour@atelier-brisane.example",
+  "address": { "@type": "PostalAddress", "streetAddress": "ZA des Tilleuls", "addressLocality": "Sornac-le-Haut", "addressCountry": "FR" },
+  "areaServed": "30 km autour de Sornac-le-Haut",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "18:00" }
+  ]
+}
+</script>
+<style>
+@font-face{font-family:"Fraunces";src:url("fonts/fraunces-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("fonts/instrument-sans-var.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+
+:root{
+  --bg:#f7f2ea;          /* papier chaud */
+  --bg-2:#ede3d4;        /* aplat chêne pâle */
+  --fg:#231a12;          /* encre noyer */
+  --muted:#65564a;
+  --line:#d6c8b4;
+  --accent:#8a461b;      /* chêne huilé, l'unique accent */
+  --accent-ink:#fbf6ee;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Instrument Sans", "Helvetica Neue", sans-serif;
+  --mono:"Instrument Sans", sans-serif;
+  --pad:clamp(20px,5vw,80px);
+  --head:72px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;overflow-wrap:break-word;hyphens:manual}
+p{margin:0}
+.kicker{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 clamp(16px,2vw,22px)}
+.num{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- header ---------- */
+.site-head{position:sticky;top:0;z-index:20;height:var(--head);display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding:0 var(--pad);background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);
+  border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:38px;height:38px;border-radius:7px}
+.brand b{font-family:var(--serif);font-weight:500;font-size:21px;line-height:1.1;letter-spacing:-.01em;display:block}
+.brand small{display:block;font-size:12px;color:var(--muted);line-height:1.2;margin-top:2px}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,34px);font-size:15px}
+.nav a{text-decoration:none;position:relative;padding:6px 0}
+.nav a:not(.tel-btn)::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;
+  transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav a:not(.tel-btn):hover::after{transform:scaleX(1)}
+.tel-btn{display:inline-flex;align-items:center;gap:9px;padding:10px 18px!important;border-radius:999px;
+  background:var(--fg);color:var(--accent-ink);font-weight:600;font-variant-numeric:tabular-nums;transition:background .2s,transform .2s}
+.tel-btn:hover{background:var(--accent);transform:translateY(-1px)}
+.tel-btn svg{width:16px;height:16px}
+
+/* ---------- hero-split ---------- */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:min(calc(100svh - var(--head)),900px);background:var(--bg)}
+.hero__copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,96px) clamp(28px,5vw,80px) clamp(40px,5vw,72px) var(--pad)}
+.hero__title{font-weight:380;font-size:clamp(42px,5.4vw,84px);line-height:1.06;letter-spacing:-.022em;max-width:12ch;margin:0 0 clamp(22px,2.6vw,34px)}
+.hero__title span{color:var(--accent)}
+.hero__lead{font-size:clamp(16.5px,1.3vw,19px);line-height:1.62;color:var(--muted);max-width:46ch;margin:0 0 clamp(28px,3vw,40px)}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:16px;padding:16px 26px;
+  border-radius:999px;background:var(--accent);color:var(--accent-ink);text-decoration:none;border:0;cursor:pointer;
+  transition:transform .2s var(--ease),background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);background:#753a15;box-shadow:0 10px 24px -12px rgba(60,30,10,.55)}
+.btn svg{width:18px;height:18px;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+.link-tel{display:inline-flex;align-items:center;gap:9px;font-weight:600;text-decoration:none;font-variant-numeric:tabular-nums;
+  border-bottom:1px solid var(--line);padding-bottom:3px;transition:border-color .2s,color .2s}
+.link-tel:hover{color:var(--accent);border-color:var(--accent)}
+.link-tel svg{width:17px;height:17px}
+.hero__meta{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:clamp(20px,3vw,44px);
+  margin-top:clamp(36px,5vw,64px);padding-top:clamp(20px,2.4vw,28px);border-top:1px solid var(--line)}
+.hero__meta b{display:block;font-family:var(--serif);font-weight:420;font-size:clamp(26px,2.4vw,36px);line-height:1.05;letter-spacing:-.01em}
+.hero__meta span{display:block;font-size:13px;line-height:1.35;color:var(--muted);margin-top:6px;max-width:14ch}
+.hero__media{position:relative;margin:0;overflow:hidden;background:#ece3d6;min-height:420px}
+.hero__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.hero__media figcaption{position:absolute;left:clamp(16px,2vw,28px);bottom:clamp(16px,2vw,28px);background:var(--bg);color:var(--fg);
+  font-size:13px;line-height:1.3;padding:10px 14px;border-radius:4px}
+.hero__media figcaption b{font-family:var(--serif);font-weight:500;font-size:15px;display:block}
+
+/* ---------- manifeste (bande pleine largeur) ---------- */
+.manifest{background:var(--bg-2);padding:clamp(64px,10vw,150px) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,3vw,40px)}
+.manifest__quote{grid-column:1 / span 10;font-weight:330;font-size:clamp(30px,4.3vw,66px);line-height:1.12;letter-spacing:-.018em}
+.manifest__quote em{font-style:normal;color:var(--accent)}
+.manifest__notes{grid-column:5 / span 8;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);margin-top:clamp(24px,4vw,56px);
+  padding-top:clamp(20px,2.4vw,28px);border-top:1px solid color-mix(in srgb,var(--fg) 25%,transparent)}
+.manifest__notes p{font-size:16px;line-height:1.65;color:var(--muted)}
+.manifest__notes strong{display:block;color:var(--fg);font-weight:600;margin-bottom:6px}
+
+/* ---------- services-list ---------- */
+.svc{padding:clamp(64px,9vw,130px) var(--pad)}
+.svc__head{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(20px,4vw,64px);align-items:end;margin:0 0 clamp(32px,4vw,56px)}
+.h2{font-weight:380;font-size:clamp(34px,4.6vw,66px);line-height:1.06;letter-spacing:-.02em}
+.svc__intro{font-size:clamp(16px,1.2vw,18px);line-height:1.62;color:var(--muted);max-width:50ch}
+.svc__rows{border-top:1px solid var(--fg);list-style:none;margin:0;padding:0}
+.svc__row{display:grid;grid-template-columns:72px minmax(0,1.1fr) minmax(0,1fr) 40px;align-items:baseline;gap:clamp(14px,2.5vw,40px);
+  padding:clamp(20px,2.4vw,32px) 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:padding-left .3s var(--ease),background .3s}
+.svc__row:hover{padding-left:clamp(8px,1.4vw,18px)}
+.svc__idx{font-size:13px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.svc__name{font-weight:400;font-size:clamp(23px,2.4vw,34px);line-height:1.12;letter-spacing:-.012em}
+.svc__desc{font-size:15.5px;line-height:1.55;color:var(--muted);max-width:52ch}
+.svc__arrow{align-self:center;justify-self:end;color:var(--muted);transition:transform .25s var(--ease),color .25s}
+.svc__row:hover .svc__arrow{transform:translateX(6px);color:var(--accent)}
+.svc__arrow svg{width:22px;height:22px;display:block}
+
+/* ---------- gallery-feature ---------- */
+.gal{padding:clamp(64px,9vw,130px) var(--pad);border-top:1px solid var(--line)}
+.gal__head{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(20px,4vw,64px);align-items:end;margin:0 0 clamp(32px,4vw,56px)}
+.gal__head p{color:var(--muted);max-width:48ch}
+.gal__feature{display:grid;grid-template-columns:1.65fr .85fr;gap:clamp(20px,3vw,48px);align-items:end;margin:0 0 clamp(20px,2.4vw,32px)}
+.frame{position:relative;margin:0;overflow:hidden;border-radius:3px;background:#eee6da}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.gal__feature .frame{aspect-ratio:16/10}
+.gal__feature:hover .frame img{transform:scale(1.025)}
+.gal__cap .year{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.gal__cap h3{font-weight:420;font-size:clamp(26px,2.6vw,38px);line-height:1.1;letter-spacing:-.012em;margin:10px 0 14px}
+.gal__cap p{font-size:15.5px;line-height:1.6;color:var(--muted);max-width:40ch}
+.gal__thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,28px);list-style:none;margin:0;padding:0}
+.thumb .frame{aspect-ratio:4/3}
+.thumb:hover .frame img{transform:scale(1.04)}
+.thumb__cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.thumb__cap h3{font-weight:450;font-size:clamp(19px,1.6vw,23px);line-height:1.2}
+.thumb__cap span{font-size:13px;color:var(--muted);white-space:nowrap}
+
+/* ---------- essences (bande pleine largeur) ---------- */
+.ess{background:var(--bg-2);padding:clamp(64px,9vw,130px) 0 0}
+.ess__head{padding:0 var(--pad);display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(20px,4vw,64px);align-items:end;margin:0 0 clamp(32px,4vw,56px)}
+.ess__head p{color:var(--muted);max-width:50ch}
+.ess__row{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;margin:0;padding:0}
+.plank{position:relative;min-height:clamp(300px,34vw,500px);padding:clamp(22px,2.4vw,36px);display:flex;flex-direction:column;justify-content:flex-end;
+  color:var(--fg);isolation:isolate;transition:flex-grow .4s}
+.plank::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--wood);opacity:1}
+.plank::after{content:"";position:absolute;inset:0;z-index:-1;mix-blend-mode:multiply;opacity:.55;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.11' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.2 0 0 0 0 0.08 0 0 0 0.9 -0.15'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size:400px 600px}
+.plank--chene{--wood:linear-gradient(100deg,#c08a52,#d2a06a 45%,#b47b43)}
+.plank--frene{--wood:linear-gradient(100deg,#e2cba6,#ecd9b9 50%,#d8bd92)}
+.plank--noyer{--wood:linear-gradient(100deg,#5a3720,#6d4429 50%,#4e2f1b);color:#f6ecdf}
+.plank--pin{--wood:linear-gradient(100deg,#e6bd80,#efcd96 50%,#dcae6c)}
+.plank h3{font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.05;letter-spacing:-.02em}
+.plank p{font-size:14.5px;line-height:1.5;margin-top:10px;max-width:24ch}
+.plank__tag{background:color-mix(in srgb,var(--bg) 88%,transparent);color:var(--fg);align-self:flex-start;
+  padding:12px 14px 13px;border-radius:4px;transition:transform .25s var(--ease)}
+.plank--noyer .plank__tag{background:color-mix(in srgb,#2a190e 72%,transparent);color:#f6ecdf}
+.plank:hover .plank__tag{transform:translateY(-4px)}
+
+/* ---------- process-timeline ---------- */
+.proc{padding:clamp(64px,9vw,130px) var(--pad);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,96px);align-items:start}
+.proc .h2{margin-bottom:clamp(32px,4vw,52px)}
+.steps{list-style:none;margin:0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.step{position:relative;padding:0 0 clamp(26px,3.2vw,40px) 60px}
+.step:last-child{padding-bottom:0}
+.step__dot{position:absolute;left:0;top:0;width:31px;height:31px;border-radius:50%;border:1px solid var(--accent);background:var(--bg);
+  display:grid;place-items:center;font-size:12px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.step h3{font-family:var(--sans);font-weight:600;font-size:clamp(18px,1.5vw,21px);line-height:1.3;margin:2px 0 6px}
+.step p{font-size:15.5px;line-height:1.6;color:var(--muted);max-width:50ch}
+.proc__aside{position:sticky;top:calc(var(--head) + 28px)}
+.proc__aside .frame{aspect-ratio:4/3}
+.visit{margin-top:clamp(18px,2vw,26px);padding:clamp(20px,2.4vw,30px);background:var(--bg-2);border-radius:3px;display:grid;gap:12px}
+.visit h3{font-weight:420;font-size:clamp(23px,2vw,29px);line-height:1.15}
+.visit p{font-size:15.5px;line-height:1.6;color:var(--muted)}
+.visit a{justify-self:start;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;color:var(--accent);padding-bottom:2px;transition:opacity .2s}
+.visit a:hover{opacity:.75}
+
+/* ---------- contact (bascule accent) ---------- */
+.contact{background:var(--accent);color:var(--accent-ink);padding:clamp(64px,9vw,130px) var(--pad);
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:start}
+.contact .kicker{color:#f3d9bd}
+.contact__title{font-weight:360;font-size:clamp(40px,5.6vw,86px);line-height:1.05;letter-spacing:-.022em;margin:0 0 clamp(20px,2.4vw,30px)}
+.contact__sub{font-size:clamp(16.5px,1.3vw,19px);line-height:1.6;max-width:44ch;color:#f6e6d4}
+.contact__tel{display:inline-block;margin-top:clamp(28px,3.4vw,44px);font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.8vw,54px);
+  line-height:1.1;letter-spacing:-.01em;text-decoration:none;font-variant-numeric:tabular-nums;border-bottom:1px solid rgba(251,246,238,.45);padding-bottom:4px;transition:border-color .2s}
+.contact__tel:hover{border-color:var(--accent-ink)}
+.contact__info{display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;margin-top:clamp(28px,3.4vw,44px);font-size:15px;line-height:1.55;color:#f6e6d4}
+.contact__info b{display:block;color:var(--accent-ink);font-weight:600;margin-bottom:2px}
+.contact__info a{text-decoration:none;border-bottom:1px solid rgba(251,246,238,.4)}
+.form{background:var(--bg);color:var(--fg);border-radius:4px;padding:clamp(24px,3vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.form h3{grid-column:1/-1;font-weight:420;font-size:clamp(25px,2.2vw,32px);line-height:1.15}
+.form .full{grid-column:1/-1}
+.field{display:grid;gap:7px}
+.field label{font-size:13px;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--fg);background:#fffdf9;border:1px solid var(--line);border-radius:3px;padding:12px 13px;width:100%;
+  transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:112px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+.check{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:var(--accent)}
+.form__foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:4px}
+.form__foot small{font-size:13px;color:var(--muted);max-width:34ch;line-height:1.45}
+
+/* ---------- footer ---------- */
+.foot{background:var(--fg);color:#e9dfd1;padding:clamp(48px,6vw,80px) var(--pad) 28px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:clamp(24px,3vw,48px);font-size:15px;line-height:1.6}
+.foot .brand b{color:#fbf6ee}
+.foot .brand small{color:#bfae99}
+.foot h4{margin:0 0 10px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#d9b48c;font-weight:600}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(233,223,209,.3);transition:border-color .2s}
+.foot a:hover{border-color:#e9dfd1}
+.foot__base{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;margin-top:clamp(20px,3vw,36px);border-top:1px solid rgba(233,223,209,.16);font-size:13px;color:#bfae99}
+
+/* ---------- barre d'action mobile ---------- */
+.mbar{display:none}
+
+/* ---------- motion (3 gestes : entrée héro · reveal de section · dérive du héros) ---------- */
+@keyframes rise{from{opacity:.38;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes settle{from{opacity:.55;transform:scale(1.06)}to{opacity:1;transform:scale(1)}}
+@keyframes drift{from{transform:translateY(0) scale(1.04)}to{transform:translateY(5%) scale(1.04)}}
+@media (prefers-reduced-motion:no-preference){
+  .hero__copy > *{animation:rise .9s var(--ease) both}
+  .hero__copy > :nth-child(2){animation-delay:.08s}
+  .hero__copy > :nth-child(3){animation-delay:.16s}
+  .hero__copy > :nth-child(4){animation-delay:.24s}
+  .hero__copy > :nth-child(5){animation-delay:.32s}
+  .hero__media{animation:settle 1.3s var(--ease) both}
+  @supports (animation-timeline: view()){
+    .reveal{animation:rise linear forwards;animation-timeline:view();animation-range:entry 0% entry 45%}
+    .hero__media img{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 100vh}
+  }
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .hero__meta{grid-template-columns:repeat(2,auto)}
+  .svc__row{grid-template-columns:56px minmax(0,1fr) 32px}
+  .svc__desc{grid-column:2 / 3}
+  .svc__arrow{grid-row:1;grid-column:3}
+  .ess__row{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  :root{--head:64px}
+  .nav a:not(.tel-btn){display:none}
+  .brand small{display:none}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero__media{order:-1;min-height:0;aspect-ratio:1/1;max-height:62svh;width:100%}
+  .hero__copy{padding:clamp(30px,8vw,48px) var(--pad) clamp(40px,9vw,56px)}
+  .hero__title{max-width:14ch}
+  .manifest{grid-template-columns:1fr}
+  .manifest__quote,.manifest__notes{grid-column:1 / -1}
+  .manifest__notes{grid-template-columns:1fr}
+  .svc__head,.gal__head,.ess__head{grid-template-columns:1fr;align-items:start;gap:16px}
+  .gal__feature{grid-template-columns:1fr;align-items:start}
+  .gal__thumbs{grid-template-columns:1fr 1fr}
+  .proc{grid-template-columns:1fr}
+  .proc__aside{position:static;order:-1}
+  .contact{grid-template-columns:1fr}
+  body{padding-bottom:76px}
+  .mbar{display:grid;grid-template-columns:1fr 1.25fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 94%,transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none}
+  .mbar a svg{width:18px;height:18px}
+  .mbar .call{background:var(--fg);color:var(--accent-ink)}
+  .mbar .quote{background:var(--accent);color:var(--accent-ink)}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .tel-btn span{display:none}
+  .tel-btn{padding:11px!important}
+  .hero__meta{grid-template-columns:1fr 1fr;gap:22px 20px}
+  .svc__row{grid-template-columns:40px minmax(0,1fr)}
+  .svc__arrow{display:none}
+  .gal__thumbs{grid-template-columns:1fr}
+  .ess__row{grid-template-columns:1fr 1fr}
+  .plank{min-height:260px;padding:16px}
+  .plank p{font-size:13.5px}
+  .form{grid-template-columns:1fr}
+  .contact__info{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="#top" aria-label="Atelier Brisane, accueil">
+    <img src="assets/mark.svg" alt="" width="38" height="38">
+    <span><b>Atelier Brisane</b><small>Menuiserie ébénisterie · depuis 1987</small></span>
+  </a>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="#fabrications">Fabrications</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#atelier">L'atelier</a>
+    <a href="#contact">Devis</a>
+    <a class="tel-btn" href="tel:+33261913705" aria-label="Appeler l'atelier au 02 61 91 37 05">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>02 61 91 37 05</span>
+    </a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- hero-split&nbsp;: promesse à gauche, la pièce phare plein-bleed à droite -->
+  <section class="hero" data-section="hero-split">
+    <div class="hero__copy">
+      <p class="kicker">Menuisier ébéniste à Sornac-le-Haut</p>
+      <h1 class="hero__title">Du bois massif, à la mesure de <span>votre maison.</span></h1>
+      <p class="hero__lead">Escaliers, fenêtres, portes, placards et cuisines&nbsp;: chaque pièce est dessinée avec vous, débitée et assemblée dans notre atelier, puis posée par la même équipe.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Demander un devis gratuit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a class="link-tel" href="tel:+33261913705">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          02 61 91 37 05
+        </a>
+      </div>
+      <div class="hero__meta">
+        <div><b class="num">1987</b><span>atelier fondé</span></div>
+        <div><b class="num">4</b><span>essences locales</span></div>
+        <div><b class="num">30 km</b><span>devis gratuit chez vous</span></div>
+        <div><b class="num">48 h</b><span>pour vous rappeler</span></div>
+      </div>
+    </div>
+    <figure class="hero__media">
+      <img src="assets/escalier.svg" alt="Escalier quart tournant en chêne massif fabriqué par l'Atelier Brisane" width="1440" height="1560" fetchpriority="high">
+      <figcaption><b>Escalier quart tournant</b>Chêne massif · 2010</figcaption>
+    </figure>
+  </section>
+
+  <!-- manifeste&nbsp;: bande pleine largeur, le moment fort -->
+  <section class="manifest" aria-label="Notre façon de travailler">
+    <p class="manifest__quote reveal">Pas de catalogue. Tout est fait sur mesure, <em>pour votre maison</em> et pour durer.</p>
+    <div class="manifest__notes reveal">
+      <p><strong>Trois menuisiers et un apprenti</strong>Des machines traditionnelles et beaucoup de travail à la main&nbsp;: assemblages à tenon et mortaise, quincaillerie de qualité.</p>
+      <p><strong>Le bois d'ici</strong>Chêne, frêne, noyer et pin des scieries de la région, finis à l'huile dure ou au vernis.</p>
+    </div>
+  </section>
+
+  <!-- services-list&nbsp;: les fabrications, une par ligne -->
+  <section class="svc" id="fabrications" data-section="services-list">
+    <div class="svc__head reveal">
+      <div>
+        <p class="kicker">Nos fabrications</p>
+        <h2 class="h2">De l'escalier au placard, tout sort de l'atelier.</h2>
+      </div>
+      <p class="svc__intro">Menuiseries extérieures ou agencement intérieur, neuf ou rénovation&nbsp;: chaque projet commence par une prise de cotes chez vous et finit posé par ceux qui l'ont fabriqué.</p>
+    </div>
+    <ul class="svc__rows">
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">01</span>
+        <h3 class="svc__name">Escaliers sur mesure</h3>
+        <p class="svc__desc">Droits ou quart tournant, en chêne ou en hêtre, dessinés pour votre trémie.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">02</span>
+        <h3 class="svc__name">Fenêtres et volets bois</h3>
+        <p class="svc__desc">Fenêtres à la française en double vitrage et volets assortis, fabriqués à vos cotes.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">03</span>
+        <h3 class="svc__name">Portes d'entrée</h3>
+        <p class="svc__desc">Portes pleines en bois massif, comme notre porte en chêne et laiton.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">04</span>
+        <h3 class="svc__name">Placards et dressings</h3>
+        <p class="svc__desc">Sous pente ou en niche&nbsp;: le rangement épouse la forme exacte de la pièce.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">05</span>
+        <h3 class="svc__name">Cuisines en bois massif</h3>
+        <p class="svc__desc">Façades et caissons en bois massif, du noyer au chêne, dessinés pour votre pièce.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">06</span>
+        <h3 class="svc__name">Parquets et lambris</h3>
+        <p class="svc__desc">Posés et finis à l'huile dure ou au vernis, dans les essences de la région.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+      <li><a class="svc__row reveal" href="#contact">
+        <span class="svc__idx">07</span>
+        <h3 class="svc__name">Rénovation d'escaliers anciens et portes de caractère</h3>
+        <p class="svc__desc">On reprend, on répare et on garde ce qui fait le charme de la pièce d'origine.</p>
+        <span class="svc__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <!-- gallery-feature&nbsp;: une pièce en grand + trois planches -->
+  <section class="gal" id="realisations" data-section="gallery-feature">
+    <div class="gal__head reveal">
+      <div>
+        <p class="kicker">Réalisations</p>
+        <h2 class="h2">Quelques pièces sorties de l'atelier.</h2>
+      </div>
+      <p>Chaque réalisation est unique&nbsp;: dessinée pour une maison précise, fabriquée à Sornac-le-Haut, posée par notre équipe.</p>
+    </div>
+    <div class="gal__feature">
+      <figure class="frame reveal"><img src="assets/cuisine.svg" alt="Cuisine en noyer massif avec plan de travail en ardoise" width="1600" height="1089"></figure>
+      <div class="gal__cap reveal">
+        <span class="year">2011</span>
+        <h3>Cuisine en noyer, plan ardoise</h3>
+        <p>Caissons et façades en noyer massif, plan de travail en ardoise&nbsp;: une cuisine pensée meuble par meuble, sans module de catalogue.</p>
+      </div>
+    </div>
+    <ul class="gal__thumbs">
+      <li class="thumb reveal">
+        <figure class="frame"><img src="assets/porte.svg" alt="Porte d'entrée cintrée en chêne massif et poignée laiton" width="1200" height="810"></figure>
+        <div class="thumb__cap"><h3>Porte d'entrée</h3><span>Chêne et laiton · 2009</span></div>
+      </li>
+      <li class="thumb reveal">
+        <figure class="frame"><img src="assets/fenetre.svg" alt="Fenêtre à la française en pin, quatre carreaux" width="1200" height="828"></figure>
+        <div class="thumb__cap"><h3>Fenêtres</h3><span>Pin · 2010</span></div>
+      </li>
+      <li class="thumb reveal">
+        <figure class="frame"><img src="assets/dressing.svg" alt="Dressing sur mesure sous pente en frêne clair" width="1200" height="810"></figure>
+        <div class="thumb__cap"><h3>Dressing sous pente</h3><span>Frêne · 2011</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- matériaux&nbsp;: les quatre essences, bande pleine largeur -->
+  <section class="ess" aria-labelledby="ess-t">
+    <div class="ess__head reveal">
+      <div>
+        <p class="kicker">Les essences</p>
+        <h2 class="h2" id="ess-t">Le bon bois pour chaque pièce.</h2>
+      </div>
+      <p>Nous travaillons quatre essences venues des scieries de la région. On vous aide à choisir selon l'usage, la lumière de la pièce et la finition&nbsp;: huile dure ou vernis.</p>
+    </div>
+    <ul class="ess__row">
+      <li class="plank plank--chene"><div class="plank__tag"><h3>Chêne</h3><p>Escaliers, portes d'entrée</p></div></li>
+      <li class="plank plank--frene"><div class="plank__tag"><h3>Frêne</h3><p>Dressings, placards clairs</p></div></li>
+      <li class="plank plank--noyer"><div class="plank__tag"><h3>Noyer</h3><p>Cuisines, meubles</p></div></li>
+      <li class="plank plank--pin"><div class="plank__tag"><h3>Pin</h3><p>Fenêtres, lambris</p></div></li>
+    </ul>
+  </section>
+
+  <!-- process-timeline&nbsp;: de la cote à la pose, image d'atelier à côté -->
+  <section class="proc" id="atelier" data-section="process-timeline">
+    <div>
+      <p class="kicker reveal">L'atelier</p>
+      <h2 class="h2 reveal">De la prise de cotes à la pose, une seule équipe.</h2>
+      <ol class="steps">
+        <li class="step reveal"><span class="step__dot">1</span><h3>On vient prendre les cotes</h3><p>Nous nous déplaçons gratuitement chez vous, dans un rayon de 30 km autour de Sornac-le-Haut.</p></li>
+        <li class="step reveal"><span class="step__dot">2</span><h3>On dessine la pièce avec vous</h3><p>Essence, finition, quincaillerie&nbsp;: chaque choix se fait ensemble, puis vous recevez un devis détaillé.</p></li>
+        <li class="step reveal"><span class="step__dot">3</span><h3>On fabrique chez nous</h3><p>Débit et assemblage à l'atelier, à tenon et mortaise, sur des machines traditionnelles et beaucoup à la main.</p></li>
+        <li class="step reveal"><span class="step__dot">4</span><h3>La même équipe pose</h3><p>Finition à l'huile dure ou au vernis, puis pose par ceux qui ont fabriqué la pièce.</p></li>
+      </ol>
+    </div>
+    <div class="proc__aside reveal">
+      <figure class="frame"><img src="assets/atelier.svg" alt="L'établi et le rabot de l'atelier de Sornac-le-Haut" width="1200" height="810"></figure>
+      <div class="visit">
+        <h3>Visitez l'atelier</h3>
+        <p>Venez voir les essences de bois et les finitions sur place, sur rendez-vous&nbsp;: nous vous montrerons les pièces en cours de fabrication.</p>
+        <a href="#contact" data-visit>Prendre rendez-vous pour une visite</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact&nbsp;: la clôture, CTA répété + formulaire court -->
+  <section class="contact" id="contact" data-section="cta-booking">
+    <div class="reveal">
+      <p class="kicker">Devis gratuit</p>
+      <h2 class="contact__title">Parlons de votre projet.</h2>
+      <p class="contact__sub">Envoyez-nous les dimensions approximatives et quelques photos de la pièce&nbsp;: nous vous rappelons sous 48 h.</p>
+      <a class="contact__tel" href="tel:+33261913705">02 61 91 37 05</a>
+      <div class="contact__info">
+        <p><b>Horaires</b>Lundi au vendredi, 8h-12h et 13h30-18h. Le samedi matin sur rendez-vous.</p>
+        <p><b>L'atelier</b>ZA des Tilleuls, Sornac-le-Haut. Interventions dans un rayon de 30 km.</p>
+        <p><b>E-mail</b><a href="mailto:bonjour@atelier-brisane.example">bonjour@atelier-brisane.example</a></p>
+      </div>
+    </div>
+    <form class="form reveal" id="devis" novalidate>
+      <h3>Votre demande en une minute</h3>
+      <div class="field"><label for="f-nom">Nom</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+      <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      <div class="field"><label for="f-commune">Commune</label><input id="f-commune" name="commune" autocomplete="address-level2"></div>
+      <div class="field"><label for="f-projet">Votre projet</label>
+        <select id="f-projet" name="projet">
+          <option>Escalier sur mesure</option>
+          <option>Fenêtres et volets bois</option>
+          <option>Porte d'entrée</option>
+          <option>Placard ou dressing</option>
+          <option>Cuisine en bois massif</option>
+          <option>Parquet ou lambris</option>
+          <option>Rénovation (escalier, porte)</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-msg">Dimensions approximatives, envies, délais</label><textarea id="f-msg" name="message"></textarea></div>
+      <label class="check"><input type="checkbox" id="f-visite" name="visite"> Je souhaite aussi visiter l'atelier sur rendez-vous</label>
+      <div class="form__foot">
+        <button class="btn" type="submit">Envoyer ma demande
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <small>Votre messagerie s'ouvre avec la demande prête&nbsp;: ajoutez-y vos photos avant d'envoyer.</small>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <a class="brand" href="#top"><img src="assets/mark.svg" alt="" width="38" height="38"><span><b>Atelier Brisane</b><small>Menuiserie ébénisterie · depuis 1987</small></span></a>
+  </div>
+  <div><h4>Atelier</h4><p>ZA des Tilleuls<br>Sornac-le-Haut</p></div>
+  <div><h4>Contact</h4><p><a href="tel:+33261913705">02 61 91 37 05</a><br><a href="mailto:bonjour@atelier-brisane.example">bonjour@atelier-brisane.example</a></p></div>
+  <div><h4>Horaires</h4><p>Lun. au ven., 8h-12h / 13h30-18h<br>Samedi matin sur rendez-vous</p></div>
+  <div class="foot__base"><span>© 2026 Atelier Brisane · Menuisier ébéniste à Sornac-le-Haut</span><span>Devis gratuit à domicile dans un rayon de 30 km</span></div>
+</footer>
+
+<nav class="mbar" aria-label="Actions rapides">
+  <a class="call" href="tel:+33261913705"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Appeler</a>
+  <a class="quote" href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Devis gratuit</a>
+</nav>
+
+<script>
+(function(){
+  var form=document.getElementById('devis');
+  document.querySelectorAll('[data-visit]').forEach(function(a){
+    a.addEventListener('click',function(){var c=document.getElementById('f-visite');if(c)c.checked=true;});
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
+    if(!v('f-nom')||!v('f-tel')){(v('f-nom')?document.getElementById('f-tel'):document.getElementById('f-nom')).focus();return;}
+    var body=['Nom : '+v('f-nom'),'Téléphone : '+v('f-tel'),'Commune : '+v('f-commune'),'Projet : '+v('f-projet'),
+      document.getElementById('f-visite').checked?'Je souhaite visiter l\'atelier sur rendez-vous.':'','',v('f-msg'),'','(Photos de la pièce jointes)'].join('\n');
+    location.href='mailto:bonjour@atelier-brisane.example?subject='+encodeURIComponent('Demande de devis : '+v('f-projet'))+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>

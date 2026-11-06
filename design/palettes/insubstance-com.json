@@ -1,0 +1,28 @@
+{
+  "slug": "insubstance-com",
+  "url": "https://insubstance.com/",
+  "vars": {
+    "--token-c3336c87-9f82-42ca-96d7-f639156d4108": "#fff",
+    "--token-923f3532-12d4-48ff-a71f-8a2c83a34c4e": "#f2f2f2",
+    "--token-5546cf67-4de7-4b72-9177-149b22dc424d": "#e4e4e4",
+    "--token-ece78d39-d403-4298-95ea-9a064a8ed783": "#a6a6a6",
+    "--token-45779fe7-6314-45dc-b8ae-6cf792541683": "#000",
+    "--token-06136570-08f6-4e9b-b7b3-00ffc703bc51": "#fff",
+    "--framer-text-color": "#000",
+    "--framer-link-current-text-color": "#111",
+    "--framer-link-hover-text-color": "#08f",
+    "--framer-link-text-color": "#09f"
+  },
+  "palette": [
+    "#e4e4e4",
+    "#fafafa",
+    "#111",
+    "#09f",
+    "#efefef",
+    "rgb(250,250,250)",
+    "#f2f2f2",
+    "#a6a6a6",
+    "#08f",
+    "#0000001a"
+  ]
+}

@@ -1,0 +1,27 @@
+# lws-cockpit — la Station (backoffice/reviewpipe/serve.ts) en service permanent sur la box, sans Docker ni Coolify.
+# Service systemd UTILISATEUR, NON installé par défaut (architecture/scheduling/install-units.sh, ou cron.md).
+#
+# Elle écoute sur 127.0.0.1:${BACKOFFICE_PORT:-4000} (BACKOFFICE_HOST, défaut boucle locale). Pour l'ouvrir au
+# monde : un reverse proxy HTTPS devant (Caddy, cf. docs/GUIDE.md), ET BACKOFFICE_PASSWORD dans ~/lws/.env (auth
+# Basic sur tout, sauf /t/, le tracking public des mails). Sans mot de passe, un Host externe reçoit 403 : la
+# Station ne s'expose jamais nue par accident. Pour la garder privée : un tunnel SSH suffit
+#   ssh -N -L 4000:127.0.0.1:4000 <toi>@<box>   puis http://127.0.0.1:4000 sur ton poste
+#
+# Le cockpit sert aussi le tracking signé (/t/c/…, /t/u/… : TRACK_BASE + LWS_TRACK_SECRET, outreach/tracking/).
+
+[Unit]
+Description=lastwebstudios — Station (cockpit, CRM /outreach, cockpit d'appel, vue Machine, tracking /t/)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/lws
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/env npm run backoffice:serve
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

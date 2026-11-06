@@ -1,0 +1,38 @@
+{
+  "slug": "walkerwarner-com",
+  "url": "https://walkerwarner.com/",
+  "vars": {
+    "--wp-block-synced-color": "#7a00df",
+    "--wp-editor-canvas-background": "#ddd",
+    "--wp-admin-theme-color": "#007cba",
+    "--wp-admin-theme-color-darker-10": "#006ba1",
+    "--wp-admin-theme-color-darker-20": "#005a87",
+    "--wp--preset--color--black": "#000000",
+    "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+    "--wp--preset--color--white": "#ffffff",
+    "--wp--preset--color--pale-pink": "#f78da7",
+    "--wp--preset--color--vivid-red": "#cf2e2e",
+    "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+    "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+    "--wp--preset--color--light-green-cyan": "#7bdcb5",
+    "--wp--preset--color--vivid-green-cyan": "#00d084",
+    "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+    "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+    "--wp--preset--color--vivid-purple": "#9b51e0",
+    "--swiper-theme-color": "#007aff",
+    "--underline-color": "#7b665f",
+    "--burger-hover": "#828282"
+  },
+  "palette": [
+    "#828282",
+    "#7b665f",
+    "#13130f",
+    "#d4d4d4",
+    "#f1f2ed",
+    "rgba(0,0,0,0)",
+    "#e6e8e1",
+    "rgba(0,0,0,.0167)",
+    "rgba(0,0,0,.0352)",
+    "rgba(0,0,0,.0563)"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(/.claude/skills/**)",
+      "Skill(composer)",
+      "Skill(composer:*)",
+      "Bash(npm run doctor*)",
+      "Bash(npm run typecheck)",
+      "Bash(npm test*)",
+      "Bash(node design/scripts/lint.mjs *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git check-ignore *)"
+    ],
+    "deny": [
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(git push*)",
+      "Bash(git add *)"
+    ]
+  }
+}

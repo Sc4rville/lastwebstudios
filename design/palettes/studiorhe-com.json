@@ -1,0 +1,17 @@
+{
+  "slug": "studiorhe-com",
+  "url": "https://www.studiorhe.com/",
+  "vars": {},
+  "palette": [
+    "rgba(255,255,255,var(--tw-text-opacity)",
+    "rgba(240,100,70,var(--tw-bg-opacity)",
+    "rgba(0,0,0,var(--tw-border-opacity)",
+    "#b3d4fc",
+    "#a1a1aa",
+    "rgba(0,0,0,var(--tw-bg-opacity)",
+    "rgba(61,68,66,var(--tw-bg-opacity)",
+    "#efefef",
+    "#e4e4e4",
+    "rgba(255,255,255,var(--tw-border-opacity)"
+  ]
+}

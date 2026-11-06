@@ -1,0 +1,22 @@
+{
+  "id": "atelier-brisane-sornac-le-haut",
+  "generated": "2026-10-24",
+  "mode": "audit-only",
+  "engines": { "image": "none", "video": "none" },
+  "credits_spent": 0,
+  "heroVideo": false,
+  "hero_mp4": false,
+  "audit": { "rasterPhotos": 0, "hd": 0, "needBoost": [], "heroCandidate": null, "heroBorderless": false },
+  "summary": "Aucune photo raster : l'audit compte 0 photo. Les 6 visuels photo-*.svg sont des illustrations vectorielles 800x600 (4:3) dont le <title> les marque 'illustration fictive' : ce ne sont PAS de vraies photos de réalisations. Aucun moteur image/vidéo pour ce batch, donc aucune génération ni édition.",
+  "assets": [
+    { "source": "photo-1.svg", "subject": "Escalier quart tournant en chêne", "kind": "svg-illustration-fictive", "size": "800x600", "action": "none (moteur image coupé)", "generated": false, "weak": true, "heroSuitable": "best-of-set (sujet signature menuiserie), 4:3, recadrage object-fit/object-position au composer" },
+    { "source": "photo-2.svg", "subject": "Fenêtre bois double vitrage", "kind": "svg-illustration-fictive", "size": "800x600", "action": "none", "generated": false, "weak": true, "heroSuitable": false },
+    { "source": "photo-3.svg", "subject": "Porte d'entrée en bois massif", "kind": "svg-illustration-fictive", "size": "800x600", "action": "none", "generated": false, "weak": true, "heroSuitable": false },
+    { "source": "photo-4.svg", "subject": "Dressing sur mesure sous pente", "kind": "svg-illustration-fictive", "size": "800x600", "action": "none", "generated": false, "weak": true, "heroSuitable": false },
+    { "source": "photo-5.svg", "subject": "Cuisine en bois massif", "kind": "svg-illustration-fictive", "size": "800x600", "action": "none", "generated": false, "weak": true, "heroSuitable": "alternative (sujet large)" },
+    { "source": "photo-6.svg", "subject": "L'atelier : établi et rabot", "kind": "svg-illustration-fictive", "size": "800x600", "action": "none", "generated": false, "weak": true, "heroSuitable": "alternative (atelier = authenticité)" },
+    { "source": "logo.svg", "subject": "Logo Atelier Brisane", "kind": "svg-logo", "size": "300x90", "action": "none (vectoriel, fond déjà transparent hors carré)", "generated": false, "weak": false, "heroSuitable": false }
+  ],
+  "reshoot": ["photo-1.svg", "photo-2.svg", "photo-3.svg", "photo-4.svg", "photo-5.svg", "photo-6.svg"],
+  "composerHints": "Compo éditoriale (typo + palette bois) : les illustrations SVG ne doivent pas être présentées comme des photos de chantier réelles ; à utiliser en vignettes/illustratif ou à remplacer par de vraies photos client. Héros : typographique, ou photo-1.svg recadrée si un visuel est requis."
+}

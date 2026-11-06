@@ -1,0 +1,244 @@
+{
+  "id": "atelier-brisane-sornac-le-haut",
+  "industry": "menuisier",
+  "identity": {
+    "name": "Atelier Brisane",
+    "city": "Sornac-le-Haut",
+    "phone": "02 61 91 37 05",
+    "email": "bonjour@atelier-brisane.example",
+    "hours": "Lundi au vendredi, 8h-12h / 13h30-18h",
+    "zone": "30 km autour de Sornac-le-Haut"
+  },
+  "content": {
+    "tagline": "Menuisier ébéniste depuis 1987, fabrication sur mesure d'escaliers, fenêtres, portes, placards et cuisines en bois massif",
+    "about": "Depuis 1987, l'Atelier Brisane fabrique dans son atelier de Sornac-le-Haut. Chaque pièce est dessinée avec vous, débitée et assemblée chez nous, puis posée par la même équipe. Nous travaillons le chêne, le frêne, le noyer et le pin des scieries de la région. Pas de catalogue : tout est fait sur mesure, pour votre maison et pour durer.",
+    "services": [
+      "Escaliers sur mesure",
+      "Fenêtres et volets bois",
+      "Portes d'entrée",
+      "Placards et dressings",
+      "Cuisines en bois massif",
+      "Parquets et lambris",
+      "Rénovation d'escaliers anciens et portes de caractère"
+    ]
+  },
+  "assets": {
+    "logo": "assets/atelier-brisane-sornac-le-haut/logo.svg",
+    "photos": [
+      "assets/atelier-brisane-sornac-le-haut/photo-1.svg",
+      "assets/atelier-brisane-sornac-le-haut/photo-2.svg",
+      "assets/atelier-brisane-sornac-le-haut/photo-3.svg",
+      "assets/atelier-brisane-sornac-le-haut/photo-4.svg",
+      "assets/atelier-brisane-sornac-le-haut/photo-5.svg",
+      "assets/atelier-brisane-sornac-le-haut/photo-6.svg"
+    ]
+  },
+  "existing": {
+    "url": "http://atelier-brisane.example/",
+    "screenshot": "assets/atelier-brisane-sornac-le-haut/avant.png"
+  },
+  "score": {
+    "value": 82,
+    "tier": "hot",
+    "axes": {
+      "besoin": 90,
+      "levier": 84,
+      "valeur": 77,
+      "closabilite": 100,
+      "expansion": 35
+    },
+    "expectedValue": 69,
+    "signals": {
+      "gallery": true,
+      "quoteCta": true,
+      "social": false,
+      "premium": true,
+      "multiSite": false,
+      "ecommerce": false,
+      "booking": false,
+      "blog": false
+    },
+    "feasible": true,
+    "accroche": "Votre site de menuisier : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+    "reasons": [
+      "pas responsive (pas de viewport)",
+      "SEO pauvre (pas de description / OG)",
+      "pas de HTTPS (sécurité + SEO pénalisé)",
+      "aucune donnée structurée (SEO local faible)",
+      "page très pauvre (peu de contenu)",
+      "dernière trace de maj : 2011",
+      "axes — besoin 90 · levier 84 · valeur 77 · closab. 100 · expansion 35 → € espéré 69"
+    ]
+  },
+  "audit": {
+    "date": "2026-10-24",
+    "url": "http://atelier-brisane.example/",
+    "finalUrl": "http://atelier-brisane.example/",
+    "reachable": true,
+    "https": false,
+    "loadMs": 83,
+    "mobile": {
+      "overflowPx": 578,
+      "brokenMobile": true,
+      "hasViewportMeta": false,
+      "overflow768": 200,
+      "overflow1280": 0
+    },
+    "contact": {
+      "hasForm": false,
+      "hasTel": false,
+      "hasMailto": true,
+      "hasPhoneText": true,
+      "hasEmailText": true,
+      "hasContactLink": true
+    },
+    "seo": {
+      "title": "Atelier Brisane - Menuisier ébéniste à Sornac-le-Haut - Escaliers, fenêtres, portes, agencement",
+      "titleLen": 95,
+      "hasMetaDesc": false,
+      "h1Count": 1,
+      "imgCount": 7,
+      "imgNoAlt": 0,
+      "hasCanonical": false,
+      "jsonLdCount": 0,
+      "hasOgTitle": false,
+      "hasOgImage": false
+    },
+    "strengths": {
+      "videos": 0,
+      "hasBooking": false,
+      "hasReviews": false,
+      "googleRating": null,
+      "reviewCount": null,
+      "copyrightYear": 2011,
+      "stale": true
+    },
+    "buttons": {
+      "tested": 2,
+      "dead": []
+    },
+    "form": {
+      "present": false,
+      "status": "none"
+    },
+    "overlap": {
+      "desktop": {
+        "count": 0,
+        "examples": []
+      },
+      "mobile": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "perf": {
+      "available": false,
+      "score": null,
+      "lcpMs": null,
+      "cls": null,
+      "source": "psi"
+    },
+    "pages": [
+      {
+        "url": "http://atelier-brisane.example/contact.html",
+        "kind": "contact",
+        "reachable": true,
+        "overflow": {
+          "at390": 578,
+          "at768": 200,
+          "at1280": 0
+        },
+        "overlapDesktop": {
+          "count": 0,
+          "examples": []
+        },
+        "overlapMobile": {
+          "count": 0,
+          "examples": []
+        },
+        "brokenImages": []
+      },
+      {
+        "url": "http://atelier-brisane.example/realisations.html",
+        "kind": "portfolio",
+        "reachable": true,
+        "overflow": {
+          "at390": 578,
+          "at768": 200,
+          "at1280": 0
+        },
+        "overlapDesktop": {
+          "count": 0,
+          "examples": []
+        },
+        "overlapMobile": {
+          "count": 0,
+          "examples": []
+        },
+        "brokenImages": []
+      }
+    ],
+    "screenshots": {
+      "desktop": "data/assets/atelier-brisane-sornac-le-haut/_audit-desktop.png",
+      "mobile": "data/assets/atelier-brisane-sornac-le-haut/_audit-mobile.png"
+    },
+    "links": {
+      "checked": 5,
+      "broken": []
+    },
+    "functional": {
+      "jsErrors": 0,
+      "jsErrorMessages": [],
+      "deadLinks": 2,
+      "brokenImages": 0,
+      "brokenImageUrls": []
+    },
+    "issues": [
+      "Pas de HTTPS : le navigateur affiche « Non sécurisé », ça fait fuir et Google pénalise.",
+      "Le site déborde horizontalement sur mobile (578px de scroll latéral à 390px) : pénible à lire au téléphone.",
+      "Le site déborde aussi horizontalement sur tablette (200px à 768px).",
+      "Pas de balise viewport : le site n'est pas pensé pour le mobile (texte minuscule, zoom forcé).",
+      "Le numéro de téléphone n'est pas cliquable : sur mobile, impossible d'appeler en un tap.",
+      "Le pied de page affiche « © 2011 » : le site paraît à l'abandon / non mis à jour depuis 15 an(s).",
+      "Pas de meta description : Google affiche un extrait au hasard sous votre lien.",
+      "Pas d'URL canonique (balise canonical) : risque de contenu dupliqué aux yeux de Google.",
+      "Aucune donnée structurée (JSON-LD) : Google ne peut pas afficher d'infos enrichies (étoiles, horaires, adresse).",
+      "Balises Open Graph incomplètes : les partages sur réseaux sociaux s'affichent sans aperçu propre.",
+      "Sur la page contact, débordement horizontal sur mobile (578px).",
+      "Sur la page réalisations/portfolio, débordement horizontal sur mobile (578px)."
+    ],
+    "clientIssues": [
+      "Pas de HTTPS : le navigateur affiche « Non sécurisé », ça fait fuir et Google pénalise.",
+      "Le site déborde horizontalement sur mobile (578px de scroll latéral à 390px) : pénible à lire au téléphone.",
+      "Le site déborde aussi horizontalement sur tablette (200px à 768px).",
+      "Pas de balise viewport : le site n'est pas pensé pour le mobile (texte minuscule, zoom forcé).",
+      "Le numéro de téléphone n'est pas cliquable : sur mobile, impossible d'appeler en un tap.",
+      "Le pied de page affiche « © 2011 » : le site paraît à l'abandon / non mis à jour depuis 15 an(s).",
+      "Sur la page contact, débordement horizontal sur mobile (578px).",
+      "Sur la page réalisations/portfolio, débordement horizontal sur mobile (578px)."
+    ]
+  },
+  "brief": {
+    "date": "2026-10-24",
+    "beauty_before": {
+      "score": 2,
+      "why": "Mise en page 2011 : fond marron à motif, sidebar étroite, visiteur-compteur, zéro respiration — ça a l'air abandonné."
+    },
+    "what": "Menuisier ébéniste familial à Sornac-le-Haut depuis 1987, fabrication sur mesure (escaliers, fenêtres, portes, placards, cuisines) en bois massif, zone 30 km, devis gratuit à domicile — artisanat haut de gamme qui mérite un site à la hauteur du savoir-faire.",
+    "problems": [
+      "Déborde horizontalement sur mobile (578px de scroll latéral à 390px) et sur tablette (200px à 768px) : illisible au téléphone, confirmé sur les pages contact et réalisations aussi.",
+      "Pas de balise viewport ni de HTTPS : le site n'est techniquement pas pensé pour 2026 (non sécurisé affiché par le navigateur, zoom forcé sur mobile).",
+      "Téléphone non cliquable sur mobile : impossible d'appeler en un tap malgré un numéro bien visible en en-tête.",
+      "Pied de page affiche « © 2011 » et un compteur de visiteurs des années 2000 : donne l'impression que l'atelier est fermé ou à l'abandon.",
+      "Design daté visuellement (fond marron texturé, sidebar chargée, tableau de tarifs 'Tarifs 2011' encore affiché) qui ne rend pas justice à un métier d'artisanat/ébénisterie haut de gamme.",
+      "Aucune preuve sociale : zéro avis Google, zéro témoignage vidéo, zéro prise de RDV en ligne — alors que l'atelier propose déjà des visites sur place."
+    ],
+    "angle": "L'artisanat du bois massif depuis 1987, mis en valeur comme il le mérite : un site qui respire, montre le geste et le matériau, et qu'on peut consulter — et appeler — depuis son téléphone.",
+    "moves": [
+      "Hero plein écran sur une réalisation phare (escalier ou cuisine bois massif), typographie chaleureuse/artisanale plutôt que le marron saturé actuel",
+      "Galerie de réalisations en grand format (remplace la mini-grille 5 vignettes) organisée par type de fabrication, avec essences de bois mises en avant (chêne, frêne, noyer, pin)",
+      "Numéro de téléphone cliquable + CTA devis gratuit visible en permanence (sticky), bloc 'Visitez l'atelier sur RDV' transformé en vraie prise de RDV"
+    ],
+    "keep": []
+  }
+}

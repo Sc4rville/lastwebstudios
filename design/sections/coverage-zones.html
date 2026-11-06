@@ -1,0 +1,44 @@
+<!-- coverage-zones · coverage · liste des zones desservies (villes) en colonnes + ville principale en avant -->
+<section class="cov" data-section="coverage-zones">
+  <style>
+    .cov{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,112px) clamp(20px,5vw,80px);
+      display:grid; grid-template-columns:0.9fr 1.1fr; gap:clamp(32px,5vw,72px); align-items:start}
+    .cov__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .cov__title{font-family:var(--serif); font-weight:500; line-height:1.08; letter-spacing:-.01em;
+      font-size:clamp(30px,4vw,52px); margin:0 0 clamp(16px,2vw,24px)}
+    .cov__intro{font-family:var(--sans); font-size:clamp(15px,1.2vw,18px); line-height:1.6;
+      color:var(--muted); max-width:44ch; margin:0 0 clamp(20px,2.5vw,28px)}
+    .cov__main{display:inline-flex; align-items:center; gap:10px;
+      font-family:var(--sans); font-weight:600; font-size:clamp(16px,1.4vw,19px); color:var(--fg)}
+    .cov__main svg{width:20px; height:20px; color:var(--accent)}
+    .cov__cols{columns:3; column-gap:clamp(20px,3vw,40px); list-style:none; margin:0; padding:0;
+      border-top:1px solid var(--fg); padding-top:clamp(18px,2.5vw,28px)}
+    .cov__city{break-inside:avoid; font-family:var(--sans); font-size:clamp(14px,1.05vw,16px);
+      line-height:2.1; color:var(--muted); border-bottom:1px solid color-mix(in srgb, var(--muted) 22%, transparent)}
+    .cov__city b{color:var(--fg); font-weight:600}
+    .cov .reveal{opacity:1}
+    @media (max-width:880px){
+      .cov{grid-template-columns:1fr; gap:clamp(24px,6vw,36px)}
+      .cov__cols{columns:2}
+    }
+    @media (max-width:390px){ .cov__cols{columns:1} }
+  </style>
+
+  <div class="reveal">
+    <p class="cov__kicker">{{KICKER}}</p>
+    <h2 class="cov__title">{{HEADLINE}}</h2>
+    <p class="cov__intro">{{INTRO}}</p>
+    <p class="cov__main">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+      {{MAIN_CITY}}
+    </p>
+  </div>
+
+  <ul class="cov__cols reveal">
+    <!-- repeat: city -->
+    <li class="cov__city">{{CITY_NAME}}</li>
+    <!-- /repeat -->
+  </ul>
+</section>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Last Web Studios</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#prospects" id="brand" title="Prospects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg><span>Last Web Studios</span></a>
+    <nav class="steps" id="steps" aria-label="The three steps">
+      <a href="#prospects" data-v="prospects" class="on"><span>Prospects</span><i id="nProspects"></i></a>
+      <span class="arrow" aria-hidden="true"></span>
+      <a href="#sites" data-v="sites"><span>Sites</span><i id="nSites"></i></a>
+      <span class="arrow" aria-hidden="true"></span>
+      <a href="#outreach" data-v="outreach"><span>Outreach</span><i id="nOutreach"></i></a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="pill" id="cagePill">…</button>
+    <span class="live" id="live" title="live"></span>
+    <div class="menu">
+      <button class="btn icon" id="menuBtn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button>
+      <div class="dropdown" id="menuDrop" hidden>
+        <a href="#settings">Settings</a>
+        <a href="/billing.html">Billing</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- PROSPECTS: what the engine found, in the owner's words -->
+    <section class="view prospects" id="v-prospects">
+      <div class="howto" id="howto" hidden>
+        <span><b>Prospects</b> — tell the agency what you're after, it finds businesses with a dated website.</span>
+        <span><b>Sites</b> — it rebuilds their site; you review and send the good ones to outreach.</span>
+        <span><b>Outreach</b> — emails go out, you call with the new site in hand, deals move step by step.</span>
+        <button class="btn icon" id="howtoClose" aria-label="Got it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <form class="ask" id="findForm" autocomplete="off">
+        <input id="findText" type="text" placeholder="Tell the agency what you're after — “20 plumbers and roofers around Austin”, “a mix of trades near Lyon”, “surprise me”" list="tradeList">
+        <datalist id="tradeList"></datalist>
+        <button class="btn primary" id="findBtn" type="submit">Find prospects</button>
+      </form>
+      <div class="brief" id="briefChips" hidden></div>
+      <div class="jobs" id="jobs"></div>
+      <div class="pbar">
+        <label class="switch" id="autoWrap"><input type="checkbox" id="autoToggle"><span class="track"></span><span>Hands-off</span></label>
+        <span class="muted" id="autoHint">You decide each step.</span>
+        <span class="spacer"></span>
+        <select id="fTrade"><option value="">All trades</option></select>
+        <select id="fCity"><option value="">All cities</option></select>
+        <select id="fStatus"><option value="">All</option><option value="new">New</option><option value="building">Building</option><option value="built">Built</option><option value="skipped">Skipped</option></select>
+      </div>
+      <div class="bulk" id="bulk" hidden><span id="bulkCount"></span><button class="btn primary" id="bulkBuild">Build sites</button><button class="btn ghost" id="bulkClear">Clear</button></div>
+      <div class="plist" id="plist"></div>
+    </section>
+
+    <!-- SITES -->
+    <section class="view sites" id="v-sites" hidden>
+      <aside class="rail" id="rail"></aside>
+      <div class="stage">
+        <div class="stagebar">
+          <span class="seg" id="viewmode"><a data-v="before">Before</a><a data-v="after" class="on">After</a><a data-v="compare">Compare</a></span>
+          <span class="seg" id="vpsel"><a data-w="full" class="on">Desktop</a><a data-w="390">Mobile</a></span>
+          <span class="spacer"></span>
+          <a id="openTab" class="btn ghost" target="_blank" rel="noopener">Open</a>
+        </div>
+        <div class="view-area" id="view">
+          <div class="viewport" id="viewport"><iframe id="preview" title="preview" src="about:blank" allow="autoplay; fullscreen"></iframe></div>
+          <div id="before" class="before" hidden></div>
+          <div id="compare" class="compare" hidden></div>
+          <div class="empty" id="emptyStage" hidden>Sites appear here while they are built. <a href="#prospects">Pick prospects to build →</a></div>
+        </div>
+      </div>
+      <aside class="inspect" id="inspect">
+        <div class="ihead">
+          <h2 id="iTitle">—</h2>
+          <span class="chip fit" id="iScore" hidden>Good fit</span>
+        </div>
+        <div class="irow"><span class="chip" id="iState"></span><span class="muted" id="iMeta"></span></div>
+        <div class="actions">
+          <button class="btn primary" id="approve">Send to outreach</button>
+          <button class="btn ghost" id="rebuild">Rebuild</button>
+          <button class="btn ghost" id="reject">Skip</button>
+        </div>
+        <textarea id="comment" placeholder="Feedback: what should change? Paste a screenshot if useful."></textarea>
+        <div class="actions"><button class="btn ghost" id="apply">Apply feedback</button><span class="muted" id="iMsg"></span></div>
+      </aside>
+    </section>
+
+    <!-- OUTREACH -->
+    <section class="view pipeline" id="v-outreach" hidden>
+      <div class="pipehead">
+        <span class="agentline" id="agentLine"></span>
+        <span class="agentline" id="boardFilter"></span>
+        <span class="spacer"></span>
+        <button class="btn ghost" id="editStages">Edit steps</button>
+      </div>
+      <div class="jobs" id="jobsOut"></div>
+      <div class="board" id="board"></div>
+    </section>
+  </main>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="sheet" id="sheet" hidden role="dialog"><div class="sheetbody" id="sheetBody"></div></div>
+  <aside class="lead" id="lead" hidden></aside>
+  <div class="toasts" id="toasts"></div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

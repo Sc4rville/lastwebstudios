@@ -1,0 +1,37 @@
+<!-- stats-row · stats · rangée de 3-4 chiffres clés (gros nombre + label), filets de séparation -->
+<section class="stats" data-section="stats-row">
+  <style>
+    .stats{background:var(--bg); color:var(--fg);
+      padding:clamp(44px,7vw,96px) clamp(20px,5vw,80px)}
+    .stats__row{display:grid; grid-template-columns:repeat(4,1fr); gap:0}
+    .stats__item{padding:clamp(8px,2vw,24px) clamp(16px,3vw,40px);
+      border-left:1px solid color-mix(in srgb, var(--muted) 40%, transparent)}
+    .stats__item:first-child{border-left:0; padding-left:0}
+    .stats__num{font-family:var(--serif); font-weight:500; line-height:.95; letter-spacing:-.02em;
+      font-size:clamp(44px,6vw,88px); margin:0 0 clamp(10px,1.4vw,16px)}
+    .stats__num span{color:var(--accent)}
+    .stats__label{font-family:var(--sans); font-size:clamp(13px,1.05vw,15px); line-height:1.45;
+      color:var(--muted); margin:0; max-width:22ch}
+    .stats .reveal{opacity:1}
+    @media (max-width:880px){
+      .stats__row{grid-template-columns:1fr 1fr; gap:clamp(20px,5vw,36px) 0}
+      .stats__item{border-left:0; padding-left:0;
+        border-top:1px solid color-mix(in srgb, var(--muted) 40%, transparent); padding-top:clamp(16px,4vw,24px)}
+      .stats__item:first-child,.stats__item:nth-child(2){border-top:0; padding-top:0}
+    }
+    @media (max-width:480px){
+      .stats__row{grid-template-columns:1fr}
+      .stats__item:nth-child(2){border-top:1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+        padding-top:clamp(16px,4vw,24px)}
+    }
+  </style>
+
+  <div class="stats__row reveal">
+    <!-- repeat: stat -->
+    <div class="stats__item">
+      <p class="stats__num">{{STAT_VALUE}}<span>{{STAT_UNIT}}</span></p>
+      <p class="stats__label">{{STAT_LABEL}}</p>
+    </div>
+    <!-- /repeat -->
+  </div>
+</section>

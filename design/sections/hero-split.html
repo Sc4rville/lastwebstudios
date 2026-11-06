@@ -1,0 +1,53 @@
+<!-- hero-split · hero · deux colonnes 50/50 : promesse + CTA d'un côté, média de l'autre, plein hauteur -->
+<section class="hero-sp" data-section="hero-split">
+  <style>
+    .hero-sp{display:grid; grid-template-columns:1fr 1fr; min-height:90vh;
+      background:var(--bg); color:var(--fg)}
+    .hero-sp__copy{display:flex; flex-direction:column; justify-content:center;
+      padding:clamp(32px,6vw,88px) clamp(24px,5vw,72px); max-width:60ch}
+    .hero-sp__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 clamp(16px,2vw,24px)}
+    .hero-sp__title{font-family:var(--serif); font-weight:500; line-height:1.05; letter-spacing:-.01em;
+      font-size:clamp(36px,5.5vw,72px); margin:0 0 clamp(18px,2.5vw,30px)}
+    .hero-sp__lead{font-family:var(--sans); font-size:clamp(16px,1.3vw,19px); line-height:1.6;
+      color:var(--muted); max-width:44ch; margin:0 0 clamp(26px,3vw,38px)}
+    .hero-sp__actions{display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px}
+    .hero-sp__cta{font-family:var(--sans); font-weight:600; font-size:16px; padding:15px 28px;
+      border-radius:6px; background:var(--accent); color:var(--bg); text-decoration:none;
+      transition:transform .2s, opacity .2s}
+    .hero-sp__cta:hover{transform:translateY(-2px); opacity:.92}
+    .hero-sp__phone{font-family:var(--sans); font-weight:600; color:var(--fg); text-decoration:none}
+    .hero-sp__phone:hover{color:var(--accent)}
+    .hero-sp__meta{margin-top:clamp(28px,4vw,44px); display:flex; gap:clamp(24px,4vw,48px);
+      flex-wrap:wrap; font-family:var(--sans)}
+    .hero-sp__meta b{display:block; font-family:var(--serif); font-size:clamp(22px,2.4vw,30px); line-height:1}
+    .hero-sp__meta span{font-size:13px; color:var(--muted)}
+    .hero-sp__media{position:relative; overflow:hidden}
+    .hero-sp__media img{width:100%; height:100%; object-fit:cover; object-position:center; display:block}
+    .hero-sp .reveal{opacity:1}
+    @media (max-width:880px){
+      .hero-sp{grid-template-columns:1fr; min-height:auto}
+      .hero-sp__media{order:-1; min-height:46vh}
+      .hero-sp__copy{padding:clamp(28px,8vw,40px) clamp(20px,6vw,32px)}
+    }
+  </style>
+
+  <div class="hero-sp__copy">
+    <p class="hero-sp__kicker reveal">{{KICKER}}</p>
+    <h1 class="hero-sp__title reveal">{{HEADLINE}}</h1>
+    <p class="hero-sp__lead reveal">{{LEAD}}</p>
+    <div class="hero-sp__actions reveal">
+      <a class="hero-sp__cta" href="{{CTA_HREF}}">{{CTA_LABEL}}</a>
+      <a class="hero-sp__phone" href="tel:{{PHONE}}">{{PHONE_DISPLAY}}</a>
+    </div>
+    <div class="hero-sp__meta reveal">
+      <!-- repeat: meta -->
+      <div><b>{{META_VALUE}}</b><span>{{META_LABEL}}</span></div>
+      <!-- /repeat -->
+    </div>
+  </div>
+
+  <figure class="hero-sp__media reveal">
+    <img src="{{HERO_IMG}}" alt="{{HERO_ALT}}">
+  </figure>
+</section>

@@ -1,0 +1,49 @@
+<!-- faq-accordion · faq · questions/réponses en accordéon natif (<details>), large, sobre -->
+<section class="faq" data-section="faq-accordion">
+  <style>
+    .faq{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,112px) clamp(20px,5vw,80px);
+      display:grid; grid-template-columns:0.8fr 1.2fr; gap:clamp(28px,5vw,72px); align-items:start}
+    .faq__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .faq__title{font-family:var(--serif); font-weight:500; line-height:1.06; letter-spacing:-.015em;
+      font-size:clamp(30px,4.5vw,58px); margin:0 0 clamp(14px,2vw,20px)}
+    .faq__aside{font-family:var(--sans); font-size:15px; line-height:1.6; color:var(--muted);
+      max-width:34ch; margin:0}
+    .faq__aside a{color:var(--fg); text-decoration:none; border-bottom:1px solid var(--accent)}
+    .faq__aside a:hover{color:var(--accent)}
+    .faq__list{border-top:1px solid var(--fg)}
+    .faq__item{border-bottom:1px solid color-mix(in srgb, var(--muted) 35%, transparent)}
+    .faq__q{display:flex; align-items:center; justify-content:space-between; gap:24px; cursor:pointer;
+      list-style:none; padding:clamp(18px,2.4vw,28px) 0;
+      font-family:var(--sans); font-weight:600; font-size:clamp(16px,1.4vw,20px); line-height:1.35}
+    .faq__q::-webkit-details-marker{display:none}
+    .faq__sign{flex:0 0 auto; width:22px; height:22px; position:relative}
+    .faq__sign::before,.faq__sign::after{content:""; position:absolute; background:var(--accent);
+      transition:transform .25s ease}
+    .faq__sign::before{left:0; right:0; top:50%; height:2px; transform:translateY(-50%)}
+    .faq__sign::after{top:0; bottom:0; left:50%; width:2px; transform:translateX(-50%)}
+    .faq__item[open] .faq__sign::after{transform:translateX(-50%) scaleY(0)}
+    .faq__a{font-family:var(--sans); font-size:15px; line-height:1.65; color:var(--muted);
+      max-width:60ch; margin:0; padding:0 0 clamp(20px,2.6vw,30px)}
+    .faq .reveal{opacity:1}
+    @media (max-width:880px){
+      .faq{grid-template-columns:1fr; gap:clamp(20px,6vw,32px)}
+    }
+  </style>
+
+  <div class="reveal">
+    <p class="faq__kicker">{{KICKER}}</p>
+    <h2 class="faq__title">{{HEADLINE}}</h2>
+    <p class="faq__aside">{{ASIDE_TEXT}} <a href="{{CONTACT_HREF}}">{{CONTACT_LABEL}}</a></p>
+  </div>
+
+  <div class="faq__list reveal">
+    <!-- repeat: qa -->
+    <details class="faq__item">
+      <summary class="faq__q">{{QUESTION}}<span class="faq__sign" aria-hidden="true"></span></summary>
+      <p class="faq__a">{{ANSWER}}</p>
+    </details>
+    <!-- /repeat -->
+  </div>
+</section>

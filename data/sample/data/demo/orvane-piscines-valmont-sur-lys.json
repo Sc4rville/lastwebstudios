@@ -1,0 +1,7 @@
+{
+  "_sample": "mail FICTIF de la sandbox (le vrai est généré par npm run savior / la démo)",
+  "prospectId": "orvane-piscines-valmont-sur-lys",
+  "senderName": "Camille · Atelier Vélin",
+  "subject": "La démo de votre nouveau site, en 30 secondes",
+  "body": "Bonjour,\n\nComme vous avez jeté un œil à la page, voici la visite complète du site, sur téléphone et sur ordinateur : https://atelier-velin.example/demo/orvane/video\n\nOn en parle 10 minutes ? https://cal.atelier-velin.example/15min\n\nCamille"
+}

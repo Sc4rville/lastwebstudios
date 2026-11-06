@@ -1,0 +1,12 @@
+{
+  "results": [
+    {
+      "siren": "000000042",
+      "nom_complet": "ORVANE",
+      "etat_administratif": "C",
+      "date_creation": "2011-09-01",
+      "siege": { "libelle_commune": "BRUMELOT", "code_postal": "99020" }
+    }
+  ],
+  "total_results": 1, "page": 1, "per_page": 5, "total_pages": 1
+}

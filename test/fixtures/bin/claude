@@ -1,0 +1,161 @@
+#!/usr/bin/env node
+/**
+ * FAUX `claude` (Claude Code CLI) pour les tests : mis en tête du PATH et dans CLAUDE_BIN par test/run.mjs,
+ * pour qu'AUCUN test ne parle au vrai modèle (ni plan, ni API). Imite ce que le produit lit :
+ *
+ *   --version · auth status                          version, état de connexion (JSON)
+ *   -p --output-format json [--json-schema S]        enveloppe { type:"result", subtype:"success", result, structured_output }
+ *   -p --output-format stream-json [--json-schema S] évènement system/init (outils), quelques évènements, un `result`
+ *
+ * Il reconnaît les prompts du produit (structuration, agents du composer, lanceur first-site) et répond des
+ * données 100 % fictives ; les agents « compose » écrivent un vrai petit site (propre au lint et au verify).
+ *
+ * Réglages par variables :
+ *   FAKE_CLAUDE_LOG=<fichier>     journalise chaque appel (argv + prompt reçu sur stdin) en JSONL
+ *   FAKE_CLAUDE_RESULT=<json>     réponse forcée du chemin json (sinon : réponse selon le prompt reconnu)
+ *   FAKE_CLAUDE_MODE=limit        simule la limite de session du plan · =fail : code de sortie 1
+ *   FAKE_CLAUDE_MKDIR=<dossier>   (stream-json, agent composer du worker) crée ce dossier SANS index.html
+ *   FAKE_CLAUDE_NO_STRUCTURED=1   n'émet jamais `structured_output` (teste le repli regex)
+ *   FAKE_CLAUDE_AUTH=none         `auth status` : non connecté
+ *   FAKE_CLAUDE_NO_WORKFLOW=1     l'outil Workflow est absent de l'init
+ *   FAKE_CLAUDE_JUDGE=tie         le juge aveugle ne départage pas (le beauty-gate échoue)
+ *   FAKE_CLAUDE_COST=<usd>        `total_cost_usd` du résultat (défaut 0) : teste le registre de dépense du worker
+ *   FAKE_CLAUDE_SLEEP_MS=<ms>     (stream-json) l'agent « travaille » ce temps avant de répondre (teste STOP en plein job)
+ *   FAKE_CLAUDE_CHUNKED=<n>       écrit stdout par morceaux de n octets (1 ms entre chaque) : un caractère UTF-8 ou une
+ *                                 ligne JSON coupés entre deux lectures, comme sur un vrai tube quand la sortie est longue
+ */
+import { appendFileSync, readFileSync, mkdirSync, writeFileSync } from "node:fs"
+import { join, dirname } from "node:path"
+
+const argv = process.argv.slice(2)
+const has = (f) => argv.includes(f)
+const opt = (f) => (has(f) ? argv[argv.indexOf(f) + 1] : undefined)
+const fmt = opt("--output-format") || "text"
+
+// sortie : d'un bloc (défaut), ou en petits morceaux d'octets (FAKE_CLAUDE_CHUNKED) pour tester les lecteurs du produit
+const CHUNK = Number(process.env.FAKE_CLAUDE_CHUNKED) || 0
+let pending = Promise.resolve()
+function emit(str) {
+  if (!CHUNK) { process.stdout.write(str); return }
+  const buf = Buffer.from(str, "utf8")
+  pending = pending.then(async () => {
+    for (let i = 0; i < buf.length; i += CHUNK) {
+      process.stdout.write(buf.subarray(i, i + CHUNK))
+      await new Promise((r) => setTimeout(r, 1))
+    }
+  })
+}
+const exit = async (code) => { await pending; process.exit(code) }
+
+if (has("--version")) { console.log("9.9.9 (Claude Code, faux binaire de test)"); process.exit(0) }
+if (argv[0] === "auth" && argv[1] === "status") {
+  const out = process.env.FAKE_CLAUDE_AUTH === "none"
+    ? { loggedIn: false, authMethod: "none", apiProvider: "firstParty" }
+    : { loggedIn: true, authMethod: "claude.ai", apiProvider: "firstParty", subscriptionType: "max", email: "test@lws.example" }
+  console.log(JSON.stringify(out, null, 2))
+  process.exit(0)
+}
+
+let stdin = ""
+try { stdin = readFileSync(0, "utf8") } catch { /* pas de stdin */ }
+if (process.env.FAKE_CLAUDE_LOG) {
+  // présence (jamais la valeur) des variables qui décident de la facturation : le produit doit retirer la clé API
+  const env = { ANTHROPIC_API_KEY: !!process.env.ANTHROPIC_API_KEY, ANTHROPIC_AUTH_TOKEN: !!process.env.ANTHROPIC_AUTH_TOKEN, CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS: process.env.CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS ?? null }
+  appendFileSync(process.env.FAKE_CLAUDE_LOG, JSON.stringify({ at: new Date().toISOString(), argv, cwd: process.cwd(), env, stdin }) + "\n")
+}
+const mode = process.env.FAKE_CLAUDE_MODE || ""
+if (mode === "fail") { console.error("faux claude : échec simulé"); process.exit(1) }
+
+/** Un petit site composé, fictif et PROPRE (0 tiret cadratin, pas d'asset disque, pas de @font-face, viewport). */
+function writeSite(indexPath, id) {
+  mkdirSync(dirname(indexPath), { recursive: true })
+  writeFileSync(indexPath, `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orvane Piscines, Valmont-sur-Lys</title><style>body{margin:0;font-family:system-ui,sans-serif;color:#0b2530;background:#f4f8f9}
+header,section,footer{padding:48px 6vw;max-width:1100px;margin:0 auto}h1{font-size:clamp(2rem,6vw,4.5rem);line-height:1.05;margin:0 0 16px}
+a.cta{display:inline-block;padding:14px 22px;background:#0b6e8a;color:#fff;border-radius:6px;text-decoration:none}a.cta:hover{background:#09566c}</style></head>
+<body><header><h1>Votre piscine, notre savoir-faire depuis 1998</h1><p>Construction et rénovation de piscines familiales dans la vallée de la Lys.</p>
+<a class="cta" href="tel:+33353012468">Appeler l'atelier</a></header><section><h2>Ce que nous faisons</h2><ul><li>Construction de piscines</li>
+<li>Rénovation de bassins</li><li>Spas et abris</li><li>Entretien saisonnier</li></ul></section>
+<footer><p>Orvane Piscines (prospect fictif de test, ${id})</p></footer></body></html>\n`)
+  writeFileSync(join(dirname(indexPath), "control.md"), `# ${id}\n\ntemplate: composer\nverdict: (faux claude)\n`)
+}
+
+// réponses canoniques par prompt reconnu, données 100 % fictives
+function answerFor(prompt) {
+  if (process.env.FAKE_CLAUDE_RESULT) return process.env.FAKE_CLAUDE_RESULT
+  if (/## TEXTE BRUT/.test(prompt)) {
+    return JSON.stringify({
+      identity: { phone: "03 53 01 24 68", email: "contact@orvane-piscines.example", hours: "Lun-Sam 9h-18h", zone: "Vallée de la Lys" },
+      content: {
+        tagline: "Votre piscine, notre savoir-faire depuis 1998",
+        about: "Orvane Piscines construit et rénove des piscines familiales dans la vallée de la Lys. Une petite équipe, des chantiers suivis de A à Z.",
+        services: ["construction de piscines", "rénovation de bassins", "spas et abris", "entretien saisonnier"],
+        brands: ["Aquaclair"],
+      },
+    })
+  }
+  if (/CAPTURES À ANALYSER/.test(prompt) && /besoin/.test(prompt)) return JSON.stringify({ besoin: 82, reasons: ["design daté des années 2010 (faux juge)", "typographie système"] })
+  // agents du composer (compose-batch.workflow.js), moteur local
+  if (/DÉMARRE LE CHRONO DE GEN/.test(prompt)) return JSON.stringify({ beauty_before: { score: 3, why: "site daté (faux)" }, what: "pisciniste", problems: ["tableaux de mise en page", "pas de viewport"], angle: "l'eau qui vend", moves: ["héros photo plein-bleed"] })
+  if (/Maillon ASSET-BOOST/.test(prompt)) return JSON.stringify({ boosted: [], heroVideo: false, notes: "audit seul (faux claude)" })
+  const compose = /Compose le site SUR-MESURE de "([^"]+)"/.exec(prompt)
+  if (compose) {
+    const out = /SORTIE : (output\/sites\/[^\s]+\/index\.html)/.exec(prompt)
+    if (out) writeSite(out[1], compose[1])
+    return JSON.stringify({ ok: !!out, path: out ? out[1] : "", fontPair: "Host Grotesk × Geist", lintClean: true, verifyClean: true, notes: "site fictif écrit par le faux claude" })
+  }
+  if (/Tu viens de composer/.test(prompt)) return JSON.stringify({ improved: false, rounds: 0, fixes: [], notes: "rien à corriger (faux)" })
+  if (/Juge de design NEUTRE/.test(prompt)) {
+    const newIsA = /Image A : output\/sites\//.test(prompt)
+    if (process.env.FAKE_CLAUDE_JUDGE === "tie") return JSON.stringify({ more_beautiful: "tie", margin: "tie", reasons: ["indécis (faux juge)"] })
+    return JSON.stringify({ more_beautiful: newIsA ? "A" : "B", margin: "much", reasons: ["hiérarchie nette (faux juge)", "photo qui porte le héros"] })
+  }
+  // lanceur du moteur « workflow » de first-site : simule le Workflow (site écrit + résultat)
+  if (/FIRST_SITE_RESULT=/.test(prompt)) {
+    const m = /args: (\{.*\}) \}\)/.exec(prompt)
+    let args = {}
+    try { args = JSON.parse(m[1]) } catch { /* */ }
+    const id = (args.ids || [])[0] || "inconnu"
+    writeSite(`output/sites/${id}/${args.date}-composer/index.html`, id)
+    return "FIRST_SITE_RESULT=" + JSON.stringify({ engines: { boost: args.boost, image: args.image, video: args.video, sync: args.sync, models: args.models }, passed: [{ id, font: "Host Grotesk", loops: 1, verdict: { more_beautiful: "A", margin: "much", reasons: ["faux workflow"] } }], failed: [] })
+  }
+  return "{}"
+}
+
+function structuredOf(text) {
+  if (!has("--json-schema") || process.env.FAKE_CLAUDE_NO_STRUCTURED === "1") return undefined
+  try { const v = JSON.parse(text); return v && typeof v === "object" ? v : undefined } catch { return undefined }
+}
+
+const TOOLS = ["Agent", "Bash", "Edit", "Read", "Skill", "WebFetch", "WebSearch", "Workflow", "Write"].filter((t) => !(t === "Workflow" && process.env.FAKE_CLAUDE_NO_WORKFLOW === "1"))
+
+if (fmt === "stream-json") {
+  const out = (o) => emit(JSON.stringify(o) + "\n")
+  out({ type: "system", subtype: "init", model: "fake", tools: TOOLS, apiKeySource: "none" })
+  if (mode === "limit") {
+    out({ type: "assistant", message: { content: [{ type: "text", text: "Claude usage limit reached. Your limit resets 3am (UTC)" }] } })
+    out({ type: "result", subtype: "error", is_error: true, result: "Claude usage limit reached. resets 3am (UTC)", usage: { input_tokens: 1, output_tokens: 1 }, total_cost_usd: 0 })
+    await exit(1)
+  }
+  if (process.env.FAKE_CLAUDE_MKDIR && /^# compose-worker/m.test(stdin)) { // seulement l'agent composer
+    const dir = process.env.FAKE_CLAUDE_MKDIR
+    mkdirSync(dir, { recursive: true })
+    writeFileSync(join(dir, "brouillon.html"), "<p>chantier interrompu (faux claude)</p>")
+  }
+  const text = answerFor(stdin)
+  out({ type: "assistant", message: { content: [{ type: "text", text: "faux agent : travail simulé" }, { type: "tool_use", name: "Read", input: { file_path: "README.md" } }] } })
+  const sleepMs = Number(process.env.FAKE_CLAUDE_SLEEP_MS) || 0
+  if (sleepMs) await new Promise((r) => setTimeout(r, sleepMs))
+  const structured = structuredOf(text)
+  out({ type: "result", subtype: "success", is_error: false, result: text === "{}" ? "faux agent : terminé" : text, ...(structured ? { structured_output: structured } : {}), usage: { input_tokens: 120, output_tokens: 40, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 }, total_cost_usd: Number(process.env.FAKE_CLAUDE_COST) || 0 })
+  await exit(0)
+}
+
+if (fmt === "json") {
+  const text = answerFor(stdin)
+  const structured = structuredOf(text)
+  emit(JSON.stringify({ type: "result", subtype: "success", is_error: false, result: text, ...(structured ? { structured_output: structured } : {}), usage: { input_tokens: 50, output_tokens: 30 }, modelUsage: { [opt("--model") || "fake"]: {} }, total_cost_usd: Number(process.env.FAKE_CLAUDE_COST) || 0 }))
+  await exit(0)
+}
+
+process.stdout.write("faux claude : ok\n")

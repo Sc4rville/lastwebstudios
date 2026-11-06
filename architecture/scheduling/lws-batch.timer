@@ -1,0 +1,12 @@
+# lws-batch.timer — un batch par nuit à 00:30 (heure de Paris, hors de l'heure du changement d'heure) : le worker construit pendant la nuit, tu juges au
+# réveil dans la Station. Vérifier : systemd-analyze calendar '*-*-* 00:30:00 Europe/Paris'
+
+[Unit]
+Description=lastwebstudios — batch composer chaque nuit (00:30, Paris)
+
+[Timer]
+OnCalendar=*-*-* 00:30:00 Europe/Paris
+Persistent=true
+
+[Install]
+WantedBy=timers.target

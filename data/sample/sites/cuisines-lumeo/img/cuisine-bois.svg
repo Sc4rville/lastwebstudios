@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><title>Cuisine bois et béton (illustration fictive)</title>
+<rect width="800" height="600" fill="#d8d3cc"/><rect x="0" y="440" width="800" height="160" fill="#8f8a83"/>
+<rect x="80" y="60" width="300" height="360" fill="#a5774b"/><g stroke="#7f5530" stroke-width="4"><path d="M80 180h300M80 300h300M230 60v360"/></g>
+<rect x="420" y="300" width="320" height="140" fill="#a5774b"/><rect x="410" y="286" width="340" height="16" fill="#6f6f6f"/>
+<rect x="30" y="540" width="260" height="34" rx="4" fill="#fff" fill-opacity=".85"/><text x="44" y="563" font-family="Arial, sans-serif" font-size="17" fill="#c0392b">Cuisine chêne et béton ciré</text></svg>

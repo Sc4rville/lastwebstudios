@@ -1,0 +1,17 @@
+# Repli de `npm run sandbox -- --db docker` : un Postgres jetable, sans TLS, sur la boucle locale uniquement.
+# Le port vient de SANDBOX_PG_PORT (la sandbox en choisit un libre) ; `down -v` à la sortie efface tout.
+name: lws-sandbox-${SANDBOX_PG_PORT:-55432}
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: lws
+      POSTGRES_PASSWORD: lws
+      POSTGRES_DB: lws
+    command: ["postgres", "-c", "fsync=off", "-c", "full_page_writes=off"]
+    ports:
+      - "127.0.0.1:${SANDBOX_PG_PORT:-55432}:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "lws", "-d", "lws", "-h", "127.0.0.1"]
+      interval: 1s
+      retries: 60

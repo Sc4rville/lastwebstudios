@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="810" viewBox="0 0 800 540" preserveAspectRatio="xMidYMid slice">
+<title>Dressing sur mesure sous pente (illustration fictive)</title>
+<defs><linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9d2ad"/><stop offset="1" stop-color="#d4b383"/></linearGradient></defs>
+<rect width="800" height="600" fill="#f4efe7"/>
+<path d="M0 0 H800 L800 120 L0 260 Z" fill="#e7ddcf"/>
+<path d="M60 250 L740 130 V520 H60 Z" fill="url(#f)" stroke="#a37b48" stroke-width="6"/>
+<g stroke="#a37b48" stroke-width="5"><path d="M230 220 V520"/><path d="M400 190 V520"/><path d="M570 160 V520"/></g>
+<g fill="#8a6234"><rect x="205" y="360" width="10" height="50" rx="4"/><rect x="245" y="360" width="10" height="50" rx="4"/><rect x="375" y="360" width="10" height="50" rx="4"/><rect x="415" y="360" width="10" height="50" rx="4"/><rect x="545" y="360" width="10" height="50" rx="4"/><rect x="585" y="360" width="10" height="50" rx="4"/></g>
+<rect x="0" y="520" width="800" height="80" fill="#cbb89d"/>
+<rect x="30" y="546" width="330" height="34" rx="4" fill="#ffffff" fill-opacity=".85"/>
+<text x="44" y="569" font-family="Verdana, sans-serif" font-size="17" fill="#5b3418">Dressing sous pente, frêne clair</text>
+</svg>

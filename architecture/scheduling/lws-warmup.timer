@@ -1,0 +1,14 @@
+# lws-warmup.timer — un tick par heure, 08:15 → 19:15 (heure de Paris), tous les jours : ~12 ticks × 2 mails au plus
+# par boîte et par tick couvrent la cible du jour (plafond 20) en l'étalant comme un humain.
+# Vérifier : systemd-analyze calendar '*-*-* 08..19:15:00 Europe/Paris'
+
+[Unit]
+Description=lastwebstudios — warmup : un tick par heure, 08:15-19:15 (Paris)
+
+[Timer]
+OnCalendar=*-*-* 08..19:15:00 Europe/Paris
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

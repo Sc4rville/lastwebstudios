@@ -1,0 +1,13 @@
+{
+  "slug": "daytrip-studio",
+  "url": "https://daytrip.studio/",
+  "vars": {},
+  "palette": [
+    "rgba(255,255,255,.375)",
+    "#efefef",
+    "#e4e4e4",
+    "rgba(180,180,180,.625)",
+    "#bdbdbd",
+    "rgba(0,0,0,0)"
+  ]
+}

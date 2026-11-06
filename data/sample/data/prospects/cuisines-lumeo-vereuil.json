@@ -1,0 +1,65 @@
+{
+  "_sample": "FICTIF : prospect inventé pour la sandbox et la démo (aucune entreprise réelle).",
+  "id": "cuisines-lumeo-vereuil",
+  "industry": "cuisiniste",
+  "identity": {
+    "name": "Cuisines Lumeo",
+    "city": "Véreuil",
+    "phone": "01 99 00 41 52",
+    "hours": "Mar-Sam 9h30-12h / 14h-19h"
+  },
+  "content": {
+    "tagline": "Votre cuisiniste à Véreuil depuis 1994",
+    "about": "Cuisines Lumeo conçoit, fabrique et installe des cuisines équipées, des salles de bains et des rangements sur mesure, avec un showroom de 300 m² et une étude 3D gratuite.",
+    "services": [
+      "cuisines équipées",
+      "salles de bains",
+      "dressings et placards sur mesure",
+      "plans de travail quartz, granit, céramique",
+      "étude 3D gratuite"
+    ],
+    "brands": []
+  },
+  "assets": {
+    "logo": "assets/cuisines-lumeo-vereuil/logo.svg",
+    "photos": [
+      "assets/cuisines-lumeo-vereuil/photo-1.svg",
+      "assets/cuisines-lumeo-vereuil/photo-2.svg"
+    ]
+  },
+  "existing": {
+    "url": "http://cuisines-lumeo.example/",
+    "screenshot": "assets/cuisines-lumeo-vereuil/avant.png"
+  },
+  "score": {
+    "value": 78,
+    "tier": "hot",
+    "reasons": [
+      "pas responsive (pas de viewport)",
+      "SEO pauvre (pas de description / OG)",
+      "pas de HTTPS (sécurité + SEO pénalisé)",
+      "aucune donnée structurée (SEO local faible)",
+      "page très pauvre (peu de contenu)",
+      "dernière trace de maj : 2009"
+    ],
+    "accroche": "Votre site de cuisiniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez."
+  },
+  "brief": {
+    "beauty_before": {
+      "score": 2,
+      "why": "tableau 780 px, texte en 11 px, promo 2009 en jaune"
+    },
+    "what": "cuisiniste avec showroom, pose par ses équipes",
+    "problems": [
+      "aucun e-mail (le formulaire est en panne) : seul le téléphone marche",
+      "illisible sur mobile",
+      "promo de 2009 encore en tête"
+    ],
+    "angle": "le showroom en grand : 15 modèles, une étude 3D",
+    "moves": [
+      "héros sur la cuisine exposée",
+      "prise de rendez-vous showroom",
+      "galerie par style"
+    ]
+  }
+}

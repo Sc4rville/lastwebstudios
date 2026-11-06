@@ -1,0 +1,29 @@
+{
+  "slug": "barrbuild-co-uk",
+  "url": "https://www.barrbuild.co.uk/",
+  "vars": {
+    "--white": "#ffffff",
+    "--black": "#000000",
+    "--slate1": "#303030",
+    "--slate2": "#6f6f6f",
+    "--slate3": "#979797",
+    "--slate4": "#9e9e9e",
+    "--plaster": "#e0ccba",
+    "--timber": "#473b35",
+    "--offWhite1": "#ece6de",
+    "--offWhite2": "#eeedec",
+    "--parchment": "#f6f3ef"
+  },
+  "palette": [
+    "#02dba8",
+    "#eb3d3b",
+    "rgba(0,0,0,0.6)",
+    "rgba(255,255,255,0.7)",
+    "#f3eee9",
+    "#383838",
+    "#e0ccba",
+    "rgba(0,0,0,0.11)",
+    "#efefef",
+    "#e4e4e4"
+  ]
+}

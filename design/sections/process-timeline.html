@@ -1,0 +1,48 @@
+<!-- process-timeline · process · frise verticale à gauche (étapes) + média sticky à droite -->
+<section class="proc-tl" data-section="process-timeline">
+  <style>
+    .proc-tl{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,112px) clamp(20px,5vw,80px);
+      display:grid; grid-template-columns:1.15fr 0.85fr; gap:clamp(32px,6vw,80px); align-items:start}
+    .proc-tl__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .proc-tl__title{font-family:var(--serif); font-weight:500; line-height:1.08; letter-spacing:-.01em;
+      font-size:clamp(30px,4vw,52px); margin:0 0 clamp(32px,4vw,52px)}
+    .proc-tl__list{list-style:none; margin:0; padding:0; position:relative}
+    .proc-tl__list::before{content:""; position:absolute; left:11px; top:6px; bottom:6px; width:1px;
+      background:var(--muted); opacity:.4}
+    .proc-tl__item{position:relative; padding:0 0 clamp(28px,3.5vw,44px) clamp(44px,4vw,56px)}
+    .proc-tl__item:last-child{padding-bottom:0}
+    .proc-tl__dot{position:absolute; left:0; top:2px; width:24px; height:24px; border-radius:999px;
+      border:1px solid var(--accent); display:grid; place-items:center; background:var(--bg);
+      font-family:var(--mono); font-size:11px; color:var(--accent)}
+    .proc-tl__name{font-family:var(--sans); font-weight:600; font-size:clamp(18px,1.6vw,22px); margin:0 0 8px}
+    .proc-tl__text{font-family:var(--sans); font-size:15px; line-height:1.6; color:var(--muted);
+      max-width:48ch; margin:0}
+    .proc-tl__media{position:sticky; top:24px; aspect-ratio:4/5; overflow:hidden; border-radius:4px}
+    .proc-tl__media img{width:100%; height:100%; object-fit:cover; object-position:center; display:block}
+    .proc-tl .reveal{opacity:1}
+    @media (max-width:880px){
+      .proc-tl{grid-template-columns:1fr; gap:clamp(28px,7vw,40px)}
+      .proc-tl__media{position:static; order:-1; aspect-ratio:4/3}
+    }
+  </style>
+
+  <div>
+    <p class="proc-tl__kicker reveal">{{KICKER}}</p>
+    <h2 class="proc-tl__title reveal">{{HEADLINE}}</h2>
+    <ol class="proc-tl__list">
+      <!-- repeat: step -->
+      <li class="proc-tl__item reveal">
+        <span class="proc-tl__dot">{{STEP_NUM}}</span>
+        <h3 class="proc-tl__name">{{STEP_TITLE}}</h3>
+        <p class="proc-tl__text">{{STEP_TEXT}}</p>
+      </li>
+      <!-- /repeat -->
+    </ol>
+  </div>
+
+  <figure class="proc-tl__media reveal">
+    <img src="{{MEDIA_IMG}}" alt="{{MEDIA_ALT}}">
+  </figure>
+</section>

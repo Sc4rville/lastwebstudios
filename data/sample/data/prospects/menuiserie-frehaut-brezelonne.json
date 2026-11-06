@@ -1,0 +1,36 @@
+{
+  "_sample": "FICTIF : prospect inventé pour la sandbox et la démo (aucune entreprise réelle).",
+  "id": "menuiserie-frehaut-brezelonne",
+  "industry": "menuisier",
+  "identity": {
+    "name": "Menuiserie Fréhaut",
+    "city": "Brézelonne",
+    "phone": "02 61 91 54 90",
+    "email": "atelier@menuiserie-frehaut.example"
+  },
+  "content": {
+    "tagline": "Menuiserie bois et alu, pose et rénovation",
+    "about": "Menuiserie Fréhaut fabrique et pose fenêtres, portes et volets en bois et en aluminium, et rénove les menuiseries anciennes.",
+    "services": [
+      "fenêtres bois et alu",
+      "portes d'entrée",
+      "volets battants et roulants",
+      "rénovation de menuiseries anciennes"
+    ],
+    "brands": []
+  },
+  "assets": {
+    "photos": []
+  },
+  "existing": {
+    "url": "http://menuiserie-frehaut.example/"
+  },
+  "score": {
+    "value": 41,
+    "tier": "warm",
+    "reasons": [
+      "SEO pauvre (pas de description / OG)"
+    ],
+    "accroche": "Votre site de menuisier : SEO pauvre. On vous a refait la page d'accueil, regardez."
+  }
+}

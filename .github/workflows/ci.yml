@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: typecheck · test · sandbox · scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # scoring, parsing, captures and the render check run in a real browser
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run typecheck
+
+      # offline: throwaway workspace, no .env, no key, a fake `claude` on the PATH
+      - run: npm test
+
+      # the fictional agency: embedded Postgres (PGlite), every cockpit view verified, nothing sent
+      - run: npm run sandbox -- --check
+
+      # nothing real: phones, e-mails, IPs, home paths, fonts outside the OFL lock
+      - run: node scripts/oss/scan.mjs .
+
+  gitleaks:
+    name: gitleaks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

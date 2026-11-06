@@ -1,0 +1,28 @@
+{
+  "value": 22,
+  "tier": "cold",
+  "axes": {
+    "besoin": 20,
+    "levier": 25,
+    "valeur": 30,
+    "closabilite": 40,
+    "expansion": 10
+  },
+  "expectedValue": 18,
+  "signals": {
+    "gallery": true,
+    "quoteCta": false,
+    "social": false,
+    "premium": false,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "",
+  "reasons": [
+    "site récent et soigné : faible besoin"
+  ],
+  "_fixture": "score fictif (vue Machine)"
+}

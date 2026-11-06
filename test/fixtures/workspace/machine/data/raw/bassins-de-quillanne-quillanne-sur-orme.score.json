@@ -1,0 +1,29 @@
+{
+  "value": 78,
+  "tier": "hot",
+  "axes": {
+    "besoin": 80,
+    "levier": 85,
+    "valeur": 90,
+    "closabilite": 90,
+    "expansion": 50
+  },
+  "expectedValue": 62,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de pisciniste : cassé sur mobile. On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "cassé sur mobile (débordement)",
+    "dernière trace de maj : 2015"
+  ],
+  "_fixture": "score fictif (vue Machine)"
+}

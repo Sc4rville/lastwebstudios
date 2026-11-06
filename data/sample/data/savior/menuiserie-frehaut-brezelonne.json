@@ -1,0 +1,7 @@
+{
+  "_sample": "mail FICTIF de la sandbox (le vrai est généré par npm run savior / la démo)",
+  "prospectId": "menuiserie-frehaut-brezelonne",
+  "senderName": "Camille · Atelier Vélin",
+  "subject": "Votre site de menuisier, vu depuis Google",
+  "body": "Bonjour,\n\nQuand on cherche une menuiserie à Brézelonne, votre site n'a ni description ni coordonnées lisibles par Google. Je peux vous montrer en 10 minutes ce que ça change : https://atelier-velin.example\n\nCamille"
+}

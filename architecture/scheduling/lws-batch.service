@@ -1,0 +1,27 @@
+# lws-batch — empile UN batch composer dans la file du worker (scripts/batch.ts), lancé par lws-batch.timer : c'est
+# ce qui rend l'agence AUTOMATIQUE (la box trouve, note, lit, construit et juge pendant que tes PC sont éteints).
+# Unité systemd UTILISATEUR, NON installée par défaut (cf. cron.md, ou install-units.sh). Dépôt attendu dans ~/lws.
+#
+# Réglages (dans ~/lws/.env, qui l'emporte sur les valeurs ci-dessous) :
+#   LWS_BATCH_SIZE  nombre de prospects par batch (défaut 5)
+#   LWS_BATCH_ARGS  options de `npm run batch` en plus, ex. « --industry menuisier » ; vide = métier AUTO (le worker
+#                   lance `npm run radar` et prend le mieux classé, puis scrape s'il manque des prospects)
+# Le batch passe par la cage : STOP le saute, LWS_BUDGET_USD_DAY arrête le worker pour la journée une fois atteint.
+# Requiert DATABASE_URL (la file vit dans la base) et le worker (worker/lws-worker.service).
+
+[Unit]
+Description=lastwebstudios — batch composer de nuit (file du worker)
+OnFailure=lws-alert@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+Environment=LWS_BATCH_SIZE=5
+Environment=LWS_BATCH_ARGS=
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh batch batch composer $LWS_BATCH_SIZE $LWS_BATCH_ARGS
+TimeoutStartSec=120
+# logs : journalctl --user -u lws-batch.service (l'empilement) · journalctl --user -u lws-worker -f (le travail)
