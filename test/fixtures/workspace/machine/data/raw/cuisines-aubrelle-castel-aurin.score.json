@@ -1,0 +1,28 @@
+{
+  "value": 69,
+  "tier": "hot",
+  "axes": {
+    "besoin": 70,
+    "levier": 72,
+    "valeur": 75,
+    "closabilite": 90,
+    "expansion": 40
+  },
+  "expectedValue": 55,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de cuisiniste : pas responsive. On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "pas responsive (pas de viewport)"
+  ],
+  "_fixture": "score fictif (vue Machine)"
+}

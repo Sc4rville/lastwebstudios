@@ -1,0 +1,34 @@
+{
+  "value": 78,
+  "tier": "hot",
+  "axes": {
+    "besoin": 90,
+    "levier": 70,
+    "valeur": 87,
+    "closabilite": 80,
+    "expansion": 40
+  },
+  "expectedValue": 63,
+  "signals": {
+    "gallery": false,
+    "quoteCta": false,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de cuisiniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "pas responsive (pas de viewport)",
+    "SEO pauvre (pas de description / OG)",
+    "pas de HTTPS (sécurité + SEO pénalisé)",
+    "aucune donnée structurée (SEO local faible)",
+    "page très pauvre (peu de contenu)",
+    "dernière trace de maj : 2009",
+    "axes — besoin 90 · levier 70 · valeur 87 · closab. 80 · expansion 40 → € espéré 63"
+  ],
+  "_sample": "score réel de leadengine/2_scoring/scripts/score.ts sur le vieux site fictif (VISUAL=0, sans SIREN)"
+}

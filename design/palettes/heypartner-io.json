@@ -1,0 +1,26 @@
+{
+  "slug": "heypartner-io",
+  "url": "https://heypartner.io/",
+  "vars": {
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgba(59,130,246,.5)",
+    "--color-black": "#170404",
+    "--color-white": "#f1f1f1",
+    "--color-beige": "#dedcd0",
+    "--color-blue": "#5a88ff",
+    "--color-yellow": "#efffb9",
+    "--color-pink": "#eacaca"
+  },
+  "palette": [
+    "rgb(241241241/var(--tw-bg-opacity)",
+    "rgb(2344/var(--tw-text-opacity)",
+    "rgb(222220208/var(--tw-bg-opacity)",
+    "rgb(241241241/var(--tw-text-opacity)",
+    "#170404",
+    "#efefef",
+    "#e4e4e4",
+    "#9ca3af",
+    "rgba(59,130,246,.5)",
+    "rgb(2344/var(--tw-border-opacity)"
+  ]
+}

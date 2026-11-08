@@ -1,0 +1,24 @@
+{
+  "slug": "packbags-nl",
+  "url": "https://packbags.nl/",
+  "vars": {
+    "--swatch-disabled-strike-color": "rgb(var(--text-color)",
+    "--thumbnail-disabled-strike-color": "rgb(var(--border-color)",
+    "--shopify-account-color-background": "rgb(var(--default-color-scheme-background)",
+    "--shopify-account-color-text": "rgb(var(--default-color-scheme-text-color)",
+    "--shopify-account-signed-in-avatar-color-background": "rgb(var(--text-color)",
+    "--shopify-account-signed-in-avatar-color-text": "rgb(from rgb(var(--text-color)"
+  },
+  "palette": [
+    "rgb(var(--text-color)",
+    "rgb(var(--border-color)",
+    "rgb(var(--background)",
+    "rgb(var(--button-text-color)",
+    "#0000000d",
+    "rgb(var(--background-secondary)",
+    "rgb(var(--logo-item-border-color)",
+    "rgb(var(--page-overlay)",
+    "#ffffff80",
+    "#c8c8c833"
+  ]
+}

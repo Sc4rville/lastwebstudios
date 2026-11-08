@@ -1,0 +1,8 @@
+{
+  "_sample": "mail FICTIF de la sandbox (le vrai est généré par npm run savior / la démo)",
+  "prospectId": "orvane-piscines-valmont-sur-lys",
+  "angle": "customers",
+  "senderName": "Camille · Atelier Vélin",
+  "subject": "Une idée pour le site d'Orvane Piscines",
+  "body": "Bonjour,\n\nVotre site ne s'affiche pas sur un téléphone, alors que c'est là que vos clients cherchent un pisciniste. J'ai refait votre page d'accueil, avec vos bassins en grand et le devis en un clic : https://atelier-velin.example/demo/orvane\n\nSi elle vous plaît, je vous la mets en ligne. Sinon, vous ne me devez rien.\n\nCamille"
+}

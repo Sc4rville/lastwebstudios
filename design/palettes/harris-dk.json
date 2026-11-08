@@ -1,0 +1,28 @@
+{
+  "slug": "harris-dk",
+  "url": "https://harris.dk/",
+  "vars": {
+    "--black": "#000",
+    "--white": "#fff",
+    "--error": "#df5e3c",
+    "--gray": "#dadada",
+    "--darkgray": "#000000b2",
+    "--midgray": "#818180",
+    "--pink": "#f2a4b7",
+    "--turquoise": "#4cb1a9",
+    "--yellow": "#f2b439",
+    "--navy": "#221749"
+  },
+  "palette": [
+    "rgba(0,0,0,.4)",
+    "rgba(255,255,255,.5)",
+    "#efefef",
+    "#e4e4e4",
+    "#bdbdbd",
+    "#df5e3c",
+    "#dadada",
+    "#000000b2",
+    "#818180",
+    "#f2a4b7"
+  ]
+}

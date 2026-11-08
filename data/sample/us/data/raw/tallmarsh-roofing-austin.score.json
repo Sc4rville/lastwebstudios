@@ -1,0 +1,12 @@
+{
+  "value": 81,
+  "tier": "hot",
+  "reasons": [
+    "not responsive (no viewport)",
+    "no HTTPS (security, Google penalty)",
+    "poor SEO (no description / OG)",
+    "last updated: 2010"
+  ],
+  "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look.",
+  "_sample": "fictional score (US sandbox cast)"
+}

@@ -1,0 +1,604 @@
+{
+  "generated": "2026-10-24",
+  "count": 31,
+  "license": "OFL-1.1 (chaque famille : <slug>/OFL.txt)",
+  "families": {
+    "Host Grotesk": {
+      "slug": "host-grotesk",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "300-800",
+          "style": "normal",
+          "file": "host-grotesk/host-grotesk-var.woff2",
+          "bytes": 20296
+        },
+        {
+          "weight": "300",
+          "style": "normal",
+          "file": "host-grotesk/host-grotesk-300.woff2",
+          "bytes": 13476
+        },
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "host-grotesk/host-grotesk-400.woff2",
+          "bytes": 13684
+        },
+        {
+          "weight": "600",
+          "style": "normal",
+          "file": "host-grotesk/host-grotesk-600.woff2",
+          "bytes": 13728
+        }
+      ]
+    },
+    "Bricolage Grotesque": {
+      "slug": "bricolage-grotesque",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "200-800",
+          "style": "normal",
+          "file": "bricolage-grotesque/bricolage-grotesque-var.woff2",
+          "bytes": 41344
+        }
+      ]
+    },
+    "Archivo": {
+      "slug": "archivo",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "archivo/archivo-var.woff2",
+          "bytes": 34928
+        }
+      ]
+    },
+    "Syne": {
+      "slug": "syne",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400-800",
+          "style": "normal",
+          "file": "syne/syne-var.woff2",
+          "bytes": 34608
+        }
+      ]
+    },
+    "Unbounded": {
+      "slug": "unbounded",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "200-900",
+          "style": "normal",
+          "file": "unbounded/unbounded-var.woff2",
+          "bytes": 50904
+        }
+      ]
+    },
+    "Space Grotesk": {
+      "slug": "space-grotesk",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "300-700",
+          "style": "normal",
+          "file": "space-grotesk/space-grotesk-var.woff2",
+          "bytes": 22288
+        },
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "space-grotesk/space-grotesk-400.woff2",
+          "bytes": 13388
+        },
+        {
+          "weight": "500",
+          "style": "normal",
+          "file": "space-grotesk/space-grotesk-500.woff2",
+          "bytes": 13312
+        },
+        {
+          "weight": "600",
+          "style": "normal",
+          "file": "space-grotesk/space-grotesk-600.woff2",
+          "bytes": 13284
+        },
+        {
+          "weight": "700",
+          "style": "normal",
+          "file": "space-grotesk/space-grotesk-700.woff2",
+          "bytes": 12840
+        }
+      ]
+    },
+    "Familjen Grotesk": {
+      "slug": "familjen-grotesk",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400-700",
+          "style": "normal",
+          "file": "familjen-grotesk/familjen-grotesk-var.woff2",
+          "bytes": 18916
+        }
+      ]
+    },
+    "Fraunces": {
+      "slug": "fraunces",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "fraunces/fraunces-var.woff2",
+          "bytes": 36620
+        },
+        {
+          "weight": "100-900",
+          "style": "italic",
+          "file": "fraunces/fraunces-var-italic.woff2",
+          "bytes": 45656
+        }
+      ]
+    },
+    "Cormorant Garamond": {
+      "slug": "cormorant-garamond",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "300-700",
+          "style": "normal",
+          "file": "cormorant-garamond/cormorant-garamond-var.woff2",
+          "bytes": 37640
+        },
+        {
+          "weight": "300-700",
+          "style": "italic",
+          "file": "cormorant-garamond/cormorant-garamond-var-italic.woff2",
+          "bytes": 39260
+        }
+      ]
+    },
+    "Newsreader": {
+      "slug": "newsreader",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "200-800",
+          "style": "normal",
+          "file": "newsreader/newsreader-var.woff2",
+          "bytes": 58084
+        },
+        {
+          "weight": "200-800",
+          "style": "italic",
+          "file": "newsreader/newsreader-var-italic.woff2",
+          "bytes": 64520
+        }
+      ]
+    },
+    "Bodoni Moda": {
+      "slug": "bodoni-moda",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400-900",
+          "style": "normal",
+          "file": "bodoni-moda/bodoni-moda-var.woff2",
+          "bytes": 25884
+        },
+        {
+          "weight": "400-900",
+          "style": "italic",
+          "file": "bodoni-moda/bodoni-moda-var-italic.woff2",
+          "bytes": 30328
+        }
+      ]
+    },
+    "Source Serif 4": {
+      "slug": "source-serif-4",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "200-900",
+          "style": "normal",
+          "file": "source-serif-4/source-serif-4-var.woff2",
+          "bytes": 50824
+        },
+        {
+          "weight": "200-900",
+          "style": "italic",
+          "file": "source-serif-4/source-serif-4-var-italic.woff2",
+          "bytes": 51516
+        }
+      ]
+    },
+    "Instrument Serif": {
+      "slug": "instrument-serif",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "instrument-serif/instrument-serif-400.woff2",
+          "bytes": 21032
+        },
+        {
+          "weight": "400",
+          "style": "italic",
+          "file": "instrument-serif/instrument-serif-400-italic.woff2",
+          "bytes": 22128
+        }
+      ]
+    },
+    "DM Serif Display": {
+      "slug": "dm-serif-display",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "dm-serif-display/dm-serif-display-400.woff2",
+          "bytes": 24744
+        },
+        {
+          "weight": "400",
+          "style": "italic",
+          "file": "dm-serif-display/dm-serif-display-400-italic.woff2",
+          "bytes": 24572
+        }
+      ]
+    },
+    "Young Serif": {
+      "slug": "young-serif",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "young-serif/young-serif-400.woff2",
+          "bytes": 26992
+        }
+      ]
+    },
+    "Geist": {
+      "slug": "geist",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "geist/geist-var.woff2",
+          "bytes": 29400
+        },
+        {
+          "weight": "300",
+          "style": "normal",
+          "file": "geist/geist-300.woff2",
+          "bytes": 13228
+        },
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "geist/geist-400.woff2",
+          "bytes": 12956
+        }
+      ]
+    },
+    "Instrument Sans": {
+      "slug": "instrument-sans",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400-700",
+          "style": "normal",
+          "file": "instrument-sans/instrument-sans-var.woff2",
+          "bytes": 30092
+        }
+      ]
+    },
+    "Manrope": {
+      "slug": "manrope",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "200-800",
+          "style": "normal",
+          "file": "manrope/manrope-var.woff2",
+          "bytes": 24836
+        }
+      ]
+    },
+    "Figtree": {
+      "slug": "figtree",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "300-900",
+          "style": "normal",
+          "file": "figtree/figtree-var.woff2",
+          "bytes": 20156
+        }
+      ]
+    },
+    "Work Sans": {
+      "slug": "work-sans",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "work-sans/work-sans-var.woff2",
+          "bytes": 50316
+        }
+      ]
+    },
+    "IBM Plex Sans": {
+      "slug": "ibm-plex-sans",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-700",
+          "style": "normal",
+          "file": "ibm-plex-sans/ibm-plex-sans-var.woff2",
+          "bytes": 45712
+        }
+      ]
+    },
+    "DM Sans": {
+      "slug": "dm-sans",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "dm-sans/dm-sans-var.woff2",
+          "bytes": 36932
+        }
+      ]
+    },
+    "Schibsted Grotesk": {
+      "slug": "schibsted-grotesk",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400-900",
+          "style": "normal",
+          "file": "schibsted-grotesk/schibsted-grotesk-var.woff2",
+          "bytes": 46752
+        }
+      ]
+    },
+    "Onest": {
+      "slug": "onest",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.1"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "onest/onest-var.woff2",
+          "bytes": 33760
+        }
+      ]
+    },
+    "Plus Jakarta Sans": {
+      "slug": "plus-jakarta-sans",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "200-800",
+          "style": "normal",
+          "file": "plus-jakarta-sans/plus-jakarta-sans-var.woff2",
+          "bytes": 27348
+        }
+      ]
+    },
+    "JetBrains Mono": {
+      "slug": "jetbrains-mono",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-800",
+          "style": "normal",
+          "file": "jetbrains-mono/jetbrains-mono-var.woff2",
+          "bytes": 40404
+        },
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "jetbrains-mono/jetbrains-mono-400.woff2",
+          "bytes": 21168
+        },
+        {
+          "weight": "500",
+          "style": "normal",
+          "file": "jetbrains-mono/jetbrains-mono-500.woff2",
+          "bytes": 21832
+        },
+        {
+          "weight": "700",
+          "style": "normal",
+          "file": "jetbrains-mono/jetbrains-mono-700.woff2",
+          "bytes": 21908
+        }
+      ]
+    },
+    "Chivo Mono": {
+      "slug": "chivo-mono",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "chivo-mono/chivo-mono-var.woff2",
+          "bytes": 26336
+        }
+      ]
+    },
+    "Geist Mono": {
+      "slug": "geist-mono",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "100-900",
+          "style": "normal",
+          "file": "geist-mono/geist-mono-var.woff2",
+          "bytes": 23128
+        }
+      ]
+    },
+    "IBM Plex Mono": {
+      "slug": "ibm-plex-mono",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "ibm-plex-mono/ibm-plex-mono-400.woff2",
+          "bytes": 14708
+        },
+        {
+          "weight": "500",
+          "style": "normal",
+          "file": "ibm-plex-mono/ibm-plex-mono-500.woff2",
+          "bytes": 14888
+        }
+      ]
+    },
+    "DM Mono": {
+      "slug": "dm-mono",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "dm-mono/dm-mono-400.woff2",
+          "bytes": 14820
+        },
+        {
+          "weight": "500",
+          "style": "normal",
+          "file": "dm-mono/dm-mono-500.woff2",
+          "bytes": 14988
+        }
+      ]
+    },
+    "Space Mono": {
+      "slug": "space-mono",
+      "license": "OFL-1.1",
+      "from": [
+        "fontsource@5.3.0"
+      ],
+      "faces": [
+        {
+          "weight": "400",
+          "style": "normal",
+          "file": "space-mono/space-mono-400.woff2",
+          "bytes": 16520
+        },
+        {
+          "weight": "700",
+          "style": "normal",
+          "file": "space-mono/space-mono-700.woff2",
+          "bytes": 16724
+        }
+      ]
+    }
+  }
+}

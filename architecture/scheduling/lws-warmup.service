@@ -1,0 +1,27 @@
+# lws-warmup — ONE tick of the sending mailboxes' warmup (outreach/scripts/warmup.ts), started by lws-warmup.timer.
+# A systemd USER unit, NOT installed by default (see cron.md "Install", or install-units.sh). Paths through
+# %h (your HOME): the repo is expected in ~/lws.
+#
+# The mailboxes of outreach/sequencer/config.json write to and answer each other (1:1 email, a ramp from 2 to
+# 20 emails per mailbox per day, at most 2 per mailbox per tick): the domains' reputation is built
+# BEFORE the first cold email. Allow 10 to 14 days before enabling lws-sequencer.timer.
+#
+# REAL SENDING: the Environment=LWS_LIVE_SEND=1 line below uncommented (in the unit, NOT in .env), plus the
+# Google service account key (outreach/sequencer/sa-key.json, domain-wide delegation, gmail.send scope; gmail.modify
+# as well to take the warmups out of spam). Commented out: the tick says what it WOULD have sent and writes nothing.
+
+[Unit]
+Description=lastwebstudios — sending mailboxes warmup tick (ramp 2 → 20 emails/mailbox/day)
+OnFailure=lws-alert@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+#Environment=LWS_LIVE_SEND=1
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh warmup warmup tick
+TimeoutStartSec=600
+# logs: journalctl --user -u lws-warmup.service · state: npm run warmup -- status

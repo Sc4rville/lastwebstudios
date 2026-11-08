@@ -1,0 +1,7 @@
+{
+  "_sample": "FICTIONAL email of the US sandbox (the real one is written by the demo step)",
+  "prospectId": "pecanwood-pools-austin",
+  "senderName": "Sam at Harbor & Pine",
+  "subject": "Your new website, a 30-second tour",
+  "body": "Hi,\n\nSince you took a look at the page, here is the full tour of the site, on a phone and on a computer: https://harborpine.example/demo/pecanwood/video\n\nTen minutes to talk it over? https://cal.harborpine.example/15min\n\nSam"
+}

@@ -1,0 +1,27 @@
+# lws-telegram — the Telegram bot: drive the machine from your phone (start batches + swipe to
+# approve/skip + comment), computers off. Runs on the box next to the worker.
+#
+# Install:
+#   cp worker/lws-telegram.service ~/.config/systemd/user/   (adjust WorkingDirectory if needed)
+#   # .env must hold TELEGRAM_BOT_TOKEN (BotFather) + DATABASE_URL (for /batch and the statuses)
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now lws-telegram
+#   journalctl --user -u lws-telegram -f
+
+[Unit]
+Description=lastwebstudios telegram bot — batches + swipe to approve/skip from your phone
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/lws
+# TELEGRAM_BOT_TOKEN (BotFather) · DATABASE_URL (pooler Supabase) · CLAUDE_CODE_OAUTH_TOKEN
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/env npm run telegram
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

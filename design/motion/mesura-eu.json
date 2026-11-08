@@ -1,0 +1,8 @@
+{
+  "slug": "mesura-eu",
+  "url": "https://mesura.eu/",
+  "stack": [
+    "gsap"
+  ],
+  "scroll": "native"
+}

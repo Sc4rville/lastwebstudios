@@ -1,0 +1,34 @@
+{
+  "value": 82,
+  "tier": "hot",
+  "axes": {
+    "besoin": 90,
+    "levier": 84,
+    "valeur": 77,
+    "closabilite": 100,
+    "expansion": 35
+  },
+  "expectedValue": 69,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de menuisier : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "pas responsive (pas de viewport)",
+    "SEO pauvre (pas de description / OG)",
+    "pas de HTTPS (sécurité + SEO pénalisé)",
+    "aucune donnée structurée (SEO local faible)",
+    "page très pauvre (peu de contenu)",
+    "dernière trace de maj : 2011",
+    "axes — besoin 90 · levier 84 · valeur 77 · closab. 100 · expansion 35 → € espéré 69"
+  ],
+  "_sample": "score réel de leadengine/2_scoring/scripts/score.ts sur le vieux site fictif (VISUAL=0, sans SIREN)"
+}

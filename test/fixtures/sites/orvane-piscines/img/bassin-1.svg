@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="533" viewBox="0 0 800 533">
+<title>Bassin familial 8x4 (illustration fictive)</title>
+<defs><linearGradient id="s0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ec8f0"/><stop offset="1" stop-color="#d8f1ff"/></linearGradient></defs>
+<rect width="800" height="533" fill="url(#s0)"/>
+<circle cx="640" cy="90" r="38" fill="#fff7c2"/>
+<path d="M0 250 Q 200 200 400 250 T 800 240 V 300 H 0 Z" fill="#7bb36a"/>
+<rect x="0" y="280" width="800" height="253" fill="#e9d3a8"/>
+<rect x="126" y="286" width="548" height="178" rx="10" fill="#f4efe6"/>
+<rect x="140" y="300" width="520" height="150" rx="6" fill="#2aa7d9"/>
+<path d="M160 322 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M160 346 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M160 370 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M160 394 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/><path d="M160 418 q 30 -10 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0 t 60 0" fill="none" stroke="#ffffff" stroke-opacity=".45" stroke-width="3"/>
+<g stroke="#9aa3ab" stroke-width="6" fill="none"><path d="M610 260 v 70"/><path d="M640 260 v 70"/><path d="M610 260 q 15 -18 30 0"/></g>
+<rect x="40" y="475" width="250" height="34" rx="4" fill="#ffffff" fill-opacity=".8"/>
+<text x="54" y="498" font-family="Verdana, sans-serif" font-size="16" fill="#25506b">Bassin familial 8x4</text>
+</svg>

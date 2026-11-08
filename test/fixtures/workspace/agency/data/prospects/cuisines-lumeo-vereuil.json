@@ -1,0 +1,14 @@
+{
+  "_fixture": "FICTIF : prospect inventé pour les tests et la démo (aucune entreprise réelle).",
+  "id": "cuisines-lumeo-vereuil",
+  "industry": "cuisiniste",
+  "identity": {
+    "name": "Cuisines Lumeo",
+    "city": "Vereuil",
+    "phone": "01 99 00 42 17"
+  },
+  "content": { "services": ["cuisines équipées", "plans de travail", "pose"] },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://cuisines-lumeo.example/" },
+  "score": { "value": 38, "tier": "warm", "reasons": ["SEO pauvre (pas de description / OG)"] }
+}

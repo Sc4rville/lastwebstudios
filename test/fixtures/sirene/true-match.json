@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "siren": "000000034",
+      "nom_complet": "ORVANE PISCINES",
+      "nom_raison_sociale": "ORVANE PISCINES",
+      "etat_administratif": "A",
+      "date_creation": "1998-03-16",
+      "tranche_effectif_salarie": "02",
+      "categorie_entreprise": "PME",
+      "nombre_etablissements_ouverts": 1,
+      "activite_principale": "43.99C",
+      "finances": { "2024": { "ca": 640000, "resultat_net": 41000 } },
+      "siege": { "libelle_commune": "VALMONT-SUR-LYS", "commune": "99042", "code_postal": "59999" },
+      "matching_etablissements": [{ "libelle_commune": "VALMONT-SUR-LYS", "code_postal": "59999", "etat_administratif": "A", "liste_enseignes": ["ORVANE PISCINES"] }]
+    },
+    {
+      "siren": "000000018",
+      "nom_complet": "TESTEX PISCINES",
+      "etat_administratif": "C",
+      "siege": { "libelle_commune": "PORT-AUBRIL", "code_postal": "99010" }
+    }
+  ],
+  "total_results": 2, "page": 1, "per_page": 5, "total_pages": 1
+}

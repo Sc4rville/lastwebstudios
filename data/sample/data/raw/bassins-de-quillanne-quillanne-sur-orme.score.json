@@ -1,0 +1,35 @@
+{
+  "value": 92,
+  "tier": "warm",
+  "axes": {
+    "besoin": 90,
+    "levier": 98,
+    "valeur": 100,
+    "closabilite": 100,
+    "expansion": 55
+  },
+  "expectedValue": 90,
+  "signals": {
+    "gallery": true,
+    "quoteCta": false,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": false,
+  "accroche": "Votre site de pisciniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "pas responsive (pas de viewport)",
+    "SEO pauvre (pas de description / OG)",
+    "pas de HTTPS (sécurité + SEO pénalisé)",
+    "aucune donnée structurée (SEO local faible)",
+    "page très pauvre (peu de contenu)",
+    "dernière trace de maj : 2013",
+    "faisabilité limitée (peu de contenu/photos)",
+    "axes — besoin 90 · levier 98 · valeur 100 · closab. 100 · expansion 55 → € espéré 90"
+  ],
+  "_sample": "score réel de leadengine/2_scoring/scripts/score.ts sur le vieux site fictif (VISUAL=0, sans SIREN)"
+}

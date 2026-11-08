@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "description": "General taste preferences distilled from one piece of the owner's feedback on a built site (0 to 3).",
+  "properties": {
+    "preferences": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": { "type": "string", "maxLength": 160 },
+          "same_as": { "type": "string" },
+          "replaces": { "type": "string" },
+          "quote": { "type": "string", "maxLength": 240 },
+          "area": { "type": "string", "enum": ["hero", "words", "contact", "colour", "type", "proof", "motion", "layout", "other"] },
+          "general": { "type": "boolean" }
+        },
+        "required": ["text", "same_as", "replaces", "quote", "area", "general"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["preferences"],
+  "additionalProperties": false
+}

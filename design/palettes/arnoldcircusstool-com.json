@@ -1,0 +1,20 @@
+{
+  "slug": "arnoldcircusstool-com",
+  "url": "https://arnoldcircusstool.com/",
+  "vars": {
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgb(59 130 246 / .5)"
+  },
+  "palette": [
+    "rgb(170170170/var(--tw-bg-opacity)",
+    "#9ca3af",
+    "rgb(170170170/var(--tw-text-opacity)",
+    "rgb(000/var(--tw-bg-opacity)",
+    "rgb(255255255/var(--tw-text-opacity)",
+    "rgb(231231231/var(--tw-border-opacity)",
+    "#efefef",
+    "#e4e4e4",
+    "rgb(59130246/.5)",
+    "rgb(000/var(--tw-border-opacity)"
+  ]
+}

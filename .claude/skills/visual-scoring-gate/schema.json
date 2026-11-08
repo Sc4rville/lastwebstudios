@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "description": "Output of the visual-scoring-gate skill (prompt.md): visual redesign need /100 and the reasons observed, or unusable:true if the screenshots do not show the site.",
+  "properties": {
+    "besoin": { "type": "number" },
+    "reasons": { "type": "array", "items": { "type": "string" } },
+    "unusable": { "type": "boolean" }
+  },
+  "required": ["reasons"],
+  "additionalProperties": false
+}

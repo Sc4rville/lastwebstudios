@@ -1,0 +1,18 @@
+# lws-learn — the nightly LEARNING loop: `npm run learn` reads every outcome again (data/outcomes.jsonl + database:
+# won, lost, meeting, reply, written automatically by the cockpit and the
+# sequencer) and recomputes the scoring gate's weights (learning/rules/rules.json, ±15 per trade).
+# A systemd USER unit, NOT installed by default (see cron.md). Repo expected in ~/lws (%h/lws).
+# No LLM, no network besides the database: a few seconds.
+
+[Unit]
+Description=lastwebstudios — nightly learning (CRM outcomes → scoring gate weights)
+OnFailure=lws-alert@%n.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh learn learn
+TimeoutStartSec=300
+# logs: journalctl --user -u lws-learn.service · state: data/logs/last-learn.json

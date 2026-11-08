@@ -1,0 +1,32 @@
+{
+  "_comment": "THE FICTIONAL US CAST of the sandbox, the default demo (npm run sandbox): six invented Austin businesses, one at every stage of the funnel, for the fictional Austin studio Harbor & Pine Web Co. No real business, person or address: reserved .example domains (RFC 2606), NANP 555-01xx fiction numbers, Austin ZIP codes. Their built sites are demo stand-ins rendered by the sandbox from their own facts (a real run is in examples/). « seller »: the studio's fictional business details for Billing (a demo invoice prints whole).",
+  "agency": "agency.config.example.us.json",
+  "data": "data/sample/us/data",
+  "trades": ["pisciniste", "plombier", "couvreur-zingueur"],
+  "seller": { "name": "Harbor & Pine Web Co.", "legal": "LLC (a fictional demo business)", "address": "418 Larkspur Row, Suite 2, Austin, TX 78704", "taxId": "00-0000000", "email": "hello@harborpine.example", "phone": "+1 512-555-0142", "payment": "Bank transfer (demo: no real account)", "paymentLink": "" },
+  "story": {
+    "reply": { "from": "hello@pecanwood-pools.example", "subject": "Re: Your new website, a 30-second tour", "text": "Hi Sam, this looks great. Call me Thursday morning and we'll go through it together." },
+    "rdvNote": "Walkthrough Thursday 10 am at their yard",
+    "lostNote": "Keeping their current site for now",
+    "callNote": "No email on their site (the contact form is broken): call the office, Mon–Fri 7–11 am",
+    "feedback": {"role": "call", "text": "Use a serif for the headlines, it feels more like a family business. And no stock phrases like “quality craftsmanship”: say what they actually do."}
+  },
+  "prospects": [
+    { "id": "pecanwood-pools-austin", "name": "Pecanwood Pools", "trade": "pisciniste", "role": "won", "stage": "won",
+      "oldSite": "data/sample/us/sites/pecanwood-pools", "site": { "standIn": true, "date": "2026-10-24-composer" },
+      "story": "approved → first email (day 0) → clicks the signed link (day 1) → the click unlocks the demo email (day 3) → replies « call me Thursday » → meeting → proposal → signed (won) → learning" },
+    { "id": "wrenhaven-carpentry-austin", "name": "Wrenhaven Carpentry", "trade": "menuisier", "role": "lost", "stage": "lost",
+      "site": { "standIn": true, "date": "2026-10-24-composer" },
+      "story": "approved → first email (day 0) → one-click unsubscribe (RFC 8058, day 2) → lost « keeping their current site »" },
+    { "id": "tallmarsh-roofing-austin", "name": "Tallmarsh Roofing", "trade": "couvreur-zingueur", "role": "call", "stage": "to call",
+      "site": { "standIn": true, "date": "2026-10-24-composer" },
+      "story": "no email on their site (broken contact form): no sequence, the phone only → approved → call list (To call) with a note" },
+    { "id": "larkmoor-plumbing-drain-austin", "name": "Larkmoor Plumbing & Drain", "trade": "plombier", "role": "sequence", "stage": "in the emails",
+      "site": { "standIn": true, "date": "2026-11-02-composer" },
+      "story": "site built and approved under « Send emails automatically » → enrolled in the sequence → first email written (the last working day), the next step waits for day 3 or a click : Outreach › Emails" },
+    { "id": "bramblecrest-pool-spa-austin", "name": "Bramblecrest Pool & Spa", "trade": "pisciniste", "role": "build", "stage": "building",
+      "story": "scored, old site read → a build is queued (the built-in engine plays it)" },
+    { "id": "copperwick-kitchens-austin", "name": "Copperwick Kitchens", "trade": "cuisiniste", "role": "noted", "stage": "picked",
+      "story": "scored hot, sheet ready: the next one to build" }
+  ]
+}

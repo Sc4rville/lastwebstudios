@@ -1,0 +1,27 @@
+{
+  "slug": "smithinnovation-dk",
+  "url": "https://smithinnovation.dk/",
+  "vars": {
+    "--sk-color": "#333",
+    "--color-primary": "#fff",
+    "--color-primary-hover": "rgba(255,255,255,0.5)",
+    "--color-primary-text": "#2C2E7F",
+    "--color-text": "#fff",
+    "--color-text-opacity": "rgba(255,255,255,0.5)",
+    "--color-background": "#F7F6D9",
+    "--color-background-text": "#000",
+    "--color-background-hover": "#f3f1c4"
+  },
+  "palette": [
+    "#2c2e7f",
+    "#0094f0",
+    "rgba(0,0,0,0.5)",
+    "#007ecc",
+    "rgba(255,255,255,0.5)",
+    "#f7f6d9",
+    "#393ca5",
+    "#efefef",
+    "#e4e4e4",
+    "#ccc"
+  ]
+}

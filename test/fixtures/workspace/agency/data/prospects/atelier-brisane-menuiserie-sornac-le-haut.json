@@ -1,0 +1,19 @@
+{
+  "_fixture": "FICTIF : prospect inventé pour les tests et la démo (aucune entreprise réelle).",
+  "id": "atelier-brisane-menuiserie-sornac-le-haut",
+  "industry": "menuisier",
+  "identity": {
+    "name": "Atelier Brisane",
+    "city": "Sornac-le-Haut",
+    "phone": "02 61 91 37 05",
+    "email": "bonjour@atelier-brisane.example"
+  },
+  "content": {
+    "tagline": "Menuiserie bois sur mesure",
+    "about": "Atelier Brisane fabrique escaliers, placards et cuisines en bois massif dans son atelier de Sornac-le-Haut.",
+    "services": ["escaliers sur mesure", "placards et dressings", "agencement intérieur"]
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://atelier-brisane.example/" },
+  "score": { "value": 52, "tier": "warm", "reasons": ["plateforme datée / builder cheap", "pas de HTTPS (sécurité + SEO pénalisé)"] }
+}

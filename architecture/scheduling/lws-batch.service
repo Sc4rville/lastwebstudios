@@ -1,0 +1,27 @@
+# lws-batch — queues ONE composer batch in the worker's queue (scripts/batch.ts), started by lws-batch.timer: this is
+# what makes the agency AUTOMATIC (the box finds, scores, reads, builds and judges while your computers are off).
+# A systemd USER unit, NOT installed by default (see cron.md, or install-units.sh). Repo expected in ~/lws.
+#
+# Settings (in ~/lws/.env, which wins over the values below):
+#   LWS_BATCH_SIZE  number of prospects per batch (default 5)
+#   LWS_BATCH_ARGS  extra `npm run batch` options, e.g. "--industry menuisier"; empty = AUTO trade (the worker
+#                   runs `npm run radar` and takes the best ranked, then scrapes if prospects are missing)
+# The batch goes through the cage: STOP skips it, LWS_BUDGET_USD_DAY stops the worker for the day once reached.
+# Needs DATABASE_URL (the queue lives in the database) and the worker (worker/lws-worker.service).
+
+[Unit]
+Description=lastwebstudios — nightly composer batch (worker queue)
+OnFailure=lws-alert@%n.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/lws
+Environment=LWS_BATCH_SIZE=5
+Environment=LWS_BATCH_ARGS=
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=%h/lws/architecture/scheduling/run-guarded.sh batch batch composer $LWS_BATCH_SIZE $LWS_BATCH_ARGS
+TimeoutStartSec=120
+# logs: journalctl --user -u lws-batch.service (the queueing) · journalctl --user -u lws-worker -f (the work)

@@ -1,0 +1,24 @@
+{
+  "slug": "j-la-l-com",
+  "url": "https://j-la-l.com/",
+  "vars": {
+    "--product-bg": "#cccbd3",
+    "--iub-granular-background": "rgba(255, 255, 255, .02)",
+    "--iub-granular-border": "rgba(255, 255, 255, 0.08)",
+    "--iub-granular-toggle-background": "rgba(255, 255, 255, 0.2)",
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgb(39 39 42 / var(--tw-ring-opacity)"
+  },
+  "palette": [
+    "rgb(255255255/var(--tw-text-opacity)",
+    "rgb(393942/var(--tw-text-opacity)",
+    "rgb(393942/var(--tw-bg-opacity)",
+    "rgb(000/var(--tw-bg-opacity)",
+    "rgb(213215214/var(--tw-bg-opacity)",
+    "rgb(255255255/var(--tw-border-opacity)",
+    "rgb(255255255/var(--tw-bg-opacity)",
+    "#333",
+    "#27272a",
+    "#337ab7"
+  ]
+}

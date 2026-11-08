@@ -1,0 +1,13 @@
+# BANNED fonts (catalogue slug, one per line). The composer/orchestrator must NEVER choose them.
+# Reason: overused by default (Claude gravitates to them) → they kill diversity, or the operator hates them.
+reckless
+# generic / not distinctive (the composer must choose character, not a default):
+inter
+helvetica
+open-sans
+arial
+# icon fonts / noise (never as content type):
+icomoon
+mono
+abc
+abcplus

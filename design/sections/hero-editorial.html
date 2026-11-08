@@ -1,0 +1,55 @@
+<!--
+  hero-editorial · the reference skeleton (the catalogue's "golden" one, see README.md).
+  type: hero · layout: editorial heading on the left + tall image on the right (asymmetric grid).
+  Contract: structure + layout only. Colours/fonts come from the composer through the CSS tokens
+  (var(--bg/--fg/--muted/--accent/--serif/--sans)). Content = {{...}} placeholders. Motion = .reveal
+  (the composer wires scroll-driven + prefers-reduced-motion). Holds at 390px. Zero em-dash, zero dashed eyebrow.
+-->
+<section class="hero-ed" data-section="hero-editorial">
+  <style>
+    .hero-ed{
+      display:grid; grid-template-columns:1.05fr 0.95fr; align-items:end; gap:clamp(24px,4vw,64px);
+      padding:clamp(28px,6vw,72px) clamp(20px,5vw,80px) clamp(40px,7vw,96px);
+      background:var(--bg); color:var(--fg); min-height:88vh;
+    }
+    .hero-ed__copy{max-width:62ch}
+    .hero-ed__title{
+      font-family:var(--serif); font-weight:500; line-height:1.02; letter-spacing:-.01em;
+      font-size:clamp(40px,7vw,92px); margin:0 0 clamp(16px,2vw,28px);
+    }
+    .hero-ed__title em{font-style:italic; color:var(--accent)}
+    .hero-ed__lead{
+      font-family:var(--sans); font-size:clamp(16px,1.4vw,20px); line-height:1.5;
+      color:var(--muted); max-width:48ch; margin:0 0 clamp(24px,3vw,36px);
+    }
+    .hero-ed__actions{display:flex; flex-wrap:wrap; align-items:center; gap:16px 24px}
+    .hero-ed__cta{
+      font-family:var(--sans); font-weight:600; font-size:16px; padding:15px 26px; border-radius:999px;
+      background:var(--accent); color:var(--bg); text-decoration:none; transition:transform .2s, opacity .2s;
+    }
+    .hero-ed__cta:hover{transform:translateY(-2px); opacity:.92}
+    .hero-ed__phone{font-family:var(--sans); font-weight:600; color:var(--fg); text-decoration:none}
+    .hero-ed__phone:hover{color:var(--accent)}
+    .hero-ed__media{position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px}
+    .hero-ed__media img{width:100%; height:100%; object-fit:cover; object-position:center; display:block}
+    /* motion: visible by default, the animation is only an extra */
+    .hero-ed .reveal{opacity:1}
+    @media (max-width:880px){
+      .hero-ed{grid-template-columns:1fr; align-items:start; min-height:auto; gap:28px}
+      .hero-ed__media{aspect-ratio:4/3; order:-1}
+    }
+  </style>
+
+  <div class="hero-ed__copy">
+    <h1 class="hero-ed__title reveal">{{HEADLINE}} <em>{{HEADLINE_ACCENT}}</em></h1>
+    <p class="hero-ed__lead reveal">{{LEAD}}</p>
+    <div class="hero-ed__actions reveal">
+      <a class="hero-ed__cta" href="{{CTA_HREF}}">{{CTA_LABEL}}</a>
+      <a class="hero-ed__phone" href="tel:{{PHONE}}">{{PHONE_DISPLAY}}</a>
+    </div>
+  </div>
+
+  <figure class="hero-ed__media reveal">
+    <img src="{{HERO_IMG}}" alt="{{HERO_ALT}}">
+  </figure>
+</section>

@@ -1,0 +1,30 @@
+{
+  "_sample": "FICTIONAL: a prospect invented for the US sandbox and the demo (no real business).",
+  "id": "tallmarsh-roofing-austin",
+  "industry": "couvreur-zingueur",
+  "identity": {
+    "name": "Tallmarsh Roofing",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78759",
+    "phone": "(512) 555-0147",
+    "hours": "Mon–Fri 7 am – 11 am, 1 pm – 5 pm"
+  },
+  "content": {
+    "tagline": "Roof replacement and storm repair",
+    "about": "Tallmarsh Roofing replaces and repairs shingle and metal roofs across North Austin, with free inspections after hail and storms.",
+    "services": ["Roof replacement", "Storm and hail repair", "Metal roofs", "Gutters", "Free inspections"],
+    "brands": []
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://tallmarsh-roofing.example/", "screenshot": "assets/tallmarsh-roofing-austin/avant.png" },
+  "score": {
+    "value": 81,
+    "tier": "hot",
+    "reasons": ["not responsive (no viewport)", "no HTTPS (security, Google penalty)", "poor SEO (no description / OG)", "last updated: 2010"],
+    "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look."
+  },
+  "brief": { "problems": ["no email on the site (the contact form is broken): only the phone works", "unreadable on a phone", "a 2010 promotion still at the top"] },
+  "audit": { "https": false, "mobile": { "hasViewportMeta": false }, "form": { "present": true, "status": "broken" }, "strengths": { "copyrightYear": 2010, "stale": true } },
+  "_sim": { "lang": "en", "family": "roof", "palette": { "a": "#1f2a37", "b": "#c0392b", "bg": "#f4f4f2" } }
+}

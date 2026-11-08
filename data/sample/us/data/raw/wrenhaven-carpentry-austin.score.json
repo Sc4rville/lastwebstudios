@@ -1,0 +1,12 @@
+{
+  "value": 79,
+  "tier": "hot",
+  "reasons": [
+    "not responsive (no viewport)",
+    "thin page (little content)",
+    "no photos",
+    "old jQuery (dated stack)"
+  ],
+  "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look.",
+  "_sample": "fictional score (US sandbox cast)"
+}

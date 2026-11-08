@@ -1,0 +1,34 @@
+<!-- cta-banner · cta · a sober horizontal band: sentence + button on the right -->
+<section class="cta-bn" data-section="cta-banner">
+  <style>
+    .cta-bn{background:var(--bg); color:var(--fg);
+      padding:clamp(28px,4vw,56px) clamp(20px,5vw,80px)}
+    .cta-bn__inner{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      gap:clamp(18px,3vw,40px);
+      border:1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+      border-radius:12px; padding:clamp(22px,3vw,44px) clamp(24px,4vw,56px)}
+    .cta-bn__text{font-family:var(--serif); font-weight:500; line-height:1.15; letter-spacing:-.01em;
+      font-size:clamp(22px,2.8vw,36px); margin:0; max-width:30ch}
+    .cta-bn__text em{font-style:italic; color:var(--accent)}
+    .cta-bn__actions{display:flex; align-items:center; gap:16px 24px; flex-wrap:wrap}
+    .cta-bn__btn{font-family:var(--sans); font-weight:600; font-size:16px; padding:14px 28px;
+      border-radius:8px; background:var(--accent); color:var(--bg); text-decoration:none; white-space:nowrap;
+      transition:transform .2s, opacity .2s}
+    .cta-bn__btn:hover{transform:translateY(-2px); opacity:.92}
+    .cta-bn__phone{font-family:var(--sans); font-weight:600; color:var(--fg); text-decoration:none;
+      white-space:nowrap}
+    .cta-bn__phone:hover{color:var(--accent)}
+    .cta-bn .reveal{opacity:1}
+    @media (max-width:880px){
+      .cta-bn__inner{flex-direction:column; align-items:flex-start}
+    }
+  </style>
+
+  <div class="cta-bn__inner reveal">
+    <p class="cta-bn__text">{{HEADLINE}}</p>
+    <div class="cta-bn__actions">
+      <a class="cta-bn__btn" href="{{CTA_HREF}}">{{CTA_LABEL}}</a>
+      <a class="cta-bn__phone" href="tel:{{PHONE}}">{{PHONE_DISPLAY}}</a>
+    </div>
+  </div>
+</section>

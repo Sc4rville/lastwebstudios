@@ -1,0 +1,24 @@
+/* SITE FICTIF (données d'exemple LWS) : feuille de style volontairement datée (2011), faite de zéro. */
+body { margin: 0; background: #6b4423 repeating-linear-gradient(90deg, #6b4423 0 22px, #74492a 22px 26px, #6b4423 26px 61px); font-family: Georgia, "Times New Roman", serif; font-size: 13px; color: #3b2a1a; }
+#conteneur { width: 960px; margin: 14px auto; background: #fffaf0; border: 4px ridge #c9a06a; }
+#bandeau { height: 120px; background: #f3e3c4; border-bottom: 3px double #8a5a2e; position: relative; }
+#bandeau img { position: absolute; left: 18px; top: 14px; }
+#bandeau .tel { position: absolute; right: 20px; top: 30px; font: bold 22px Verdana, sans-serif; color: #a0161b; text-align: right; }
+#bandeau .tel small { display: block; font-size: 11px; color: #6b4423; font-weight: normal; }
+#nav { background: #8a5a2e; padding: 0 10px; height: 34px; }
+#nav a { float: left; display: block; padding: 0 16px; line-height: 34px; color: #fff3df; font: bold 12px Verdana, sans-serif; text-transform: uppercase; text-decoration: none; border-right: 1px solid #a8774a; }
+#nav a:hover, #nav a.actif { background: #5b3418; }
+#colg { float: left; width: 200px; padding: 14px; background: #f6ead4; min-height: 640px; border-right: 1px dotted #8a5a2e; }
+#colg h3 { font: bold 13px Verdana, sans-serif; background: #8a5a2e; color: #fff; padding: 4px 6px; margin: 0 0 8px; }
+#colg ul { padding-left: 16px; margin: 0 0 18px; } #colg li { margin-bottom: 5px; }
+#corps { margin-left: 229px; padding: 16px 22px; }
+h1 { font-size: 24px; color: #5b3418; font-style: italic; margin-top: 4px; }
+h2 { font: bold 15px Verdana, sans-serif; color: #a0161b; border-bottom: 1px solid #d8bf99; padding-bottom: 3px; margin-top: 22px; }
+.vignettes img { width: 96px; height: 72px; border: 1px solid #8a5a2e; margin: 0 6px 6px 0; }
+.nouveau { color: #fff; background: #d10000; font: bold 10px Verdana; padding: 1px 4px; }
+.cadre { border: 1px solid #c9a06a; background: #fff; padding: 10px; margin: 12px 0; }
+.compteur { font: 11px "Courier New", monospace; background: #000; color: #39ff14; padding: 2px 6px; }
+#pied { clear: both; background: #5b3418; color: #e8d2ad; font: 10px Verdana, sans-serif; text-align: center; padding: 10px; }
+#pied a { color: #fff3df; }
+table.tarifs { border-collapse: collapse; width: 100%; } table.tarifs td, table.tarifs th { border: 1px solid #c9a06a; padding: 5px; }
+table.tarifs th { background: #f3e3c4; }

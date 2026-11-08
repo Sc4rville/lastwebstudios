@@ -1,0 +1,79 @@
+{
+  "id": "orvane-piscines-valmont-sur-lys",
+  "generated": "2026-10-24",
+  "mode": "audit-only",
+  "engines": {
+    "image": "none",
+    "video": "none"
+  },
+  "credits_spent": 0,
+  "heroVideo": false,
+  "hero_mp4": false,
+  "audit_note": "asset-audit.mjs ne lit que png/jpg/webp/gif : il a rapporté 0 photo. Les visuels du prospect sont tous en SVG, donc la trace ci-dessous a été faite à la main à partir de leurs en-têtes SVG.",
+  "hero": {
+    "source": "photo-2.svg",
+    "reason": "Bassin à débordement : le visuel le plus « signature » d'un pisciniste. Vectoriel 800x533 (3:2), donc net à toutes les tailles et recadrable plein-bleed via object-fit:cover / object-position au composer.",
+    "fallback": "photo-1.svg"
+  },
+  "assets": [
+    {
+      "source": "photo-1.svg",
+      "title": "Bassin familial 8x4 (illustration fictive)",
+      "size": "800x533",
+      "action": "keep (crop au composer)",
+      "generated": false,
+      "hero_ok": true,
+      "weak": false
+    },
+    {
+      "source": "photo-2.svg",
+      "title": "Bassin à débordement (illustration fictive)",
+      "size": "800x533",
+      "action": "keep — héro",
+      "generated": false,
+      "hero_ok": true,
+      "weak": false
+    },
+    {
+      "source": "photo-3.svg",
+      "title": "Spa 5 places (illustration fictive)",
+      "size": "800x533",
+      "action": "keep (crop au composer)",
+      "generated": false,
+      "hero_ok": false,
+      "weak": false
+    },
+    {
+      "source": "photo-4.svg",
+      "title": "Abri télescopique (illustration fictive)",
+      "size": "800x533",
+      "action": "keep (crop au composer)",
+      "generated": false,
+      "hero_ok": false,
+      "weak": false
+    },
+    {
+      "source": "photo-5.svg",
+      "title": "pastille orange 12x12",
+      "size": "12x12",
+      "action": "écarter : icône/puce décorative, pas une photo",
+      "generated": false,
+      "hero_ok": false,
+      "weak": true
+    },
+    {
+      "source": "logo.svg",
+      "title": "logo Orvane Piscines (fictif)",
+      "size": "260x80",
+      "action": "keep — vectoriel, pas de remove-bg ; fond plein #0d5c8a, appliquer la règle logo-contraste",
+      "generated": false,
+      "hero_ok": false,
+      "weak": false
+    }
+  ],
+  "weak_reshoot_client": [
+    "Les 4 visuels de réalisations (photo-1..4) sont des illustrations vectorielles marquées « illustration fictive » et non des photos de chantiers réels. Il faut demander au client de vraies photos de ses bassins, spa et abris.",
+    "photo-5.svg n'est pas exploitable (pastille de 12 px)."
+  ],
+  "composer_notes": "Aucune image générée ni éditée. Les 4 illustrations sont au même ratio 3:2 : les servir en object-fit:cover avec un aspect-ratio imposé. Ne pas les présenter comme des « photos de nos réalisations » tant que le client n'a pas fourni de vraies photos."
+}

@@ -1,0 +1,29 @@
+{
+  "value": 52,
+  "tier": "warm",
+  "axes": {
+    "besoin": 50,
+    "levier": 60,
+    "valeur": 55,
+    "closabilite": 80,
+    "expansion": 30
+  },
+  "expectedValue": 42,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": false,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de menuisier : galerie en vignettes minuscules. On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "galerie en vignettes",
+    "pas de HTTPS (sécurité + SEO pénalisé)"
+  ],
+  "_fixture": "score fictif (vue Machine)"
+}

@@ -1,0 +1,30 @@
+{
+  "_sample": "FICTIONAL: a prospect invented for the US sandbox and the demo (no real business).",
+  "id": "copperwick-kitchens-austin",
+  "industry": "cuisiniste",
+  "identity": {
+    "name": "Copperwick Kitchens",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78701",
+    "phone": "(512) 555-0119",
+    "email": "design@copperwick-kitchens.example",
+    "hours": "Tue–Sat 10 am – 6 pm"
+  },
+  "content": {
+    "tagline": "Kitchen design showroom",
+    "about": "Copperwick Kitchens designs and installs custom kitchens, from cabinets to countertops, with a showroom downtown and free 3D plans.",
+    "services": ["Custom kitchens", "Cabinet refacing", "Countertops", "3D design"],
+    "brands": []
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://copperwick-kitchens.example/", "screenshot": "assets/copperwick-kitchens-austin/avant.png" },
+  "score": {
+    "value": 84,
+    "tier": "hot",
+    "reasons": ["not responsive (no viewport)", "no photos", "poor SEO (no description / OG)", "last updated: 2009"],
+    "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look."
+  },
+  "audit": { "https": true, "mobile": { "hasViewportMeta": false }, "strengths": { "copyrightYear": 2009, "stale": true } },
+  "_sim": { "lang": "en", "family": "kitchen", "palette": { "a": "#5a3e2b", "b": "#c9a66b", "bg": "#f7f3ee" } }
+}

@@ -1,0 +1,28 @@
+{
+  "value": 30,
+  "tier": "cold",
+  "axes": {
+    "besoin": 80,
+    "levier": 40,
+    "valeur": 50,
+    "closabilite": 15,
+    "expansion": 30
+  },
+  "expectedValue": 0,
+  "signals": {
+    "gallery": false,
+    "quoteCta": false,
+    "social": false,
+    "premium": false,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": false,
+  "reasons": [
+    "injoignable : ni téléphone ni e-mail (fiche) et aucun contact sur le site (tél, e-mail, formulaire) → ne pas démarcher",
+    "pas responsive (pas de viewport)",
+    "SEO pauvre (pas de description / OG)"
+  ]
+}

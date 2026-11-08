@@ -1,0 +1,38 @@
+# lws-worker — the daemon that takes the batches from the queue (autonomous generation on the box).
+# A systemd USER service (like the lws-* timers): runs under your account, plan token in your HOME.
+#
+# Install (see worker/setup-box.sh, which does it all):
+#   mkdir -p ~/.config/systemd/user
+#   cp worker/lws-worker.service ~/.config/systemd/user/
+#   # edit WorkingDirectory below if the repo is not in ~/lws
+#   loginctl enable-linger "$USER"          # the service survives logging out / rebooting
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now lws-worker
+#   systemctl --user status lws-worker      # check
+#   journalctl --user -u lws-worker -f      # follow the logs
+
+[Unit]
+Description=lastwebstudios worker — takes jobs from the batch_requests queue and builds the sites (Claude Code + Playwright)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# ⚠ adjust if the repo is elsewhere (setup-box.sh puts the right path here automatically)
+WorkingDirectory=%h/lws
+# a single env file (optional here since the worker also runs process.loadEnvFile()):
+#   DATABASE_URL · CLAUDE_CODE_OAUTH_TOKEN (the PLAN, otherwise the account's `claude auth login`) · LWS_BUDGET_USD_DAY…
+#   (an ANTHROPIC_API_KEY that is present is REMOVED from the agents: plan-first, WORKER_PLAN_STRICT=0 keeps it)
+EnvironmentFile=-%h/lws/.env
+Environment=PATH=%h/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/usr/bin/env npm run worker
+Restart=always
+RestartSec=10
+# emergency stop (STOP file or the cockpit's button): the worker exits with code 3 → NO restart loop.
+# To resume: rm STOP (or Resume in the cockpit), then systemctl --user restart lws-worker
+RestartPreventExitStatus=3
+# gives a running batch time to finish cleanly on stop (SIGTERM → the loop stops)
+TimeoutStopSec=120
+
+[Install]
+WantedBy=default.target

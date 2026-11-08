@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="828" viewBox="0 0 800 552" preserveAspectRatio="xMidYMid slice">
+<title>Fenêtre bois double vitrage (illustration fictive)</title>
+<defs>
+<linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fcbe6"/><stop offset="1" stop-color="#e4f2fa"/></linearGradient>
+<linearGradient id="bois" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9b6534"/><stop offset="1" stop-color="#6e4120"/></linearGradient>
+</defs>
+<rect width="800" height="600" fill="#efe6d8"/>
+<rect x="210" y="60" width="380" height="460" fill="url(#bois)" rx="4"/>
+<rect x="240" y="90" width="150" height="190" fill="url(#ciel)"/><rect x="410" y="90" width="150" height="190" fill="url(#ciel)"/>
+<rect x="240" y="300" width="150" height="190" fill="url(#ciel)"/><rect x="410" y="300" width="150" height="190" fill="url(#ciel)"/>
+<path d="M260 250 l40 -60 l30 40 l20 -25 l30 45 z" fill="#86b07a" opacity=".8"/>
+<path d="M430 250 q30 -50 70 -30 q30 10 50 30 z" fill="#86b07a" opacity=".7"/>
+<g stroke="#ffffff" stroke-opacity=".55" stroke-width="5"><path d="M255 110 l40 40"/><path d="M425 110 l40 40"/><path d="M255 320 l40 40"/><path d="M425 320 l40 40"/></g>
+<rect x="180" y="520" width="440" height="26" fill="#c9b08c"/>
+<rect x="30" y="556" width="330" height="34" rx="4" fill="#ffffff" fill-opacity=".85"/>
+<text x="44" y="579" font-family="Verdana, sans-serif" font-size="17" fill="#5b3418">Fenêtre à la française, pin traité</text>
+</svg>

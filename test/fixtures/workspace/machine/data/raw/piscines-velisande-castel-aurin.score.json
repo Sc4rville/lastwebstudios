@@ -1,0 +1,28 @@
+{
+  "value": 64,
+  "tier": "hot",
+  "axes": {
+    "besoin": 60,
+    "levier": 70,
+    "valeur": 68,
+    "closabilite": 100,
+    "expansion": 30
+  },
+  "expectedValue": 51,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de pisciniste : plateforme datée. On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "plateforme datée / builder cheap"
+  ],
+  "_fixture": "score fictif (vue Machine)"
+}

@@ -1,0 +1,38 @@
+<!doctype html><html lang="en" data-cz-theme="ocean">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cursor demo — ocean</title>
+<link rel="stylesheet" href="cursor.css">
+<style>
+  :root{--accent:#0fb6c8}
+  *{margin:0;box-sizing:border-box}
+  body{font-family:"Host Grotesk",system-ui,sans-serif}
+  section{min-height:100vh;display:grid;place-items:center;text-align:center;padding:6vw}
+  .light{background:linear-gradient(160deg,#eafcff,#c7f0f7)}
+  .dark{background:#0a1418;color:#eafcff}
+  h1{font-size:clamp(40px,8vw,104px);font-weight:300;letter-spacing:-.03em;line-height:1}
+  p{margin-top:18px;font-size:18px;opacity:.7}
+  .btn{display:inline-block;margin-top:34px;padding:16px 30px;border-radius:999px;
+       background:var(--accent);color:#021014;font-weight:600;text-decoration:none;border:0;font-size:16px}
+  .ghost{background:none;border:1.5px solid currentColor;color:inherit}
+  .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+</style></head>
+<body>
+  <section class="light">
+    <div>
+      <h1>Water, elevated.</h1>
+      <p>The <b>ocean</b> cursor theme — turquoise halo, connected ring, a dot that inverts the background.</p>
+      <div class="row">
+        <a class="btn" href="#" data-magnetic data-cursor="view">Discover the pool</a>
+        <a class="btn ghost" href="#">Our work</a>
+      </div>
+    </div>
+  </section>
+  <section class="dark">
+    <div>
+      <h1>On a dark background too.</h1>
+      <p>The dot stays readable (mix-blend difference), the halo breathes.</p>
+      <a class="btn" href="#" data-magnetic>Request a quote</a>
+    </div>
+  </section>
+  <link rel="stylesheet" href="cursor.css"><script src="cursor.js" defer></script>
+</body></html>

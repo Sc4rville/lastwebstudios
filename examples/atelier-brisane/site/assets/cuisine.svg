@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1089" viewBox="40 40 720 490" preserveAspectRatio="xMidYMid slice">
+<title>Cuisine en bois massif (illustration fictive)</title>
+<defs><linearGradient id="c" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b98451"/><stop offset="1" stop-color="#9a6a3c"/></linearGradient></defs>
+<rect width="800" height="600" fill="#f2ede4"/>
+<rect x="80" y="70" width="640" height="140" fill="url(#c)"/><g stroke="#6d4521" stroke-width="4"><path d="M240 70 V210"/><path d="M400 70 V210"/><path d="M560 70 V210"/></g>
+<rect x="60" y="300" width="680" height="24" fill="#5a5148"/>
+<rect x="80" y="324" width="640" height="200" fill="url(#c)"/><g stroke="#6d4521" stroke-width="4"><path d="M240 324 V524"/><path d="M400 324 V524"/><path d="M560 324 V524"/><path d="M80 400 H240"/></g>
+<rect x="430" y="240" width="90" height="60" fill="#d8dde0" stroke="#9aa3ab" stroke-width="4"/>
+<g fill="#4a3018"><rect x="150" y="440" width="20" height="8" rx="3"/><rect x="310" y="440" width="20" height="8" rx="3"/><rect x="470" y="440" width="20" height="8" rx="3"/><rect x="630" y="440" width="20" height="8" rx="3"/></g>
+<rect x="0" y="524" width="800" height="76" fill="#cdbca3"/>
+<rect x="30" y="546" width="300" height="34" rx="4" fill="#ffffff" fill-opacity=".85"/>
+<text x="44" y="569" font-family="Verdana, sans-serif" font-size="17" fill="#5b3418">Cuisine en noyer, plan ardoise</text>
+</svg>

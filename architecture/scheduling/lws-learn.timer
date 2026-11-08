@@ -1,0 +1,12 @@
+# lws-learn.timer — every night at 01:30 (Paris), before the 03:00 pipeline: today's gate has yesterday's weights.
+# 01:30 and not 02:30: at the daylight saving change, 02:30 does not exist (March) or exists twice (October).
+
+[Unit]
+Description=lastwebstudios — nightly learning (01:30, Paris)
+
+[Timer]
+OnCalendar=*-*-* 01:30:00 Europe/Paris
+Persistent=true
+
+[Install]
+WantedBy=timers.target

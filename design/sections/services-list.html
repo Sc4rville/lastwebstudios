@@ -1,0 +1,58 @@
+<!-- services-list · services · a wide editorial list, 1 service per line (title + 1 sentence), a rule between lines -->
+<section class="svc-list" data-section="services-list">
+  <style>
+    .svc-list{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,120px) clamp(20px,5vw,80px)}
+    .svc-list__head{display:grid; grid-template-columns:0.8fr 1.2fr; gap:clamp(20px,4vw,56px);
+      align-items:end; margin:0 0 clamp(28px,4vw,52px)}
+    .svc-list__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .svc-list__title{font-family:var(--serif); font-weight:500; line-height:1.06; letter-spacing:-.015em;
+      font-size:clamp(32px,5vw,64px); margin:0}
+    .svc-list__intro{font-family:var(--sans); font-size:clamp(15px,1.2vw,18px); line-height:1.6;
+      color:var(--muted); max-width:50ch; margin:0}
+    .svc-list__rows{border-top:1px solid var(--fg)}
+    .svc-list__row{display:grid; grid-template-columns:auto 1fr auto; align-items:baseline;
+      gap:clamp(16px,3vw,48px); padding:clamp(20px,2.8vw,38px) 0;
+      border-bottom:1px solid color-mix(in srgb, var(--muted) 35%, transparent);
+      text-decoration:none; color:inherit; transition:padding-left .3s ease}
+    .svc-list__row:hover{padding-left:clamp(8px,1.5vw,20px)}
+    .svc-list__idx{font-family:var(--mono); font-size:13px; color:var(--accent)}
+    .svc-list__name{font-family:var(--serif); font-weight:500; font-size:clamp(22px,2.6vw,36px);
+      line-height:1.05; margin:0}
+    .svc-list__desc{font-family:var(--sans); font-size:15px; line-height:1.5; color:var(--muted);
+      margin:8px 0 0; max-width:54ch}
+    .svc-list__arrow{align-self:center; color:var(--muted); transition:transform .3s, color .3s}
+    .svc-list__row:hover .svc-list__arrow{transform:translateX(6px); color:var(--accent)}
+    .svc-list__arrow svg{width:22px; height:22px; display:block}
+    .svc-list .reveal{opacity:1}
+    @media (max-width:880px){
+      .svc-list__head{grid-template-columns:1fr; align-items:start; gap:18px}
+      .svc-list__row{grid-template-columns:auto 1fr; gap:14px}
+      .svc-list__arrow{display:none}
+    }
+  </style>
+
+  <div class="svc-list__head reveal">
+    <div>
+      <p class="svc-list__kicker">{{KICKER}}</p>
+      <h2 class="svc-list__title">{{HEADLINE}}</h2>
+    </div>
+    <p class="svc-list__intro">{{INTRO}}</p>
+  </div>
+
+  <div class="svc-list__rows">
+    <!-- repeat: service -->
+    <a class="svc-list__row reveal" href="{{SERVICE_HREF}}">
+      <span class="svc-list__idx">{{SERVICE_INDEX}}</span>
+      <span>
+        <h3 class="svc-list__name">{{SERVICE_TITLE}}</h3>
+        <p class="svc-list__desc">{{SERVICE_TEXT}}</p>
+      </span>
+      <span class="svc-list__arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </span>
+    </a>
+    <!-- /repeat -->
+  </div>
+</section>

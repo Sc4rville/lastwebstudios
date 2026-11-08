@@ -1,0 +1,37 @@
+{
+  "_fixture": "FICTIF : prospect inventé pour les tests et la démo (aucune entreprise réelle).",
+  "id": "orvane-piscines-valmont-sur-lys",
+  "industry": "pisciniste",
+  "identity": {
+    "name": "Orvane Piscines",
+    "city": "Valmont-sur-Lys",
+    "zone": "Vallée de la Lys",
+    "phone": "03 53 01 24 68",
+    "email": "contact@orvane-piscines.example",
+    "hours": "Lun-Sam 9h-12h / 14h-18h"
+  },
+  "content": {
+    "tagline": "Votre piscine, notre savoir-faire depuis 1998",
+    "about": "Orvane Piscines construit, rénove et entretient les piscines des familles de la vallée de la Lys. Le même chef d'équipe suit chaque chantier, du premier coup de pelle à la première baignade.",
+    "services": ["construction de piscines", "rénovation de bassins", "spas et abris", "entretien saisonnier", "dépannage filtration"],
+    "brands": []
+  },
+  "assets": {
+    "logo": "assets/orvane-piscines-valmont-sur-lys/logo-orvane.svg",
+    "photos": ["assets/orvane-piscines-valmont-sur-lys/bassin-1.svg", "assets/orvane-piscines-valmont-sur-lys/bassin-2.svg", "assets/orvane-piscines-valmont-sur-lys/spa-1.svg"]
+  },
+  "existing": { "url": "http://orvane-piscines.example/" },
+  "score": {
+    "value": 83,
+    "tier": "hot",
+    "reasons": ["pas responsive (pas de viewport)", "SEO pauvre (pas de description / OG)", "pas de HTTPS (sécurité + SEO pénalisé)", "vieux jQuery (socle technique daté)", "dernière trace de maj : 2016"],
+    "accroche": "Votre site pisciniste : pas responsive (pas de viewport), on vous a refait la page d'accueil, regardez."
+  },
+  "brief": {
+    "beauty_before": { "score": 3, "why": "mise en page en tableaux, bandeau défilant, typographies système" },
+    "what": "pisciniste familial, 25 ans de chantiers, showroom",
+    "problems": ["pas lisible sur mobile", "aucune preuve visuelle mise en avant", "devis enterré dans la colonne"],
+    "angle": "l'eau et la lumière : montrer le résultat avant le discours",
+    "moves": ["héros plein cadre sur un bassin", "galerie avant/après", "devis en un clic"]
+  }
+}

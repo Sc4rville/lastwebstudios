@@ -1,0 +1,30 @@
+{
+  "_sample": "FICTIONAL: a prospect invented for the US sandbox and the demo (no real business).",
+  "id": "wrenhaven-carpentry-austin",
+  "industry": "menuisier",
+  "identity": {
+    "name": "Wrenhaven Carpentry",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78745",
+    "phone": "(737) 555-0128",
+    "email": "shop@wrenhaven-carpentry.example",
+    "hours": "Mon–Sat 7 am – 4 pm"
+  },
+  "content": {
+    "tagline": "Finish carpentry and built-ins",
+    "about": "Wrenhaven Carpentry builds custom cabinets, built-ins, doors and decks for homes around Austin, from a small shop in South Austin.",
+    "services": ["Custom built-ins", "Doors and trim", "Decks and pergolas", "Cabinet repair"],
+    "brands": []
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://wrenhaven-carpentry.example/", "screenshot": "assets/wrenhaven-carpentry-austin/avant.png" },
+  "score": {
+    "value": 79,
+    "tier": "hot",
+    "reasons": ["not responsive (no viewport)", "thin page (little content)", "no photos", "old jQuery (dated stack)"],
+    "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look."
+  },
+  "audit": { "https": true, "mobile": { "hasViewportMeta": false } },
+  "_sim": { "lang": "en", "family": "wood", "palette": { "a": "#3b2f2f", "b": "#a97c50", "bg": "#f6f1ea" } }
+}

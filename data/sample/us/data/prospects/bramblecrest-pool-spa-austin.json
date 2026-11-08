@@ -1,0 +1,30 @@
+{
+  "_sample": "FICTIONAL: a prospect invented for the US sandbox and the demo (no real business).",
+  "id": "bramblecrest-pool-spa-austin",
+  "industry": "pisciniste",
+  "identity": {
+    "name": "Bramblecrest Pool & Spa",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78745",
+    "phone": "(737) 555-0172",
+    "email": "info@bramblecrest-pools.example",
+    "hours": "Mon–Sat 9 am – 5 pm"
+  },
+  "content": {
+    "tagline": "Pools, spas and outdoor living",
+    "about": "Bramblecrest Pool & Spa builds plunge pools and spas, adds decks and shade, and opens and services pools every season in South Austin.",
+    "services": ["Plunge pools", "Spas and hot tubs", "Pool decks and shade", "Seasonal service"],
+    "brands": []
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://bramblecrest-pools.example/", "screenshot": "assets/bramblecrest-pool-spa-austin/avant.png" },
+  "score": {
+    "value": 88,
+    "tier": "warm",
+    "reasons": ["not responsive (no viewport)", "poor SEO (no description / OG)", "no HTTPS (security, Google penalty)", "last updated: 2013"],
+    "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look."
+  },
+  "audit": { "https": false, "mobile": { "hasViewportMeta": false }, "strengths": { "copyrightYear": 2013, "stale": true } },
+  "_sim": { "lang": "en", "family": "pool", "palette": { "a": "#1d4e89", "b": "#e9c46a", "bg": "#f8f7f2" } }
+}

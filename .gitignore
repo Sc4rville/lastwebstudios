@@ -1,0 +1,124 @@
+node_modules/
+.env*
+!.env.example
+dist/
+build/
+.DS_Store
+
+# Generated sites and the pipeline's data: never committed (your agency, your prospects)
+output/
+data/*
+!data/sample/
+
+# Données générées par le pipeline — jamais committées
+# Assets : on VERSIONNE le contenu (photos/logos — compressé ~6 Mo, partagé entre opérateurs + backup git).
+# On IGNORE les captures avant.png (dérivées, ~4 Mo chacune, re-capturables) et les vidéos (lourdes → Git LFS si besoin).
+data/assets/**/gate-*.png
+data/assets/**/_audit-*.png
+data/assets/**/*.mp4
+data/assets/**/*.webm
+data/assets/**/*.mov
+data/raw/*.json
+# le registre de dédup du scraper est PARTAGÉ entre opérateurs → versionné
+!data/raw/prospects.registry.json
+
+# Boucle learning : retours bruts (bus data) + règles/rapport GÉNÉRÉS (rebuildables via `npm run learn`)
+data/outcomes.jsonl
+data/learning/
+data/research/
+learning/rules/rules.json
+learning/analysis/report.md
+# fiches prospects VERSIONNÉES (pour que la box les ait, décision du 25/06) ; médias lourds (mp4) via Supabase
+# data/prospects/*.json  ← dé-ignoré
+data/logs/
+# the cockpit's local database (npm run backoffice without DATABASE_URL) and the demo builds' scratch folder
+data/pglite/
+data/tmp/
+# Outreach : records de brouillons PRÉPARÉS (état transitoire, rebuildable via `npm run outreach`)
+data/outreach/
+data/personas/
+
+# Secrets — jamais sur GitHub
+*.pem
+*.key
+
+# Claude : on VERSIONNE les skills + CLAUDE.md (la méthode du projet),
+# on n'ignore que le transitoire (config machine, sessions)
+.claude/settings.local.json
+
+# Vidéo explainer (HyperFrames) — on garde les SOURCES (index.html, design.md, fonts),
+# on ignore le lourd/généré : rendus, snapshots, audio, deps node
+
+# extractize : cache de rendu temporaire (jeté après extraction)
+
+# backoffice index/state DB (local, rebuildable via reindex)
+
+# screenshots scratch déversés à la racine par erreur (un agent qui shoote dans cwd)
+/_*
+# médias IA (Higgsfield) stagés à la racine (sources scroll-scrub/héro) — lourds, hors git (→ box/Supabase)
+/*.mp4
+
+# registre prospects GÉNÉRÉ (depuis les seeds + output/sites/) — artefact stale, jamais committé (Rule 1)
+docs/prospects.md
+
+# auto-journal du hook Stop (claude-journal-hook.sh) — local, reconstructible, jamais committé
+/session.md
+# outils tiers hors-sujet déposés à la racine (sideloading iOS, signing…) — PAS du projet lws
+/tools/
+
+# session higgsfield (cookies app web — Seedance unlimited headless)
+worker/.hf-session.json
+.hf-session.json
+
+# logs d'appels de vente (data brute, possibles notes prospects)
+sales/calls/
+
+# Tests e-commerce standalone (composer-ecom) — assets lourds, hors pipe
+ecom/
+
+# Closing : livrables de vente par prospect (npm run crawl) — on VERSIONNE le texte lisible
+# (content.md + manifest, partagé), on garde hors git les médias lourds + le content.json redondant
+closing/**/photos/
+closing/**/*.zip
+closing/**/content.json
+# trieur de photos (closing/triage.mjs) : état de tri + sélection exportée — reconstructibles, lourds
+closing/**/_triage.json
+closing/**/_selection/
+
+# séquenceur : état + log d'envois (local, reconstructible)
+data/sequencer/
+
+data/savior/
+
+outreach/sequencer/credentials.json
+data/demo/
+data/seo/
+data/contenu/
+
+data/invoices/
+outreach/sequencer/sa-key.json
+
+# audits cyber (recon + rapport générés, reconstructibles)
+data/audits/
+
+outreach/sequencer/verified-emails.json
+outreach/sequencer/verified-report.json
+.vercel/
+data/warmup/
+outreach/sequencer/verified-emails.all.json
+outreach/sequencer/verified-report.all.json
+
+# marqueur de chantier du worker (worker/building.ts) : état transitoire, jamais versionné
+output/sites/**/.lws-building
+
+# identifiants Google/OAuth téléchargés (jamais commités)
+**/credentials.json
+
+# arrêt d'urgence de la cage 24/7 (packages/shared/cage.mjs) : état de la machine, jamais versionné
+/STOP
+.oss-build/
+.sandbox/
+
+# Your agency's identity (Settings writes it on first save): yours, never committed. The demo studios ship as
+# agency.config.example.us.json (US, the default) and agency.config.example.json (France); the cockpit runs on the US one until then.
+agency.config.json

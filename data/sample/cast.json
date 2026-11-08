@@ -1,0 +1,36 @@
+{
+  "_comment": "THE FICTIONAL CAST of the French demo studio (npm run sandbox -- --country FR): eight invented businesses, three trades, one at every stage of the funnel. No real business, person, address or photo: invented towns, reserved .example domains (RFC 2606), phone numbers in the ARCEP ranges reserved for fiction, SVG illustrations made from scratch. The « built » sites are REAL runs of the product (npm run first-site) on their fictional dated sites, kept in examples/. « stage » is the story's own word (French cast), « role » the step the sandbox plays. The default demo (a US studio) gets cast.us.json. « seller »: the studio's fictional business details for Billing (a demo invoice prints whole).",
+  "agency": "agency.config.example.json",
+  "trades": ["pisciniste", "menuisier", "cuisiniste"],
+  "seller": { "name": "Atelier Vélin", "legal": "SASU (entreprise fictive de démonstration)", "address": "12 rue des Lavandières, 01990 Valmont-sur-Lys", "siret": "000 000 000 00000", "tva": "FR00 000000000", "email": "bonjour@atelier-velin.example", "phone": "01 99 00 12 34", "iban": "FR76 0000 0000 0000 0000 0000 000", "paymentLink": "" },
+  "story": {
+    "reply": { "from": "contact@orvane-piscines.example", "subject": "Re: La démo de votre nouveau site, en 30 secondes", "text": "Bonjour Camille, c'est très réussi. Appelez-moi jeudi matin, on regarde ça ensemble." },
+    "rdvNote": "démo jeudi 10 h, au showroom",
+    "lostNote": "garde son site actuel pour l'instant",
+    "callNote": "pas d'e-mail sur le site (formulaire en panne) : appeler le showroom, mardi-samedi 9h30-12h",
+    "feedback": {"role": "sequence", "text": "Des titres avec empattements, ça fait plus artisan. Et pas de phrases toutes faites comme « savoir-faire de qualité » : dites ce qu'ils font."}
+  },
+  "prospects": [
+    { "id": "orvane-piscines-valmont-sur-lys", "name": "Orvane Piscines", "trade": "pisciniste", "stage": "gagné", "role": "won",
+      "oldSite": "test/fixtures/sites/orvane-piscines", "site": { "from": "examples/orvane-piscines", "date": "2026-10-24-composer" },
+      "story": "approved ♥♥♥ → first email (day 0) → clicks the signed link (day 1) → the click unlocks the demo email (day 3) → replies « call me Thursday » → Hot Lead → meeting → proposal → signed (won) → learning" },
+    { "id": "atelier-brisane-sornac-le-haut", "name": "Atelier Brisane", "trade": "menuisier", "stage": "perdu", "role": "lost",
+      "oldSite": "data/sample/sites/atelier-brisane", "site": { "from": "examples/atelier-brisane", "date": "2026-10-24-composer" },
+      "story": "approved ♥♥ → first email (day 0) → one-click unsubscribe (RFC 8058, day 2) → lost « keeps their current site »" },
+    { "id": "cuisines-lumeo-vereuil", "name": "Cuisines Lumeo", "trade": "cuisiniste", "stage": "en appel", "role": "call",
+      "oldSite": "data/sample/sites/cuisines-lumeo", "site": { "from": "examples/cuisines-lumeo", "date": "2026-10-24-composer" },
+      "story": "no email on their site (broken form): no sequence, the phone only → approved → call list (To call) with a note" },
+    { "id": "menuiserie-frehaut-brezelonne", "name": "Menuiserie Fréhaut", "trade": "menuisier", "stage": "en séquence", "role": "sequence",
+      "site": { "standIn": true, "date": "2026-11-02-composer" },
+      "story": "site built and approved under « Send emails automatically » → enrolled in the sequence → first email written (the last working day), the next step waits for day 3 or a click : Outreach › Emails" },
+    { "id": "bassins-de-quillanne-quillanne-sur-orme", "name": "Bassins de Quillanne", "trade": "pisciniste", "stage": "en build", "role": "build",
+      "oldSite": "data/sample/sites/bassins-quillanne",
+      "story": "scored, old site read (real parse) → a build is queued (the built-in engine plays it)" },
+    { "id": "cuisines-aubrelle-castel-aurin", "name": "Cuisines Aubrelle", "trade": "cuisiniste", "stage": "noté (retenu)", "role": "noted",
+      "story": "scored hot, sheet ready: the next one to build" },
+    { "id": "piscines-velisande-castel-aurin", "name": "Piscines Vélisande", "trade": "pisciniste", "stage": "noté",
+      "story": "through the scoring gate, not read yet" },
+    { "id": "atelier-doralis-lavrenne-la-cote", "name": "Atelier Doralis", "trade": "menuisier", "stage": "trouvé",
+      "story": "found by the scraper (data/raw/prospects.scraped.csv), not scored yet" }
+  ]
+}

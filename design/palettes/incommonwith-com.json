@@ -1,0 +1,34 @@
+{
+  "slug": "incommonwith-com",
+  "url": "https://www.incommonwith.com/",
+  "vars": {
+    "--color-bone-light": "#fafaf9",
+    "--color-bone-mid": "#F8F7F1",
+    "--color-bone-dark": "#E9E4DC",
+    "--color-clay-mid": "#DCD8D0",
+    "--color-clay-dark": "#BCB6A6",
+    "--color-brick-light": "#5C1C07",
+    "--color-brick-mid": "#4A0A05",
+    "--color-brick-dark": "#441100",
+    "--color-red-light": "#E60000",
+    "--color-red-mid": "#AD0000",
+    "--color-red-dark": "#8D0000",
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgba(59,130,246,.5)",
+    "--swiper-theme-color": "#007aff",
+    "--swiper-preloader-color": "#000",
+    "--color-bg": "#fafaf9"
+  },
+  "palette": [
+    "rgba(0,0,0,.5)",
+    "#4a0a05",
+    "#f8f7f1",
+    "#8d0000",
+    "#9ca3af",
+    "#fafaf9",
+    "rgba(59,130,246,.5)",
+    "rgba(255,255,255,0)",
+    "rgba(255,255,255,0.5)",
+    "#efefef"
+  ]
+}

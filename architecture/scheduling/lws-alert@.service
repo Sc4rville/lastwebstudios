@@ -1,0 +1,12 @@
+[Unit]
+Description=lastwebstudios — failure alert for %i (local dead man's switch)
+
+[Service]
+Type=oneshot
+# On a job's OnFailure=: logs to data/logs/ALERT.log + a GNOME notification when available (workstation).
+# On a box without a screen: LWS_ALERT_URL in ~/lws/.env receives a text POST ("FAILED <unit> on <machine>"):
+# an ntfy topic (https://ntfy.sh/<secret-topic>), the /fail URL of a healthchecks.io check, or any webhook that
+# accepts a text body. Unset: nothing leaves the machine. (`$$` = a literal `$` for systemd: bash reads the
+# variables, not the manager.)
+EnvironmentFile=-%h/lws/.env
+ExecStart=/usr/bin/env bash -c 'D=%h/lws/data/logs; mkdir -p "$$D"; echo "[$$(date -Iseconds)] FAILED %i" >> "$$D/ALERT.log"; command -v notify-send >/dev/null && notify-send "lastwebstudios" "Scheduled job failed: %i"; if [ -n "$$LWS_ALERT_URL" ]; then curl -fsS -m 15 -H "Title: lastwebstudios" --data-raw "FAILED %i on $$(hostname)" "$$LWS_ALERT_URL" >/dev/null || echo "[$$(date -Iseconds)] LWS_ALERT_URL alert not delivered" >> "$$D/ALERT.log"; fi; true'

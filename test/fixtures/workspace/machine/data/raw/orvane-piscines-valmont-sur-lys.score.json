@@ -1,0 +1,34 @@
+{
+  "value": 95,
+  "tier": "hot",
+  "axes": {
+    "besoin": 98,
+    "levier": 100,
+    "valeur": 100,
+    "closabilite": 100,
+    "expansion": 55
+  },
+  "expectedValue": 98,
+  "signals": {
+    "gallery": true,
+    "quoteCta": true,
+    "social": false,
+    "premium": true,
+    "multiSite": false,
+    "ecommerce": false,
+    "booking": false,
+    "blog": false
+  },
+  "feasible": true,
+  "accroche": "Votre site de pisciniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+  "reasons": [
+    "pas responsive (pas de viewport)",
+    "SEO pauvre (pas de description / OG)",
+    "pas de HTTPS (sécurité + SEO pénalisé)",
+    "aucune donnée structurée (SEO local faible)",
+    "vieux jQuery (socle technique daté)",
+    "page très pauvre (peu de contenu)",
+    "dernière trace de maj : 2016",
+    "axes — besoin 98 · levier 100 · valeur 100 · closab. 100 · expansion 55 → € espéré 98"
+  ]
+}

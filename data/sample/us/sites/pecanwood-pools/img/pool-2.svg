@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500"><title>Pool renovation with new tile (fictional illustration)</title>
+<rect width="800" height="500" fill="#eef4f6"/><rect x="0" y="0" width="800" height="190" fill="#bcdcea"/><rect x="0" y="190" width="800" height="310" fill="#d6cbb6"/>
+<rect x="140" y="250" width="520" height="190" fill="#1f8fbf"/><rect x="140" y="250" width="520" height="16" fill="#f4a24a"/>
+<g stroke="#fff" stroke-opacity=".45" stroke-width="3" fill="none"><path d="M170 320 q40 -8 80 0 t80 0 t80 0 t80 0 t80 0"/><path d="M170 380 q40 -8 80 0 t80 0 t80 0 t80 0 t80 0"/></g>
+<rect x="30" y="20" width="220" height="34" rx="4" fill="#fff" fill-opacity=".85"/><text x="44" y="43" font-family="Verdana, sans-serif" font-size="16" fill="#2d6c8c">Renovation, new tile</text></svg>

@@ -1,0 +1,61 @@
+#!/usr/bin/env node
+/**
+ * FAKE `codex` (OpenAI's Codex CLI) for the tests: first on the PATH through test/run.mjs (same folder as the fake
+ * `claude`), so that NO test talks to the real model or the ChatGPT subscription. Imitates what the product reads:
+ *
+ *   --version                       version
+ *   login status                    "Logged in using ChatGPT" (FAKE_CODEX_AUTH=none: signed out, code 1;
+ *                                   FAKE_CODEX_AUTH=api: "Logged in using API key")
+ *   exec [opts] -                   prompt on stdin; -o <file> receives the last message; --output-schema <f>
+ *                                   constrains the JSON; -i <image> (repeatable); -m <model>; --json: events
+ *
+ * The answer comes from the FAKE `claude` in the same folder (it recognises the product's prompts: structuration, visual
+ * gate…): we pass it the same prompt and take `structured_output` (or `result`). So the codex path returns
+ * exactly the same fictional data as the claude-code path.
+ *
+ * Settings: FAKE_CODEX_LOG=<file> (JSONL: argv, prompt, API key present?) · FAKE_CODEX_RESULT=<json> (forced
+ * answer) · FAKE_CODEX_MODE=fail (code 1, "not logged in")
+ */
+import { appendFileSync, readFileSync, writeFileSync } from "node:fs"
+import { spawnSync } from "node:child_process"
+import { join, dirname } from "node:path"
+import { fileURLToPath } from "node:url"
+
+const argv = process.argv.slice(2)
+const opt = (f) => { const i = argv.indexOf(f); return i >= 0 ? argv[i + 1] : undefined }
+const all = (f) => argv.map((a, i) => (a === f ? argv[i + 1] : null)).filter(Boolean)
+
+if (argv.includes("--version")) { process.stdout.write("codex-cli 0.0.0-fake\n"); process.exit(0) }
+if (argv[0] === "login" && argv[1] === "status") {
+  const a = process.env.FAKE_CODEX_AUTH || "chatgpt"
+  if (a === "none") { process.stderr.write("Not logged in\n"); process.exit(1) }
+  process.stdout.write(a === "api" ? "Logged in using API key\n" : "Logged in using ChatGPT\n"); process.exit(0)
+}
+if (argv[0] !== "exec") { process.stderr.write(`fake codex: unknown command ${argv[0]}\n`); process.exit(2) }
+
+const prompt = readFileSync(0, "utf8")
+const schemaArg = opt("--output-schema")
+let schema = null
+if (schemaArg) { try { schema = JSON.parse(readFileSync(schemaArg, "utf8")) } catch { schema = "unreadable" } } // read HERE: the product deletes its temp folder after the call
+if (process.env.FAKE_CODEX_LOG) appendFileSync(process.env.FAKE_CODEX_LOG, JSON.stringify({ argv, prompt, hasApiKey: Boolean(process.env.OPENAI_API_KEY), images: all("-i"), model: opt("-m") ?? null, schema }) + "\n")
+if (process.env.FAKE_CODEX_MODE === "fail") { process.stderr.write("error: not logged in. Run `codex login`.\n"); process.exit(1) }
+
+let text = process.env.FAKE_CODEX_RESULT
+if (!text) {
+  const schemaFile = opt("--output-schema")
+  const claude = join(dirname(fileURLToPath(import.meta.url)), "claude")
+  const args = ["-p", "--output-format", "json", "--model", opt("-m") || "fake"]
+  if (schemaFile) args.push("--json-schema", readFileSync(schemaFile, "utf8"))
+  const r = spawnSync(process.execPath, [claude, ...args], { input: prompt, encoding: "utf8", env: { ...process.env, FAKE_CLAUDE_LOG: "" } })
+  let env
+  try { env = JSON.parse(r.stdout) } catch { process.stderr.write(`fake codex: the fake claude did not answer in JSON\n${r.stderr}`); process.exit(1) }
+  text = env.structured_output !== undefined ? JSON.stringify(env.structured_output) : String(env.result ?? "")
+}
+
+const out = opt("-o")
+if (out) writeFileSync(out, text + "\n")
+if (argv.includes("--json")) {
+  process.stdout.write(JSON.stringify({ type: "thread.started", thread_id: "fake-thread", model: opt("-m") || "fake-codex" }) + "\n")
+  process.stdout.write(JSON.stringify({ type: "item.completed", item: { type: "agent_message", text } }) + "\n")
+  process.stdout.write(JSON.stringify({ type: "turn.completed", usage: { input_tokens: 12, output_tokens: 34 } }) + "\n")
+} else process.stdout.write(text + "\n")

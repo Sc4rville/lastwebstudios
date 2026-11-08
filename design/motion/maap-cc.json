@@ -1,0 +1,8 @@
+{
+  "slug": "maap-cc",
+  "url": "https://maap.cc/",
+  "stack": [
+    "swiper"
+  ],
+  "scroll": "native"
+}

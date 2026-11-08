@@ -1,0 +1,35 @@
+node_modules
+.git
+video
+genesis2
+design/.extract-cache
+**/*.tmp.*
+*.log
+# sites/assets générés (git-canonique mais LOURDS : ~1900 fichiers) : le cockpit les sert depuis le
+# bucket Supabase + la DB au runtime, JAMAIS depuis l'image → on les exclut du contexte de build.
+# C'était LA cause des builds qui saturaient le disque de la box (contexte ~5 Go → helper de build ~4,4 Go).
+output
+data
+
+# ── SECRETS : jamais dans une couche d'image (F-4, audit 2026-10-24) ──
+# Coolify construit depuis un clone propre, mais un `docker build .` local part de la copie de travail.
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+**/sa-key.json
+**/credentials.json
+**/.hf-session.json
+**/*.pem
+**/*.key
+.claude/settings.local.json
+
+# ── matière client, journaux d'équipe, vitrine, rapports, tests : inutiles au cockpit ──
+closing
+sessions
+website
+NIGHT
+.oss-build
+.sandbox
+test

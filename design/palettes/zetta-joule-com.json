@@ -1,0 +1,40 @@
+{
+  "slug": "zetta-joule-com",
+  "url": "https://zetta-joule.com",
+  "vars": {
+    "--_color---greyscale--grey-750": "#524f4b",
+    "--_button-style---background": "#fff0",
+    "--_color---colors-primary--dark-grey": "#1b1b1b",
+    "--_color---colors-primary--light-blue": "#d3e7ff",
+    "--_color---colors-secondary--duck-egg": "#f1f5f8",
+    "--_color---colors-secondary--beige": "#f1f0eb",
+    "--_color---colors-secondary--blue": "#628ad1",
+    "--_color---greyscale--grey-350": "#b6b5b2",
+    "--_color---greyscale--grey-950": "#242424",
+    "--_color---greyscale--grey-650": "#524f4b",
+    "--_color---greyscale--grey-100": "#e5e5e5",
+    "--_color---colors-secondary--dark-blue": "#3d5e86",
+    "--_color---colors-secondary--navy": "#29313f",
+    "--_color---alpha--white-alpha-10": "#ffffff1a",
+    "--_color---alpha--white-alpha-20": "#fff3",
+    "--_color---alpha--dark-blue-alpha-20": "#3d5e8633",
+    "--_color---alpha--black-alpha-30": "#0000004d",
+    "--_color---greyscale--grey-50": "#f2f2f2",
+    "--_color---greyscale--grey-250": "#cfcdc9",
+    "--_color---greyscale--grey-500": "#7d7d7d",
+    "--_color---alpha--black-alpha-40": "#0006",
+    "--_button-style---background-hover": "#fff0"
+  },
+  "palette": [
+    "#0bf",
+    "#ccc",
+    "#ddd",
+    "#222",
+    "#333",
+    "#999",
+    "#fafafa",
+    "#0006",
+    "#c8c8c8",
+    "rgba(197,211,219,1)"
+  ]
+}

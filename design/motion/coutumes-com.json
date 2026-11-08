@@ -1,0 +1,9 @@
+{
+  "slug": "coutumes-com",
+  "url": "https://coutumes.com/",
+  "stack": [
+    "lenis",
+    "swiper"
+  ],
+  "scroll": "lenis (smooth)"
+}

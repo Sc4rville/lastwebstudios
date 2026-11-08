@@ -1,0 +1,30 @@
+{
+  "_sample": "FICTIONAL: a prospect invented for the US sandbox and the demo (no real business).",
+  "id": "pecanwood-pools-austin",
+  "industry": "pisciniste",
+  "identity": {
+    "name": "Pecanwood Pools",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78704",
+    "phone": "(512) 555-0163",
+    "email": "hello@pecanwood-pools.example",
+    "hours": "Mon–Fri 8 am – 5 pm"
+  },
+  "content": {
+    "tagline": "Custom pools in Austin since 1998",
+    "about": "Pecanwood Pools designs and builds custom in-ground pools, renovates older ones and keeps them running with weekly service across South Austin.",
+    "services": ["Custom in-ground pools", "Pool renovation", "Spas and water features", "Weekly pool service"],
+    "brands": []
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://pecanwood-pools.example/", "screenshot": "assets/pecanwood-pools-austin/avant.png" },
+  "score": {
+    "value": 86,
+    "tier": "hot",
+    "reasons": ["not responsive (no viewport)", "no HTTPS (security, Google penalty)", "last updated: 2011", "poor SEO (no description / OG)"],
+    "accroche": "Your site: not responsive (no viewport). We rebuilt your home page, take a look."
+  },
+  "audit": { "https": false, "mobile": { "hasViewportMeta": false }, "strengths": { "copyrightYear": 2011, "stale": true } },
+  "_sim": { "lang": "en", "family": "pool", "palette": { "a": "#0f6fa8", "b": "#f4a261", "bg": "#f6f3ec" } }
+}

@@ -1,0 +1,52 @@
+<!-- gallery-feature · gallery · one project shown big (feature) + 3-4 thumbnails aligned below -->
+<section class="gal-feat" data-section="gallery-feature">
+  <style>
+    .gal-feat{background:var(--bg); color:var(--fg);
+      padding:clamp(48px,8vw,112px) clamp(20px,5vw,80px)}
+    .gal-feat__head{max-width:60ch; margin:0 0 clamp(28px,4vw,48px)}
+    .gal-feat__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.18em;
+      font-size:12px; color:var(--accent); margin:0 0 14px}
+    .gal-feat__title{font-family:var(--serif); font-weight:500; line-height:1.08; letter-spacing:-.01em;
+      font-size:clamp(30px,4vw,52px); margin:0}
+    .gal-feat__hero{display:grid; grid-template-columns:1.6fr 0.9fr; gap:clamp(20px,3vw,40px);
+      align-items:end; margin:0 0 clamp(16px,2vw,24px)}
+    .gal-feat__frame{position:relative; aspect-ratio:16/10; overflow:hidden; border-radius:4px; margin:0}
+    .gal-feat__frame img{width:100%; height:100%; object-fit:cover; display:block;
+      transition:transform .6s ease}
+    .gal-feat__hero:hover .gal-feat__frame img{transform:scale(1.03)}
+    .gal-feat__caption{padding-bottom:clamp(8px,1.5vw,18px)}
+    .gal-feat__name{font-family:var(--serif); font-weight:500; font-size:clamp(22px,2.4vw,32px);
+      line-height:1.1; margin:0 0 10px}
+    .gal-feat__desc{font-family:var(--sans); font-size:15px; line-height:1.6; color:var(--muted);
+      max-width:42ch; margin:0}
+    .gal-feat__thumbs{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(12px,1.6vw,20px)}
+    .gal-feat__thumb{position:relative; aspect-ratio:1/1; overflow:hidden; border-radius:3px; margin:0}
+    .gal-feat__thumb img{width:100%; height:100%; object-fit:cover; display:block;
+      transition:transform .5s ease}
+    .gal-feat__thumb:hover img{transform:scale(1.06)}
+    .gal-feat .reveal{opacity:1}
+    @media (max-width:880px){
+      .gal-feat__hero{grid-template-columns:1fr; align-items:start}
+      .gal-feat__thumbs{grid-template-columns:1fr 1fr}
+    }
+  </style>
+
+  <div class="gal-feat__head reveal">
+    <p class="gal-feat__kicker">{{KICKER}}</p>
+    <h2 class="gal-feat__title">{{HEADLINE}}</h2>
+  </div>
+
+  <div class="gal-feat__hero">
+    <figure class="gal-feat__frame reveal"><img src="{{FEATURE_IMG}}" alt="{{FEATURE_ALT}}"></figure>
+    <div class="gal-feat__caption reveal">
+      <h3 class="gal-feat__name">{{FEATURE_NAME}}</h3>
+      <p class="gal-feat__desc">{{FEATURE_DESC}}</p>
+    </div>
+  </div>
+
+  <div class="gal-feat__thumbs">
+    <!-- repeat: thumb -->
+    <figure class="gal-feat__thumb reveal"><img src="{{IMG}}" alt="{{ALT}}"></figure>
+    <!-- /repeat -->
+  </div>
+</section>

@@ -1,0 +1,216 @@
+{
+  "id": "cuisines-lumeo-vereuil",
+  "industry": "cuisiniste",
+  "identity": {
+    "name": "Cuisines Lumeo",
+    "city": "Véreuil",
+    "phone": "01 99 00 41 52",
+    "hours": "mardi au samedi 9h30-12h / 14h-19h",
+    "zone": "Véreuil"
+  },
+  "content": {
+    "tagline": "votre cuisiniste à Véreuil depuis 1994",
+    "about": "Cuisines Lumeo conçoit, fabrique et installe des cuisines équipées, des salles de bains et des rangements sur mesure. Showroom de 300 m² avec 15 modèles exposés. Étude 3D gratuite, pose par nos propres équipes, service après-vente.",
+    "services": [
+      "Conception, fabrication et installation de cuisines équipées",
+      "Cuisines laquées, bois massif, stratifié",
+      "Plans de travail en quartz, granit ou céramique",
+      "Salles de bains sur mesure",
+      "Meubles vasques, douches à l'italienne",
+      "Dressings et placards sur mesure",
+      "Étude 3D gratuite",
+      "Pose par nos propres équipes",
+      "Service après-vente"
+    ]
+  },
+  "assets": {
+    "logo": "assets/cuisines-lumeo-vereuil/logo.svg",
+    "photos": [
+      "assets/cuisines-lumeo-vereuil/photo-1.svg",
+      "assets/cuisines-lumeo-vereuil/photo-2.svg"
+    ]
+  },
+  "existing": {
+    "url": "http://cuisines-lumeo.example/",
+    "screenshot": "assets/cuisines-lumeo-vereuil/avant.png"
+  },
+  "score": {
+    "value": 78,
+    "tier": "hot",
+    "axes": {
+      "besoin": 90,
+      "levier": 70,
+      "valeur": 87,
+      "closabilite": 80,
+      "expansion": 40
+    },
+    "expectedValue": 63,
+    "signals": {
+      "gallery": false,
+      "quoteCta": false,
+      "social": false,
+      "premium": true,
+      "multiSite": false,
+      "ecommerce": false,
+      "booking": false,
+      "blog": false
+    },
+    "feasible": true,
+    "accroche": "Votre site de cuisiniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez.",
+    "reasons": [
+      "pas responsive (pas de viewport)",
+      "SEO pauvre (pas de description / OG)",
+      "pas de HTTPS (sécurité + SEO pénalisé)",
+      "aucune donnée structurée (SEO local faible)",
+      "page très pauvre (peu de contenu)",
+      "dernière trace de maj : 2009",
+      "axes — besoin 90 · levier 70 · valeur 87 · closab. 80 · expansion 40 → € espéré 63"
+    ]
+  },
+  "audit": {
+    "date": "2026-10-24",
+    "url": "http://cuisines-lumeo.example/",
+    "finalUrl": "http://cuisines-lumeo.example/",
+    "reachable": true,
+    "https": false,
+    "loadMs": 43,
+    "mobile": {
+      "overflowPx": 390,
+      "brokenMobile": true,
+      "hasViewportMeta": false,
+      "overflow768": 12,
+      "overflow1280": 0
+    },
+    "contact": {
+      "hasForm": true,
+      "hasTel": false,
+      "hasMailto": false,
+      "hasPhoneText": true,
+      "hasEmailText": false,
+      "hasContactLink": true
+    },
+    "seo": {
+      "title": "CUISINES LUMEO - Cuisiniste - Véreuil - Cuisines équipées, salles de bains, rangements",
+      "titleLen": 86,
+      "hasMetaDesc": false,
+      "h1Count": 1,
+      "imgCount": 3,
+      "imgNoAlt": 2,
+      "hasCanonical": false,
+      "jsonLdCount": 0,
+      "hasOgTitle": false,
+      "hasOgImage": false
+    },
+    "strengths": {
+      "videos": 0,
+      "hasBooking": false,
+      "hasReviews": false,
+      "googleRating": null,
+      "reviewCount": null,
+      "copyrightYear": 2009,
+      "stale": true
+    },
+    "buttons": {
+      "tested": 1,
+      "dead": []
+    },
+    "form": {
+      "present": true,
+      "status": "présent (non soumis)"
+    },
+    "overlap": {
+      "desktop": {
+        "count": 0,
+        "examples": []
+      },
+      "mobile": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "perf": {
+      "available": false,
+      "score": null,
+      "lcpMs": null,
+      "cls": null,
+      "source": "psi"
+    },
+    "pages": [
+      {
+        "url": "http://cuisines-lumeo.example/#contact",
+        "kind": "contact",
+        "reachable": false,
+        "overflow": {
+          "at390": 0,
+          "at768": 0,
+          "at1280": 0
+        },
+        "overlapDesktop": {
+          "count": 0,
+          "examples": []
+        },
+        "overlapMobile": {
+          "count": 0,
+          "examples": []
+        },
+        "brokenImages": []
+      }
+    ],
+    "screenshots": {
+      "desktop": "data/assets/cuisines-lumeo-vereuil/_audit-desktop.png",
+      "mobile": "data/assets/cuisines-lumeo-vereuil/_audit-mobile.png"
+    },
+    "links": {
+      "checked": 4,
+      "broken": []
+    },
+    "functional": {
+      "jsErrors": 0,
+      "jsErrorMessages": [],
+      "deadLinks": 4,
+      "brokenImages": 0,
+      "brokenImageUrls": []
+    },
+    "issues": [
+      "Pas de HTTPS : le navigateur affiche « Non sécurisé », ça fait fuir et Google pénalise.",
+      "Le site déborde horizontalement sur mobile (390px de scroll latéral à 390px) : pénible à lire au téléphone.",
+      "Pas de balise viewport : le site n'est pas pensé pour le mobile (texte minuscule, zoom forcé).",
+      "Le numéro de téléphone n'est pas cliquable : sur mobile, impossible d'appeler en un tap.",
+      "Le pied de page affiche « © 2009 » : le site paraît à l'abandon / non mis à jour depuis 17 an(s).",
+      "Pas de meta description : Google affiche un extrait au hasard sous votre lien.",
+      "Pas d'URL canonique (balise canonical) : risque de contenu dupliqué aux yeux de Google.",
+      "Aucune donnée structurée (JSON-LD) : Google ne peut pas afficher d'infos enrichies (étoiles, horaires, adresse).",
+      "Balises Open Graph incomplètes : les partages sur réseaux sociaux s'affichent sans aperçu propre."
+    ],
+    "clientIssues": [
+      "Pas de HTTPS : le navigateur affiche « Non sécurisé », ça fait fuir et Google pénalise.",
+      "Le site déborde horizontalement sur mobile (390px de scroll latéral à 390px) : pénible à lire au téléphone.",
+      "Pas de balise viewport : le site n'est pas pensé pour le mobile (texte minuscule, zoom forcé).",
+      "Le numéro de téléphone n'est pas cliquable : sur mobile, impossible d'appeler en un tap.",
+      "Le pied de page affiche « © 2009 » : le site paraît à l'abandon / non mis à jour depuis 17 an(s)."
+    ]
+  },
+  "brief": {
+    "date": "2026-10-24",
+    "beauty_before": {
+      "score": 2,
+      "why": "Site figé en 2009 : bandeau d'offre promotionnelle périmée depuis 17 ans, illustrations vectorielles grossières à la place de vraies photos de cuisines, mise en page en tableau sans hiérarchie ni respiration."
+    },
+    "what": "Cuisiniste familial à Véreuil depuis 1994 : conception, fabrication et pose de cuisines équipées, salles de bains et rangements sur mesure, avec showroom de 300 m² (15 modèles) et étude 3D gratuite — un vrai savoir-faire artisanal local, invisible sur le site actuel.",
+    "problems": [
+      "Bandeau \"OFFRE SPÉCIALE 2009 ... avant le 31 décembre\" toujours affiché : le site crie qu'il est à l'abandon depuis 17 ans (copyright 2009 confirmé par l'audit).",
+      "Les \"photos\" de cuisines sont des illustrations vectorielles sommaires (blocs et rectangles bruns), aucune vraie photo du showroom de 300 m² ni des réalisations — zéro preuve du savoir-faire.",
+      "Pas de HTTPS : le navigateur affiche \"Non sécurisé\" (audit).",
+      "Le site déborde horizontalement sur mobile (390px de scroll latéral), pas de balise viewport : illisible au téléphone (audit).",
+      "Numéro de téléphone en texte brut, non cliquable : impossible d'appeler en un tap sur mobile (audit).",
+      "Formulaire de contact affiché mais explicitement \"temporairement indisponible\" — le seul canal de contact numérique est cassé."
+    ],
+    "angle": "Le cuisiniste artisan de Véreuil depuis 1994 mérite un site qui montre enfin son showroom et son savoir-faire sur-mesure, au lieu d'une page figée depuis l'offre promo de 2009.",
+    "moves": [
+      "Hero plein écran porté par les réalisations (cuisines laquées/bois massif/quartz) pour remplacer les illustrations vectorielles par une vraie image forte",
+      "CTA clair et répété \"Étude 3D gratuite\" + téléphone cliquable en un tap, visible dès le hero",
+      "Mood chaleureux et artisanal (bois, pierre, laque) avec une paire de fonts élégante type serif/sans du catalogue design/fonts, pour signaler le métier et l'ancienneté (depuis 1994) sans paraître daté"
+    ],
+    "keep": []
+  }
+}

@@ -1,0 +1,18 @@
+/* FIXTURE FICTIVE : feuille de style volontairement datée (2014). */
+body { background: #cfe9f7 url("../img/puce.svg") repeat; margin: 0; font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #333; }
+#page { background: #fff; border: 1px solid #8bb9d4; }
+#entete { background: #0d5c8a; padding: 10px; color: #fff; }
+#slogan { font-family: "Comic Sans MS", cursive; font-size: 18px; color: #ffe066; margin-top: 6px; }
+#menu { background: #ff8a00; padding: 6px 10px; font-weight: bold; }
+#menu a { color: #fff; text-decoration: none; }
+#menu a:hover { text-decoration: underline; color: #0d5c8a; }
+#defile { background: #fffbe6; color: #c0392b; font-weight: bold; padding: 3px; }
+h1 { color: #0d5c8a; font-size: 20px; border-bottom: 2px dotted #ff8a00; }
+h2 { color: #ff8a00; font-size: 16px; }
+.puces li { list-style-image: url("../img/puce.svg"); margin-bottom: 4px; }
+.galerie img { border: 3px solid #8bb9d4; }
+#colonne { background: #eef7fc; border-left: 1px solid #8bb9d4; }
+.encart { border: 1px dashed #0d5c8a; padding: 8px; margin-bottom: 10px; background: #fff; }
+.bouton { background: #ff8a00; color: #fff; padding: 4px 10px; border: 2px outset #ffb35c; text-decoration: none; }
+.compteur { font-family: "Courier New", monospace; text-align: center; }
+#pied { background: #0d5c8a; color: #bfe8f8; text-align: center; font-size: 10px; padding: 8px; }

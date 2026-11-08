@@ -1,0 +1,147 @@
+{
+  "id": "cuisines-lumeo-vereuil",
+  "url": "http://cuisines-lumeo.example/",
+  "date": "2026-10-24",
+  "startedAt": "2026-10-24T15:05:50.326Z",
+  "steps": {
+    "score": {
+      "ms": 62,
+      "value": 78,
+      "tier": "hot",
+      "reasons": [
+        "pas responsive (pas de viewport)",
+        "SEO pauvre (pas de description / OG)",
+        "pas de HTTPS (sécurité + SEO pénalisé)",
+        "aucune donnée structurée (SEO local faible)"
+      ]
+    },
+    "parse": {
+      "ms": 2551,
+      "photos": 2,
+      "logo": true,
+      "textChars": 975
+    },
+    "structure": {
+      "ms": 25720,
+      "services": 9,
+      "issue": null
+    },
+    "compose": {
+      "ms": 769519,
+      "engine": "workflow",
+      "planEstimateUsd": 2.5608923999999997,
+      "agents": null
+    }
+  },
+  "engine": "workflow",
+  "provider": "claude-code",
+  "compose": {
+    "args": {
+      "date": "2026-10-24",
+      "ids": [
+        "cuisines-lumeo-vereuil"
+      ],
+      "pairings": "1 paire(s) de pairings.run.json",
+      "scores": {
+        "cuisines-lumeo-vereuil": 78
+      },
+      "boost": false,
+      "image": "none",
+      "video": "none",
+      "sync": false,
+      "models": {
+        "smart": "opus",
+        "fast": "haiku",
+        "judge": "sonnet"
+      }
+    }
+  },
+  "workflowResult": {
+    "engines": {
+      "boost": false,
+      "image": "none",
+      "video": "none",
+      "sync": false,
+      "models": {
+        "smart": "opus",
+        "fast": "haiku",
+        "judge": "sonnet"
+      }
+    },
+    "passed": [
+      {
+        "id": "cuisines-lumeo-vereuil",
+        "font": "Cormorant Garamond (display) × Manrope (texte)",
+        "arch": "hero-split (texte à gauche, image plein-bleed à droite)",
+        "before": 2,
+        "heroVideo": false,
+        "loops": 1,
+        "verdict": {
+          "more_beautiful": "A",
+          "margin": "much",
+          "reasons": [
+            "A a une hiérarchie typographique soignée (serif élégant en accent, sans-serif propre pour le corps) alors que B utilise une typo système brute sans hiérarchie claire",
+            "A exploite un rythme éditorial avec grands espaces blancs/beiges et sections aérées ; B est compact, surchargé de boîtes grises empilées sans respiration",
+            "A présente une palette de couleurs cohérente et raffinée (terracotta, crème, bois) ; B utilise des couleurs par défaut (liens bleus soulignés, fond gris, bordures dures) typiques d'un site des années 2000",
+            "A montre les matériaux via de vrais échantillons visuels soignés (façades, plans de travail) ; B affiche des illustrations grossières façon schéma technique amateur",
+            "A a une structure de navigation moderne, un bouton CTA clair et un footer structuré ; B a un menu horizontal daté, un bandeau d'offre promotionnelle criard et un formulaire cassé ('temporairement indisponible')",
+            "A inspire confiance et modernité (finitions soignées, micro-contrastes, alignement précis) ; B inspire l'amateurisme et l'abandon (site visiblement non maintenu depuis 2009)"
+          ]
+        }
+      }
+    ],
+    "failed": []
+  },
+  "lint": {
+    "clean": true,
+    "dashCount": 0,
+    "problems": []
+  },
+  "verify": {
+    "clean": true,
+    "desktop": {
+      "overflowX": false,
+      "scrollW": 1440,
+      "innerW": 1440,
+      "scrollH": 6922,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "blurryImages": [],
+      "stuckHidden": 0,
+      "clippedHeadings": [],
+      "screenshot": "site/_after.png"
+    },
+    "mobile": {
+      "overflowX": false,
+      "scrollW": 390,
+      "innerW": 390,
+      "scrollH": 7393,
+      "consoleErrors": 0,
+      "brokenImages": 0,
+      "blurryImages": [],
+      "stuckHidden": 0,
+      "clippedHeadings": [],
+      "screenshot": "site/_after.mobile.png"
+    }
+  },
+  "gate": {
+    "pass": true,
+    "loops": 1,
+    "font": "Cormorant Garamond (display) × Manrope (texte)",
+    "verdict": {
+      "more_beautiful": "A",
+      "margin": "much",
+      "reasons": [
+        "A a une hiérarchie typographique soignée (serif élégant en accent, sans-serif propre pour le corps) alors que B utilise une typo système brute sans hiérarchie claire",
+        "A exploite un rythme éditorial avec grands espaces blancs/beiges et sections aérées ; B est compact, surchargé de boîtes grises empilées sans respiration",
+        "A présente une palette de couleurs cohérente et raffinée (terracotta, crème, bois) ; B utilise des couleurs par défaut (liens bleus soulignés, fond gris, bordures dures) typiques d'un site des années 2000",
+        "A montre les matériaux via de vrais échantillons visuels soignés (façades, plans de travail) ; B affiche des illustrations grossières façon schéma technique amateur",
+        "A a une structure de navigation moderne, un bouton CTA clair et un footer structuré ; B a un menu horizontal daté, un bandeau d'offre promotionnelle criard et un formulaire cassé ('temporairement indisponible')",
+        "A inspire confiance et modernité (finitions soignées, micro-contrastes, alignement précis) ; B inspire l'amateurisme et l'abandon (site visiblement non maintenu depuis 2009)"
+      ]
+    },
+    "why": null
+  },
+  "totalMs": 809939,
+  "ok": true
+}

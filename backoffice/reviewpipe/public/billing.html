@@ -1,0 +1,388 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Billing — Last Web Studios</title>
+<link rel="stylesheet" href="/app.css">
+<style>
+  /* the cockpit's tokens and components (app.css) ; only the page's layout lives here */
+  main{padding:var(--s6) var(--gutter) var(--s8);max-width:1040px;margin:0 auto}
+  .cardbox{background:var(--fill);box-shadow:inset 0 0 0 1px var(--line);border-radius:var(--r-card);padding:var(--s5);margin-bottom:var(--s4)}
+  h2{font-size:var(--t17);font-weight:600;margin:0 0 var(--s4);letter-spacing:-.01em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);align-items:start}
+  table{width:100%;border-collapse:collapse;font-size:var(--t14);table-layout:fixed}
+  th{text-align:left;color:var(--faint);font-weight:500;font-size:var(--t13);padding:8px 10px;border-bottom:1px solid var(--line)}
+  td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle;overflow-wrap:anywhere}
+  tbody tr:last-child td{border-bottom:0}
+  .r{text-align:right}
+  /* one numeric face : the sans with tabular figures, for every amount and the total */
+  .num{font-family:var(--font);font-size:inherit;font-variant-numeric:tabular-nums}
+  .tot{margin:var(--s5) 0 0 auto;width:340px}
+  .tot > div{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);padding:5px 0;color:var(--dim)}
+  .tot .taxrow label{display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+  .tot .taxrow input{width:80px;height:36px;text-align:right}
+  .tot .ttc{border-top:1px solid var(--line2);font-weight:600;font-size:var(--t16);color:var(--ink);margin-top:8px;padding-top:12px;align-items:baseline}
+  .tot .ttc .num{font-size:var(--t26);font-weight:600;letter-spacing:-.02em}
+  .tot .num{color:var(--ink)}
+  .rowline:hover td{background:var(--fill)}
+  .err{color:var(--bad-ink);font-size:var(--t14)}
+  .won{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s4)}
+  .won select{max-width:360px}
+  .subnav{display:flex;align-items:flex-end;gap:var(--s4);margin-bottom:var(--s5)}
+  .subnav h1{margin:0;font-size:var(--t34);font-weight:600;letter-spacing:-.028em;line-height:1.1}
+  .subnav p{color:var(--dim);font-size:var(--t15);margin-top:8px}
+  .subnav .tabs{margin-left:auto}
+  .fielderr{color:var(--bad-ink);font-size:var(--t13)}
+  .fielderr:empty{display:none}
+  .summary{background:var(--bad-bg);color:var(--bad-ink);box-shadow:inset 0 0 0 1px var(--bad-line);border-radius:14px;padding:12px 16px;font-size:var(--t14);margin-bottom:var(--s4)}
+  .summary a{color:var(--bad-ink);text-decoration:underline}
+  .checklist{color:var(--faint);font-size:var(--t14)}
+  .rowacts{white-space:nowrap;display:inline-flex;gap:14px;justify-content:flex-end}
+  .emptycta{display:flex;flex-direction:column;align-items:center;gap:var(--s3);padding:var(--s6) 0;color:var(--faint);font-size:var(--t15)}
+  /* the columns of the lists : the number, the client takes the room, the date, the total at the right, the status */
+  #inv-table col.c-num{width:150px} #inv-table col.c-date{width:130px} #inv-table col.c-total{width:130px} #inv-table col.c-status{width:180px} #inv-table col.c-acts{width:250px}
+  #items-table col.c-qty{width:96px} #items-table col.c-pu{width:140px} #items-table col.c-amt{width:130px} #items-table col.c-x{width:48px}
+  @media (max-width:760px){main{padding:var(--s4) var(--s4) var(--s6)}.grid{grid-template-columns:1fr}.tot{width:100%}.subnav{flex-wrap:wrap;align-items:flex-start}.subnav h1{font-size:var(--t26)}.subnav .tabs{margin-left:0;flex-basis:100%}.subnav .tabs > button{flex:1;justify-content:center}table{font-size:var(--t13)}.cardbox{padding:var(--s4)}}
+  /* a phone : each line is a small card (description on its own row, then quantity, price and amount) */
+  @media (max-width:640px){
+    #items-table thead,#items-table colgroup{display:none}
+    #items-table,#items-table tbody{display:block}
+    #items tr{display:grid;grid-template-columns:1fr 1fr 1fr 32px;gap:6px 8px;padding:10px 0;border-bottom:1px solid var(--line)}
+    #items td{padding:0;border:0}
+    #items td:first-child{grid-column:1/4}
+    #items td:nth-child(5){grid-column:4;grid-row:1}
+    #items td.il-amt{align-self:center;text-align:right}
+    #items td:nth-child(2)::before,#items td:nth-child(3)::before{display:block;color:var(--faint);font-size:var(--t13);margin-bottom:2px}
+    #items td:nth-child(2)::before{content:"Qty"}
+    #items td:nth-child(3)::before{content:"Unit price"}
+    /* the invoices : one card each (number and total, client, date and status, the actions), no sideways scroll */
+    #inv-table thead,#inv-table colgroup{display:none}
+    #inv-table,#inv-table tbody{display:block}
+    #inv-rows tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line)}
+    #inv-rows td{padding:0;border:0;min-width:0}
+    #inv-rows td.c-client{grid-column:1/-1;grid-row:2}
+    #inv-rows td.c-date{grid-row:3}
+    #inv-rows td.c-status{grid-row:3;text-align:right}
+    #inv-rows td.c-acts{grid-column:1/-1;grid-row:4}
+    #inv-rows .rowacts{justify-content:flex-start;flex-wrap:wrap}
+    #inv-rows td.c-empty{grid-column:1/-1}
+    #inv-rows tr:has(td.c-empty){border-bottom:0}
+  }
+</style></head><body>
+<!-- the cockpit's own header : the three steps with their counts, the status pill, the menu (Billing is where you are) -->
+<header class="top">
+  <a class="brand" href="/#prospects" id="brand"><span>Last Web Studios</span></a>
+  <nav class="steps" id="steps" aria-label="Your agency">
+    <a href="/#prospects" data-v="prospects"><svg class="ic tabic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lab"><span>Prospects</span><i id="nProspects"></i></span></a>
+    <a href="/#sites" data-v="sites"><svg class="ic tabic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></svg><span class="lab"><span>Sites</span><i id="nSites"></i></span></a>
+    <a href="/#outreach" data-v="outreach"><svg class="ic tabic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6.2 6.2l1.3-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span class="lab"><span>Outreach</span><i id="nOutreach"></i></span></a>
+  </nav>
+  <div class="topright">
+    <a class="pill" id="cagePill" href="/#status" title="Status" aria-label="Status">…</a>
+    <div class="menu">
+      <button class="btn icon quiet" id="menuBtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menuDrop"><svg class="ic" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/></svg></button>
+      <div class="dropdown" id="menuDrop" role="menu" hidden>
+        <a href="/#learned" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>What the agency learned</a>
+        <a href="/#settings" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Settings</a>
+        <a href="/#handsoff" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="8" cy="12" r="3"/></svg>Hands-off</a>
+        <hr>
+        <a href="/billing.html" aria-current="page" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h3"/></svg>Billing</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="demobar" id="demoBar" hidden></div>
+<main>
+  <div class="subnav"><div><h1>Billing</h1><p>Invoices for the clients you won, numbered in order.</p></div><span class="seg tabs" role="tablist" aria-label="Billing"><button type="button" role="tab" class="on" aria-selected="true" data-v="new">New invoice</button><button type="button" role="tab" aria-selected="false" data-v="list">Invoices</button><button type="button" role="tab" aria-selected="false" data-v="settings">Your business</button></span></div>
+  <section id="v-new">
+    <div class="summary" id="summary" role="alert" hidden></div>
+    <div class="cardbox">
+      <h2>Client</h2>
+      <div class="won" id="wonWrap" hidden><label class="field" style="flex:1"><b>From a won deal</b><select id="c-won"><option value="">Pick a client you won…</option></select></label></div>
+      <div class="grid">
+        <label class="field"><b>Business name</b><input id="c-name" type="text" placeholder="Their business name" autocomplete="off" aria-describedby="e-c-name"><span class="fielderr" id="e-c-name"></span></label>
+        <label class="field"><b>Email</b><input id="c-email" type="email" placeholder="owner@their-business.example" aria-describedby="e-c-email"><span class="fielderr" id="e-c-email"></span></label>
+        <label class="field"><b>Address</b><input id="c-address" type="text" placeholder="Street, city"></label>
+        <label class="field" id="c-siret-wrap" hidden><b>Company number (optional)</b><input id="c-siret" type="text"></label>
+      </div>
+      <div class="grid" style="margin-top:var(--s3)">
+        <label class="field"><b>Issue date</b><input id="i-issue" type="date"></label>
+        <label class="field"><b>Due date</b><input id="i-due" type="date" aria-describedby="e-i-due"><span class="fielderr" id="e-i-due"></span></label>
+        <label class="field"><b>Type</b><select id="i-kind"><option value="facture">Invoice</option><option value="acompte">Deposit invoice</option><option value="solde">Final invoice</option></select></label>
+        <label class="field"><b>Payment link (optional)</b><input id="i-payurl" type="url" placeholder="https://buy.stripe.com/…" aria-describedby="e-i-payurl"><span class="fielderr" id="e-i-payurl"></span></label>
+      </div>
+    </div>
+    <div class="cardbox">
+      <h2>Items</h2>
+      <table id="items-table"><colgroup><col><col class="c-qty"><col class="c-pu"><col class="c-amt"><col class="c-x"></colgroup><thead><tr><th>Description</th><th class="r">Qty</th><th class="r">Unit price</th><th class="r">Amount</th><th></th></tr></thead><tbody id="items"></tbody></table>
+      <button class="btn sm" id="add-item" style="margin-top:var(--s3)">Add a line</button>
+      <div class="tot"><div><span>Subtotal</span><span id="t-ht" class="num"></span></div><div class="taxrow"><label for="i-vat"><span id="t-taxlbl">Tax</span><input id="i-vat" type="number" value="0" min="0" max="100" step="any" aria-describedby="e-i-vat"><span>%</span></label><span id="t-tva" class="num"></span></div><span class="fielderr" id="e-i-vat"></span><div class="ttc"><span>Total</span><span id="t-ttc" class="num"></span></div></div>
+    </div>
+    <div class="cardbox"><label class="field"><b>Note (optional)</b><textarea id="i-notes" rows="2" placeholder="Thanks for your business."></textarea></label></div>
+    <div class="actions" style="justify-content:flex-start"><button class="btn primary" id="save" style="flex:0 0 auto">Create invoice</button><span id="saved" class="msg" role="status"></span><span id="err" class="err" role="alert"></span></div>
+  </section>
+
+  <section id="v-list" hidden>
+    <div class="cardbox">
+      <p class="msg" style="margin:0 0 var(--s3)">Invoices are numbered in order. A sent invoice is never edited or deleted: you cancel it with a credit note. Only the last draft can be deleted, so the numbers keep no gap.</p>
+      <table id="inv-table"><colgroup><col class="c-num"><col><col class="c-date"><col class="c-total"><col class="c-status"><col class="c-acts"></colgroup><thead><tr><th>Number</th><th>Client</th><th>Date</th><th class="r">Total</th><th>Status</th><th></th></tr></thead><tbody id="inv-rows"></tbody></table>
+      <span class="err" id="list-err" role="alert"></span>
+    </div>
+  </section>
+
+  <section id="v-settings" hidden>
+    <div class="cardbox">
+      <h2>Your business</h2>
+      <p class="msg">Printed on every invoice. Only what you fill in is printed, never the demo studio's details.</p>
+      <p class="checklist" id="seller-check"></p>
+      <div class="grid" id="seller-fields"></div>
+      <div class="actions" style="margin-top:var(--s4);justify-content:flex-start"><button class="btn primary" id="save-settings" style="flex:0 0 auto">Save</button><span id="settings-saved" class="msg" role="status"></span><span class="err" id="seller-warn" role="alert"></span></div>
+    </div>
+  </section>
+</main>
+<div class="scrim" id="scrim" hidden></div>
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true"><div class="sheethead"><h2 id="sheetTitle"></h2><button class="btn icon ghost" id="sheetClose" aria-label="Close"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><div class="sheetbody" id="sheetBody"></div></div>
+<script>
+const $ = (s) => document.querySelector(s)
+const $$ = (s) => [...document.querySelectorAll(s)]
+let CUR = null // the agency's locale and currency, once known : never « 0,00 € » in a US agency
+const eur = (n) => { if (!CUR) return ""; try { return new Intl.NumberFormat(CUR.locale, { style: "currency", currency: CUR.currency }).format(Number(n) || 0) } catch { return (Number(n) || 0).toFixed(2) } }
+const day = (d) => { try { return new Date(d + "T00:00:00").toLocaleDateString(CUR ? CUR.locale : "en-US", { year: "numeric", month: "short", day: "numeric" }) } catch { return d } }
+const escH = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))
+const getJson = (u, opt) => fetch(u, opt).then((r) => r.json()).catch(() => ({ error: "The cockpit is not answering. Start it again with npm run backoffice (or npm run sandbox)." }))
+const postJson = (u, b) => getJson(u, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(b || {}) })
+// MONTANTS EN CENTIMES : mêmes règles que invoices.ts (lineCents/totalsCents), vérifié par test/cockpit/invoices.test.ts
+// <money>
+function divRound(n, d) { return (n < 0 ? -1 : 1) * Math.floor((Math.abs(n) + d / 2) / d) + 0 }
+function lineCents(it) { return divRound(Math.round((Number(it.qty) || 0) * 1000) * Math.round((Number(it.unitPrice) || 0) * 100), 1000) }
+function totalsCents(inv) { const lines = (inv.items || []).map(lineCents); const ht = lines.reduce((s, c) => s + c, 0); const tva = divRound(ht * Math.round((Number(inv.vatRate) || 0) * 100), 10000); return { lines, ht, tva, ttc: ht + tva } }
+// </money>
+// the same ceilings as the server (invoices.ts › MAX_AMOUNT, MAX_QTY) : past them, a typo
+const MAX_AMOUNT = 10000000, MAX_QTY = 100000
+
+/* ───────── the cockpit's header, here too : counts, the status pill, the menu, the demo line ───────── */
+const usd = (n) => n == null ? "—" : `$${Number(n).toFixed(2)}`
+function setMenu(open) { $("#menuDrop").hidden = !open; $("#menuBtn").setAttribute("aria-expanded", open ? "true" : "false") }
+$("#menuBtn").onclick = (e) => { e.stopPropagation(); setMenu($("#menuDrop").hidden) }
+document.addEventListener("click", () => setMenu(false))
+function count(id, k) { const el = $(id); el.textContent = k ? String(k) : ""; el.closest("a").classList.toggle("needs", !!k) }
+Promise.all([getJson("/api/prospects"), getJson("/api/sites")]).then(([p, sites]) => {
+  if (p && p.counts) { count("#nProspects", p.counts.new); if (typeof p.toCall === "number") count("#nOutreach", p.toCall) }
+  if (Array.isArray(sites)) count("#nSites", sites.filter((s) => s.hasIndex !== false && !["approved", "rejected", "sent", "drafted", "superseded"].includes(s.status) && !["lost", "signature"].includes(s.crmStage)).length)
+})
+getJson("/api/cage").then((c) => {
+  if (!c || !c.stop) return
+  // « ● Running », today's builds next to it (the daily cap in builds, as on the cockpit's pill)
+  const test = c.send.mode === "dry-run", word = c.stop.on ? "Stopped" : "Running"
+  const p = $("#cagePill")
+  p.className = "pill" + (c.stop.on ? " stop" : c.alerts && c.alerts.length ? " warn" : test ? " off" : "")
+  const bl = c.builds || { done: 0, cap: null }
+  const builds = bl.cap != null ? `${bl.done} of ${bl.cap} builds today` : `${bl.done} build${bl.done === 1 ? "" : "s"} today`
+  p.innerHTML = `<span class="dot"></span><span class="label">${word}</span><span class="short" aria-hidden="true">${word}</span>${c.stop.on ? "" : `<span class="label2">${builds}</span>`}`
+  p.title = `${word}${c.stop.on ? "" : test ? ". Test mode — no emails go out" : ". Live — emails go out"}. ${builds}${bl.cap != null ? " (the daily cap)" : ""}.`; p.setAttribute("aria-label", p.title)
+})
+// the demo line : the cockpit's own (its Settings link, hidden for good with its ✕ like there)
+getJson("/api/settings").then((st) => {
+  if (!st || st.error || !(st.sandbox || st.demo)) return
+  const bar = $("#demoBar"), key = st.sandbox ? "lws.demoBar.sandbox" : "lws.demoBar.real"
+  let gone = false; try { gone = !!localStorage.getItem(key) } catch { /* */ }
+  if (gone && st.sandbox) return
+  bar.innerHTML = st.sandbox
+    ? `<span class="long">Demo agency: every business here is fictional and nothing is sent. What you type here is thrown away when the demo stops.</span><span class="short">Demo agency · nothing is sent</span><a class="link" href="/#settings">Settings</a><button type="button" class="btn icon quiet sm" id="demoBarX" aria-label="Hide this line"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>`
+    : `<span class="long">This is still the demo agency: make it yours in Settings before your first invoice.</span><span class="short">Still the demo agency</span><a class="link" href="/#settings">Settings</a>`
+  bar.hidden = false
+  const x = $("#demoBarX"); if (x) x.onclick = () => { try { localStorage.setItem(key, "1") } catch { /* */ } bar.hidden = true }
+})
+/* ───────── a confirmation in the page's own sheet (never the browser's confirm()) ───────── */
+let sheetDone = null
+function closeSheet(v = false) { $("#sheet").hidden = true; $("#scrim").hidden = true; const d = sheetDone; sheetDone = null; if (d) d(v) }
+$("#scrim").onclick = () => closeSheet(false); $("#sheetClose").onclick = () => closeSheet(false)
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#sheet").hidden) closeSheet(false) })
+function askSheet(title, text, ok, danger = false) {
+  return new Promise((resolve) => {
+    sheetDone = resolve
+    $("#sheetTitle").textContent = title
+    $("#sheetBody").innerHTML = `<span class="msg">${escH(text)}</span><div class="actions"><button class="btn ${danger ? "danger" : "primary"}" id="askOk">${escH(ok)}</button><button class="btn subtle" id="askNo">Cancel</button></div>`
+    $("#sheet").hidden = false; $("#scrim").hidden = false
+    $("#askOk").onclick = () => closeSheet(true); $("#askNo").onclick = () => closeSheet(false); $("#askOk").focus()
+  })
+}
+
+// what a business prints on its invoice, by country (a US agency: entity type, EIN, how to pay ; no SIRET, VAT, IBAN)
+const FIELDS = {
+  US: [["name","Business name"],["legal","Entity type (LLC, S-Corp…)"],["taxId","EIN"],["address","Address"],["phone","Phone"],["email","Email"],["payment","How to pay you (ACH details, Zelle, check…)"],["paymentLink","Default payment link"]],
+  FR: [["name","Name"],["legal","Legal form and share capital"],["address","Address"],["siret","SIRET"],["tva","VAT number"],["rcs","Registry"],["email","Email"],["phone","Phone"],["iban","IBAN"],["bic","BIC"],["paymentLink","Default payment link"]],
+  OTHER: [["name","Business name"],["legal","Entity type"],["taxId","Tax ID"],["address","Address"],["phone","Phone"],["email","Email"],["iban","IBAN"],["payment","How to pay you"],["paymentLink","Default payment link"]],
+}
+// what must be filled before the first invoice (the server checks the same : invoices.ts › sellerRequired)
+const REQUIRED = { FR: ["name", "address", "siret"], OTHER: ["name", "address"] }
+const required = () => REQUIRED[COUNTRY] || REQUIRED.OTHER
+let COUNTRY = ""
+const sellerFields = () => FIELDS[COUNTRY] || FIELDS.OTHER
+getJson("/api/agency").then((a) => {
+  if (!a || !a.currency) return
+  if (a.name) { $("#brand span").textContent = a.name; document.title = `Billing · ${a.name}` }
+  CUR = { locale: a.locale || "en-US", currency: a.currency }
+  COUNTRY = String(a.country || "").toUpperCase()
+  const tax = a.tax || { rate: COUNTRY === "US" ? 0 : 20, label: COUNTRY === "US" ? "Sales tax" : "Tax" }
+  $("#t-taxlbl").textContent = tax.label
+  if (!$("#i-vat").dataset.touched) $("#i-vat").value = tax.rate
+  $("#c-siret-wrap").hidden = COUNTRY === "US"
+  recalc()
+})
+$("#i-vat").addEventListener("input", () => { $("#i-vat").dataset.touched = "1" })
+// a won deal fills the client (the call panel's « Create invoice » lands here with ?client=<id>) and the first line
+let WON = []
+function fillFrom(c) {
+  if (!c) return
+  $("#c-name").value = c.name || ""; $("#c-email").value = c.email || ""; $("#c-address").value = c.address || c.city || ""; $("#c-won").value = c.id; clearInvalid()
+  // the deal has no amount in the call list : the line is written, the price is yours to type
+  const first = $("#items tr"); if (first && !first.querySelector(".il-label").value.trim()) { first.querySelector(".il-label").value = `New website for ${c.name}`; const pu = first.querySelector(".il-pu"); if (!Number(pu.value)) { pu.value = ""; pu.focus() } }
+  recalc()
+  $("#saved").textContent = `Filled from your deal with ${c.name}: type the price.`
+}
+getJson("/api/won").then((w) => {
+  WON = (w && w.won) || []
+  if (!WON.length) return
+  $("#c-won").innerHTML = `<option value="">Pick a client you won…</option>` + WON.map((c) => `<option value="${escH(c.id)}">${escH(c.name)}${c.city ? ` · ${escH(c.city)}` : ""}</option>`).join("")
+  $("#wonWrap").hidden = false
+  const want = new URLSearchParams(location.search).get("client")
+  if (want) fillFrom(WON.find((c) => c.id === want))
+})
+$("#c-won").onchange = () => fillFrom(WON.find((c) => c.id === $("#c-won").value))
+function showTab(v) { const t = $(`.tabs button[data-v="${v}"]`); if (t) t.click() }
+$$(".tabs button").forEach((t) => t.onclick = () => { $$(".tabs button").forEach((x) => { x.classList.toggle("on", x === t); x.setAttribute("aria-selected", x === t ? "true" : "false") }); for (const v of ["new", "list", "settings"]) $("#v-" + v).hidden = v !== t.dataset.v; if (t.dataset.v === "list") loadList(); if (t.dataset.v === "settings") loadSettings() })
+const X = `<svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>`
+function addItem(it = { label: "", qty: 1, unitPrice: 0 }) {
+  const tr = document.createElement("tr")
+  tr.innerHTML = `<td><input class="il-label" type="text" value="${escH(it.label || "")}" placeholder="Website redesign" aria-label="Description"></td><td><input class="il-qty r" type="number" min="0" value="${escH(it.qty)}" step="any" aria-label="Quantity"></td><td><input class="il-pu r" type="number" min="0" value="${escH(it.unitPrice)}" step="any" aria-label="Unit price"></td><td class="r il-amt num"></td><td><button class="btn icon quiet sm" type="button" title="Remove this line" aria-label="Remove this line">${X}</button></td>`
+  tr.querySelector("button").onclick = () => { tr.remove(); recalc() }
+  tr.querySelectorAll("input").forEach((i) => i.addEventListener("input", () => { i.removeAttribute("aria-invalid"); recalc() }))
+  $("#items").appendChild(tr); recalc()
+}
+function readItems() { return $$("#items tr").map((tr) => ({ label: tr.querySelector(".il-label").value.trim(), qty: Number(tr.querySelector(".il-qty").value) || 0, unitPrice: Number(tr.querySelector(".il-pu").value) || 0 })) }
+function recalc() { const t = totalsCents({ items: readItems(), vatRate: Number($("#i-vat").value) || 0 }); $$("#items tr").forEach((tr, i) => { tr.querySelector(".il-amt").textContent = eur(t.lines[i] / 100) }); $("#t-ht").textContent = eur(t.ht / 100); $("#t-tva").textContent = eur(t.tva / 100); $("#t-ttc").textContent = eur(t.ttc / 100) }
+$("#add-item").onclick = () => addItem()
+$("#i-vat").addEventListener("input", recalc)
+const iso = (ms) => new Date(ms - new Date(ms).getTimezoneOffset() * 60000).toISOString().slice(0, 10)
+function resetDates() { $("#i-issue").value = iso(Date.now()); $("#i-due").value = iso(Date.now() + 30 * 864e5) }
+resetDates()
+addItem()
+function clearInvalid() { $$("#v-new [aria-invalid]").forEach((e) => e.removeAttribute("aria-invalid")); $("#err").textContent = ""; $$("#v-new .fielderr").forEach((e) => e.textContent = ""); $("#summary").hidden = true }
+$$("#v-new input, #v-new select").forEach((i) => i.addEventListener("input", () => { i.removeAttribute("aria-invalid"); const e = $(`#e-${i.id}`); if (e) e.textContent = "" }))
+// the same rules as the server (invoices.ts › invoiceProblem) ; the field at fault is marked and focused
+function validate() {
+  const rows = $$("#items tr"), items = readItems()
+  const raw = (tr, c) => tr.querySelector(c).value
+  if (!$("#c-name").value.trim()) return ["Add the client's business name.", $("#c-name")]
+  const em = $("#c-email").value.trim(); if (em && !/^[^\s@<>]+@[^\s@<>]+\.[a-z]{2,}$/i.test(em)) return ["The client's email doesn't look right.", $("#c-email")]
+  if (!items.length) return ["Add at least one line.", $("#add-item")]
+  const noLabel = rows.find((tr) => !raw(tr, ".il-label").trim()); if (noLabel) return ["Every line needs a description.", noLabel.querySelector(".il-label")]
+  const inputs = rows.map((tr) => [tr.querySelector(".il-qty"), tr.querySelector(".il-pu")]).flat()
+  // a number, finite (never 1e309), then not negative, then not absurd
+  const notNum = inputs.find((i) => i.value === "" || !Number.isFinite(Number(i.value))); if (notNum) return [notNum.value === "" ? "Every line needs a quantity and a price." : "Quantities and prices must be numbers.", notNum]
+  const neg = inputs.find((i) => !(Number(i.value) >= 0)); if (neg) return ["Quantities and prices can't be negative.", neg]
+  const huge = rows.map((tr) => [[tr.querySelector(".il-qty"), MAX_QTY], [tr.querySelector(".il-pu"), MAX_AMOUNT]]).flat().find(([i, max]) => Number(i.value) > max); if (huge) return ["That amount looks like a typo: check the quantities and prices.", huge[0]]
+  const vat = $("#i-vat").value; if (vat === "" || !(Number(vat) >= 0 && Number(vat) <= 100)) return ["Tax must be between 0 and 100 %.", $("#i-vat")]
+  const t = totalsCents({ items, vatRate: Number(vat) || 0 })
+  // a number is never spent on nothing : a zero total waits for a price
+  if (!(t.ttc > 0)) return ["The total is zero: add a price before creating the invoice.", rows.map((tr) => tr.querySelector(".il-pu")).find((i) => !Number(i.value)) || rows[0].querySelector(".il-pu")]
+  if (t.ttc / 100 > MAX_AMOUNT) return ["That amount looks like a typo: check the quantities and prices.", rows[0].querySelector(".il-pu")]
+  if (!$("#i-issue").value) return ["Pick an issue date.", $("#i-issue")]
+  if ($("#i-due").value && $("#i-due").value < $("#i-issue").value) return ["The due date can't be before the issue date.", $("#i-due")]
+  const u = $("#i-payurl").value.trim(); if (u && !/^https?:\/\/\S+$/i.test(u)) return ["The payment link must start with http(s)://.", $("#i-payurl")]
+  return null
+}
+// a message said ONCE where you look : next to the field (and by the button) ; the summary at the top only when the
+// field is off screen
+const onScreen = (el) => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight }
+// your business first : what is still missing (or still the demo studio's) is said before anything is sent, with the
+// way there (the server refuses the same : invoices.ts › sellerProblem)
+let SELLER = null
+const sellerMissing = () => { if (!SELLER) return []; const demo = new Set(SELLER._demo || []); return sellerFields().filter(([k]) => required().includes(k) && (demo.has(k) || /<[^>]*>/.test(String(SELLER[k] || "")) || !String(SELLER[k] || "").trim())).map(([, l]) => l) }
+const loadSeller = () => getJson("/api/invoice-settings").then((s) => { if (s && !s.error) SELLER = s })
+loadSeller()
+function sayBusinessFirst(missing) {
+  const demo = SELLER && (SELLER._demo || []).some((k) => required().includes(k))
+  SELLER_TRIED = true
+  $("#summary").innerHTML = `Fill in Your business first${demo ? " (your own details, not the demo studio's)" : ""}: ${escH(missing.join(", "))}. <a href="#" id="toBusiness">Open Your business</a>`
+  $("#summary").hidden = false; $("#toBusiness").onclick = (e) => { e.preventDefault(); showTab("settings") }
+}
+let saving = false
+$("#save").onclick = async () => {
+  if (saving) return
+  clearInvalid(); $("#saved").textContent = ""
+  if (!SELLER) await loadSeller()
+  const missing = sellerMissing(); if (missing.length) { sayBusinessFirst(missing); return }
+  const bad = validate()
+  if (bad) {
+    const [msg, el] = bad, fe = $(`#e-${el.id}`)
+    $("#err").textContent = msg; if (fe) fe.textContent = msg
+    if (el.tagName === "INPUT") el.setAttribute("aria-invalid", "true")
+    if (!onScreen(el)) { $("#summary").textContent = msg; $("#summary").hidden = false }
+    el.focus(); return
+  }
+  saving = true; $("#save").disabled = true; $("#save").classList.add("loading"); $("#save").setAttribute("aria-busy", "true")
+  try {
+    const body = { client: { name: $("#c-name").value.trim(), address: $("#c-address").value.trim(), email: $("#c-email").value.trim(), siret: $("#c-siret").value.trim() }, issueDate: $("#i-issue").value, dueDate: $("#i-due").value, items: readItems(), vatRate: Number($("#i-vat").value) || 0, notes: $("#i-notes").value.trim(), kind: $("#i-kind").value, paymentUrl: $("#i-payurl").value.trim() }
+    const inv = await postJson("/api/invoices", body)
+    if (!inv || !inv.number) {
+      const msg = (inv && inv.error) || "Not saved"
+      $("#err").textContent = msg
+      // your own details are missing (or still the demo studio's) : said at the top, with the way there
+      if (inv && inv.seller) { SELLER_TRIED = true; $("#summary").innerHTML = `${escH(msg)}. <a href="#" id="toBusiness">Open Your business</a>`; $("#summary").hidden = false; $("#toBusiness").onclick = (e) => { e.preventDefault(); showTab("settings") } }
+      return
+    }
+    $("#saved").innerHTML = `${inv.kind === "acompte" ? "Deposit invoice" : inv.kind === "solde" ? "Final invoice" : "Invoice"} ${escH(inv.number)} created. <a class="link" href="/invoice/${encodeURIComponent(inv.id)}" target="_blank" rel="noopener">Open or print it</a>`
+    // a fresh form : a second click can't create the same invoice twice
+    for (const id of ["c-name", "c-email", "c-address", "c-siret", "i-payurl", "i-notes"]) $("#" + id).value = ""
+    $("#c-won").value = ""; $("#i-kind").value = "facture"; resetDates()
+    $("#items").innerHTML = ""; addItem()
+  } finally { saving = false; $("#save").disabled = false; $("#save").classList.remove("loading"); $("#save").removeAttribute("aria-busy") }
+}
+async function loadList() {
+  const invs = await getJson("/api/invoices")
+  $("#list-err").textContent = ""
+  if (!Array.isArray(invs)) { $("#inv-rows").innerHTML = `<tr><td colspan="6" class="err c-empty" style="padding:24px;text-align:center">${escH(invs.error || "Not loaded")}</td></tr>`; return }
+  const KL = { facture: "", acompte: "Deposit", solde: "Final", avoir: "Credit note" }
+  // the last number of each year : the only draft that can be deleted (the sequence never gets a hole)
+  const lastOfYear = {}; for (const i of invs) { const y = String(i.number).slice(0, 4); if (!lastOfYear[y] || i.number > lastOfYear[y]) lastOfYear[y] = i.number }
+  const won = WON[0]
+  $("#inv-rows").innerHTML = invs.length ? invs.map((i) => {
+    const ttc = i.totals ? i.totals.ttc : totalsCents(i).ttc / 100
+    const cancelled = !!i.cancelledBy
+    const lab = cancelled ? "Cancelled" : { draft: "Draft", sent: "Sent", paid: "Paid" }[i.status] || i.status
+    const kind = KL[i.kind || "facture"]
+    const next = i.status === "draft" ? "Mark sent" : i.status === "sent" ? "Mark paid" : "Mark unpaid"
+    // one credit note per invoice : once cancelled, it says by which one and offers no second
+    const avoir = i.kind !== "avoir" && i.status !== "draft" && !cancelled ? `<a href="#" data-av="${escH(i.id)}" class="link" title="Cancel this invoice with a credit note">Credit note</a>` : ""
+    const del = i.status === "draft" && lastOfYear[String(i.number).slice(0, 4)] === i.number ? `<a href="#" data-del="${escH(i.id)}" class="link" title="Delete this draft (the last number)">Delete</a>` : ""
+    const status = cancelled ? `<span class="chip status skipped" title="Cancelled by credit note ${escH(i.cancelledBy)}">Cancelled by ${escH(i.cancelledBy)}</span>` : `<span class="chip status ${i.status === "paid" ? "won" : i.status === "sent" ? "approved" : "needs"}">${escH(lab)}</span>`
+    return `<tr class="rowline"><td><b>${escH(i.number)}</b>${kind ? ` <span class="chip tag">${kind}</span>` : ""}${i.ref ? ` <span class="msg">cancels ${escH(i.ref)}</span>` : ""}</td><td class="c-client">${escH(i.client && i.client.name)}</td><td class="c-date">${escH(day(i.issueDate))}</td><td class="r num">${eur(ttc)}</td><td class="c-status">${status}</td><td class="r c-acts"><span class="rowacts"><a class="link" href="/invoice/${encodeURIComponent(i.id)}" target="_blank" rel="noopener">Open</a>${cancelled ? "" : `<a href="#" data-cy="${escH(i.id)}" data-st="${escH(i.status)}" class="link">${next}</a>`}${avoir}${del}</span></td></tr>`
+  }).join("") : `<tr><td colspan="6" class="c-empty"><div class="emptycta">${won ? `<span>${escH(won.name)} is won: its invoice is one click away.</span><button type="button" class="btn primary" id="invWon">Create the invoice for ${escH(won.name)}</button>` : `<span>No invoices yet. Win a deal in Outreach, then create its invoice here.</span>`}</div></td></tr>`
+  const iw = $("#invWon"); if (iw) iw.onclick = () => { showTab("new"); fillFrom(won) }
+  $$(".rowline [data-cy]").forEach((a) => a.onclick = async (e) => { e.preventDefault(); const nx = { draft: "sent", sent: "paid", paid: "sent" }[a.dataset.st]; if (nx === "sent" && a.dataset.st === "draft" && !(await askSheet("Mark this invoice as sent?", "It can't be edited or deleted afterwards: you would cancel it with a credit note.", "Mark sent"))) return; await postJson("/api/invoices/" + encodeURIComponent(a.dataset.cy), { status: nx }); loadList() })
+  $$(".rowline [data-av]").forEach((a) => a.onclick = async (e) => { e.preventDefault(); if (!(await askSheet("Cancel this invoice?", "A credit note with the same lines in negative is issued and the invoice is marked cancelled. One per invoice.", "Issue the credit note", true))) return; const r = await postJson("/api/invoices/" + encodeURIComponent(a.dataset.av) + "/avoir"); if (r.number) window.open("/invoice/" + encodeURIComponent(r.id), "_blank"); else $("#list-err").textContent = r.error || "Not created"; loadList() })
+  $$(".rowline [data-del]").forEach((a) => a.onclick = async (e) => { e.preventDefault(); if (!(await askSheet("Delete this draft?", "It was never sent, and it is the last number: the next invoice takes its number.", "Delete", true))) return; const r = await getJson("/api/invoices/" + encodeURIComponent(a.dataset.del), { method: "DELETE" }); if (r.ok) loadList(); else $("#list-err").textContent = r.error || "Not deleted" })
+}
+let SELLER_TRIED = false // red only after a refused invoice ; a neutral checklist before
+async function loadSettings() {
+  $("#seller-fields").innerHTML = "" // never a stale form to type into while the saved one loads
+  const s = await getJson("/api/invoice-settings")
+  // a <…> placeholder of the demo config, or a value that is still the demo studio's, is shown empty (to be replaced)
+  // and never printed ; it counts as not filled
+  const demo = new Set(s._demo || [])
+  const clean = (k) => { const v = String(s[k] || ""); return /<[^>]*>/.test(v) || demo.has(k) ? "" : v }
+  $("#seller-fields").innerHTML = sellerFields().map(([k, lab]) => `<label class="field"><b>${lab}${required().includes(k) ? "" : ' <span class="muted">(optional)</span>'}</b><input id="s-${k}" type="${k === "email" ? "email" : k === "paymentLink" ? "url" : "text"}" value="${escH(clean(k))}"${demo.has(k) ? ` placeholder="Yours, not the demo studio's"` : ""}></label>`).join("")
+  const missing = sellerFields().filter(([k]) => required().includes(k) && !clean(k).trim()).map(([, l]) => l)
+  const filled = sellerFields().filter(([k]) => clean(k).trim()).length
+  $("#seller-warn").textContent = missing.length && SELLER_TRIED ? `Needed before your first invoice: ${missing.join(", ")}` : ""
+  $("#seller-check").textContent = `${filled} of ${sellerFields().length} filled${missing.length && !SELLER_TRIED ? ` · needed before your first invoice: ${missing.join(", ")}` : ""}${demo.size ? " · the demo studio's details are left out" : ""}`
+  $("#settings-saved").textContent = ""
+}
+$("#save-settings").onclick = async () => {
+  const body = {}; sellerFields().forEach(([k]) => { const el = $("#s-" + k); if (el) body[k] = el.value.trim() })
+  if (!String(body.name || "").trim()) { $("#seller-warn").textContent = "Your business name can't be empty."; $("#s-name").setAttribute("aria-invalid", "true"); $("#s-name").focus(); return }
+  if (body.paymentLink && !/^https?:\/\/\S+$/i.test(body.paymentLink)) { $("#seller-warn").textContent = "The payment link must start with http(s)://."; $("#s-paymentLink").setAttribute("aria-invalid", "true"); $("#s-paymentLink").focus(); return }
+  $("#save-settings").classList.add("loading")
+  try { const r = await postJson("/api/invoice-settings", body); if (r && r.error) { $("#seller-warn").textContent = r.error; return } SELLER = r; await loadSettings(); $("#settings-saved").textContent = "Saved." } finally { $("#save-settings").classList.remove("loading") }
+}
+</script></body></html>

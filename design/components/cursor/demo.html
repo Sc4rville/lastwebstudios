@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>cursor — demo</title>
+<link rel="stylesheet" href="cursor.css">
+<style>
+  :root{--cz-accent:#d8ff3e}
+  *{margin:0;box-sizing:border-box}
+  body{min-height:100vh;background:#0b0b0d;color:#f4f4f6;font:16px/1.6 system-ui,sans-serif;display:grid;place-items:center;gap:0}
+  .wrap{text-align:center;padding:40px;max-width:720px}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:300;letter-spacing:-.02em;margin-bottom:8px}
+  h1 em{font-style:normal;color:var(--cz-accent)}
+  p{color:#9a9aa6;margin-bottom:40px}
+  .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:16px 30px;border-radius:999px;border:1px solid #2a2a30;background:#141417;color:#f4f4f6;font-weight:600;cursor:pointer}
+  .btn.solid{background:var(--cz-accent);color:#0b0b0d;border-color:var(--cz-accent)}
+  .light{background:#f4f4f6;color:#0b0b0d;padding:60px 40px;border-radius:24px;margin-top:48px}
+</style></head>
+<body>
+  <div class="wrap">
+    <h1>A cursor that <em>leaves a trail</em>.</h1>
+    <p>A sharp dot + a trailing ring · mix-blend-mode · magnetic · self-contained, zero dependencies.</p>
+    <div class="row">
+      <button class="btn solid" data-magnetic data-cursor="view">Our work</button>
+      <button class="btn" data-magnetic="0.45" data-cursor="→">Request a quote</button>
+    </div>
+    <div class="light">
+      <strong>On a light background too</strong> — the blend mode inverts the cursor, always readable.
+    </div>
+  </div>
+  <script src="cursor.js" defer></script>
+</body></html>

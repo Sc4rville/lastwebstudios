@@ -1,0 +1,8 @@
+{
+  "slug": "insubstance-com",
+  "url": "https://insubstance.com/",
+  "stack": [
+    "framer-motion"
+  ],
+  "scroll": "native"
+}

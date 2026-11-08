@@ -1,0 +1,48 @@
+{
+  "_sample": "FICTIF : prospect inventé pour la sandbox et la démo (aucune entreprise réelle).",
+  "id": "bassins-de-quillanne-quillanne-sur-orme",
+  "industry": "pisciniste",
+  "identity": {
+    "name": "Bassins de Quillanne",
+    "city": "Quillanne-sur-Orme",
+    "phone": "03 53 01 77 12",
+    "email": "info@bassins-quillanne.example"
+  },
+  "content": {
+    "tagline": "Constructeur de piscines et spas",
+    "about": "Bassins de Quillanne construit des piscines maçonnées sur mesure, des couloirs de nage et des bassins miroirs, installe spas et saunas et assure l'entretien.",
+    "services": [
+      "piscines béton sur mesure",
+      "couloirs de nage",
+      "bassins miroirs",
+      "spas et saunas",
+      "entretien et hivernage"
+    ],
+    "brands": []
+  },
+  "assets": {
+    "logo": "assets/bassins-de-quillanne-quillanne-sur-orme/logo.svg",
+    "photos": [
+      "assets/bassins-de-quillanne-quillanne-sur-orme/photo-1.svg",
+      "assets/bassins-de-quillanne-quillanne-sur-orme/photo-2.svg"
+    ]
+  },
+  "existing": {
+    "url": "http://bassins-quillanne.example/",
+    "screenshot": "assets/bassins-de-quillanne-quillanne-sur-orme/avant.png"
+  },
+  "score": {
+    "value": 92,
+    "tier": "warm",
+    "reasons": [
+      "pas responsive (pas de viewport)",
+      "SEO pauvre (pas de description / OG)",
+      "pas de HTTPS (sécurité + SEO pénalisé)",
+      "aucune donnée structurée (SEO local faible)",
+      "page très pauvre (peu de contenu)",
+      "dernière trace de maj : 2013",
+      "faisabilité limitée (peu de contenu/photos)"
+    ],
+    "accroche": "Votre site de pisciniste : pas responsive (pas de viewport). On vous a refait la page d'accueil, regardez."
+  }
+}

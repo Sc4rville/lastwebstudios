@@ -1,0 +1,27 @@
+{
+  "slug": "365ayearof-cartier-com",
+  "url": "https://365ayearof.cartier.com/",
+  "vars": {
+    "--color-light-grey": "#faf8f6",
+    "--color-gold": "#ba9b53",
+    "--color-three-golds": "#e8d19b",
+    "--color-chocolate": "#1c1715",
+    "--color-black": "#0d0d0d",
+    "--color-white": "#fff",
+    "--color-red": "#c10016",
+    "--color-silver": "#dbdbd1",
+    "--color-dark-grey": "#5c5c5c"
+  },
+  "palette": [
+    "#73859f",
+    "rgba(43,51,63,.7)",
+    "#2b333f",
+    "rgba(115,133,159,.5)",
+    "#efefef",
+    "#e4e4e4",
+    "#ba9b53",
+    "rgba(0,0,0,0)",
+    "rgba(0,0,0,.2)",
+    "rgba(var(--color-white--rgb)"
+  ]
+}

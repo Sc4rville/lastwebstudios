@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Last Web Studios</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <div class="banner" id="banner" hidden></div>
+  <header class="top">
+    <a class="brand" href="#prospects" id="brand" title="Prospects"><span>Last Web Studios</span></a>
+    <!-- the three steps : one segmented control in the header, the tab bar on a phone -->
+    <nav class="steps" id="steps" aria-label="Your agency">
+      <a href="#prospects" data-v="prospects" class="on" title="New prospects, waiting for your decision"><svg class="ic tabic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="lab"><span>Prospects</span><i id="nProspects"></i></span></a>
+      <a href="#sites" data-v="sites" title="Built sites waiting for your review"><svg class="ic tabic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/></svg><span class="lab"><span>Sites</span><i id="nSites"></i></span></a>
+      <a href="#outreach" data-v="outreach" title="Calls to make"><svg class="ic tabic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6.2 6.2l1.3-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2z"/></svg><span class="lab"><span>Outreach</span><i id="nOutreach"></i></span></a>
+    </nav>
+    <div class="topright">
+      <button class="pill" id="cagePill" title="Status" aria-label="Status">…</button>
+      <div class="menu">
+        <button class="btn icon quiet" id="menuBtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="menuDrop"><svg class="ic" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/></svg></button>
+        <div class="dropdown" id="menuDrop" role="menu" hidden>
+          <a href="#learned" id="menuLearned" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>What the agency learned</a>
+          <a href="#settings" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Settings</a>
+          <a href="#handsoff" id="menuHandsoff" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="8" cy="12" r="3"/></svg>Hands-off<i class="chip tag" id="handsoffChip">off</i></a>
+          <hr>
+          <a href="/billing.html" role="menuitem"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h3"/></svg>Billing</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="demobar" id="demoBar" hidden></div>
+  <div class="demobar warnbar" id="aiBar" hidden></div>
+
+  <main id="main">
+    <!-- PROSPECTS : the ask bar is the hero, then large captures of their site today -->
+    <section class="view prospects page" id="v-prospects">
+      <form class="ask" id="findForm" autocomplete="off" role="search">
+        <svg class="ic lead-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="findText" type="text" placeholder="Tell the agency what you're after" aria-label="Tell the agency what you're after" autocomplete="off">
+        <button class="btn primary" id="findBtn" type="submit"><span class="long">Find prospects</span><span class="short">Find</span></button>
+      </form>
+      <div class="brief" id="briefChips" hidden></div>
+      <div class="findnote msg" id="findNote" hidden></div>
+      <div class="findnote msg" id="findDone" role="status" hidden></div>
+      <div class="jobs" id="jobs"></div>
+      <div class="results">
+        <div>
+          <h1 id="pHead">Your prospects</h1>
+          <p class="lede"><span id="pLede"></span> <span class="faint" id="pCount"></span><span class="faint wideonly" id="pBuilds"></span></p>
+        </div>
+        <div class="tools scroller">
+          <span class="seg" id="pseg" role="group" aria-label="Trade" hidden></span>
+          <button class="btn quiet touchonly" id="selectMode" type="button" aria-pressed="false">Select</button>
+          <button class="btn quiet" id="filterBtn" type="button"><svg class="ic" viewBox="0 0 24 24"><path d="M3 5h18M6 12h12M10 19h4"/></svg><span>Filter</span><i class="chip tag" id="filterCount" hidden></i></button>
+        </div>
+      </div>
+      <button type="button" class="newpill" id="newPill" hidden></button>
+      <div class="plist" id="plist"></div>
+      <div class="bulk" id="bulk" role="region" aria-label="Selected prospects" hidden><span id="bulkCount"></span><button class="btn quiet" id="bulkClear">Clear</button><button class="btn primary" id="bulkBuild">Build sites</button></div>
+    </section>
+
+    <!-- SITES : the preview on its stage, the filmstrip under it, the inspector at the right -->
+    <section class="view sites" id="v-sites" hidden>
+      <div class="stage">
+        <div class="stagebar">
+          <span class="seg" id="viewmode" role="group" aria-label="Which site"><a data-v="before" role="button" tabindex="0" aria-pressed="false">Before</a><a data-v="after" class="on" role="button" tabindex="0" aria-pressed="true">After</a><a data-v="compare" role="button" tabindex="0" aria-pressed="false">Compare</a></span>
+          <span class="spacer"></span>
+          <span class="seg" id="vpsel" role="group" aria-label="Screen size"><a data-w="full" role="button" tabindex="0"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Desktop</a><a data-w="390" role="button" tabindex="0" aria-pressed="false"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Phone</a></span>
+          <a id="openTab" class="btn quiet" target="_blank" rel="noopener" title="Open in a new tab" aria-label="Open in a new tab"><svg class="ic" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span>Open</span></a>
+        </div>
+        <div class="view-area" id="view">
+          <div class="frame" id="frame">
+            <div class="viewport" id="viewport"><iframe id="preview" title="preview" src="about:blank" allow="autoplay; fullscreen"></iframe></div>
+            <div id="before" class="before" hidden></div>
+            <div id="compare" class="compare" hidden></div>
+          </div>
+          <div class="building" id="buildingPane" hidden></div>
+          <div class="empty" id="emptyStage" hidden>Sites appear here while they are built. <a href="#prospects">Pick prospects to build</a>.</div>
+        </div>
+        <nav class="rail" id="rail" aria-label="Sites"></nav>
+      </div>
+      <aside class="inspect" id="inspect" aria-label="This site">
+        <div class="jobs" id="jobsSites"></div>
+        <div class="ihead"><h2 id="iTitle"></h2></div>
+        <div class="imeta" id="iMeta"></div>
+        <div class="irow"><span class="chip status" id="iState"></span><span class="faint" id="iWhen"></span></div>
+        <span id="iDemo" hidden>A demo stand-in, made from what the demo knows. <a class="link" href="/example/" target="_blank" rel="noopener">See a real build</a></span>
+        <div class="why" id="iWhyWrap" hidden><h3>Why it's on your list</h3><ul id="iWhy"></ul></div>
+        <a id="iOld" target="_blank" rel="noopener" hidden></a>
+        <span id="iNoReach" hidden></span>
+        <div class="iacts">
+          <button class="btn primary lg" id="approve"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Send to outreach</span></button>
+          <a class="btn lg" id="iOutreach" href="#outreach" hidden>Open in Outreach</a>
+          <button class="btn" id="rebuild" title="Rebuild"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg><span>Rebuild</span></button>
+          <button class="btn quiet" id="reject">Skip</button>
+        </div>
+        <details class="block prefs" id="iPrefs" hidden></details>
+        <div class="fb">
+          <h3>What should change?</h3>
+          <div id="iThread"></div>
+          <div class="fbwrap"><textarea id="comment" placeholder="Tell the agency what to change. Paste a screenshot if it helps." aria-label="What should change"></textarea><button class="btn sm" id="apply">Apply</button></div>
+          <span class="msg" id="iMsg"></span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- OUTREACH : who to call today, with the new site in hand -->
+    <section class="view pipeline page" id="v-outreach" hidden>
+      <div class="ohead">
+        <div>
+          <h1 id="oHead">Outreach</h1>
+          <p class="lede"><span class="agentline" id="agentLine"></span></p>
+        </div>
+        <div class="tools">
+          <div class="mstages scroller" id="mstages" role="group" aria-label="Show one step" hidden></div>
+          <span class="agentline"><span id="boardFilter"></span><button type="button" class="link linkbtn" id="editStages">Edit steps</button></span>
+        </div>
+      </div>
+      <div class="jobs" id="jobsOut"></div>
+      <div class="owork">
+        <div class="oqueue"><div class="board" id="board"></div><div class="mlist" id="mlist"></div></div>
+        <aside class="onext" id="oNext" aria-label="Up next" hidden></aside>
+      </div>
+    </section>
+  </main>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="sheet" id="sheet" hidden role="dialog"><div class="sheethead"><h2 id="sheetTitle"></h2><button class="btn icon quiet" id="sheetClose" aria-label="Close"><svg class="ic" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div><div class="sheetbody" id="sheetBody"></div></div>
+  <div class="scrim leadscrim" id="leadScrim" hidden></div>
+  <aside class="lead" id="lead" role="dialog" aria-modal="true" aria-labelledby="leadTitle" tabindex="-1" hidden></aside>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

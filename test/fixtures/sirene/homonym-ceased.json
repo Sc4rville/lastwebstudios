@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "siren": "000000018",
+      "nom_complet": "TESTEX PISCINES",
+      "nom_raison_sociale": "TESTEX PISCINES",
+      "etat_administratif": "C",
+      "date_creation": "2004-05-01",
+      "tranche_effectif_salarie": "01",
+      "categorie_entreprise": "PME",
+      "nombre_etablissements_ouverts": 0,
+      "activite_principale": "43.99C",
+      "finances": {},
+      "siege": { "libelle_commune": "PORT-AUBRIL", "commune": "99001", "code_postal": "99010" },
+      "matching_etablissements": [{ "libelle_commune": "PORT-AUBRIL", "code_postal": "99010", "etat_administratif": "F", "liste_enseignes": ["TESTEX PISCINES"] }]
+    },
+    {
+      "siren": "000000026",
+      "nom_complet": "PISCINES ET SPAS DU NORD FICTIF",
+      "etat_administratif": "C",
+      "siege": { "libelle_commune": "BRUMELOT", "code_postal": "99020" }
+    }
+  ],
+  "total_results": 2, "page": 1, "per_page": 5, "total_pages": 1
+}

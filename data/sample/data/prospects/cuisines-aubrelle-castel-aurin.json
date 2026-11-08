@@ -1,0 +1,35 @@
+{
+  "_sample": "FICTIF : prospect inventé pour la sandbox et la démo (aucune entreprise réelle).",
+  "id": "cuisines-aubrelle-castel-aurin",
+  "industry": "cuisiniste",
+  "identity": {
+    "name": "Cuisines Aubrelle",
+    "city": "Castel-Aurin",
+    "phone": "04 65 71 86 30",
+    "email": "studio@cuisines-aubrelle.example"
+  },
+  "content": {
+    "tagline": "Cuisines et agencements haut de gamme",
+    "about": "Cuisines Aubrelle dessine des cuisines et des agencements sur mesure pour les maisons de la région de Castel-Aurin.",
+    "services": [
+      "cuisines sur mesure",
+      "agencement de séjours",
+      "îlots et verrières"
+    ],
+    "brands": []
+  },
+  "assets": {
+    "photos": []
+  },
+  "existing": {
+    "url": "http://cuisines-aubrelle.example/"
+  },
+  "score": {
+    "value": 69,
+    "tier": "hot",
+    "reasons": [
+      "pas responsive (pas de viewport)"
+    ],
+    "accroche": "Votre site de cuisiniste : pas responsive. On vous a refait la page d'accueil, regardez."
+  }
+}

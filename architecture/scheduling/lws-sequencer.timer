@@ -1,0 +1,15 @@
+# lws-sequencer.timer — one tick every 20 min, on weekdays, in office hours (Paris time): the emails
+# go out when a tradesperson reads theirs, and the per-mailbox throttle (config.json) spreads the volume over the day.
+# A reply that arrives over the weekend is read on Monday at 08:00 (the call list is worked on weekdays).
+# Check the expression: systemd-analyze calendar 'Mon..Fri *-*-* 08..18:00/20:00 Europe/Paris'
+
+[Unit]
+Description=lastwebstudios — sequencer: one tick every 20 min, Mon-Fri 08:00-18:40 (Paris)
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 08..18:00/20:00 Europe/Paris
+Persistent=true
+RandomizedDelaySec=90
+
+[Install]
+WantedBy=timers.target

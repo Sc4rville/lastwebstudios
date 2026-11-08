@@ -1,0 +1,41 @@
+<!-- cta-booking · cta · a full-width band, strong heading + subtitle + booking button + phone, strongly centred -->
+<section class="cta-bk" data-section="cta-booking">
+  <style>
+    .cta-bk{position:relative; isolation:isolate; background:var(--accent); color:var(--bg);
+      padding:clamp(56px,10vw,140px) clamp(20px,5vw,80px); text-align:center; overflow:hidden}
+    /* a discreet texture to avoid a flat colour field */
+    .cta-bk::before{content:""; position:absolute; inset:0; z-index:-1; opacity:.10;
+      background:radial-gradient(circle at 20% 20%, currentColor 0, transparent 38%),
+                 radial-gradient(circle at 82% 70%, currentColor 0, transparent 34%)}
+    .cta-bk__inner{max-width:30ch; margin:0 auto}
+    .cta-bk__kicker{font-family:var(--mono); text-transform:uppercase; letter-spacing:.2em;
+      font-size:12px; opacity:.8; margin:0 0 clamp(16px,2vw,24px)}
+    .cta-bk__title{font-family:var(--serif); font-weight:500; line-height:1.02; letter-spacing:-.015em;
+      font-size:clamp(36px,6vw,84px); margin:0 0 clamp(16px,2vw,24px)}
+    .cta-bk__sub{font-family:var(--sans); font-size:clamp(16px,1.4vw,20px); line-height:1.55;
+      opacity:.92; max-width:46ch; margin:0 auto clamp(28px,3.5vw,40px)}
+    .cta-bk__actions{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:16px 24px}
+    .cta-bk__btn{font-family:var(--sans); font-weight:600; font-size:16px; padding:16px 34px;
+      border-radius:999px; background:var(--bg); color:var(--fg); text-decoration:none;
+      transition:transform .2s, box-shadow .2s}
+    .cta-bk__btn:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.18)}
+    .cta-bk__phone{font-family:var(--sans); font-weight:600; font-size:17px; color:var(--bg);
+      text-decoration:none; border-bottom:1px solid color-mix(in srgb, var(--bg) 55%, transparent);
+      padding-bottom:3px}
+    .cta-bk__phone:hover{border-color:var(--bg)}
+    .cta-bk .reveal{opacity:1}
+    @media (max-width:880px){
+      .cta-bk__inner{max-width:none}
+    }
+  </style>
+
+  <div class="cta-bk__inner reveal">
+    <p class="cta-bk__kicker">{{KICKER}}</p>
+    <h2 class="cta-bk__title">{{HEADLINE}}</h2>
+    <p class="cta-bk__sub">{{SUBTEXT}}</p>
+    <div class="cta-bk__actions">
+      <a class="cta-bk__btn" href="{{CTA_HREF}}">{{CTA_LABEL}}</a>
+      <a class="cta-bk__phone" href="tel:{{PHONE}}">{{PHONE_DISPLAY}}</a>
+    </div>
+  </div>
+</section>

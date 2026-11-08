@@ -1,0 +1,30 @@
+{
+  "_sample": "FICTIONAL: a prospect invented for the US sandbox and the demo (no real business).",
+  "id": "larkmoor-plumbing-drain-austin",
+  "industry": "plombier",
+  "identity": {
+    "name": "Larkmoor Plumbing & Drain",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78731",
+    "phone": "(512) 555-0186",
+    "email": "office@larkmoor-plumbing.example",
+    "hours": "Mon–Fri 7 am – 6 pm, emergencies 24/7"
+  },
+  "content": {
+    "tagline": "Family plumbers, same-day service",
+    "about": "Larkmoor Plumbing & Drain fixes leaks, clears drains and installs water heaters for homes in Central Austin, same day when they can.",
+    "services": ["Leak repair", "Water heaters", "Drain cleaning", "Bathroom plumbing"],
+    "brands": []
+  },
+  "assets": { "photos": [] },
+  "existing": { "url": "http://larkmoor-plumbing.example/", "screenshot": "assets/larkmoor-plumbing-drain-austin/avant.png" },
+  "score": {
+    "value": 74,
+    "tier": "warm",
+    "reasons": ["poor SEO (no description / OG)", "thin page (little content)", "last updated: 2012"],
+    "accroche": "Your site: Google can't read what you do. We rebuilt your home page, take a look."
+  },
+  "audit": { "https": true, "mobile": { "hasViewportMeta": true }, "strengths": { "copyrightYear": 2012, "stale": true } },
+  "_sim": { "lang": "en", "family": "home", "palette": { "a": "#1b4965", "b": "#ff9f1c", "bg": "#f5f7f9" } }
+}
